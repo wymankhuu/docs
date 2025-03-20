@@ -1,78 +1,156 @@
 ---
-title: 'Avoid Answer Generation Guide'
-description: 'Prevent AI from completing work directly for users'
+title: 'Selecting an LLM'
+description: 'Choose the perfect AI model for your Playlab application'
 ---
 
-## What is this feature? <Icon name="new-box" />
+## <Icon icon="cube" size="24" className="inline-block align-text-bottom" /> What is this feature?
 
-This is a toggle in settings that Playlab builders can turn on to prevent AI from completing work directly for the user.
+You can now build on top of even more LLMs in Playlab! There are now 8 available AI models for you to build your Playlab apps on top of. We will try our best to always provide the latest models for you to build on top of.
 
 <Warning>
-  Once enabled, users cannot toggle this feature off. Only creators can decide to turn it on or off.
+  Changing the LLM may impact the performance of your app.
 </Warning>
 
-## Rationale for the feature <Icon name="chat-question" />
+## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Rationale for the feature
 
-There are times when providing answers or direct outputs is appropriate, but there are often times when the builder does not want the user to have direct access to the final answer or completed output. In the cases where you don't want the answer generated, you can toggle the Avoid Answer Generation setting as you're building.
+This feature allows Playlab users to experiment with and leverage the unique strengths of various AI models from different providers all within Playlab.
 
-## Where can I access the feature? <Icon name="head-question-outline" />
+As you build, you might find that certain models perform better at different tasks. This will allow Playlab users to select the model that fits their needs better. The more available models, the more likely you are to find one that meets your needs. We believe that Playlabbers should have access to frontier models as we build in community.
 
-<Frame>
-  <img src="/images/avoidanswers.gif" />
-</Frame>
+## <Icon icon="key" size="24" className="inline-block align-text-bottom" /> How do I access these models?
 
 <Steps>
-  <Step title="You can toggle Avoid Answer Generation in the 'Settings' menu.">
-    <Frame>
-  <img src="/images/avoidanswers.jpeg" />
-</Frame>
+  <Step title="Click the LLM selector">
+    On the top left click the LLM. (By default it will say GPT-4o)
+    
+    <img height="500" src="/images/Selectinganllm.gif" className="border border-gray-300 rounded-md shadow-sm" />
   </Step>
-  <Step title="You can check whether the setting was enabled while testing your app in the app builder, as well as when reviewing Activity.">
-    <Frame>
-  <img src="/images/avoidanswerscheck.jpeg" />
-</Frame>
+  <Step title="Choose your model">
+    From the menu, select which LLM you want to build on top of.
+    
+    <img height="200" src="/images/Selectinganllm.jpeg" className="border border-gray-300 rounded-md shadow-sm" />
   </Step>
 </Steps>
 
-## See it in action <Icon name="clipboard-question" />
+## <Icon icon="list-check" size="24" className="inline-block align-text-bottom" /> Which models should I use?
 
-Here is a sample writing feedback app where the builder does not want the app to be able to do any writing for the student and only to provide feedback on what the student provides themselves and also offer guiding questions to improve writing. The other thing to note is that the sample app does not have explicit prompting instructions to avoid providing final writing generation.
+Now that you know how to select models, here are some strengths and tradeoffs of each:
 
-<Frame>
-  <img src="/images/avoidanswersdemo.gif" />
-</Frame>
+<CardGroup cols={1}>
+  <Card title="Claude 3 Opus (Anthropic)" icon="sparkles">
+    <p><strong>Description:</strong> Advanced model which can handle complex analysis, longer tasks with many steps, and higher-order math and coding.</p>
+    <p><strong>➕ Strengths:</strong> Accuracy and strong at following detailed step by step instructions</p>
+    <p><strong>➖ Trade Offs:</strong> Slower and may be overkill for simple, straightforward tasks</p>
+  </Card>
 
-## Tips for Using Avoid Answer Generation <Icon name="lightbulb-on" />
+  <Card title="Claude 3.5 Sonnet (Anthropic)" icon="music">
+    <p><strong>Description:</strong> General purpose model balanced between speed and accuracy with an emphasis on expression and creativity.</p>
+    <p><strong>➕ Strengths:</strong> Good balance between speed and accuracy. Very creative and versatile.</p>
+    <p><strong>➖ Trade Offs:</strong> Less powerful than new Claude 3.7 models. Struggles with some complex, multi-step problems</p>
+  </Card>
+
+  <Card title="Claude 3.7 Sonnet (Anthropic)" icon="star">
+    <p><strong>Description:</strong> Latest version of Claude Sonnet series, upgrade from 3.5</p>
+    <p><strong>➕ Strengths:</strong> Improved accuracy and instruction following capabilities. Good speed to performance ratio.</p>
+    <p><strong>➖ Trade Offs:</strong> Not optimized for reasoning tasks. Not as fast as smaller models like Flash or GPT-4o</p>
+  </Card>
+
+  <Card title="Claude 3.7 Sonnet Reasoning (Anthropic)" icon="brain">
+    <p><strong>Description:</strong> Latest version of Claude Sonnet series that allows for you to work through difficult problems using careful, step-by-step reasoning.</p>
+    <p><strong>➕ Strengths:</strong> Exceptional step by step reasoning capabilities. Stronger at math and coding. Very good at explaining thought process</p>
+    <p><strong>➖ Trade Offs:</strong> Slower response times. Not as optimized for creative tasks</p>
+  </Card>
+
+  <Card title="Gemini 2 Flash (Google)" icon="bolt">
+    <p><strong>Description:</strong> General purpose model optimized for fast response times.</p>
+    <p><strong>➕ Strengths:</strong> Extremely fast response times. Good for simple instruction following and high volume tasks</p>
+    <p><strong>➖ Trade Offs:</strong> Not ideal for multi-step problem solving or instruction following. May miss nuance in instructions</p>
+  </Card>
+
+  <Card title="LearnLM (Google)" icon="graduation-cap">
+    <p><strong>Description:</strong> Experimental: Incorporates educational research to enhance teaching and learning experiences. Specialized to work for educational contexts</p>
+    <p><strong>➕ Strengths:</strong> Explains educational concepts effectively.</p>
+    <p><strong>➖ Trade Offs:</strong> In experiment mode, and has not been tested as much. Not optimized for general purpose speed. Struggles with contexts outside of education</p>
+  </Card>
+
+  <Card title="GPT-4o (OpenAI)" icon="circle-o">
+    <p><strong>Description:</strong> Advanced model designed for complex, multi-step tasks.</p>
+    <p><strong>➕ Strengths:</strong> Well balanced and strong at following instructions and speed. Versatile and effective in many domains.</p>
+    <p><strong>➖ Trade Offs:</strong> Falls in the middle in terms of response time. Sometimes overcomplicates simple tasks</p>
+  </Card>
+
+  <Card title="Llama 3.3 (Meta)" icon="meta">
+    <p><strong>Description:</strong> Advanced model for reasoning, math, and general knowledge.</p>
+    <p><strong>➕ Strengths:</strong> Strong general well balanced use cases. Performs well in math. Effective at following clear instructions.</p>
+    <p><strong>➖ Trade Offs:</strong> Slower than smaller models. Does not follow instructions as well as Claude/GPT models.</p>
+  </Card>
+
+  <Card title="O1 Reasoning (OpenAI)" icon="brain-circuit">
+    <p><strong>Description:</strong> Advanced model with multistep reasoning and complex problem-solving.</p>
+    <p><strong>➕ Strengths:</strong> Excellent multi step reasoning capabilities. Strong at following detailed analytical instructions. High accuracy with complex tasks</p>
+    <p><strong>➖ Trade Offs:</strong> Noticeable slowdown versus other models. May be unnecessarily powerful for simple tasks. Not optimized for creative tasks.</p>
+  </Card>
+</CardGroup>
+
+## <Icon icon="wand-magic-sparkles" size="24" className="inline-block align-text-bottom" /> Tips for Selecting the Right Model
+
+Selecting can be tricky. That's why we encourage you to play and experiment as you build to find the model that is best fit for your context.
+
+### <Icon icon="scale-balanced" size="24" className="inline-block align-text-bottom" /> Selection Considerations
+
+<Accordion title="Ask yourself what is an ideal response time for your app?">
+  This will allow you to pick larger or smaller models that meet those needs
+</Accordion>
+
+<Accordion title="Identify what complexity level is your task?">
+  * For simple Q&A or content generation, lighter models may suffice
+  * For multi-step reasoning, choose reasoning-focused models
+</Accordion>
+
+<Accordion title="What is the level of accuracy you are requiring of your app?">
+  * Critical accuracy use cases like data analysis, or HR operations might require more powerful models even if they're slower.
+  * Use cases that require creativity or open ended responses might not call for reasoning models and may work better with more well balanced models.
+</Accordion>
+
+### <Icon icon="medal" size="24" className="inline-block align-text-bottom" /> Best Practices
+
+<Accordion title="Try to match your model with your use case:">
+  * Creative applications – Choose models with creative strengths like Claude 3.5 Sonnet, 3.7 Sonnet, GPT 4o
+  * Problem-solving tools – Select reasoning-focused models like Claude 3.7 Sonnet (Reasoning) or o1
+  * Educational explanation – Consider specialized models like Llama 3.3 or those with strong explanatory capabilities
+  * High-volume applications – Balance quality with speed using models like Claude 3.5/3.7 Sonnet or Gemini 2 Flash
+</Accordion>
+
+<Accordion title="Test out multiple models for apps that you are building:">
+  * Changing a model may change performance of an app in Playlab
+  * Test multiple models before finalizing – Performance can vary significantly on your specific tasks
+  * Implement A/B testing as you're building and testing to continually evaluate model performance
+</Accordion>
+
+<Accordion title="Additional best practices:">
+  * We recommend that you remix apps as you're experimenting to not impact the original app
+  * You can review activity to see how multiple models handle similar tasks
+  * If you're building a suite of apps we recommend you use faster models for simple queries and reserve powerful models for complex tasks
+</Accordion>
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> FAQ
+
+<Accordion title="Will switching models affect my existing app?">
+  Yes, changing the LLM model can impact the performance of your app. Different models have different strengths and trade-offs, so it's important to test your app with the new model before finalizing the change.
+</Accordion>
+
+<Accordion title="How do I know which model is best for my specific use case?">
+  We recommend experimenting with different models for your specific use case. Consider factors like response time requirements, complexity level of tasks, and accuracy needs. You can implement A/B testing to evaluate model performance.
+</Accordion>
+
+<Accordion title="Can I use different models for different parts of my app suite?">
+  Yes! We recommend using faster models for simple queries and reserving more powerful models for complex tasks if you're building a suite of apps.
+</Accordion>
+
+## <Icon icon="comment-dots" size="24" className="inline-block align-text-bottom" /> We Want Your Feedback!
 
 <Info>
-  <ul>
-    <li>This feature is not toggled on by default. You have to toggle it yourself.</li>
-    <li>Users cannot toggle this feature off.</li>
-    <li>Even if you toggle the feature, you should still test your app for edge cases to see if it works.</li>
-    <li>There might be ways that users can still get around it, but it's way more difficult.</li>
-    <li>When you change the setting, you need to re-publish your app for the changes to take effect in the published app.</li>
-    <li>You do <strong>NOT</strong> need to do this when only testing it yourself in the builder.</li>
-  </ul>
-</Info>
-
-## FAQ <Icon name="frequently-asked-questions" />
-
-<Accordion title="Will this completely prevent AI from generating answers?">
-  While the feature makes it significantly more difficult for users to get direct answers, you should still test your app thoroughly for edge cases.
-</Accordion>
-
-<Accordion title="Do I need to add special prompting instructions?">
-  No, the feature works without explicit prompting instructions to avoid providing final writing generation.
-</Accordion>
-
-<Accordion title="How do I know if it's working correctly?">
-  You can check whether the setting was enabled while testing your app in the app builder, as well as when reviewing Activity.
-</Accordion>
-
-## We Want Your Feedback! <Icon name="bullhorn" />
-
-<Info>
-  Have you tried using the Avoid Answer Generation feature? We'd love to hear about your experience!
+  Have you tried building with different LLM models? We'd love to hear about your experience!
 
   Join the discussion in our [Playlab Slack Channel](https://join.slack.com/t/playlabcommunity/shared_invite/zt-31mhwj7nl-49e1Mw5fYpyHJGOFyDIFtA).
 
@@ -84,4 +162,4 @@ Here is a sample writing feedback app where the builder does not want the app to
 </div>
 
 ---
-Last updated: 3/17/2025
+Last updated: 3/16/2025
