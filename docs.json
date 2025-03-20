@@ -31,26 +31,26 @@
             "group": "Get Started",
             "pages": [
               "introduction",
-              "get started/signing-up",
-              "get started/creating a Playlab App"
+              "getstarted/Signing Up",
+              "getstarted/Creating a Playlab App"
             ]
           },
           {
             "group": "Features",
             "pages": [
-              "essentials/richer Starter Inputs",
-              "essentials/selecting an LLM",
-              "essentials/avoid Answer Generation",
-              "essentials/Organizing Workspaces",
-              "essentials/Global References",
-              "essentials/Building with Illustrative Mathematics"
+              "features/Richer Starter Inputs",
+              "features/Selecting an LLM",
+              "features/Avoid Answer Generation",
+              "features/Organizing Workspaces",
+              "features/Global References",
+              "features/Building with Illustrative Mathematics"
             ]
           },
           {
             "group": "About",
             "pages": [
-              "about",
-              "contact us"
+              "about/About Playlab",
+              "about/Contact Us"
             ]
           }
         ]
