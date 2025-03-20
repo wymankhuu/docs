@@ -30,7 +30,7 @@
           {
             "group": "Get Started",
             "pages": [
-              "introduction",
+              "getstarted/Getting Started",
               "getstarted/Signing Up",
               "getstarted/Creating a Playlab App"
             ]
