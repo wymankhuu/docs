@@ -1,97 +1,165 @@
 ---
-title: Welcome!
-description: "Welcome to the Playlab Learning Hub where you can learn about all things Playlab"
+title: 'Selecting an LLM'
+description: 'Choose the perfect AI model for your Playlab application'
 ---
-![PlayLab Hero Image](images/playlab%20hero.jpeg)
 
-<Note>
-We're thrilled to have you join the Playlab community. We hope that you continue to learning with us as you become a critical consumer and creator of AI for your context.
-</Note>
+## <Icon icon="cube" size="24" className="inline-block align-text-bottom" /> What is this feature?
 
-## <Icon icon="compass" size="24" className="inline-block align-text-bottom" /> Overview
+You can now build on top of even more LLMs in Playlab! There are now 8 available AI models for you to build your Playlab apps on top of. We will try our best to always provide the latest models for you to build on top of.
 
-Playlab Learning Hub is your one stop shop for a self-guided learning exploration. Whether you're a beginner or an expert, we hope that you can find what you're looking for to support you in your Playlab journey.
+<Warning>
+  Changing the LLM may impact the performance of your app.
+</Warning>
 
-<Divider />
+## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Rationale for the feature
 
-## <Icon icon="heart" size="24" className="inline-block align-text-bottom" /> Values
+This feature allows Playlab users to experiment with and leverage the unique strengths of various AI models from different providers all within Playlab.
 
-We're at the start of the AI era. We believe an open-source, community-driven approach is key to harnessing AI in education. We're a community of learners, supporting each other in creating, experimenting, and using AI.
+As you build, you might find that certain models perform better at different tasks. This will allow Playlab users to select the model that fits their needs better. The more available models, the more likely you are to find one that meets your needs. We believe that Playlabbers should have access to frontier models as we build in community.
 
-<CardGroup cols={2}>
-  <Card
-    title="Learn"
-    icon="book-open"
-  >
-    Understand what AI means for you. Build AI literacy by starting with hands-on workshops, rooted in your unique issues and context.
+## <Icon icon="key" size="24" className="inline-block align-text-bottom" /> How do I access these models?
+
+<Steps>
+  <Step title="Click the LLM selector">
+    On the top left click the LLM. (By default it will say GPT-4o)
+    
+    <img height="500" src="/images/Selectinganllm.gif" />
+  </Step>
+  <Step title="Choose your model">
+    From the menu, select which LLM you want to build on top of.
+    
+    <img height="200" src="/images/Selectinganllm.jpeg" />
+  </Step>
+</Steps>
+
+## <Icon icon="list-check" size="24" className="inline-block align-text-bottom" /> Which models should I use?
+
+Now that you know how to select models, here are some strengths and tradeoffs of each:
+
+<CardGroup cols={1}>
+  <Card title="Claude 3 Opus (Anthropic)" icon="sparkles">
+    <p><strong>Description:</strong> Advanced model which can handle complex analysis, longer tasks with many steps, and higher-order math and coding.</p>
+    <p><strong>➕ Strengths:</strong> Accuracy and strong at following detailed step by step instructions</p>
+    <p><strong>➖ Trade Offs:</strong> Slower and may be overkill for simple, straightforward tasks</p>
   </Card>
-  <Card
-    title="Create"
-    icon="wrench"
-  >
-    Your context matters. A lot. Create AI apps that respond to your challenges. And that bring your ideas to life.
+
+  <Card title="Claude 3.5 Sonnet (Anthropic)" icon="music">
+    <p><strong>Description:</strong> General purpose model balanced between speed and accuracy with an emphasis on expression and creativity.</p>
+    <p><strong>➕ Strengths:</strong> Good balance between speed and accuracy. Very creative and versatile.</p>
+    <p><strong>➖ Trade Offs:</strong> Less powerful than new Claude 3.7 models. Struggles with some complex, multi-step problems</p>
   </Card>
-  <Card
-    title="Experiment"
-    icon="flask"
-  >
-    Responsible AI requires experimentation. We help you refine, evaluate, and responsibly use your AI tools.
+
+  <Card title="Claude 3.7 Sonnet (Anthropic)" icon="star">
+    <p><strong>Description:</strong> Latest version of Claude Sonnet series, upgrade from 3.5</p>
+    <p><strong>➕ Strengths:</strong> Improved accuracy and instruction following capabilities. Good speed to performance ratio.</p>
+    <p><strong>➖ Trade Offs:</strong> Not optimized for reasoning tasks. Not as fast as smaller models like Flash or GPT-4o</p>
   </Card>
-  <Card
-    title="Share"
-    icon="users"
-  >
-    As you learn, share your work and learn from others. Together, we can discover how to use AI to advance education for all.
+
+  <Card title="Claude 3.7 Sonnet Reasoning (Anthropic)" icon="brain">
+    <p><strong>Description:</strong> Latest version of Claude Sonnet series that allows for you to work through difficult problems using careful, step-by-step reasoning.</p>
+    <p><strong>➕ Strengths:</strong> Exceptional step by step reasoning capabilities. Stronger at math and coding. Very good at explaining thought process</p>
+    <p><strong>➖ Trade Offs:</strong> Slower response times. Not as optimized for creative tasks</p>
+  </Card>
+
+  <Card title="Gemini 2 Flash (Google)" icon="bolt">
+    <p><strong>Description:</strong> General purpose model optimized for fast response times.</p>
+    <p><strong>➕ Strengths:</strong> Extremely fast response times. Good for simple instruction following and high volume tasks</p>
+    <p><strong>➖ Trade Offs:</strong> Not ideal for multi-step problem solving or instruction following. May miss nuance in instructions</p>
+  </Card>
+
+  <Card title="LearnLM (Google)" icon="graduation-cap">
+    <p><strong>Description:</strong> Experimental: Incorporates educational research to enhance teaching and learning experiences. Specialized to work for educational contexts</p>
+    <p><strong>➕ Strengths:</strong> Explains educational concepts effectively.</p>
+    <p><strong>➖ Trade Offs:</strong> In experiment mode, and has not been tested as much. Not optimized for general purpose speed. Struggles with contexts outside of education</p>
+  </Card>
+
+  <Card title="GPT-4o (OpenAI)" icon="circle-o">
+    <p><strong>Description:</strong> Advanced model designed for complex, multi-step tasks.</p>
+    <p><strong>➕ Strengths:</strong> Well balanced and strong at following instructions and speed. Versatile and effective in many domains.</p>
+    <p><strong>➖ Trade Offs:</strong> Falls in the middle in terms of response time. Sometimes overcomplicates simple tasks</p>
+  </Card>
+
+  <Card title="Llama 3.3 (Meta)" icon="meta">
+    <p><strong>Description:</strong> Advanced model for reasoning, math, and general knowledge.</p>
+    <p><strong>➕ Strengths:</strong> Strong general well balanced use cases. Performs well in math. Effective at following clear instructions.</p>
+    <p><strong>➖ Trade Offs:</strong> Slower than smaller models. Does not follow instructions as well as Claude/GPT models.</p>
+  </Card>
+
+  <Card title="O1 Reasoning (OpenAI)" icon="brain-circuit">
+    <p><strong>Description:</strong> Advanced model with multistep reasoning and complex problem-solving.</p>
+    <p><strong>➕ Strengths:</strong> Excellent multi step reasoning capabilities. Strong at following detailed analytical instructions. High accuracy with complex tasks</p>
+    <p><strong>➖ Trade Offs:</strong> Noticeable slowdown versus other models. May be unnecessarily powerful for simple tasks. Not optimized for creative tasks.</p>
   </Card>
 </CardGroup>
 
-<Divider />
+## <Icon icon="wand-magic-sparkles" size="24" className="inline-block align-text-bottom" /> Tips for Selecting the Right Model
 
-## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Big Ideas
+Selecting can be tricky. That's why we encourage you to play and experiment as you build to find the model that is best fit for your context.
 
-<Accordion title="AI isn't magic... it's math" icon="circle-info" defaultclose>
-  Understanding the fundamental principles behind AI demystifies it and empowers you to use it effectively.
-  
-  Behind every AI system are algorithms and data that you can learn to understand!
+### <Icon icon="scale-balanced" size="24" className="inline-block align-text-bottom" /> Selection Considerations
+
+<Accordion title="Ask yourself what is an ideal response time for your app?">
+  This will allow you to pick larger or smaller models that meet those needs
 </Accordion>
 
-<Accordion title="AI has both great potential and great risks" icon="triangle-exclamation">
-  We explore AI's possibilities while critically examining its limitations and ethical implications.
-  
-  Every AI tool comes with tradeoffs. Learn to identify both opportunities and challenges!
+<Accordion title="Identify what complexity level is your task?">
+  * For simple Q&A or content generation, lighter models may suffice
+  * For multi-step reasoning, choose reasoning-focused models
 </Accordion>
 
-<Accordion title="To learn about AI, you have to play with AI in community" icon="circle-check">
-  Hands-on experimentation and collaborative learning create deeper understanding than passive consumption.
-  
-  Your questions and insights help everyone learn better. Don't be afraid to experiment!
+<Accordion title="What is the level of accuracy you are requiring of your app?">
+  * Critical accuracy use cases like data analysis, or HR operations might require more powerful models even if they're slower.
+  * Use cases that require creativity or open ended responses might not call for reasoning models and may work better with more well balanced models.
 </Accordion>
 
-<Accordion title="You're already an AI person" icon="note-sticky">
-  Everyone interacts with AI daily, and everyone deserves the right to learn how to shape how AI can affect our lives.
-  
-  You will build your AI intuition over time as you become a critical consumer and creator of AI.
+### <Icon icon="medal" size="24" className="inline-block align-text-bottom" /> Best Practices
+
+<Accordion title="Try to match your model with your use case:">
+  * Creative applications – Choose models with creative strengths like Claude 3.5 Sonnet, 3.7 Sonnet, GPT 4o
+  * Problem-solving tools – Select reasoning-focused models like Claude 3.7 Sonnet (Reasoning) or o1
+  * Educational explanation – Consider specialized models like Llama 3.3 or those with strong explanatory capabilities
+  * High-volume applications – Balance quality with speed using models like Claude 3.5/3.7 Sonnet or Gemini 2 Flash
 </Accordion>
 
-<Divider />
+<Accordion title="Test out multiple models for apps that you are building:">
+  * Changing a model may change performance of an app in Playlab
+  * Test multiple models before finalizing – Performance can vary significantly on your specific tasks
+  * Implement A/B testing as you're building and testing to continually evaluate model performance
+</Accordion>
 
-<CardGroup cols={2}>
-  <Card
-    title="About Playlab"
-    icon="circle-info"
-    href="/about/About Playlab.mdx"
-  >
-    Learn more about Playlab's mission and approach
-  </Card>
-  <Card
-    title="Getting Started"
-    icon="rocket"
-    href="/Getting Started"
-  >
-    Begin your AI learning journey with Playlab
-  </Card>
-</CardGroup>
+<Accordion title="Additional best practices:">
+  * We recommend that you remix apps as you're experimenting to not impact the original app
+  * You can review activity to see how multiple models handle similar tasks
+  * If you're building a suite of apps we recommend you use faster models for simple queries and reserve powerful models for complex tasks
+</Accordion>
 
-*Copyright © 2025 Playlab*
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> FAQ
 
-For support, please email us at support@playlab.ai
+<Accordion title="Will switching models affect my existing app?">
+  Yes, changing the LLM model can impact the performance of your app. Different models have different strengths and trade-offs, so it's important to test your app with the new model before finalizing the change.
+</Accordion>
+
+<Accordion title="How do I know which model is best for my specific use case?">
+  We recommend experimenting with different models for your specific use case. Consider factors like response time requirements, complexity level of tasks, and accuracy needs. You can implement A/B testing to evaluate model performance.
+</Accordion>
+
+<Accordion title="Can I use different models for different parts of my app suite?">
+  Yes! We recommend using faster models for simple queries and reserving more powerful models for complex tasks if you're building a suite of apps.
+</Accordion>
+
+## <Icon icon="comment-dots" size="24" className="inline-block align-text-bottom" /> We Want Your Feedback!
+
+<Info>
+  Have you tried building with different LLM models? We'd love to hear about your experience!
+
+  Join the discussion in our [Playlab Slack Channel](https://join.slack.com/t/playlabcommunity/shared_invite/zt-31mhwj7nl-49e1Mw5fYpyHJGOFyDIFtA).
+
+  Contact us at [support@playlab.ai](mailto:support@playlab.ai)
+</Info>
+
+<div className="mt-8">
+  <Button href="../index.md">Return to Home Page</Button>
+</div>
+
+---
+Last updated: 3/16/2025
