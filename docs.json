@@ -1,11 +1,25 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Playlab Learning Hub",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#4F46E5",
+    "light": "#818CF8",
+    "dark": "#3730A3"
+  },
+  "typography": {
+    "headings": {
+      "color": {
+        "light": "#4F46E5",
+        "dark": "#FFFFFF"
+      }
+    },
+    "text": {
+      "color": {
+        "light": "#000000",
+        "dark": "#FFFFFF"
+      }
+    }
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -17,19 +31,26 @@
             "group": "Get Started",
             "pages": [
               "introduction",
-              "quickstart",
-              "development"
+              "get started/signing-up",
+              "get started/creating a Playlab App"
             ]
           },
           {
-            "group": "Essentials",
+            "group": "Features",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+              "essentials/richer Starter Inputs",
+              "essentials/selecting an LLM",
+              "essentials/avoid Answer Generation",
+              "essentials/Organizing Workspaces",
+              "essentials/Global References",
+              "essentials/Building with Illustrative Mathematics"
+            ]
+          },
+          {
+            "group": "About",
+            "pages": [
+              "about",
+              "contact us"
             ]
           }
         ]
@@ -54,26 +75,7 @@
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
@@ -94,9 +96,8 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "slack": "https://playlabcommunity.slack.com",
+      "linkedin": "https://www.linkedin.com/company/playlab-ai/"
     }
   }
 }
