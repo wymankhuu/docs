@@ -81,7 +81,8 @@
   },
   "logo": {
     "light": "/logo/LightMode_Full.svg",
-    "dark": "/logo/DarkMode_Full.svg"
+    "dark": "/logo/DarkMode_Full.svg",
+    "href": "https://www.playlab.ai"
   },
   "navbar": {
     "links": [
