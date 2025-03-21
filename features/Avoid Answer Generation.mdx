@@ -1,117 +1,78 @@
 ---
-title: 'Organizing Workspaces Guide'
-description: 'Categorize your apps by development status to better organize your Playlab workspaces'
+title: 'Avoid Answer Generation Guide'
+description: 'Prevent AI from completing work directly for users'
 ---
 
 ## <Icon icon="cube" size="24" className="inline-block align-text-bottom" /> What is this feature?
 
-Help organizations better organize and distinguish between apps in their Playlab workspaces based on development status. This feature allows you to categorize your apps by different status designations to clearly indicate their stage in the development lifecycle.
+This is a toggle in settings that Playlab builders can turn on to prevent AI from completing work directly for the user.
 
 <Warning>
-  Only administrators, workspace owners, and app creators can designate app status.
+  Once enabled, users cannot toggle this feature off. Only creators can decide to turn it on or off.
 </Warning>
 
 ## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Rationale for the feature
 
-Users looking at a workspace full of apps don't have a clear idea of which apps are complete and ready to be used and which are half baked or still in progress. This feature provides visual cues and filtering capabilities to help teams better understand the status of each app in their workspace.
+There are times when providing answers or direct outputs is appropriate, but there are often times when the builder does not want the user to have direct access to the final answer or completed output. In the cases where you don't want the answer generated, you can toggle the Avoid Answer Generation setting as you're building.
 
-As you build more apps, organization becomes essential. This feature helps you manage your growing collection of Playlab apps by clearly identifying their current development stage.
+## <Icon icon="thought-bubble" size="24" className="inline-block align-text-bottom" /> Where can I access the feature?
 
-## <Icon icon="key" size="24" className="inline-block align-text-bottom" /> Status Designations
-
-<img height="600" src="/images/organizingworkspaces.jpeg" className="border border-gray-300 rounded-md shadow-sm" />
-
-## <Icon icon="eye" size="24" className="inline-block align-text-bottom" /> Workspace Before & After
-
-### Workspace before organizing by status:
-
-My team and I have built a bunch of Playlab apps. It's getting hard to figure out the status of each of our apps.
-
-<img height="800" src="/images/organizingworkspaces1.jpeg" className="border border-gray-300 rounded-md shadow-sm" />
-
-* As a **user** I don't know which apps are ready to use and which ones are finished, just started, or need additional support.
-* As a **creator** I'm having a hard time keeping track of which apps I'm playing with and which apps I want to test.
-* As an **administrator** I'm having a hard time figuring out what to review, and what to share out with others as a finished product.
-
-### Workspace after organizing by status:
-
-My team and I have built a bunch of Playlab apps. We are going to use this feature to help sort our apps into appropriate statuses.
-
-<img height="800" src="/images/organizingworkspaces2.jpeg" className="border border-gray-300 rounded-md shadow-sm" />
-
-* As a **user** I now know that apps marked Ready to use are good to go.
-* As a **creator** I can clearly identify which apps are in Play status and which Experiment apps need to be tested more.
-* As an **administrator** I can see which apps are being experimented with, what people are playing with, and what apps I need to review.
-
-## <Icon icon="filter" size="24" className="inline-block align-text-bottom" /> Filtering by Status
-
-You can filter your apps by status type. This will allow you to streamline your workspace, organize your apps, and focus on a certain set of apps.
+<Frame>
+  <img src="/images/avoidanswers.gif" />
+</Frame>
 
 <Steps>
-  <Step title="Navigate to your workspace">
-    Go to your workspace where your apps are located
+  <Step title="You can toggle Avoid Answer Generation in the 'Settings' menu.">
+    <Frame>
+      <img src="/images/avoidanswers.jpeg" />
+    </Frame>
   </Step>
-  <Step title="Look for the filter option">
-    Find the filter option at the top of your apps list
-    
-    <img height="200" src="/images/filter1.jpeg" className="border border-gray-300 rounded-md shadow-sm" />
-  </Step>
-  <Step title="Select the status(es)">
-    Choose the status(es) you want to view
-  </Step>
-  <Step title="View filtered results">
-    Your workspace will update to show only apps with the selected status(es)
-    
-    <img height="300" src="/images/filter2.jpeg" className="border border-gray-300 rounded-md shadow-sm" />
+  <Step title="You can check whether the setting was enabled while testing your app in the app builder, as well as when reviewing Activity.">
+    <Frame>
+      <img src="/images/avoidanswerscheck.jpeg" />
+    </Frame>
   </Step>
 </Steps>
 
-## <Icon icon="zap" size="24" className="inline-block align-text-bottom" /> Tips for Using App Status
+## <Icon icon="eye" size="24" className="inline-block align-text-bottom" /> See it in action
 
-### Best Practices
+Here is a sample writing feedback app where the builder does not want the app to be able to do any writing for the student and only to provide feedback on what the student provides themselves and also offer guiding questions to improve writing. The other thing to note is that the sample app does not have explicit prompting instructions to avoid providing final writing generation.
 
-<Accordion title="Remember status defaults">
-  All apps default to **Playing** when first created or remixed.
-</Accordion>
+<Frame>
+  <img src="/images/avoidanswersdemo.gif" />
+</Frame>
 
-<Accordion title="Status is fluid">
-  Statuses are fluid. You can change the status of an app at any time as it progresses through development.
-</Accordion>
-
-<Accordion title="Legacy apps">
-  Apps made before this release will not have any accompanying status.
-</Accordion>
-
-<Accordion title="Publishing considerations">
-  Publish apps that you are **Experimenting** with or **In Review** with folks who you want to have access to. Don't publish to the public if it's not **Ready to use**.
-</Accordion>
-
-<Accordion title="Version management">
-  If you've tested many versions of the same app and ultimately decide one is the best one, you might want to **archive** versions you do not intend on using.
-</Accordion>
-
-## <Icon icon="help-circle" size="24" className="inline-block align-text-bottom" /> FAQ
-
-<Accordion title="Who can change an app's status?">
-  Only administrators, workspace owners, and app creators can designate app status.
-</Accordion>
-
-<Accordion title="How do I change an app's status?">
-  Navigate to the app settings and select the appropriate status from the dropdown menu.
-</Accordion>
-
-<Accordion title="Will changing status affect how my app functions?">
-  No, changing the status of an app is purely organizational and doesn't affect its functionality.
-</Accordion>
-
-<Accordion title="Can I have different status designations for the same app in different workspaces?">
-  No, an app's status is consistent across all workspaces where it appears.
-</Accordion>
-
-## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> We Want Your Feedback!
+## <Icon icon="wand-magic-sparkles" size="24" className="inline-block align-text-bottom" /> Tips for Using Avoid Answer Generation
 
 <Info>
-  Have you tried organizing your workspace with status designations? We'd love to hear about your experience!
+  <ul>
+    <li>This feature is not toggled on by default. You have to toggle it yourself.</li>
+    <li>Users cannot toggle this feature off.</li>
+    <li>Even if you toggle the feature, you should still test your app for edge cases to see if it works.</li>
+    <li>There might be ways that users can still get around it, but it's way more difficult.</li>
+    <li>When you change the setting, you need to re-publish your app for the changes to take effect in the published app.</li>
+    <li>You do <strong>NOT</strong> need to do this when only testing it yourself in the builder.</li>
+  </ul>
+</Info>
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> FAQ
+
+<Accordion title="Will this completely prevent AI from generating answers?">
+  While the feature makes it significantly more difficult for users to get direct answers, you should still test your app thoroughly for edge cases.
+</Accordion>
+
+<Accordion title="Do I need to add special prompting instructions?">
+  No, the feature works without explicit prompting instructions to avoid providing final writing generation.
+</Accordion>
+
+<Accordion title="How do I know if it's working correctly?">
+  You can check whether the setting was enabled while testing your app in the app builder, as well as when reviewing Activity.
+</Accordion>
+
+## <Icon icon="comment-dots" size="24" className="inline-block align-text-bottom" /> We Want Your Feedback!
+
+<Info>
+  Have you tried using the Avoid Answer Generation feature? We'd love to hear about your experience!
 
   Join the discussion in our [Playlab Slack Channel](https://join.slack.com/t/playlabcommunity/shared_invite/zt-31mhwj7nl-49e1Mw5fYpyHJGOFyDIFtA).
 
@@ -123,4 +84,4 @@ You can filter your apps by status type. This will allow you to streamline your 
 </div>
 
 ---
-Last updated: 3/16/2025
+Last updated: 3/17/2025
