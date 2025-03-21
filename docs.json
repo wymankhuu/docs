@@ -60,13 +60,13 @@
         "anchor": "FAQ",
         "icon": "square-question",
         "pages": [
-          "FAQ/FAQ",
-          "FAQ/Account Management",
-          "FAQ/Technical",
-          "FAQ/Professional Development",
-          "FAQ/Research",
-          "FAQ/Partnerships",
-          "FAQ/Privacy and Security"
+          "faq/FAQ",
+          "faq/Account Management",
+          "faq/Technical",
+          "faq/Professional Development",
+          "faq/Research",
+          "faq/Partnerships",
+          "faq/Privacy and Security"
         ]
       },
       {
@@ -118,13 +118,13 @@
             "dropdown": "FAQ",
             "icon": "square-question",
             "pages": [
-              "FAQ/FAQ",
-              "FAQ/Account Management",
-              "FAQ/Technical",
-              "FAQ/Professional Development",
-              "FAQ/Research",
-              "FAQ/Partnerships",
-              "FAQ/Privacy and Security"
+              "faq/FAQ",
+              "faq/Account Management",
+              "faq/Technical",
+              "faq/Professional Development",
+              "faq/Research",
+              "faq/Partnerships",
+              "faq/Privacy and Security"
             ]
           },
           {
