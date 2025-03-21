@@ -2,6 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
   "name": "Playlab Learning Hub",
+  "rootPage": "introduction",
   "colors": {
     "primary": "#4F46E5",
     "light": "#818CF8",
@@ -103,7 +104,7 @@
           },
           {
             "dropdown": "FAQ",
-            "icon": "circle-question",
+            "icon": "square-question",
             "pages": [
               "faq/General",
               "faq/Account Management",
