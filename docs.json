@@ -47,7 +47,7 @@
       },
       {
         "anchor": "FAQ",
-        "icon": "circle-question",
+        "icon": "square-question",
         "pages": [
           "faq/General",
           "faq/Account Management",
@@ -105,9 +105,9 @@
           },
           {
             "dropdown": "FAQ",
-            "icon": "circle-question",
+            "icon": "square-question",
             "pages": [
-              "faq/General",
+              "faq/FAQ",
               "faq/Account Management",
               "faq/Technical",
               "faq/Professional Development",
