@@ -2,7 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
   "name": "Playlab Learning Hub",
-  "rootPage": "/introduction",
+  "rootPage": "getstarted/Getting Started",
   "colors": {
     "primary": "#4F46E5",
     "light": "#818CF8",
