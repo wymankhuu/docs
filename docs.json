@@ -32,7 +32,15 @@
           "getstarted/Getting Started",
           "getstarted/Signing Up",
           "getstarted/Creating a Playlab App",
-          "getstarted/publishing"
+          "getstarted/publishing",
+          "getstarted/Changing Name and Description",
+          "getstarted/Adding References",
+          "getstarted/Adding Starter Inputs",
+          "getstarted/Using the Playlab Assistant",
+          "getstarted/Remixing",
+          "getstarted/Deleting",
+          "getstarted/Reviewing Activity",
+          "getstarted/Building Safely"
         ]
       },
       {
@@ -41,7 +49,11 @@
         "pages": [
           "features/Overview",
           "features/Richer Starter Inputs",
-          "features/Selecting an LLM"
+          "features/Selecting an LLM",
+          "features/Avoid Answer Generation",
+          "features/Organizing Workspaces",
+          "features/Global References",
+          "features/Building with Illustrative Mathematics"
         ]
       },
       {
