@@ -162,6 +162,10 @@
   "navbar": {
     "links": [
       {
+        "label": "Home",
+        "href": "/getstarted/Get Started"
+      },
+      {
         "label": "Support",
         "href": "mailto:support@playlab.ai"
       }
