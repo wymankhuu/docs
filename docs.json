@@ -29,6 +29,7 @@
         "anchor": "Getting Started",
         "icon": "play",
         "pages": [
+          "introduction",
           "getstarted/Getting Started",
           "getstarted/Signing Up",
           "getstarted/Creating a Playlab App",
