@@ -2,7 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Playlab Learning Hub",
-  "defaultPage": "introduction",
+  "defaultPage": "learn.playlab.ai",
   "colors": {
     "primary": "#4F46E5",
     "light": "#818CF8",
@@ -23,73 +23,70 @@
     }
   },
   "favicon": "/favicon.svg",
-  "navigation": [
-    "introduction",
-    {
-      "anchors": [
-        {
-          "anchor": "Getting Started",
-          "icon": "play",
-          "pages": [
-            "getstarted/Getting Started",
-            "getstarted/Signing Up",
-            "getstarted/Creating a Playlab App",
-            "getstarted/publishing",
-            "getstarted/Changing Name and Description",
-            "getstarted/Adding References",
-            "getstarted/Adding Starter Inputs",
-            "getstarted/Using the Playlab Assistant",
-            "getstarted/Remixing",
-            "getstarted/Deleting",
-            "getstarted/Reviewing Activity",
-            "getstarted/Building Safely"
-          ]
-        },
-        {
-          "anchor": "Features",
-          "icon": "puzzle",
-          "pages": [
-            "features/Overview",
-            "features/Richer Starter Inputs",
-            "features/Selecting an LLM",
-            "features/Avoid Answer Generation",
-            "features/Organizing Workspaces",
-            "features/Global References",
-            "features/Building with Illustrative Mathematics"
-          ]
-        },
-        {
-          "anchor": "Frequently Asked Questions",
-          "icon": "square-question",
-          "pages": [
-            "faq/FAQ",
-            "faq/General",
-            "faq/Account Management",
-            "faq/Technical",
-            "faq/Professional Development",
-            "faq/Research",
-            "faq/Partnerships",
-            "faq/Privacy and Security"
-          ]
-        },
-        {
-          "anchor": "About",
-          "icon": "circle-info",
-          "pages": [
-            "about/About Playlab",
-            "about/Contact Us"
-          ]
-        },
-        {
-          "anchor": "Blog",
-          "icon": "newspaper",
-          "pages": [
-            "blog/blogintro"
-          ]
-        }
-      ]
-    }
-  ],
+  "navigation": {
+    "anchors": [
+      {
+        "anchor": "Getting Started",
+        "icon": "play",
+        "pages": [
+          "getstarted/Getting Started",
+          "getstarted/Signing Up",
+          "getstarted/Creating a Playlab App",
+          "getstarted/publishing",
+          "getstarted/Changing Name and Description",
+          "getstarted/Adding References",
+          "getstarted/Adding Starter Inputs",
+          "getstarted/Using the Playlab Assistant",
+          "getstarted/Remixing",
+          "getstarted/Deleting",
+          "getstarted/Reviewing Activity",
+          "getstarted/Building Safely"
+        ]
+      },
+      {
+        "anchor": "Features",
+        "icon": "puzzle",
+        "pages": [
+          "features/Overview",
+          "features/Richer Starter Inputs",
+          "features/Selecting an LLM",
+          "features/Avoid Answer Generation",
+          "features/Organizing Workspaces",
+          "features/Global References",
+          "features/Building with Illustrative Mathematics"
+        ]
+      },
+      {
+        "anchor": "Frequently Asked Questions",
+        "icon": "square-question",
+        "pages": [
+          "faq/FAQ",
+          "faq/General",
+          "faq/Account Management",
+          "faq/Technical",
+          "faq/Professional Development",
+          "faq/Research",
+          "faq/Partnerships",
+          "faq/Privacy and Security"
+        ]
+      },
+      {
+        "anchor": "About",
+        "icon": "circle-info",
+        "pages": [
+          "about/About Playlab",
+          "about/Contact Us"
+        ]
+      },
+      {
+        "anchor": "Blog",
+        "icon": "newspaper",
+        "pages": [
+          "blog/blogintro"
+        ]
+      }
+    ]
+  },
   "logo": {
     "light": "/logo/LightMode_Full.svg",
     "dark": "/logo/DarkMode_Full.svg",
@@ -99,7 +96,7 @@
     "links": [
       {
         "label": "Home",
-        "href": "https://learn.playlab.ai/"
+        "href": "https://playlabai.mintlify.app/"
       },
       {
         "label": "Support",
