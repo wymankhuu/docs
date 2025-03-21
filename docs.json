@@ -3,6 +3,7 @@
   "theme": "maple",
   "name": "Playlab Learning Hub",
   "rootPage": "getstarted/Getting Started",
+  "fileExtensions": [".md", ".mdx"],
   "colors": {
     "primary": "#4F46E5",
     "light": "#818CF8",
@@ -163,7 +164,7 @@
     "links": [
       {
         "label": "Home",
-        "href": "/getstarted/Get Started"
+        "href": "/getstarted/Getting Started"
       },
       {
         "label": "Support",
