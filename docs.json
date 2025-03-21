@@ -48,13 +48,12 @@
         "anchor": "FAQ",
         "icon": "square-question",
         "pages": [
-          "faq/General",
-          "faq/Account Management",
-          "faq/Technical",
-          "faq/Professional Development",
-          "faq/Research",
-          "faq/Partnerships",
-          "faq/Privacy and Security"
+          "FAQ/General",
+          "FAQ/Account Management",
+          "FAQ/Technical",
+          "FAQ/Research",
+          "FAQ/Partnerships",
+          "FAQ/Privacy and Security"
         ]
       },
       {
