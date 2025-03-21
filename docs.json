@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "maple",
   "name": "Playlab Learning Hub",
   "colors": {
     "primary": "#4F46E5",
