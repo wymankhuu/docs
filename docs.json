@@ -57,7 +57,14 @@
         ]
       },
       {
-        "anchor": "FAQ",
+        "anchor": "Blog",
+        "icon": "newspaper",
+        "pages": [
+          "blog/blogintro"
+        ]
+      },
+      {
+        "anchor": "Help",
         "icon": "square-question",
         "pages": [
           "faq/FAQ",
@@ -77,13 +84,6 @@
           "about/About Playlab",
           "about/Contact Us"
         ]
-      },
-      {
-        "anchor": "Blog",
-        "icon": "newspaper",
-        "pages": [ 
-        "blog/blogintro"
-      ]
       }
     ]
   },
