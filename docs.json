@@ -2,7 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Playlab Learning Hub",
-  "rootPage": "introduction",
+  "defaultPage": "introduction",
   "colors": {
     "primary": "#4F46E5",
     "light": "#818CF8",
@@ -57,14 +57,7 @@
         ]
       },
       {
-        "anchor": "Blog",
-        "icon": "newspaper",
-        "pages": [
-          "blog/blogintro"
-        ]
-      },
-      {
-        "anchor": "Help",
+        "anchor": "Frequently Asked Questions",
         "icon": "square-question",
         "pages": [
           "faq/FAQ",
@@ -83,6 +76,13 @@
         "pages": [
           "about/About Playlab",
           "about/Contact Us"
+        ]
+      },
+      {
+        "anchor": "Blog",
+        "icon": "newspaper",
+        "pages": [
+          "blog/blogintro"
         ]
       }
     ]
