@@ -22,13 +22,68 @@
     }
   },
   "favicon": "/favicon.svg",
+  "anchors": [
+    {
+      "name": "Documentation",
+      "icon": "book-open",
+      "url": "quickstart"
+    },
+    {
+      "name": "API References",
+      "icon": "square-terminal",
+      "url": "api-reference/get"
+    },
+    {
+      "name": "Guides",
+      "icon": "compass",
+      "url": "introduction"
+    },
+    {
+      "name": "Blog",
+      "icon": "newspaper",
+      "url": "blog/blogintro"
+    }
+  ],
   "navigation": {
+    "dropdowns": [
+      {
+        "dropdown": "Documentation",
+        "icon": "book-open",
+        "pages": [
+          "quickstart",
+          "development",
+          "navigation"
+        ]
+      },
+      {
+        "dropdown": "API References",
+        "icon": "square-terminal",
+        "pages": [
+          {
+            "group": "Endpoints",
+            "icon": "code",
+            "pages": [
+              "api-reference/get",
+              "api-reference/post",
+              "api-reference/delete"
+            ]
+          }
+        ]
+      },
+      {
+        "dropdown": "Blog",
+        "icon": "newspaper",
+        "href": "https://external-link.com/blog"
+      }
+    ],
     "tabs": [
       {
         "tab": "Guides",
+        "icon": "compass",
         "groups": [
           {
             "group": "Get Started",
+            "icon": "rocket",
             "pages": [
               "introduction",
               "getstarted/Getting Started",
@@ -47,6 +102,7 @@
           },
           {
             "group": "Features",
+            "icon": "puzzle",
             "pages": [
               "features/Overview",
               "features/Richer Starter Inputs",
@@ -59,6 +115,7 @@
           },
           {
             "group": "About",
+            "icon": "info-circle",
             "pages": [
               "about/About Playlab",
               "about/FAQ",
@@ -68,21 +125,14 @@
         ]
       },
       {
-        "tab": "API Reference",
+        "tab": "Blog",
+        "icon": "newspaper",
         "groups": [
           {
-            "group": "API Documentation",
+            "group": "blog",
+            "icon": "pencil",
             "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint Examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "blog/blogintro"
             ]
           }
         ]
@@ -100,12 +150,7 @@
         "label": "Support",
         "href": "mailto:support@playlab.ai"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
+    ]
   },
   "footer": {
     "socials": {
