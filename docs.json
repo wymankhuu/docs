@@ -61,6 +61,7 @@
         "icon": "square-question",
         "pages": [
           "faq/FAQ",
+          "faq/General",
           "faq/Account Management",
           "faq/Technical",
           "faq/Professional Development",
@@ -119,6 +120,7 @@
             "icon": "square-question",
             "pages": [
               "faq/FAQ",
+              "faq/General",
               "faq/Account Management",
               "faq/Technical",
               "faq/Professional Development",
