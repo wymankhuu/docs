@@ -1,8 +1,8 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "maple",
   "name": "Playlab Learning Hub",
-  "defaultPage": "introduction",
+  "rootPage": "getstarted/Getting Started",
   "colors": {
     "primary": "#4F46E5",
     "light": "#818CF8",
@@ -24,9 +24,6 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "pages": [
-      "introduction"
-    ],
     "anchors": [
       {
         "anchor": "Getting Started",
@@ -60,7 +57,7 @@
         ]
       },
       {
-        "anchor": "Frequently Asked Questions",
+        "anchor": "FAQ",
         "icon": "square-question",
         "pages": [
           "faq/FAQ",
@@ -80,12 +77,79 @@
           "about/About Playlab",
           "about/Contact Us"
         ]
+      }
+    ],
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "icon": "book-open",
+        "dropdowns": [
+          {
+            "dropdown": "Getting Started",
+            "icon": "play",
+            "pages": [
+              "getstarted/Getting Started",
+              "getstarted/Signing Up",
+              "getstarted/Creating a Playlab App",
+              "getstarted/publishing",
+              "getstarted/Changing Name and Description",
+              "getstarted/Adding References",
+              "getstarted/Adding Starter Inputs",
+              "getstarted/Using the Playlab Assistant",
+              "getstarted/Remixing",
+              "getstarted/Deleting",
+              "getstarted/Reviewing Activity",
+              "getstarted/Building Safely"
+            ]
+          },
+          {
+            "dropdown": "Features",
+            "icon": "puzzle",
+            "pages": [
+              "features/Overview",
+              "features/Richer Starter Inputs",
+              "features/Selecting an LLM",
+              "features/Avoid Answer Generation",
+              "features/Organizing Workspaces",
+              "features/Global References",
+              "features/Building with Illustrative Mathematics"
+            ]
+          },
+          {
+            "dropdown": "FAQ",
+            "icon": "square-question",
+            "pages": [
+              "faq/FAQ",
+              "faq/General",
+              "faq/Account Management",
+              "faq/Technical",
+              "faq/Professional Development",
+              "faq/Research",
+              "faq/Partnerships",
+              "faq/Privacy and Security"
+            ]
+          },
+          {
+            "dropdown": "About",
+            "icon": "circle-info",
+            "pages": [
+              "about/About Playlab",
+              "about/Contact Us"
+            ]
+          }
+        ]
       },
       {
-        "anchor": "Blog",
+        "tab": "Blog",
         "icon": "newspaper",
-        "pages": [
-          "blog/blogintro"
+        "dropdowns": [
+          {
+            "dropdown": "Blog Posts",
+            "icon": "newspaper",
+            "pages": [
+              "blog/blogintro"
+            ]
+          }
         ]
       }
     ]
@@ -97,10 +161,6 @@
   },
   "navbar": {
     "links": [
-      {
-        "label": "Home",
-        "href": "https://playlabai.mintlify.app/"
-      },
       {
         "label": "Support",
         "href": "mailto:support@playlab.ai"
