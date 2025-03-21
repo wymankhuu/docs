@@ -2,7 +2,8 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
   "name": "Playlab Learning Hub",
-  "rootPage": "introduction",
+  "openapi": "/openapi.yml",
+  "rootPage": "/introduction",
   "colors": {
     "primary": "#4F46E5",
     "light": "#818CF8",
@@ -29,7 +30,6 @@
         "anchor": "Getting Started",
         "icon": "play",
         "pages": [
-          "introduction",
           "getstarted/Getting Started",
           "getstarted/Signing Up",
           "getstarted/Creating a Playlab App",
@@ -47,7 +47,7 @@
       },
       {
         "anchor": "FAQ",
-        "icon": "square-question",
+        "icon": "circle-question",
         "pages": [
           "faq/General",
           "faq/Account Management",
@@ -105,7 +105,7 @@
           },
           {
             "dropdown": "FAQ",
-            "icon": "square-question",
+            "icon": "circle-question",
             "pages": [
               "faq/General",
               "faq/Account Management",
