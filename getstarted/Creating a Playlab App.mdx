@@ -1,0 +1,187 @@
+---
+title: 'Creating Your First Playlab App'
+description: 'Learn how to build, test, and share your first Playlab app'
+---
+Creating your first Playlab app is an exciting step toward harnessing the power of AI in your work. This guide will walk you through the process of building, testing, and sharing your first app.
+
+<Callout type="info">
+  **Plan Before You Build**
+  
+  Take a few minutes to think about what problem you want your app to solve. Having a clear purpose will make the app creation process smoother and more effective.
+</Callout>
+
+## <Icon icon="video" size="24" className="inline-block align-text-bottom" /> Watch How To Create A Playlab App
+
+Watch a video demonstration of how to sign into Playlab for the first time. [Need updated video]
+
+<Frame>
+  <iframe 
+    src="https://www.loom.com/embed/d2de485fd555403ba59650ae4fb3ea5f?sid=be6fd7c5-3172-4110-8128-01cedc0ba6a7" 
+    frameborder="0" 
+    webkitallowfullscreen 
+    mozallowfullscreen 
+    allowfullscreen 
+    style={{ width: "100%", height: "400px" }}
+  ></iframe>
+  <figcaption>How to create a Playlab app</figcaption>
+</Frame>
+
+## <Icon icon="flask-outline" size="24" className="inline-block align-text-bottom" /> The App Creation Process
+
+<Steps>
+  <Step title="Create a New Playlab App">
+    **Start by creating a new app in your Playlab workspace.**
+    
+    1. Go to your Playlab Workspace
+    2. Click the **"Create New App"** button in the top right corner
+       
+       <Frame>
+         <img src="/images/newapp.jpeg" alt="Create New App" width="300" />
+       </Frame>
+       
+    3. Enter a descriptive name for your app and update your app description (You can always change this later)
+       
+       <Frame>
+         <img src="/images/newappname.jpeg" alt="Create New App Name" width="500" />
+       </Frame>
+       
+    4. Click **"Create"** to initialize your new app
+  </Step>
+
+  <Step title="Explore the Playlab Interface">
+    <Frame>
+      <img src="/images/interface.jpeg" alt="Interface" width="800" />
+    </Frame>
+    
+  <div className="mt-4">
+      <table className="w-full border-collapse">
+        <tbody>
+          <tr>
+            <td className="border p-2">1️⃣ Title bar</td>
+            <td className="border p-2">2️⃣ Model select bar</td>
+            <td className="border p-2">3️⃣ App Preview</td>
+          </tr>
+          <tr>
+            <td className="border p-2">4️⃣ Playlab Builder</td>
+            <td className="border p-2">5️⃣ Builder Toolbar</td>
+            <td className="border p-2">6️⃣ Publish</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </Step>
+
+  <Step title="Write Your AI Instructions">
+    We will start with the basics to help you create your Playlab app. Over time, you will learn additional AI building strategies and build AI intuition to help you improve your AI apps.
+    
+    1. Start by completing the **Background** section of your prompt:
+       >- You are an expert in: *This is where you will enter what you want your AI app to have domain or content expertise in* 
+       >- Your role is: *This is where you will enter what the main function of the AI app is*
+       >- You are talking to: *This is where you will enter who your target audience(s) are for the app*
+    
+    2. Now let's get started on the **Workflow** section of your prompt:
+       >- The workflow section is where you will guide your AI by telling it the steps you want the AI to take as it is interacting with the user.
+          >- **Step 1:** *What is the first question you want the AI to ask the user?*
+          >- **Step 2:** *What is the next question or step you want the AI to take to accomplish the intended function of the app?*
+          >- **Step 3:** *Based on the response of the user, what do you want the AI to do next?*
+          >- ❗ You can have as many or as few steps as you need.
+    
+    3. Once you're satisfied with your workflow, you should now review the **Guidelines & Guardrails** section:
+       >- By default, there will be some preexisting Guidelines & Guardrails
+         >- You are able to edit these, but they are a good start
+         >- Feel free to add any other additional guidelines or guardrails you'd like the AI to adhere to
+    
+    4. 🎉 **Congrats!** You've just created a prototype of an AI app in Playlab
+       
+       <Frame>
+         <img src="/images/preview.jpeg" alt="Builder" width="300" />
+       </Frame>
+  </Step>
+
+  <Step title="Test Your App">
+    **Make sure everything works as expected.**
+    
+    1. Click the **"Start"** button in the left hand simulator section
+    2. Try different inputs to see how your app responds
+    3. Check that AI responses match your expectations
+    4. Make adjustments to the prompting instructions based on your test results
+       
+       <Frame>
+         <img src="/images/preview.jpeg" alt="Builder" width="300" />
+       </Frame>
+  </Step>
+
+  <Step title="Publish Your Playlab App">
+    **Share your creation with others.**
+    
+    1. Click the **"Publish"** button on the top right when you're satisfied with your app
+    2. Choose visibility settings
+    3. Click **"Publish App"** to make it available
+    
+    <Frame>
+      <img src="/images/publish.jpeg" alt="Publish" width="300" />
+    </Frame>
+  </Step>
+</Steps>
+
+## <Icon icon="lightbulb-on" size="24" className="inline-block align-text-bottom" /> Tips for Creating Effective Apps
+
+<CardGroup cols={2}>
+  <Card title="Best Practices" icon="plus" iconColor="#16A34A">
+    <ul>
+      <li>**Start Simple**: Begin with a focused app that does one thing well</li>
+      <li>**Write Clear AI Instructions**: Be specific about what you want the AI to do</li>
+      <li>**Test Thoroughly**: Try different inputs and edge cases</li>
+      <li>**Gather Feedback**: Share with colleagues for early input</li>
+      <li>**Iterate**: Improve your app based on usage and feedback</li>
+    </ul>
+  </Card>
+  
+  <Card title="Common Pitfalls" icon="minus" iconColor="#DC2626">
+    <ul>
+      <li>Giving vague instructions to the AI</li>
+      <li>Creating overly complex directions without testing</li>
+      <li>Not providing enough context in your prompts</li>
+      <li>Forgetting to test with different types of inputs</li>
+      <li>Publishing before thorough testing</li>
+    </ul>
+  </Card>
+</CardGroup>
+
+## <Icon icon="frequently-asked-questions" size="24" className="inline-block align-text-bottom" /> Frequently Asked Questions
+
+<Accordion>
+  <AccordionItem title="How many apps can I create?">
+    There is no limit to the number of apps you can create in your Playlab workspace.
+  </AccordionItem>
+  
+  <AccordionItem title="Can I collaborate with others on an app?">
+    Yes! You can invite team members to collaborate on app development by clicking the "Share" button and setting appropriate permissions. We don't enable multiplayer editing at the same time but app creators can work on the same app if permissions allow.
+  </AccordionItem>
+  
+  <AccordionItem title="How do I update my app after publishing?">
+    Navigate to your published app, click the "Edit" button, make your changes, and publish again. All users will automatically see the updated version.
+  </AccordionItem>
+  
+  <AccordionItem title="What if my app doesn't work as expected?">
+    Use the testing tools to debug your app and fix at the point of error. Check your AI instructions, input configurations, and output formatting. You can also reach out to the Playlab community for help.
+  </AccordionItem>
+</Accordion>
+
+## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> Need Support?
+
+If you encounter any issues during the app creation process:
+
+* Join the [Playlab Community Forum](/community) to ask questions
+* Contact us at [support@playlab.ai](mailto:support@playlab.ai)
+
+<CardGroup>
+  <Card title="Back to Getting Started" icon="arrow-left" href="/getstarted/getting-started" iconType="duotone">
+    Return to main documentation
+  </Card>
+  <Card title="Signing Up for Playlab" icon="user-plus" href="/getstarted/signing-up" iconType="duotone">
+    Learn how to create your Playlab account
+  </Card>
+</CardGroup>
+
+Last updated: March 16, 2025
