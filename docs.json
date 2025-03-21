@@ -39,6 +39,7 @@
           {
             "group": "Features",
             "pages": [
+              "features/Overview",
               "features/Richer Starter Inputs",
               "features/Selecting an LLM",
               "features/Avoid Answer Generation",
@@ -88,7 +89,7 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@playlab.ai"
       }
     ],
     "primary": {
