@@ -2,7 +2,6 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
   "name": "Playlab Learning Hub",
-  "openapi": "/openapi.yml",
   "rootPage": "/introduction",
   "colors": {
     "primary": "#4F46E5",
@@ -129,7 +128,15 @@
       {
         "tab": "Blog",
         "icon": "newspaper",
-        "href": "blog/blogintro"
+        "dropdowns": [
+          {
+            "dropdown": "Blog Posts",
+            "icon": "newspaper",
+            "pages": [
+              "blog/blogintro"
+            ]
+          }
+        ]
       }
     ]
   },
