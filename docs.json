@@ -22,70 +22,58 @@
     }
   },
   "favicon": "/favicon.svg",
-  "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open",
-      "url": "quickstart"
-    },
-    {
-      "name": "API References",
-      "icon": "square-terminal",
-      "url": "api-reference/get"
-    },
-    {
-      "name": "Guides",
-      "icon": "compass",
-      "url": "introduction"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "blog/blogintro"
-    }
-  ],
   "navigation": {
-    "dropdowns": [
+    "anchors": [
       {
-        "dropdown": "Documentation",
-        "icon": "book-open",
+        "anchor": "Getting Started",
+        "icon": "play",
         "pages": [
-          "quickstart",
-          "development",
-          "navigation"
+          "getstarted/Getting Started",
+          "getstarted/Signing Up",
+          "getstarted/Creating a Playlab App",
+          "getstarted/publishing"
         ]
       },
       {
-        "dropdown": "API References",
-        "icon": "square-terminal",
+        "anchor": "Features",
+        "icon": "puzzle",
         "pages": [
-          {
-            "group": "Endpoints",
-            "icon": "code",
-            "pages": [
-              "api-reference/get",
-              "api-reference/post",
-              "api-reference/delete"
-            ]
-          }
+          "features/Overview",
+          "features/Richer Starter Inputs",
+          "features/Selecting an LLM"
         ]
       },
       {
-        "dropdown": "Blog",
-        "icon": "newspaper",
-        "href": "https://external-link.com/blog"
+        "anchor": "FAQ",
+        "icon": "square-question",
+        "pages": [
+          "faq/General",
+          "faq/Account Management",
+          "faq/Technical",
+          "faq/Professional Development",
+          "faq/Research",
+          "faq/Partnerships",
+          "faq/Privacy and Security"
+        ]
+      },
+      {
+        "anchor": "About",
+        "icon": "circle-info",
+        "pages": [
+          "about/About Playlab",
+          "about/Contact Us"
+        ]
       }
     ],
     "tabs": [
       {
-        "tab": "Guides",
-        "icon": "compass",
-        "groups": [
+        "tab": "Documentation",
+        "icon": "book-open",
+        "dropdowns": [
           {
-            "group": "Get Started",
-            "icon": "rocket",
+            "dropdown": "Getting Started",
+            "icon": "play",
             "pages": [
-              "introduction",
               "getstarted/Getting Started",
               "getstarted/Signing Up",
               "getstarted/Creating a Playlab App",
@@ -101,7 +89,7 @@
             ]
           },
           {
-            "group": "Features",
+            "dropdown": "Features",
             "icon": "puzzle",
             "pages": [
               "features/Overview",
@@ -114,11 +102,23 @@
             ]
           },
           {
-            "group": "About",
-            "icon": "info-circle",
+            "dropdown": "FAQ",
+            "icon": "circle-question",
+            "pages": [
+              "faq/General",
+              "faq/Account Management",
+              "faq/Technical",
+              "faq/Professional Development",
+              "faq/Research",
+              "faq/Partnerships",
+              "faq/Privacy and Security"
+            ]
+          },
+          {
+            "dropdown": "About",
+            "icon": "circle-info",
             "pages": [
               "about/About Playlab",
-              "about/FAQ",
               "about/Contact Us"
             ]
           }
@@ -127,15 +127,7 @@
       {
         "tab": "Blog",
         "icon": "newspaper",
-        "groups": [
-          {
-            "group": "blog",
-            "icon": "pencil",
-            "pages": [
-              "blog/blogintro"
-            ]
-          }
-        ]
+        "href": "blog/blogintro"
       }
     ]
   },
