@@ -105,13 +105,13 @@
             "dropdown": "FAQ",
             "icon": "square-question",
             "pages": [
-              "faq/FAQ",
-              "faq/Account Management",
-              "faq/Technical",
-              "faq/Professional Development",
-              "faq/Research",
-              "faq/Partnerships",
-              "faq/Privacy and Security"
+              "FAQ/FAQ",
+              "FAQ/Account Management",
+              "FAQ/Technical",
+              "FAQ/Professional Development",
+              "FAQ/Research",
+              "FAQ/Partnerships",
+              "FAQ/Privacy and Security"
             ]
           },
           {
