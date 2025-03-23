@@ -53,7 +53,8 @@
           "features/Organizing Workspaces",
           "features/User Profiles",
           "features/Global References",
-          "features/Building with Illustrative Mathematics"
+          "features/Building with Illustrative Mathematics",
+          "features/Adaptive Memory"
         ]
       },
       {
@@ -77,15 +78,7 @@
           {
             "group": "Advanced Prompting",
             "pages": [
-              "prompting/advanced/zerovsfew",
-              "prompting/advanced/adjusting variability",
-              "prompting/advanced/building with reasoning",
-              "prompting/advanced/chain vs tree",
-              "prompting/advanced/conditional logic",
-              "prompting/advanced/creating variables",
-              "prompting/advanced/leveraging references",
-              "prompting/advanced/metaprompt",
-              "prompting/advanced/selecting llm"
+              "prompting/advanced/intro"
             ]
           }
         ]
