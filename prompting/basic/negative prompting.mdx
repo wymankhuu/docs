@@ -1,0 +1,163 @@
+---
+title: 'Negative Prompting'
+description: 'Improve Playlab outputs by instructing the AI what to avoid or exclude'
+---
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> What is this strategy?
+
+Negative Prompting instructs AI by specifying what to avoid or exclude in its output. Rather than telling the AI what to do, you're telling the AI what to try and avoid in its responses.
+
+## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Why It's Important
+
+Using negative prompting helps define boundaries and refine AI responses by clarifying what should be excluded. This approach:
+
+* Helps avoid unwanted content
+* Improves output quality and relevance
+* Provides clearer guardrails for the AI
+* Reduces the likelihood of inappropriate or off-target responses
+* Is particularly effective for refining AI outputs
+
+## <Icon icon="video" size="24" className="inline-block align-text-bottom" /> Watch How to Apply It
+<Frame>
+  <iframe 
+    src="https://www.loom.com/embed/55e03c461fd34031808b6474a09c9b74"
+    frameborder="0" 
+    webkitallowfullscreen 
+    mozallowfullscreen 
+    allowfullscreen 
+    style={{ width: "100%", height: "400px" }}
+  ></iframe>
+  <figcaption>Negative Prompting</figcaption>
+</Frame>
+
+## <Icon icon="stairs" size="24" className="inline-block align-text-bottom" /> Step by Step
+
+<Steps>
+    <Step title="Go to the Playlab Builder">
+      Go to the Playlab Builder and take a look at your existing prompt.
+    </Step>
+    <Step title="Start with a Positive Instruction">
+      Begin with clear guidance on what you want the AI to do:
+      
+      - Define the primary task or goal
+      - Specify the desired format and tone
+      - Outline any essential elements to include
+    <Tip>
+      Creating a strong foundation with positive instructions gives the AI a clear direction before applying constraints.
+    </Tip>
+    </Step>
+    
+    <Step title="Apply Negative Prompting">
+      Add specific guidance on what to avoid:
+      
+      - Use clear "don't" or "avoid" language
+      - Be specific about what should be excluded
+      - Focus on categories of content rather than exhaustive lists
+      - Consider potential pitfalls relevant to your use case
+      <Warning> Avoid double negatives and make sure it's clear what you want the AI to omit </Warning>
+    </Step>
+    
+    <Step title="Refine and Balance">
+      Find the right balance between positive and negative prompting instructions:
+      
+      - Start with broad negative prompts and get more specific
+      - Observe how negative prompts affect AI output
+      - Balance restrictions against creative freedom
+      - Sometimes repeat important negative constraints for emphasis
+    </Step>
+</Steps>
+
+## <Icon icon="pen-to-square" size="24" className="inline-block align-text-bottom" /> Examples of Negative Prompting
+
+<CardGroup cols={2}>
+  <Card title="Weak Prompt" icon="circle-minus" color="#f44336">
+
+    Generate ideas about the importance of recycling. Include at least three main arguments and concrete examples.
+  </Card>
+  <Card title="Better Prompt" icon="check" color="#4CAF50">
+
+    Generate ideas about the importance of recycling. Include at least three main arguments and concrete examples. Don't use alarmist language, don't use technical jargon, and don't focus solely on plastic waste.
+  </Card>
+</CardGroup>
+
+## <Icon icon="binoculars" size="24" className="inline-block align-text-bottom" /> Best Practices for Negative Prompting
+      
+<CardGroup cols={2}>
+  <Card title="Be Specific" icon="bullseye" color="#4CAF50">
+    • Clearly identify what to exclude
+    
+    • Use precise language to define boundaries
+    
+    • Target specific problematic patterns
+    
+    • Avoid vague restrictions
+    
+    • Focus on categories rather than examples
+  </Card>
+  <Card title="Watch for Double Negatives" icon="triangle-exclamation" color="#2196F3">
+    • Avoid too many negative constraint
+    
+    • Be aware of contradictions
+    
+    • Don't negate your positive instructions
+    
+    • Simplify complex negative conditions
+    
+    • Test to ensure clarity
+  </Card>
+  <Card title="Apply the Funnel Approach" icon="filter" color="#FF9800">
+    • Start with broad negative prompts
+    
+    • Gradually become more specific
+    
+    • Refine based on output analysis
+    
+    • Adjust restrictions as needed
+    
+    • Balance with positive instructions
+  </Card>
+  <Card title="Enforce When Necessary" icon="shield" color="#9C27B0">
+    • Repeat critical restrictions
+    
+    • Use stronger language for important constraints
+    
+    • Restate in different ways if needed
+    
+    • Check if constraints are being followed
+    
+    • Adjust based on compliance
+  </Card>
+</CardGroup>
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> Frequently Asked Questions
+
+<Accordion title="How many negative constraints should I include?">
+  There's no fixed number, but aim for balance. Too few constraints may not adequately guide the AI, while too many might be confusing or overly restrictive. Start with 2-3 key constraints, test the results, and adjust as needed. Focus on the most important exclusions rather than trying to list every possible thing to avoid.
+</Accordion>
+
+<Accordion title="When is negative prompting more effective than positive instructions?">
+  Negative prompting works particularly well when trying to eliminate specific problems or edge cases that keep occurring in AI outputs. It's excellent for refinement after identifying issues with initial outputs, addressing safety concerns, or when there are many acceptable approaches but a few specific things to avoid.
+</Accordion>
+
+<Accordion title="How do I ensure my negative prompts don't accidentally restrict too much?">
+  Test your prompts iteratively. After adding negative constraints, review the outputs to make sure the AI still has enough creative freedom to generate useful content. If outputs become too limited or generic, try relaxing some constraints or balancing them with additional positive guidance about what is acceptable.
+</Accordion>
+
+## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> Need Support?
+
+If you need help with applying negative prompting strategies in Playlab:
+
+* Contact us at [support@playlab.ai](mailto:support@playlab.ai)
+* Join the [Playlab Community Slack](https://join.slack.com/t/playlabcommunity/shared_invite/zt-31mhwj7nl-49e1Mw5fYpyHJGOFyDIFtA)
+
+
+<CardGroup className="mt-12 mb-8">
+  <Card title="Back to Prompting Basics" icon="arrow-left" href="/prompting/basics" iconType="duotone">
+    Return to prompting fundamentals
+  </Card>
+  <Card title="Less is More" icon="arrow-right" href="/prompting/basic/less is more" iconType="duotone">
+    Continue to the next strategy
+  </Card>
+</CardGroup>
+
+Last updated: March 23, 2025
