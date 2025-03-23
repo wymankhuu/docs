@@ -51,6 +51,7 @@
           "features/Selecting an LLM",
           "features/Avoid Answer Generation",
           "features/Organizing Workspaces",
+          "features/User Profiles",
           "features/Global References",
           "features/Building with Illustrative Mathematics"
         ]
