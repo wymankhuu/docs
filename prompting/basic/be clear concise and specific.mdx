@@ -1,0 +1,173 @@
+---
+title: 'Be Clear, Concise and Specific'
+description: 'Improve Playlab app outputs by focusing on exactly what you need'
+---
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> What is this strategy?
+
+This strategy focuses on crafting Playlab prompts that are straightforward, to the point, and include all necessary details without excess information. By being clear about your requirements, concise in your language, and specific about your expectations, you dramatically improve the quality and relevance of your Playlab app outputs.
+
+## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Why It's Important
+
+  Clear, concise, and specific prompts are the foundation of effective Playlab apps. They help your app produce exactly what users need and minimize the chance of misinterpretation.
+  
+  * Saves development time by reducing the need for multiple prompt iterations
+  * Increases Playlab app output quality by focusing on exact requirements
+  * Improves app consistency and reliability across different user inputs
+
+
+## <Icon icon="map" size="24" className="inline-block align-text-bottom" /> How to Apply It
+
+<video
+  controls
+  className="w-full aspect-video"
+  src="https://www.loom.com/share/66645ccc40434db78e0bbe581a3c7c7b?sid=d9040a07-6b0d-4da1-8eb8-d70e74769bed"
+/>
+<p className="text-sm text-gray-500 mt-2 text-center italic">
+  Watch this quick demonstration of how to apply the strategy in Playlab
+</p>
+
+<Accordion title="Step 1: Clearly define your Playlab app's purpose">
+  Before writing your Playlab app prompt, take a moment to identify exactly what you want your app to achieve. Ask yourself:
+  
+  - What specific task will users accomplish with this app? (e.g., generate marketing copy, analyze data, create design mockups)
+  - What output format will best serve your users? (e.g., structured templates, interactive components, step-by-step guides)
+  - Who is the intended audience for this Playlab app?
+  
+  Having clear answers to these questions will help you formulate a focused app prompt that delivers consistent results.
+</Accordion>
+
+<Accordion title="Step 2: Design your Playlab app prompt with precision">
+  Avoid vague instructions and include specific details that narrow the scope of your Playlab app's functionality:
+  
+  - Use direct, precise verbs and terminology relevant to your app's domain or use case
+  - Include specific parameters for the app to follow (output length, tone, format)
+  - Provide context that helps your app understand user inputs correctly
+  - Define input validation rules and specify any constraints the app should operate within
+  
+  The more specific your app's core prompt is, the more consistently it will perform for different users.
+</Accordion>
+
+<Accordion title="Step 3: Optimize your Playlab app prompt">
+  Review your app's prompt and eliminate any information that doesn't directly contribute to its functionality:
+  
+  - Cut redundant phrases and conflicting instructions that might confuse the app
+  - Focus on essential app behaviors and user experience flows
+  - Use simple, direct language in both your core prompt and user-facing instructions
+  - Organize multi-step processes in a logical, sequential order
+  
+  Remember that a concise Playlab app prompt leads to faster performance and more reliable outputs.
+</Accordion>
+
+## <Icon icon="pen-to-square" size="24" className="inline-block align-text-bottom" /> Use Direct vs. Indirect Verbs
+
+<CardGroup cols={2}>
+  <Card title="Direct Verbs" icon="bullseye" color="#4CAF50">
+    Direct verbs clearly communicate specific actions and expectations:
+    
+    • **List** - Provides a clear expectation for an itemized response
+    
+    • **Explain** - Requests a detailed clarification of a concept
+    
+    • **Calculate** - Asks for a specific numerical result
+    
+    • **Describe** - Requests detailed characteristics of something
+    
+    • **Identify** - Asks to name or recognize specific elements
+    
+    • **Show** - Requests a visual or clear demonstration
+    
+    • **Detail** - Asks for comprehensive information on specific aspects
+  </Card>
+  <Card title="Indirect Verbs" icon="globe" color="#f44336">
+    Indirect verbs are vague and leave room for interpretation:
+    
+    • **Help** - Doesn't specify what kind of assistance is needed
+    
+    • **Discuss** - Too open-ended without clear direction
+    
+    • **Consider** - Doesn't indicate what action should follow
+    
+    • **Explore** - Lacks boundaries and specific outcomes
+    
+    • **Understand** - Doesn't specify what should be done with understanding
+    
+    • **Deal with** - Unclear about the expected approach
+    
+    • **Look at** - Doesn't indicate what to look for or what to do after looking
+  </Card>
+</CardGroup>
+
+<Warning> You will only know what works or doesn't for your context by testing </Warning>
+
+## <Icon icon="binoculars" size="24" className="inline-block align-text-bottom" /> Examples
+Take a look at some examples of some vague prompts and improved versions of them.
+
+<CardGroup cols={2}>
+  <Card title="Vague Prompt" icon="xmark" color="#f44336">
+     **Prompt:** 
+    "You are a math tutor"
+    **Why it's weak:** 
+    
+    This prompt lacks specifics about teaching approach, student level, mathematical topics, or expected format. It gives the AI too much room for interpretation.
+  </Card>
+  <Card title="Clear, Concise, Specific Prompt" icon="check" color="#4CAF50">
+     **Prompt:** 
+    "You are a math tutor that explains the process of solving math problems to a middle school student using clear and simple language, starting by defining what the problem is and following with a step-by-step method to solve it, including how to check the solution."
+    
+    **Why it's strong:** 
+    
+    This prompt clearly defines the role, audience, approach, structure, and verification method for every response.
+  </Card>
+</CardGroup>
+
+<CardGroup cols={2} className="mt-6">
+  <Card title="Vague Prompt" icon="xmark" color="#f44336">
+     **Prompt:** 
+    "Create an app that makes lesson plans for teachers."
+    
+    **Why it's weak:** 
+    
+    This prompt lacks specifics about grade levels, subjects, format requirements, or expected outputs. It gives the AI too much room for interpretation.
+  </Card>
+  <Card title="Clear, Concise, Specific Prompt" icon="check" color="#4CAF50">
+     **Prompt:** 
+    "Create a Playlab app that generates standards-aligned K-5 lesson plans. The app should prompt teachers for: subject area, grade level, specific learning objective, lesson duration (20-60 minutes), and available classroom resources. Generate a structured lesson plan with clear learning objectives, a warm-up activity, main instructional components, a formative assessment, and extension activities for differentiation."
+    
+    **Why it's strong:** 
+    
+    This prompt clearly defines the target audience, required inputs, expected structure, and specific components that should appear in every lesson plan.
+  </Card>
+</CardGroup>
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> Frequently Asked Questions
+
+<Accordion title="Can a Playlab app prompt be too specific?">
+  Yes, but rarely. Focus on core functionality and key outputs. Leave room for the AI to handle details within your defined structure. If users get inconsistent results, your prompt might need more specificity, not less.
+</Accordion>
+
+<Accordion title="How do I know if my Playlab app prompt is clear enough?">
+  Test with varied inputs. If your app delivers consistent, useful outputs regardless of how different users phrase their requests, your prompt is clear. If it frequently asks for clarification or produces wildly different results, refine your core prompt.
+</Accordion>
+
+<Accordion title="What if I'm not sure exactly what my Playlab app should do?">
+  Start small with a focused educational purpose. For example, instead of a general "homework helper," create a "Math Word Problem Solver" that takes specific grade level, problem type, and shows step-by-step solutions. Test this core functionality before expanding.
+</Accordion>
+
+## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> Need Support?
+
+If you need help with this prompting strategy in Playlab:
+
+* Contact us at [support@playlab.ai](mailto:support@playlab.ai)
+* Join the [Playlab Community Slack](https://join.slack.com/t/playlabcommunity/shared_invite/zt-31mhwj7nl-49e1Mw5fYpyHJGOFyDIFtA)
+
+<CardGroup className="mt-12 mb-8">
+  <Card title="Back to Prompting Basics" icon="arrow-left" href="/prompting/basics" iconType="duotone">
+    Return to prompting fundamentals
+  </Card>
+  <Card title="Next Prompting Strategy" icon="arrow-right" href="/prompting/next-strategy" iconType="duotone">
+    Continue to the next strategy
+  </Card>
+</CardGroup>
+
+Last updated: March 23, 2025

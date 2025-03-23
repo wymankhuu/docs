@@ -29,7 +29,6 @@
         "icon": "play",
         "pages": [
           "introduction",
-          "getstarted/Getting Started",
           "getstarted/Signing Up",
           "getstarted/Creating a Playlab App",
           "getstarted/publishing",
@@ -60,9 +59,7 @@
         "anchor": "Playlab Prompting",
         "icon": "shovel",
         "pages": [
-          "prompting/intro"
-        ],
-        "sections": [
+          "prompting/intro",
           {
             "group": "Basic Prompting",
             "pages": [

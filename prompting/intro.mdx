@@ -16,54 +16,57 @@ Effective prompting is the key to getting the most out of AI, whether you're cre
 ## <Icon icon="comment-dots" size="24" className="inline-block align-text-bottom" /> Prompting in Playlab
 
 <Tabs>
-  <Tab title="Prompting as a Creator">
+  <Tab title="🔨 Prompting as a Creator">
     When creating Playlab apps, how you craft your app's instructions is the foundation of your application. Your prompts are the blueprint that determines how your app will behave and serve your users.
 
-    ### Externalizing Your Thinking
+    <Accordion title="Externalizing Your Thinking">
+      When creating prompts for your Playlab app, you're essentially:
+      - Translating your expertise into clear instructions the AI can follow
+      - Defining the parameters of what makes a good response for your specific use case
+      - Creating a framework for AI to follow that matches your mental model
+      - Building guardrails that keep the AI focused on your intended purpose
+    </Accordion>
 
-    When creating prompts for your Playlab app, you're essentially:
-    - Translating your expertise into clear instructions the AI can follow
-    - Defining the parameters of what makes a good response for your specific use case
-    - Creating a framework for AI to follow that matches your mental model
-    - Building guardrails that keep the AI focused on your intended purpose
-
-    ### Playlab-Specific Considerations
-
-    Prompting in Playlab is particularly important because:
-    - Your prompts define the entire user experience of your application
-    - Well-crafted prompts create consistent, reliable results across different user inputs
-    - The right prompting strategy can make complex tasks feel simple and intuitive for users
-    - Effective prompts in Playlab can compensate for limitations in user input
+    <Accordion title="Playlab-Specific Considerations">
+      Prompting in Playlab is particularly important because:
+      - Your prompts define the entire user experience of your application
+      - Well-crafted prompts create consistent, reliable results across different user inputs
+      - The right prompting strategy can make complex tasks feel simple and intuitive for users
+      - Effective prompts in Playlab can compensate for limitations in user input
+    </Accordion>
   </Tab>
   
-  <Tab title="Prompting as a User">
+  <Tab title="⌨️ Prompting as a User">
     When using Playlab apps, how you phrase your requests significantly impacts the quality of responses you receive.
 
-    ### Externalizing Your Needs
+    <Accordion title="Externalizing Your Needs">
+      Good prompts help you:
+      - Clarify what you're actually looking for
+      - Break down complex questions into manageable parts
+      - Provide necessary context that might not be obvious
+    </Accordion>
 
-    Good prompts help you:
-    - Clarify what you're actually looking for
-    - Break down complex questions into manageable parts
-    - Provide necessary context that might not be obvious
+    <Accordion title="Effective User Prompting">
+      <Accordion title="Be Specific and Clear">
+        - **Poor**: "Help with my essay"
+        - **Better**: "I'm writing an essay comparing renewable energy sources. Can you help me outline three key differences between solar and wind power?"
+        
+        Being specific helps the AI understand exactly what you need, saving time and producing more relevant responses.
+      </Accordion>
 
-    ### Effective User Prompting
+      <Accordion title="Provide Context">
+        - **Poor**: "What's the answer to question 5?"
+        - **Better**: "I'm working on a 7th-grade geometry worksheet about calculating the area of irregular shapes. For question 5, I need to find the area of this composite figure [description]. Here's my approach so far..."
+        
+        Context helps the AI understand your situation and provide appropriate guidance.
+      </Accordion>
 
-    **Be Specific and Clear**
-    - **Poor**: "Help with my essay"
-    - **Better**: "I'm writing an essay comparing renewable energy sources. Can you help me outline three key differences between solar and wind power?"
-    
-    Being specific helps the AI understand exactly what you need, saving time and producing more relevant responses.
-
-    **Provide Context**
-    - **Poor**: "What's the answer to question 5?"
-    - **Better**: "I'm working on a 7th-grade geometry worksheet about calculating the area of irregular shapes. For question 5, I need to find the area of this composite figure [description]. Here's my approach so far..."
-    
-    Context helps the AI understand your situation and provide appropriate guidance.
-
-    **Ask Follow-up Questions**
-    - If the initial response isn't quite what you need, refine your request
-    - Build on previous interactions: "That's helpful, but could you explain more about..."
-    - Specify what aspect you want expanded: "Can you elaborate on the third point about energy storage?"
+      <Accordion title="Ask Follow-up Questions">
+        - If the initial response isn't quite what you need, refine your request
+        - Build on previous interactions: "That's helpful, but could you explain more about..."
+        - Specify what aspect you want expanded: "Can you elaborate on the third point about energy storage?"
+      </Accordion>
+    </Accordion>
   </Tab>
 </Tabs>
 ---
@@ -100,7 +103,7 @@ The Playlab Learning Hub offers resources to improve your prompting skills:
   
   <Card 
     title="Advanced Strategies" 
-    icon="rocket"
+    icon="tree"
   >
     • **Zero-Shot v Few-Shot**: Strategically decide when to use examples in your prompts.
     
