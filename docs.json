@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Playlab Learning Hub",
   "colors": {
     "primary": "#4F46E5",
     "light": "#818CF8",
@@ -54,6 +54,42 @@
           "features/Organizing Workspaces",
           "features/Global References",
           "features/Building with Illustrative Mathematics"
+        ]
+      },
+      {
+        "anchor": "Playlab Prompting",
+        "icon": "shovel",
+        "pages": [
+          "prompting/intro"
+        ],
+        "sections": [
+          {
+            "group": "Basic Prompting",
+            "pages": [
+              "prompting/basic/be clear concise and specific",
+              "prompting/basic/context is key",
+              "prompting/basic/structure and organization",
+              "prompting/basic/tailor tool for audience",
+              "prompting/basic/negative prompting",
+              "prompting/basic/less is more",
+              "prompting/basic/be mindful of bias",
+              "prompting/basic/fix at point of error"
+            ]
+          },
+          {
+            "group": "Advanced Prompting",
+            "pages": [
+              "prompting/advanced/zerovsfew",
+              "prompting/advanced/adjusting variability",
+              "prompting/advanced/building with reasoning",
+              "prompting/advanced/chain vs tree",
+              "prompting/advanced/conditional logic",
+              "prompting/advanced/creating variables",
+              "prompting/advanced/leveraging references",
+              "prompting/advanced/metaprompt",
+              "prompting/advanced/selecting llm"
+            ]
+          }
         ]
       },
       {
