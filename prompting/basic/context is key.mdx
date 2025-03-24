@@ -1,243 +1,208 @@
 ---
-title: 'Adaptive Memory'
-description: 'Enable your Playlab applications to selectively remember important information'
+title: 'Context is Key'
+description: 'Improve Playlab app outputs by providing specific, targeted contextual information'
 ---
 
-## <Icon icon="brain" size="24" className="inline-block align-text-bottom" /> What is this feature?
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> What is this strategy?
 
-Adaptive memory allows your Playlab apps to selectively remember things you instruct it to remember, impacting future interactions users have with your app.
+This strategy emphasizes the critical importance of providing rich, specific context when creating Playlab apps. By carefully defining the AI's role, target audience, specialized knowledge, and desired tone, you can dramatically improve the precision and relevance of your app's outputs.
 
-<Info>
-  Using adaptive memory will change the way your app functions as it will include what it remembers into the chat.
-</Info>
+## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Why It's Important
 
-## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Rationale for the feature
+Contextual framing is the secret weapon of effective Playlab apps. Specific context transforms generic responses into precisely targeted solutions.
+  
+  * Enables AI to adopt the exact perspective and expertise needed
+  * Reduces misinterpretation and generic responses
+  * Aligns app outputs with specific user needs and expectations
+  * Creates more nuanced and tailored interactions
 
-This feature enhances the capabilities of your Playlab apps in several key ways:
 
-* **More Natural Conversations:** AI will maintain context and have more coherent discussions
-* **Better Understanding:** Enables AI to grasp nuanced meanings and references from earlier in the conversation
-* **Improved Assistance:** Allows AI to build upon previous responses and refine its help based on user feedback
-* **Context Awareness:** Helps AI understand when previous information needs to be updated or modified
-
-## <Icon icon="video" size="24" className="inline-block align-text-bottom" /> Watch how to use Adaptive Memory
+## <Icon icon="map" size="24" className="inline-block align-text-bottom" /> How to Apply It
 
 <Frame>
   <iframe 
-    src="https://www.loom.com/embed/bc8fc2da9cc44745944a8510b5fcac61?sid=634ad2e7-dfee-4900-9f70-ea75f086f77f"
+    src="https://www.loom.com/embed/64f0615958484e439fa7a75038129c4f?sid=4958ac89-b4ea-4c78-b2fc-30d1b21dd582"
     frameborder="0" 
     webkitallowfullscreen 
     mozallowfullscreen 
     allowfullscreen 
     style={{ width: "100%", height: "400px" }}
   ></iframe>
-  <figcaption>How to configure and use Adaptive Memory</figcaption>
-</Frame>
+  <figcaption>Context is Key</figcaption>
+  </Frame>
 
-## <Icon icon="thought-bubble" size="24" className="inline-block align-text-bottom" /> How do I set up adaptive memory?
-<img height="600" src="/images/adaptivememory.gif" className="border border-gray-300 rounded-md shadow-sm" />
+<Accordion title="Step 1: Define a Precise Role">
+  Transform the AI from a generic assistant to a specialized expert:
+  
+  - Choose a specific professional persona (e.g., senior marketing strategist, forensic data analyst)
+  - Outline the persona's unique background, expertise, and approach
+  - Specify years of experience or notable achievements to add credibility
+  
+  A well-defined role helps the AI understand exactly how to approach the task with authentic expertise.
+</Accordion>
 
-<Steps>
-  <Step title="Toggle the feature">
-    Enable the adaptive memory feature in your Playlab app settings.
-    
-    <img height="600" src="/images/togglememory.png" className="border border-gray-300 rounded-md shadow-sm" />
-  </Step>
-  <Step title="Edit your memory instructions">
-    Configure what you want your app to remember about your users.
-    
-     <img height="600" src="/images/memoryinstructions.png" className="border border-gray-300 rounded-md shadow-sm" />
-  </Step>
-  <Step title="Monitor and manage memories">
-    View, refresh, or delete what your app remembers about users in the bottom panel.
-    <img height="600" src="/images/managememories.png" className="border border-gray-300 rounded-md shadow-sm" />
-    <Warning> Don't instruct the AI to remember private or personally identifying information</Warning>
-    </Step>
-</Steps>
+<Accordion title="Step 2: Specify the Target Audience">
+  Provide detailed information about who will interact with or benefit from the Playlab app:
+  
+  - Define demographic details (age, profession, expertise level)
+  - Explain the audience's specific needs and pain points
+  - Describe the audience's prior knowledge and communication preferences
+  
+  Tailoring the context to a specific audience ensures responses are precisely calibrated to their understanding and requirements.
+</Accordion>
 
-## <Icon icon="list-check" size="24" className="inline-block align-text-bottom" /> What should I include in memory instructions?
+<Accordion title="Step 3: Establish Tone and Communication Style">
+  Create a detailed guide for how the AI should communicate:
+  
+  - Select a specific communication tone (e.g., academic, conversational, mentorship-based)
+  - Define language complexity appropriate to the audience
+  - Specify preferred metaphors, examples, or explanation styles
+  - Outline any industry-specific jargon or communication norms
+  
+  A consistent communication style builds trust and improves user engagement.
+</Accordion>
 
-When creating memory instructions, consider including guidance for remembering:
+## <Icon icon="pen-to-square" size="24" className="inline-block align-text-bottom" /> Context Depth Comparison
 
 <CardGroup cols={2}>
-  <Card title="User Information" icon="user">
-    <p><strong>Description:</strong> Relevant details about the user that impact interactions.</p>
-    <p><strong>Examples:</strong></p>
-    <ul>
-      <li>Skill levels in relevant areas</li>
-      <li>Learning goals or objectives</li>
-      <li>Preferences for communication style</li>
-      <li>Prior challenges discussed</li>
-    </ul>
+  <Card title="Shallow Context" icon="xmark" color="#f44336">
+    **Example Prompt:** 
+    "Help me with marketing"
+    
+    **Contextual Limitations:**
+   
+    • No role specification
+   
+    • Undefined audience
+   
+    • Vague objective
+   
+    • No communication guidelines
+    
+Results in generic, unfocused outputs that lack precision and value.
   </Card>
-
-  <Card title="Conversation Context" icon="comments">
-    <p><strong>Description:</strong> Important points from previous conversations.</p>
-    <p><strong>Examples:</strong></p>
-    <ul>
-      <li>Key decisions or choices made</li>
-      <li>Problems that were previously solved</li>
-      <li>Ongoing projects or tasks</li>
-      <li>Feedback on previous suggestions</li>
-    </ul>
-  </Card>
-
-  <Card title="Domain-Specific Details" icon="folder">
-    <p><strong>Description:</strong> Information relevant to your app's specific domain.</p>
-    <p><strong>Examples:</strong></p>
-    <ul>
-      <li>Subject matter preferences</li>
-      <li>Industry-specific needs</li>
-      <li>Technical requirements</li>
-      <li>Specialized terminology used</li>
-    </ul>
-  </Card>
-
-  <Card title="Progress Tracking" icon="chart-line">
-    <p><strong>Description:</strong> Information that helps track user progress over time.</p>
-    <p><strong>Examples:</strong></p>
-    <ul>
-      <li>Completed tasks or milestones</li>
-      <li>Current stage in a multi-step process</li>
-      <li>Areas where improvement was noted</li>
-      <li>Ongoing challenges to address</li>
-    </ul>
+  <Card title="Deep Context" icon="check" color="#4CAF50">
+    **Example Prompt:** 
+    "You are a senior B2B technology marketing strategist with 15 years of experience in enterprise software marketing. Your audience is mid-level marketing managers at SaaS startups seeking to develop their first comprehensive go-to-market strategy. Communicate in a mentorship tone—professional yet encouraging, breaking down complex concepts into actionable insights. Use real-world tech marketing examples and avoid unnecessary jargon."
+    
+    **Contextual Strengths:**
+    
+    • Defined expert role
+    
+    • Specific target audience
+    
+    • Clear communication approach
+    
+    • Detailed expectation setting
+    
+    Enables highly targeted, nuanced, and valuable outputs.
   </Card>
 </CardGroup>
 
-## <Icon icon="quote-left" size="24" className="inline-block align-text-bottom" /> Example Memory Instructions
+<CardGroup cols={2} className="mt-6">
+  <Card title="Shallow Context" icon="xmark" color="#f44336">
+    **Example Prompt:** 
+    "Create a lesson plan"
+    
+    **Contextual Limitations:**
 
-Here are some example memory instructions for different types of apps:
+    • No educational context
+    
+    • Undefined learning objectives
+    
+    • Unspecified student demographics
+    
+    • No pedagogical approach
+    
+    Produces generic, potentially misaligned educational content.
+  </Card>
+  <Card title="Deep Context" icon="check" color="#4CAF50">
+    **Example Prompt:** 
+    "Design a science lesson plan for 7th-grade students with varying learning abilities. Focus on inquiry-based learning for a unit on environmental sustainability. The class includes students with mild learning differences, so include multi-modal learning approaches. Use a supportive, growth-mindset tone that encourages curiosity and collaborative learning. Lessons should incorporate hands-on activities, visual aids, and opportunities for student-led investigation."
+    
+    **Contextual Strengths:**
+   
+    • Specific educational level
+   
+    • Clear learning approach
+   
+    • Consideration of student diversity
+   
+    • Defined communication style
+    
+    Generates a tailored, inclusive, and engaging learning experience.
+  </Card>
+</CardGroup>
 
-<Accordion title="College Recommendation App" icon="graduation-cap">
-  <p><strong>Memory Instructions:</strong> "Keep track of key academic details shared during discussions:</p>
-  <ul>
-    <li>Mentioned GPA and test scores</li>
-    <li>Favorite subjects and areas of academic excellence</li>
-    <li>Extracurricular activities and leadership roles</li>
-    <li>Special talents or unique experiences that could impact college applications</li>
-  </ul>
-  <p>Note personal preferences that emerge during conversations:</p>
-  <ul>
-    <li>Geographic location preferences (staying close to home vs. exploring new areas)</li>
-    <li>Campus size and environment preferences (urban vs. rural, large vs. small)</li>
-    <li>Social atmosphere interests (Greek life, sports culture, arts scene)</li>
-    <li>Financial considerations and scholarship needs</li>
-  </ul>
-  <p>"</p>
+## <Icon icon="binoculars" size="24" className="inline-block align-text-bottom" /> Key Contextual Dimensions
+
+<CardGroup cols={2}>
+  <Card title="Role Specification" icon="user-tie" color="#2196F3">
+    • Professional background
+
+    • Years of experience
+
+    • Specialized expertise
+    
+    • Unique perspective
+  </Card>
+  <Card title="Audience Understanding" icon="users" color="#4CAF50">
+    • Demographics
+
+    • Prior knowledge
+
+    • Learning preferences
+
+    • Specific needs
+  </Card>
+  <Card title="Communication Style" icon="comment-dots" color="#FF9800">
+    • Tone (formal/casual)
+
+    • Language complexity
+
+    • Metaphor preferences
+
+    • Cultural considerations
+  </Card>
+  <Card title="Outcome Alignment" icon="bullseye" color="#9C27B0">
+    • Specific goals
+
+    • Success metrics
+
+    • Desired output format
+
+    • Performance expectations
+  </Card>
+</CardGroup>
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> Frequently Asked Questions
+
+<Accordion title="Can I provide too much context?">
+  Context should be purposeful and relevant. Focus on details that genuinely improve output quality. If your context feels overwhelming or prevents the AI from flexibly addressing the core task, it might be too detailed.
 </Accordion>
 
-<Accordion title="Language Learning Assistant" icon="language">
-  <p><strong>Memory Instructions:</strong> "Remember information about the learner's language journey:</p>
-  <ul>
-    <li>Current proficiency level and areas of strength</li>
-    <li>Specific vocabulary or grammar concepts they struggle with</li>
-    <li>Learning goals (travel, business, academic, etc.)</li>
-    <li>Preferred learning methods (conversation practice, grammar drills, reading)</li>
-  </ul>
-  <p>Track progress over time:</p>
-  <ul>
-    <li>Topics or lessons already covered</li>
-    <li>Mistakes that are frequently repeated</li>
-    <li>Concepts that have shown improvement</li>
-    <li>Cultural interests related to target language</li>
-  </ul>
-  <p>"</p>
+<Accordion title="How detailed should my context be?">
+  Start with key dimensions: role, audience, communication style, and specific objectives. Test your app and iteratively refine the context based on actual performance and user feedback.
 </Accordion>
 
-<Accordion title="Fitness Coach App" icon="dumbbell">
-  <p><strong>Memory Instructions:</strong> "Remember key fitness information:</p>
-  <ul>
-    <li>Fitness goals (weight loss, muscle gain, endurance, etc.)</li>
-    <li>Current exercise routine and frequency</li>
-    <li>Physical limitations or injuries mentioned</li>
-    <li>Equipment available for workouts</li>
-  </ul>
-  <p>Track progress and preferences:</p>
-  <ul>
-    <li>Exercises the user enjoys or dislikes</li>
-    <li>Recent achievements or milestones</li>
-    <li>Changes in routine or intensity levels</li>
-    <li>Nutritional considerations or dietary restrictions</li>
-  </ul>
-  <p>"</p>
+<Accordion title="What if my context changes?">
+  Playlab apps can be easily updated. Maintain a flexible approach and be prepared to adjust your contextual framing as you learn more about user needs and app performance.
 </Accordion>
 
-## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Tips for Creating Effective Memory Instructions
+## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> Need Support?
 
-### Best Practices
+If you need help with contextual framing in Playlab:
 
-<Accordion title="Be specific about what to remember">
-  Clearly define the categories of information your app should retain. Vague instructions may result in remembering too much irrelevant information or missing important details.
-</Accordion>
+* Contact us at [support@playlab.ai](mailto:support@playlab.ai)
+* Join the [Playlab Community Slack](https://join.slack.com/t/playlabcommunity/shared_invite/zt-31mhwj7nl-49e1Mw5fYpyHJGOFyDIFtA)
 
-<Accordion title="Prioritize information by importance">
-  Not all information needs to be remembered. Focus on the details that will have the most significant impact on future interactions.
-</Accordion>
+<CardGroup className="mt-12 mb-8">
+  <Card title="Back to Prompting Basics" icon="arrow-left" href="/prompting/basics" iconType="duotone">
+    Return to prompting fundamentals
+  </Card>
+  <Card title="Structure and Organization" icon="arrow-right" href="/prompting/basics/structure and organizaiton" iconType="duotone">
+    Continue to the next strategy
+  </Card>
+</CardGroup>
 
-<Accordion title="Regularly review and refine">
-  As your app evolves, revisit your memory instructions to ensure they're still capturing the most relevant information for your users.
-</Accordion>
-
-<Accordion title="Test with real conversations">
-  Analyze how memory affects actual user interactions and adjust your instructions based on what works best in practice.
-</Accordion>
-
-### Practical Applications
-
-<Accordion title="Educational Apps">
-  Remember learning progress, difficult concepts, and preferred explanatory styles to provide increasingly tailored educational content.
-</Accordion>
-
-<Accordion title="Productivity Tools">
-  Track project stages, recurring tasks, and work preferences to offer more relevant assistance over time.
-</Accordion>
-
-<Accordion title="Creative Assistants">
-  Remember stylistic preferences, past projects, and creative goals to provide more consistent and helpful creative guidance.
-</Accordion>
-
-<Accordion title="Health and Wellness Apps">
-  Track progress, habits, challenges, and preferences to provide more personalized support and recommendations.
-</Accordion>
-
-## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> FAQ
-
-<Accordion title="How does adaptive memory differ from user profiles?">
-  While user profiles provide static information set up in advance, adaptive memory dynamically captures and retains information that emerges during conversations. Both features can complement each other for a more personalized experience.
-</Accordion>
-
-<Accordion title="Can I control what information is remembered?">
-  Yes, your memory instructions guide what the AI remembers. You can also view, refresh, or delete stored memories in the management panel.
-</Accordion>
-
-<Accordion title="How much information can be remembered?">
-  There are limits to how much information can be stored in memory. Focus on quality over quantity by instructing the AI to remember only the most impactful details.
-</Accordion>
-
-<Accordion title="Is memory information private?">
-  Memory information is stored as part of your app's data. For specific privacy concerns, please refer to our privacy policy or contact support.
-</Accordion>
-
-## <Icon icon="warning" size="24" className="inline-block align-text-bottom" /> Important Considerations
-
-<Warning>
-  Be cautious about including Personally Identifying information in your memory instructions. Avoid instructing the AI to remember last names, addresses, contact information, and other sensitive information that you would not be comfortable sharing.
-</Warning>
-
-## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> We Want Your Feedback!
-
-<Info>
-  Have you created memory instructions that significantly improved your app's performance? We'd love to hear about it!
-
-  Join the discussion in our [Playlab Slack Channel](https://join.slack.com/t/playlabcommunity/shared_invite/zt-31mhwj7nl-49e1Mw5fYpyHJGOFyDIFtA).
-
-  Contact us at [support@playlab.ai](mailto:support@playlab.ai)
-</Info>
-
-<div className="mt-8">
-  <Button href="../index.md">Return to Home Page</Button>
-</div>
-
----
-Last updated: 3/23/2025
+Last updated: March 23, 2025
