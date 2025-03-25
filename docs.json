@@ -47,6 +47,7 @@
         "icon": "puzzle",
         "pages": [
           "features/Overview",
+          "features/Escalating Flagged Conversations",
           "features/Richer Starter Inputs",
           "features/Selecting an LLM",
           "features/Avoid Answer Generation",
