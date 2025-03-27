@@ -81,7 +81,8 @@
           {
             "group": "Advanced Prompting",
             "pages": [
-              "prompting/advanced/intro"
+              "prompting/advanced/intro",
+              "prompting/advanced/building with reasoning models"
             ]
           }
         ]

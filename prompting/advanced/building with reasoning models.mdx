@@ -1,0 +1,190 @@
+---
+title: 'Building with Reasoning Models'
+description: 'Harness the power of advanced reasoning models in Playlab to create more sophisticated, thoughtful applications'
+---
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> What is this strategy?
+
+This strategy focuses on effectively leveraging reasoning-enabled models in Playlab apps. By properly structuring your app's goals, output formats, and guardrails, you can unlock the full potential of models like o1 and Claude 3.7 Sonnet to produce more thoughtful, logical, and nuanced responses.
+
+<Warning>Reasoning models are not always better for every task or function.</Warning>
+
+## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Why It's Important
+
+Reasoning models represent a significant advancement in AI capabilities. When properly guided, these models can:
+
+* Perform complex logical operations and multi-step thinking
+* Evaluate evidence and draw sound conclusions
+* Generate more coherent, consistent, and reliable outputs
+* Handle nuanced tasks requiring deeper understanding
+* Provide transparent explanations of their thought processes
+
+## <Icon icon="map" size="24" className="inline-block align-text-bottom" /> How to Apply It
+
+<Frame>
+  <iframe 
+    src="https://example.com/reasoning-models-demo"
+    frameborder="0" 
+    webkitallowfullscreen 
+    mozallowfullscreen 
+    allowfullscreen 
+    style={{ width: "100%", height: "400px" }}
+  ></iframe>
+  <figcaption>Building with Reasoning Models</figcaption>
+</Frame>
+
+## <Icon icon="list-ol" size="24" className="inline-block align-text-bottom" /> Implementation Steps
+Leverage this suggested template to help you build with reasoning models like o1 and Claude 3.7 (reasoning)
+<Frame><img src="/images/reasoningprompt.png" /></Frame>
+
+<Steps>
+  <Step title="Select a Reasoning Model">
+  In the Playlab builder, select a reasoning model to build your Playlab app on top of.
+  <Frame><img src="/images/reasoningmodels.png" /></Frame>
+  </Step>
+  
+  <Step title="Define a Clear Goal">
+
+    **Goal**
+    
+    My app will help **[who/target audience]** with **[what task?]** by using **[what type of reasoning?]**.
+    
+    Example: "Help high school students improve argumentative essays with evaluative reasoning."
+    
+    A well-defined goal ensures the reasoning model operates within the intended parameters and delivers valuable results.
+  </Step>
+  
+  <Step title="Specify the Output Format">
+    
+    **Output Format**
+    
+    Responses should be **[short/detailed]** and structured as **[lists, paragraphs, tables, etc.]**.
+    
+    **Example:**
+    * Thesis Assessment: (strengths and suggestions)
+    * Argument Structure: (strengths and suggestions)
+    * Evidence Quality: (strengths and suggestions)
+    * Counter-Arguments: (strengths and suggestions)
+    * Conclusion Effectiveness: (strengths and suggestions)
+    
+    Structured outputs make complex reasoning more accessible and ensure consistency across interactions.
+  </Step>
+  
+  <Step title="Set Guardrails and Guidelines">
+    
+    **Guardrails & Guidelines**
+    
+    Do **[what it should always do]**.
+    Don't **[what it should avoid]**.
+    Tone/style should be **[neutral, friendly, formal, etc.]**.
+    
+    Example:
+    Do provide specific examples of how to improve.
+    Don't overwhelm with too many suggestions at once.
+    Tone/style should be encouraging, educational, and constructive.
+    
+    Clear guardrails prevent reasoning errors and align outputs with user expectations.
+  </Step>
+  
+  <Step title="Provide Context and Background">
+    
+    **Context**
+    
+    The app will use **[references, relevant sources, background info, or rules it should follow]**.
+    
+    Example:
+    "The app will use argumentative writing standards appropriate for high school level, focusing on logical structure, evidence quality, and persuasive techniques."
+    
+    Rich context enables more precise, relevant, and accurate reasoning processes.
+  </Step>
+</Steps>
+
+## <Icon icon="pen-to-square" size="24" className="inline-block align-text-bottom" /> Example Prompt: High School Writing Feedback Coach
+
+### Example Advanced Reasoning Prompt
+
+**Goal:**
+My app will help **high school students** with **improving argumentative essays** by using **evaluative reasoning**.
+
+**Output Format:**
+Responses should be **detailed** and structured as **categorized feedback with specific examples**:
+
+**Example:**
+* **Thesis Assessment:** Your thesis statement clearly states your position on school uniforms, which is effective. Consider strengthening it by including your main supporting points to preview your argument structure.
+* **Argument Structure:** Your arguments flow logically from one point to the next. To improve, try adding transition sentences between paragraphs to create stronger connections.
+* **Evidence Quality:** You've included relevant statistics on uniform costs. Consider adding a brief explanation of why this evidence matters to your argument.
+* **Counter-Arguments:** You acknowledge opposing views on expression. To strengthen this section, address how uniforms might still allow for some forms of self-expression.
+* **Conclusion Effectiveness:** Your conclusion effectively restates your position. Consider ending with a broader implication about how your argument relates to school policy in general.
+
+**Guardrails & Guidelines:**
+Do provide specific, actionable suggestions with examples.
+Don't overwhelm with too many suggestions at once (limit to 2-3 per category).
+Tone/style should be supportive, encouraging, and educational for teenage writers.
+
+**Context:**
+The app will use argumentative writing standards appropriate for high school level, focusing on logical structure, evidence quality, and persuasive techniques. It will prioritize fundamental structural issues over minor stylistic concerns.
+
+## <Icon icon="binoculars" size="24" className="inline-block align-text-bottom" /> Key Implementation Dimensions
+
+<Accordion title="Goal Definition">
+  * Specific purpose: Improve argumentative writing skills
+  * Target audience: High school students
+  * Reasoning style: Evaluative and constructive
+  * Success criteria: Student understands feedback and can implement improvements
+</Accordion>
+<Accordion title="Output Structure">
+  * Format components: Categorized feedback with specific examples
+  * Level of detail: 2-3 suggestions per area
+  * Organizational logic: From thesis to conclusion
+  * Presentation style: Supportive, encouraging, educational
+</Accordion>
+<Accordion title="Reasoning Guardrails">
+  * Logical constraints: Connect to established writing principles
+  * Balance handling: Identify both strengths and weaknesses
+  * Error prevention: Prioritize structural over stylistic issues
+  * Bias mitigation: Focus on reasoning quality, not personal opinion
+</Accordion>
+<Accordion title="Contextual Framework">
+  * Domain knowledge: Argumentative writing standards
+  * Reference materials: Examples of effective revisions
+  * Underlying assumptions: High school level of understanding
+  * Application scenarios: Essay drafting and revision process
+</Accordion>
+
+## <Icon icon="file-code" size="24" className="inline-block align-text-bottom" /> Template
+
+<Frame>
+  <img src="/images/reasoningtemplate.png" alt="Template Builder for Reasoning Models" />
+</Frame>
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> Frequently Asked Questions
+
+<Accordion title="Which models support advanced reasoning?">
+  Currently, O1 and Claude 3.7 Sonnet feature enhanced reasoning capabilities. Additional models may be added in the future. Check the Playlab documentation for the most up-to-date information on available reasoning models.
+</Accordion>
+
+<Accordion title="How do I know if my app needs reasoning capabilities?">
+  Consider using reasoning models if your app involves complex decision-making, multi-step problem solving, logical analysis, or needs to provide transparent explanations of its thought process. Applications involving evaluation of evidence, drawing conclusions, or complex planning particularly benefit from reasoning capabilities.
+</Accordion>
+
+<Accordion title="How can I make reasoning processes more transparent?">
+  Request that the model explicitly outline its reasoning steps, assumptions, and confidence levels. Structure your prompts to encourage step-by-step thinking and explanation. Consider requesting that conclusions include alternative perspectives or limitations of the reasoning process.
+</Accordion>
+
+## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> Need Support?
+
+If you need help implementing reasoning models in Playlab:
+
+* Contact us at [support@playlab.ai](mailto:support@playlab.ai)
+* Join the [Playlab Community Slack](https://join.slack.com/t/playlabcommunity/shared_invite/zt-31mhwj7nl-49e1Mw5fYpyHJGOFyDIFtA)
+
+<CardGroup className="mt-12 mb-8">
+  <Card title="Back to Context is Key" icon="arrow-left" href="/prompting/basics/context-is-key" iconType="duotone">
+    Return to contextual framing
+  </Card>
+  <Card title="Structure and Organization" icon="arrow-right" href="/prompting/basics/structure-and-organization" iconType="duotone">
+    Continue to the next strategy
+  </Card>
+</CardGroup>
+
+Last updated: March 27, 2025
