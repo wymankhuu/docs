@@ -26,16 +26,16 @@ This feature also allows users to flag conversations that they deem to be inappr
 ## <Icon icon="clipboard-question" size="24" className="inline-block align-text-bottom" /> How do notifications work?
 
 ### User Flagged Conversation
-User flagged conversations trigger mmediate notifications to app creators, empowering users to provide direct feedback on conversations they find problematic.
+User flagged conversations trigger immediate notifications to app creators, empowering users to provide direct feedback on conversations they find problematic.
 <img height="800" src="/images/userflag.gif" className="border border-gray-300 rounded-md shadow-sm" />
 
 ### Reviewing Flagged Conversations
-The flagged conversation review interface provides a streamlined workflow for administrators to assess, address, and resolve reported issues efficiently.You can see separate icons for flagged user conversations and messages that were moderated. They will appear in the activity page of your Playlab workspace or
+The flagged conversation review interface provides a streamlined workflow for administrators to assess, address, and resolve reported issues efficiently. You can see separate icons for flagged user conversations and messages that were moderated. They will appear in the activity page of your Playlab workspace.
 <img height="800" src="/images/reviewingflags.gif" className="border border-gray-300 rounded-md shadow-sm" />
 
 ### Automatic Moderation Notifications:
-When a message is automatically moderated (either input or output), the creator of the app will receive an email. You can see a sample version below.
-<img height="800" src="/images/flagemail.png" className="border border-gray-300 rounded-md shadow-sm" />
+When a message is automatically moderated (either input or output), the creator of the app will receive an email notification different from manually flagged conversations.
+<img height="800" src="/images/escalatingflagged (2).png" className="border border-gray-300 rounded-md shadow-sm" />
 
 ## <Icon icon="circle-plus" size="24" className="inline-block align-text-bottom" /> Accessing Moderated Content
 
@@ -43,6 +43,10 @@ When a message is automatically moderated (either input or output), the creator 
   <Step title="Navigate to Workspace Activity">
     Access your workspace activity page to view all conversations
     <img height="600" src="/images/workspaceflag.png" alt="workspace flags" className="border border-gray-300 rounded-md shadow-sm" />
+  </Step>
+  <Step title="Filter by Conversation Type">
+    Use the new Conversation Type filter to quickly find flagged or moderated conversations
+    <img height="600" src="/images/escalatingflagged.png" alt="conversation type filter" className="border border-gray-300 rounded-md shadow-sm" />
   </Step>
   <Step title="Review the flagged conversation">
     Click on the conversation to open the full thread to review any messages
@@ -86,10 +90,10 @@ When a message is automatically moderated (either input or output), the creator 
   Currently, notifications are sent based on your role (app creator, workspace owner, or organization admin). Customization options may be added in future updates.
 </Accordion>
 <Accordion title="How long are flagged conversations stored?">
-  Flagged conversations are automatically resolved after 30 days if no action is taken.
+  Flagged conversations are stored indefinitely at this time. There is no automatic resolution system currently in place.
 </Accordion>
 <Accordion title="What should I do if I receive a notification?">
-  Review the conversation, assess the issue, and take appropriate action such as updating your app, following up with the user, or marking the flag as resolved.
+  Review the conversation, assess the issue, and take appropriate action such as updating your app or following up with the user.
 </Accordion>
 
 <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> We Want Your Feedback!
@@ -106,4 +110,4 @@ When a message is automatically moderated (either input or output), the creator 
 </div>
 
 ---
-Last updated: 3/25/2025
+Last updated: 3/27/2025
