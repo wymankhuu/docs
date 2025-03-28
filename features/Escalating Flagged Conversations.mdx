@@ -1,9 +1,9 @@
 ---
-title: 'Escalating Flagged Conversations Guide'
-description: 'Review and manage moderated and flagged messages in your Playlab apps'
+title: "Escalating Flagged Conversations Guide"
+description: "Review and manage moderated and flagged messages in your Playlab apps"
 ---
 
-## <Icon icon="bell-on" size="24" className="inline-block align-text-bottom" /> What is this feature?
+## <Icon icon="bell-on" size="24" /> What is this feature?
 
 Playlab now supports Escalating Flagged Conversations, allowing builders, workspace owners, and organization admins to receive notifications when conversations with their apps contain moderated or flagged content. You can now review these conversations, take appropriate action, and ensure your apps maintain high-quality interactions.
 
@@ -15,48 +15,85 @@ Playlab now supports Escalating Flagged Conversations, allowing builders, worksp
   Moderation is still in beta and will occasionally make mistakes.
 </Warning>
 
-## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Rationale for the feature
+## <Icon icon="lightbulb" size="24" /> Rationale for the feature
 
 Playlab users have been asking for improved visibility into moderated or flagged conversations with their apps. With Escalating Flagged Conversations, administrators are promptly notified when moderation occurs, enhancing transparency and enabling quick action.
 
 This feature makes it simple to identify and review potentially problematic conversations, allowing you to update your apps as needed and maintain a safe, high-quality user experience.
 
 This feature also allows users to flag conversations that they deem to be inappropriate or biased. This will then inform the creator of the app via email.
- 
-## <Icon icon="clipboard-question" size="24" className="inline-block align-text-bottom" /> How do notifications work?
+
+## <Icon icon="clipboard-question" size="24" /> How do notifications work?
 
 ### User Flagged Conversation
+
 User flagged conversations trigger immediate notifications to app creators, empowering users to provide direct feedback on conversations they find problematic.
-<img height="800" src="/images/userflag.gif" className="border border-gray-300 rounded-md shadow-sm" />
+
+<img
+  height="800"
+  src="/images/userflag.gif"
+  className="border border-gray-300 rounded-md shadow-sm"
+/>
 
 ### Reviewing Flagged Conversations
+
 The flagged conversation review interface provides a streamlined workflow for administrators to assess, address, and resolve reported issues efficiently. You can see separate icons for flagged user conversations and messages that were moderated. They will appear in the activity page of your Playlab workspace.
-<img height="800" src="/images/reviewingflags.gif" className="border border-gray-300 rounded-md shadow-sm" />
+
+<img
+  height="800"
+  src="/images/reviewingflags.gif"
+  className="border border-gray-300 rounded-md shadow-sm"
+/>
 
 ### Automatic Moderation Notifications:
-When a message is automatically moderated (either input or output), the creator of the app will receive an email notification different from manually flagged conversations.
-<img height="800" src="/images/escalatingflagged (2).png" className="border border-gray-300 rounded-md shadow-sm" />
 
-## <Icon icon="circle-plus" size="24" className="inline-block align-text-bottom" /> Accessing Moderated Content
+When a message is automatically moderated (either input or output), the app creator, workspace owner, and organization admin will receive an email notification different from manually flagged conversations.![image.png](/image.png)
+
+<Icon icon="circle-plus" size="24" /> Accessing Moderated Content
 
 <Steps>
   <Step title="Navigate to Workspace Activity">
     Access your workspace activity page to view all conversations
-    <img height="600" src="/images/workspaceflag.png" alt="workspace flags" className="border border-gray-300 rounded-md shadow-sm" />
+
+    <img
+      height="600"
+      src="/images/workspaceflag.png"
+      alt="workspace flags"
+      className="border border-gray-300 rounded-md shadow-sm"
+    />
   </Step>
   <Step title="Filter by Conversation Type">
     Use the new Conversation Type filter to quickly find flagged or moderated conversations
-    <img height="600" src="/images/escalatingflagged.png" alt="conversation type filter" className="border border-gray-300 rounded-md shadow-sm" />
+
+    <img
+      height="600"
+      src="/images/escalatingflagged.png"
+      alt="conversation type filter"
+      className="border border-gray-300 rounded-md shadow-sm"
+    />
   </Step>
   <Step title="Review the flagged conversation">
     Click on the conversation to open the full thread to review any messages
-    <img height="600" src="/images/reviewflagactivity.png" alt="messages" className="border border-gray-300 rounded-md shadow-sm" />
+
+    <img
+      height="600"
+      src="/images/reviewflagactivity.png"
+      alt="messages"
+      className="border border-gray-300 rounded-md shadow-sm"
+    />
   </Step>
   <Step title="View moderated content">
     Use the "Show Message" toggle to reveal the moderated message content (only available to authorized users)
-    <img height="600" src="/images/reviewmessage.png" alt="Review message" className="border border-gray-300 rounded-md shadow-sm" />
-    
+
+    <img
+      height="600"
+      src="/images/reviewmessage.png"
+      alt="Review message"
+      className="border border-gray-300 rounded-md shadow-sm"
+    />
+
     The toggle will display:
+
     - The full content of the moderated message
     - The category of violation (e.g., "Moderated for: violence")
   </Step>
@@ -66,39 +103,39 @@ When a message is automatically moderated (either input or output), the creator 
   Remember that moderated content may contain inappropriate material. Review with caution.
 </Check>
 
-## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Tips for Managing Flagged Conversations
+## <Icon icon="lightbulb" size="24" /> Tips for Managing Flagged Conversations
 
 ### Best Practices
 
-* **Respond promptly to notifications**: Review flagged conversations as soon as possible to address any issues with your app.
+- **Respond promptly to notifications**: Review flagged conversations as soon as possible to address any issues with your app.
+- **Analyze patterns in flagged content**: Look for trends in the types of content being flagged to identify potential improvements for your app.
+- **Update your app's instructions**: If you notice recurring issues, consider updating your app's instructions to prevent similar problems.
+- **Follow up with users when appropriate**: For identified users experiencing issues, consider reaching out to provide support or clarification.
+- **Document your resolution steps**: Keep track of how you resolve flagged conversations to improve your response in the future.
+- **Consider required guardrails**: For apps dealing with sensitive topics, implement clear guardrails in your instructions to prevent moderation issues.
 
-* **Analyze patterns in flagged content**: Look for trends in the types of content being flagged to identify potential improvements for your app.
+<Icon icon="circle-question" size="24" /> FAQ
 
-* **Update your app's instructions**: If you notice recurring issues, consider updating your app's instructions to prevent similar problems.
-
-* **Follow up with users when appropriate**: For identified users experiencing issues, consider reaching out to provide support or clarification.
-
-* **Document your resolution steps**: Keep track of how you resolve flagged conversations to improve your response in the future.
-
-* **Consider required guardrails**: For apps dealing with sensitive topics, implement clear guardrails in your instructions to prevent moderation issues.
-
-<Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> FAQ
 <Accordion title="What types of content trigger automatic moderation?">
   Automatic moderation triggers for categories including violence, hate speech, sexual content, harassment, self-harm, and other harmful content as defined by our moderation system.
 </Accordion>
+
 <Accordion title="Can I customize which notifications I receive?">
   Currently, notifications are sent based on your role (app creator, workspace owner, or organization admin). Customization options may be added in future updates.
 </Accordion>
+
 <Accordion title="How long are flagged conversations stored?">
   Flagged conversations are stored indefinitely at this time. There is no automatic resolution system currently in place.
 </Accordion>
+
 <Accordion title="What should I do if I receive a notification?">
   Review the conversation, assess the issue, and take appropriate action such as updating your app or following up with the user.
 </Accordion>
 
-<Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> We Want Your Feedback!
+<Icon icon="bullhorn" size="24" /> We Want Your Feedback\!
+
 <Info>
-  Have you tried reviewing Escalating Flagged Conversations? We'd love to hear about your experience!
+  Have you tried reviewing Escalating Flagged Conversations? We'd love to hear about your experience\!
 
   Join the discussion in our [Playlab Slack Channel](https://join.slack.com/t/playlabcommunity/shared_invite/zt-31mhwj7nl-49e1Mw5fYpyHJGOFyDIFtA).
 
@@ -106,8 +143,10 @@ When a message is automatically moderated (either input or output), the creator 
 </Info>
 
 <div className="mt-8">
-  <Button href="../index.md">Return to Home Page</Button>
+Return to Home Page
+
 </div>
 
 ---
+
 Last updated: 3/27/2025
