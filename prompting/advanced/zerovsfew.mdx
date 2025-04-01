@@ -1,0 +1,346 @@
+---
+title: 'Zero-Shot vs. Few-Shot Prompting'
+description: 'Learn when and how t use different prompting techniques to optimize your Playlab app performance for your specific use cases'
+---
+
+In this guide, we dive into zero-shot, one-shot, and few-shot prompting techniques—and explore how providing AI models with examples can significantly boost their accuracy and consistency. This practice, known as In-Context Learning (ICL), allows models to learn directly from examples embedded in your prompt rather than relying solely on pre-trained knowledge.
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> What is this strategy?
+
+This strategy focuses on choosing between different prompting approaches when designing Playlab apps:
+
+**Zero-shot prompting**: Providing instructions without examples, where the model relies entirely on its pre-trained knowledge.
+
+**One-shot prompting**: Providing a single example alongside instructions to clarify the task structure.
+
+**Few-shot prompting**: Including multiple examples (typically 2-10) demonstrating desired input-output pairs to guide the model's responses.
+
+<Note>These techniques fall under In-Context Learning (ICL), where models learn from examples embedded directly in the prompt without additional training or fine-tuning.</Note>
+
+<Warning>The best approach depends on your specific use case - neither technique is universally superior.</Warning>
+
+## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Why It's Important
+
+Selecting the right prompting technique can significantly impact your app's performance:
+
+* Improves response accuracy and consistency
+* Reduces the need for complex instruction sets
+* Helps models understand unconventional or specialized tasks
+* Allows you to calibrate the style, tone, and format of responses
+* Enables structured output generation (JSON, YAML, lists, etc.)
+* Provides better control over output formatting without extensive instructions
+* Leverages the model's pattern recognition abilities for complex tasks
+* Minimizes the need for extensive prompt revisions during development
+
+## <Icon icon="map" size="24" className="inline-block align-text-bottom" /> How to Apply It
+
+<Frame>
+  <iframe 
+    src="https://example.com/zero-shot-few-shot-demo"
+    frameborder="0" 
+    webkitallowfullscreen 
+    mozallowfullscreen 
+    allowfullscreen 
+    style={{ width: "100%", height: "400px" }}
+  ></iframe>
+  <figcaption>Zero-Shot vs. Few-Shot Prompting Techniques</figcaption>
+</Frame>
+
+## <Icon icon="list-ol" size="24" className="inline-block align-text-bottom" /> Implementation Steps
+Leverage this suggested template to help you choose and implement the right prompting approach
+<Frame><img src="/images/promptingapproaches.png" /></Frame>
+
+<Steps>
+  <Step title="Assess Task Complexity">
+    **Complexity Analysis**
+    
+    * Is the task common or specialized?
+    * Does it require specific formatting or style?
+    * Is it ambiguous or clearly defined?
+    
+    Zero-shot works well for common, well-defined tasks with clear instructions. Few-shot excels at specialized, complex, or ambiguous tasks requiring precise formatting or style.
+  </Step>
+  
+  <Step title="Select Your Approach">
+
+    **Decision Framework**
+    
+    Choose **zero-shot** when:
+    * Task follows common patterns (summarization, Q&A, classification)
+    * Instructions are clear and unambiguous
+    * You want flexibility in responses
+    * You're using a reasoning-enabled model
+    * The task is simple and well-understood
+    
+    Choose **one-shot** when:
+    * You need to clarify a specific expected format
+    * The task has some ambiguity that a single example resolves
+    * You want to guide the model while conserving context window space
+    * The task is moderately complex
+    
+    Choose **few-shot** when:
+    * Task is specialized or uncommon
+    * Format needs to be highly specific (JSON, structured lists, etc.)
+    * You want consistent output structure
+    * Instructions alone might be misinterpreted
+    * You need the model to identify patterns across multiple examples
+  </Step>
+  
+  <Step title="Craft Your Prompt">
+    
+    **Zero-Shot Structure**
+    ```
+    [Clear task description]
+    [Detailed instructions]
+    [Format requirements if any]
+    [Input data]
+    ```
+    
+    **One-Shot Structure**
+    ```
+    [Brief task description]
+    [Example: Input → Output]
+    [Input data]
+    ```
+    
+    **Few-Shot Structure**
+    There are multiple formats you can use:
+    
+    Format 1 - Colon separation (good for short inputs/outputs):
+    ```
+    [Brief task description]
+    [Input 1]: [Output 1]
+    [Input 2]: [Output 2]
+    [Input 3]: [Output 3]
+    [Test input]:
+    ```
+    
+    Format 2 - Q&A style (common in research):
+    ```
+    [Brief task description]
+    Q: [Input 1]
+    A: [Output 1]
+    
+    Q: [Input 2]
+    A: [Output 2]
+    
+    Q: [Test input]
+    A:
+    ```
+    
+    Format 3 - INPUT/OUTPUT labels (best for longer content):
+    ```
+    [Brief task description]
+    INPUT: [Input 1]
+    OUTPUT: [Output 1]
+    
+    INPUT: [Input 2]
+    OUTPUT: [Output 2]
+    
+    INPUT: [Test input]
+    OUTPUT:
+    ```
+    
+    For few-shot, use varied but representative examples covering key patterns you want the model to learn.
+  </Step>
+  
+  <Step title="Test and Refine">
+    
+    **Evaluation Framework**
+    
+    * Test with diverse inputs
+    * Evaluate based on accuracy, consistency, and edge case handling
+    * If results are inconsistent with zero-shot, try adding examples
+    * If few-shot is too rigid, consider reducing examples or adding flexibility instructions
+    
+    Iterative refinement is key to finding the optimal balance for your specific use case.
+  </Step>
+</Steps>
+
+## <Icon icon="pen-to-square" size="24" className="inline-block align-text-bottom" /> Example Prompts
+
+### Zero-Shot Example: Product Description Generator
+
+```
+Generate a compelling product description for e-commerce based on the following specifications:
+
+Product: [product name]
+Key Features: [list of features]
+Target Audience: [audience description]
+Tone: Professional yet engaging
+Length: 100-150 words
+
+Your description should highlight benefits rather than just features, include a strong opening sentence, and end with a call to action.
+```
+
+### One-Shot Example: Sentiment Classification
+
+```
+Classify the sentiment of the following text as positive, negative, or neutral.
+
+Text: The product is terrible.
+Sentiment: Negative
+
+Text: I think the vacation was okay.
+Sentiment:
+```
+
+### Few-Shot Example: Custom Recipe Formatter
+
+```
+Convert the following recipe inputs into a standardized format. Follow these examples:
+
+Example 1:
+Input: Pancakes - 2 cups flour, 2 eggs, 1 cup milk, 3 tbsp sugar, 1 tbsp baking powder, mix and cook on griddle
+Output:
+# Classic Pancakes
+## Ingredients
+- 2 cups flour
+- 2 eggs
+- 1 cup milk
+- 3 tbsp sugar
+- 1 tbsp baking powder
+
+## Instructions
+1. Combine all ingredients and mix until smooth
+2. Heat griddle to medium
+3. Pour batter onto griddle in round shapes
+4. Flip when bubbles appear
+5. Cook until golden brown
+
+Example 2:
+[Second example with different structure]
+
+Now format this recipe:
+[Input recipe]
+```
+
+### Few-Shot Example: Structured Information Extraction
+
+```
+INPUT: Software Engineer - Python specialist needed at TechCorp. 5+ years experience required. Salary range $90,000 - $120,000. Remote work available. Apply by June 30, 2024.
+OUTPUT: 
+Position: Software Engineer
+Specialization: Python
+Company: TechCorp
+Experience Required: 5+ years
+Salary Range: $90,000 - $120,000
+Work Type: Remote
+Application Deadline: June 30, 2024
+
+INPUT: Marketing Manager for GlobalBrand. MBA preferred. 3-5 years in consumer goods marketing. $75K-$95K DOE. Hybrid work model. Applications close July 15, 2024.
+OUTPUT:
+Position: Marketing Manager
+Company: GlobalBrand
+Education: MBA preferred
+Experience Required: 3-5 years
+Industry: Consumer goods
+Salary Range: $75,000 - $95,000
+Work Type: Hybrid
+Application Deadline: July 15, 2024
+
+INPUT: Data Scientist wanted at AI Innovations Ltd. PhD in Computer Science or related field. Minimum 2 years industry experience. Competitive salary €60,000 - €80,000 based on experience. On-site work in Berlin office. Apply by August 31, 2024.
+OUTPUT:
+```
+
+## <Icon icon="binoculars" size="24" className="inline-block align-text-bottom" /> Key Implementation Dimensions
+
+<Accordion title="Task Characteristics">
+  * Complexity: Simple vs. intricate
+  * Familiarity: Common vs. specialized
+  * Ambiguity: Clear vs. open to interpretation
+  * Constraints: Flexible vs. rigid requirements
+  * Output structure: Prose vs. structured (JSON, lists, etc.)
+  * Pattern complexity: Single pattern vs. multiple patterns
+</Accordion>
+<Accordion title="Example Selection (for Few-Shot)">
+  * Diversity: Cover various patterns and edge cases
+  * Representation: Match expected real-world inputs
+  * Progression: Simple to complex examples
+  * Clarity: Unambiguous demonstrations
+  * Format consistency: Use the same format across examples (colon, INPUT/OUTPUT, Q&A)
+  * Example count: 2-5 for simple tasks, 5-10 for complex tasks
+  * Balance: Include examples of different types or categories
+</Accordion>
+<Accordion title="Instruction Quality">
+  * Specificity: Detailed vs. general guidance
+  * Structure: How information is organized
+  * Context: Background information provided
+  * Boundaries: Clear limitations and scope
+</Accordion>
+<Accordion title="Model Considerations">
+  * Capabilities: Advanced reasoning vs. basic models
+  * Fine-tuning: Base vs. specialized models
+  * Token efficiency: Economy of explanation
+  * Adaptability: Resilience to variation
+</Accordion>
+
+## <Icon icon="file-code" size="24" className="inline-block align-text-bottom" /> Real-World Applications
+
+Few-shot prompting is highly versatile and can be applied to numerous domains:
+
+* **Text Classification**: Sentiment analysis, topic categorization, content moderation
+* **Information Extraction**: Structured data from unstructured text, entity recognition
+* **Content Creation**: Travel itineraries, product descriptions, marketing copy
+* **Code Generation**: Creating functions, code translation, bug fixing
+* **Structured Output**: Generating JSON, YAML, or consistently formatted text
+* **Translation**: Context-aware language translation
+* **Summarization**: With specific formatting or style requirements
+* **Question Answering**: For specialized knowledge domains
+* **Conversation Design**: Creating specific dialogue patterns
+
+## <Icon icon="file-code" size="24" className="inline-block align-text-bottom" /> Template
+
+<Frame>
+  <img src="/images/promptingtechniquestemplate.png" alt="Template for Zero-Shot vs. Few-Shot Prompting" />
+</Frame>
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> Frequently Asked Questions
+
+<Accordion title="When does zero-shot prompting perform better than few-shot?">
+  Zero-shot often performs better for straightforward tasks where the model already has strong capabilities, like basic summarization or Q&A. It's also advantageous when using reasoning-enabled models that can follow complex instructions without examples, or when you want more diverse and creative outputs rather than strictly formatted responses.
+</Accordion>
+
+<Accordion title="How many examples should I include in few-shot prompting?">
+  The optimal number typically ranges from 2-5 examples for simple tasks and around 10 for more complex ones. Start with 2-3 diverse examples covering key patterns. If performance doesn't improve with additional examples, focus on example quality and instruction clarity instead. For complex tasks with many edge cases, consider breaking down into multiple steps rather than adding too many examples. Some research scenarios may use 100+ examples, but this is usually impractical due to context window limitations.
+</Accordion>
+
+<Accordion title="Can I combine zero-shot and few-shot approaches?">
+  Yes, hybrid approaches can be very effective. You might provide detailed instructions (zero-shot component) followed by 1-2 examples for clarification (few-shot component). This is particularly useful for tasks where the concept is simple but the exact format or style needs demonstration, or when introducing novel constraints to otherwise familiar tasks.
+</Accordion>
+
+<Accordion title="What's the difference between chain-of-thought prompting and few-shot prompting?">
+  While both techniques involve providing examples, they serve different purposes:
+  
+  * Few-shot prompting: Shows input-output pairs to demonstrate the desired format or pattern
+  * Chain-of-thought prompting: Shows the reasoning steps or thought process to reach an answer
+  
+  These techniques can be combined by including reasoning steps within few-shot examples, creating "few-shot chain-of-thought prompting."
+</Accordion>
+
+<Accordion title="How is few-shot prompting useful for structured outputs?">
+  Few-shot prompting excels at producing structured outputs like JSON, YAML, bulleted lists, and other specific formats. Instead of writing detailed instructions about the output format, you can simply show examples of the desired structure. This is particularly valuable when:
+  
+  * You need to copy-paste the output into a spreadsheet
+  * You're using code to extract parts of the output
+  * You need consistency across multiple outputs
+  * The output structure is complex or difficult to describe in words
+</Accordion>
+
+## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> Need Support?
+
+If you need help implementing zero-shot or few-shot prompting in Playlab:
+
+* Contact us at [support@playlab.ai](mailto:support@playlab.ai)
+* Join the [Playlab Community Slack](https://join.slack.com/t/playlabcommunity/shared_invite/zt-31mhwj7nl-49e1Mw5fYpyHJGOFyDIFtA)
+
+<CardGroup className="mt-12 mb-8">
+  <Card title="Back to Reasoning Models" icon="arrow-left" href="/prompting/advanced/building-with-reasoning-models" iconType="duotone">
+    Return to reasoning models
+  </Card>
+  <Card title="Prompt Chaining" icon="arrow-right" href="/prompting/advanced/prompt-chaining" iconType="duotone">
+    Continue to the next strategy
+  </Card>
+</CardGroup>
+
+Last updated: March 30, 2025
