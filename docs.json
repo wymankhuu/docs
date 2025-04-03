@@ -82,6 +82,8 @@
             "group": "Advanced Prompting",
             "pages": [
               "prompting/advanced/intro",
+              "prompting/advanced/selecting llm",
+              "prompting/advanced/conditional logic",
               "prompting/advanced/building with reasoning models"
             ]
           }
