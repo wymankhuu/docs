@@ -84,6 +84,7 @@
               "prompting/advanced/intro",
               "prompting/advanced/selecting llm",
               "prompting/advanced/conditional logic",
+              "prompting/advanced/adjusting variability",
               "prompting/advanced/building with reasoning models"
             ]
           }

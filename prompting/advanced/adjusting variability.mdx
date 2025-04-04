@@ -1,0 +1,153 @@
+---
+title: 'Adjusting Variability'
+description: 'Adjust outputs from consistent to creative by adjusting and selecting the right variability settings for your Playlab applications'
+---
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> What is this strategy?
+
+This strategy focuses on effectively selecting and adjusting variability in Playlab apps. By understanding how variability affects model outputs and matching the appropriate setting to your specific use case, you can optimize your app's performance for consistency, creativity, or a balanced approach.
+
+<Warning>High variability is not always better for every task or function.</Warning>
+
+## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Why It's Important
+
+Variability in Large Language Models (LLMs) is one of the levers Playlab creators can leverage to try and fine tune their outputs. It determines how consistently models perform across different tasks or when processing different types of information:
+
+* High variability can lead to more creative, diverse outputs
+* Low variability ensures more consistent, predictable responses
+* Medium variability provides a balanced approach for general-purpose applications
+* Selecting the appropriate variability level ensures your app meets user expectations
+
+<Note>AI is not magic, it's math. So variability does not guarantee a certain output even if it's set at a very low variability. It just means it's more likely to be consistent</Note>
+
+## <Icon icon="list-ol" size="24" className="inline-block align-text-bottom" /> How to Adjust Variability
+
+<Frame>
+  <img src="/images/variability.gif" alt="Gif of Selecting Variability" />
+</Frame>
+
+<Steps>
+  <Step title="Understand Variability Levels">
+    **Variability Levels and Their Impact:**
+    * **Low Variability (less than 50%)**: Most consistent, reliable outputs
+    * **Medium Variability (60-70%)**: Balanced performance (70% is the default)
+    * **High Variability (80-100%)**: Most creative, potentially unpredictable outputs
+  </Step>
+  
+  <Step title="Consider Your App's Purpose">
+    **Match Variability to Your App Goals:**
+    
+    Ask yourself these questions:
+    * Does your app need to provide consistent, predictable responses?
+    * Is creativity and diversity in responses important?
+    * How important is reliability versus potential novelty?
+    * What are your users' expectations for the app's behavior?
+    
+    Example: A customer service assistant would benefit from low variability, while a creative writing assistant might need high variability.
+  </Step>
+  
+  <Step title="Select Variability in Playlab">
+    While in the Playlab app builder:
+    1. Locate the variability dropdown at the top of the builder interface
+    2. Select the variability that you want to use.
+    3. Test your app with different settings
+    
+    <Frame>
+      <img src="/images/variability demo.gif" alt="Variability Selection Demo" />
+    </Frame>
+  </Step>
+  
+  <Step title="Test and Refine">
+    * Use the "Remix" feature to create different versions with varying settings
+    * Test each version with similar inputs
+    * Compare outputs for consistency, creativity, and appropriateness
+    * Gather user feedback on which version best meets their needs
+    * Refine your selection based on real-world performance
+  </Step>
+</Steps>
+
+## <Icon icon="pen-to-square" size="24" className="inline-block align-text-bottom" /> Variability Comparison Guide
+
+### Understanding the Impact of Different Variability Settings
+
+| Aspect | High Variability (80-100%) | Medium Variability (60-70%) | Low Variability (less than 50%) |
+|--------|---------------------------|----------------------------|------------------------|
+| **Performance Characteristic** | Unpredictable, potentially brilliant | Balanced, consistent | Stable, reliable |
+| **Response to Input** | Sensitive to specifics | Adaptable to different inputs | Consistent across inputs |
+| **Accuracy** | Can be extremely accurate for familiar inputs | Good performance across various tasks | Dependable results across all tasks |
+| **Reliability** | May struggle with new information | More predictable performance | Highly consistent performance |
+| **Best Use Cases** | Creative writing, brainstorming, idea generation | General-purpose assistants, balanced applications | Customer service, technical documentation, factual information |
+
+## <Icon icon="binoculars" size="24" className="inline-block align-text-bottom" /> Key Implementation Dimensions
+
+<Accordion title="Match to Task Specificity">
+  * High-variability models excel at accuracy on specific, familiar data
+  * They may struggle with new or unfamiliar data types
+  * Consider your app's domain and how specialized the knowledge needs to be
+  * For highly specialized domains with consistent inputs, higher variability may work well
+</Accordion>
+
+<Accordion title="Choose Balance for Flexibility">
+  * Medium variability offers steady, adaptable performance
+  * Provides a good balance for apps that need to handle diverse tasks
+  * Avoids extreme performance swings while maintaining acceptable creativity
+  * Default setting (70%) works well for most general applications
+</Accordion>
+
+<Accordion title="Prioritize Stability for Consistency">
+  * Low-variability models give reliable results across varied tasks
+  * Ideal for applications where consistency is more important than creativity
+  * Better at handling changes and new situations in a predictable way
+  * Recommended for business, customer service, or factual information apps
+</Accordion>
+
+<Accordion title="Consider Predictability Requirements">
+  * Less variability means more predictable performance
+  * For mission-critical applications, choose medium to low variability
+  * When consistent user experience is essential, lower variability is preferred
+  * Applications requiring regulatory compliance benefit from lower variability
+</Accordion>
+
+## <Icon icon="file-code" size="24" className="inline-block align-text-bottom" /> Variability Selection Big Questions
+
+When deciding on variability for your Playlab app, consider:
+
+1. **App Purpose**: What is the primary function of your app?
+2. **User Expectations**: What level of consistency do users expect?
+3. **Content Type**: Is the content factual, creative, or a mix?
+4. **Risk Tolerance**: How important is it to avoid unexpected outputs?
+
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> Frequently Asked Questions
+
+<Accordion title="Can I change variability after creating my app?">
+  Yes! You can adjust the variability as you'd like or use the "Remix" feature in Playlab to create a new version of your app with different variability settings. This allows you to test multiple versions and compare their performance.
+</Accordion>
+
+<Accordion title="Does variability affect response speed?">
+  Variability settings primarily affect the consistency and creativity of outputs, not the processing speed. Response times are more influenced by model size and complexity rather than variability settings.
+</Accordion>
+
+<Accordion title="What's the best variability setting for a knowledge base assistant?">
+  For knowledge base applications where factual accuracy and consistency are important, a lower variability setting (30 to 50%) is generally recommended. This ensures more reliable and predictable information retrieval.
+</Accordion>
+
+<Accordion title="How does variability affect different LLM's?">
+  Variability settings will vary with different LLMs, but these models may already have certain biases toward consistency based on their training. It's best to test different variability settings even with different models to find the optimal balance.
+</Accordion>
+
+## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> Need Support?
+
+<Info>
+  Have you experimented with different variability settings? We'd love to hear about your experience!
+
+  Join the discussion in our [Playlab Slack Channel](https://join.slack.com/t/playlabcommunity/shared_invite/zt-31mhwj7nl-49e1Mw5fYpyHJGOFyDIFtA).
+
+  Contact us at [support@playlab.ai](mailto:support@playlab.ai)
+</Info>
+
+<div className="mt-8">
+  <Button href="../index.md">Return to Home Page</Button>
+</div>
+
+Last updated: April 04, 2025
