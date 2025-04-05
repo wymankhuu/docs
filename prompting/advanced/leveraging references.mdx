@@ -1,0 +1,150 @@
+---
+title: 'Leveraging References'
+description: 'Add references to your Playlab to provide additional context and specialized knowledge'
+---
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> What is this strategy?
+
+This strategy focuses on using reference materials in your Playlab app to improve its knowledge base. By uploading documents or adding links, you can give your app access to specific information that helps it generate more accurate, relevant, and customized responses for your users.
+
+<Note>Think of references as giving your Playlab app a specialized library of knowledge that it can draw from when answering questions.</Note>
+
+## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Why It's Important
+
+References are key to building apps that have specialized knowledge beyond what the AI already knows:
+
+* Ensures responses align with specific, verified information
+* Tailors content to your exact curriculum or teaching standards
+* Provides rich context for more comprehensive answers
+* Allows incorporation of up-to-date information through external links
+* Enables creation of school-specific or organizational content
+
+<Warning>More references aren't always better. Each reference should have a clear purpose in improving your app's outputs.</Warning>
+
+## <Icon icon="list-ol" size="24" className="inline-block align-text-bottom" /> How to Add References
+
+<Frame>
+  <img src="/images/addingreferences.gif" alt="Adding references demonstration" />
+</Frame>
+
+<Warning>It's important you have permission to upload references into your app</Warning>
+<Steps>
+  <Step title="Prepare Your Reference Materials">
+    **Choose the Right Format:**
+    * PDFs work well for maintaining formatting
+    * Markdown for structured text
+    * Well-organized text files
+    * Links to external resources
+    
+    **Optimize Your Files:**
+    * Break large documents into smaller, focused files
+    * Ensure clear formatting for easier AI parsing
+    * Tables and structured formats are easier for the AI to understand than long paragraphs
+  </Step>
+  
+  <Step title="Upload References in Playlab">
+    While in the Playlab app builder:
+    1. Navigate to the References section
+    2. Click "Upload" to add document files or "Add Link" for web resources
+    <Frame>
+      <img src="/images/referencesbutton.png" alt="Upload link interface" />
+    </Frame>
+    3. Give each reference a descriptive name
+    4. Make sure you have permission to upload the references.
+    <Frame>
+      <img src="/images/uploadlink.png" alt="Upload link interface" />
+    </Frame>
+  </Step>
+  
+  <Step title="Guide Your App to Use References">
+    In your app instructions, specify how and when to use the references:
+    
+    **Example Instructions:**
+    * "Use the lesson plan document to create activities that align with our school's 4th-grade science curriculum."
+    * "When answering questions about classroom management, refer to the discipline policy document."
+    * "Based on the provided state standards document, generate grade-appropriate math exercises."
+  </Step>
+  
+  <Step title="Test and Refine">
+    * Try your app with references enabled and disabled to see the difference
+    * Check if outputs mention or incorporate information from your references
+    * Adjust your instructions if the references aren't being used effectively
+    * Add or remove references based on performance
+  </Step>
+</Steps>
+
+## <Icon icon="pen-to-square" size="24" className="inline-block align-text-bottom" /> Reference Use Case Examples
+
+### Educational Applications with References
+
+| Use Case | Reference Type | Example Instruction |
+|----------|----------------|---------------------|
+| **Curriculum Planning** | Syllabus documents, standards PDFs | "Using the attached curriculum standards, create a weekly lesson plan for 2nd-grade math on addition and subtraction." |
+| **Assessment Creation** | Previous exams, rubrics | "Based on the sample tests provided, generate 5 new assessment questions on photosynthesis that match our difficulty level." |
+| **Differentiated Learning** | Student data, learning profiles | "Referring to the learning styles document, adapt this history lesson on Ancient Egypt for visual, auditory, and kinesthetic learners." |
+| **Feedback Generation** | Feedback guidelines, student work samples | "Using our feedback rubric, provide constructive comments on this student's essay about 'To Kill a Mockingbird'." |
+| **Parent Communication** | Communication templates, school policies | "Based on our communication guide, draft an email to parents about the upcoming science fair that includes all required information." |
+
+## <Icon icon="binoculars" size="24" className="inline-block align-text-bottom" /> Key Implementation Strategies
+
+<Accordion title="Choose Quality References">
+  * Select authoritative, accurate, and relevant materials
+  * Focus on resources that directly support your app's purpose
+  * Consider the credibility and currency of information
+  * For educational apps, use official curriculum documents, textbooks, or verified teaching resources
+</Accordion>
+
+<Accordion title="Be Explicit in Your Instructions">
+  * Clearly direct the app to use specific references for specific tasks
+  * Example: "When creating vocabulary exercises, refer to the word list document"
+  * Specify which sections of longer documents are relevant for particular questions
+  * Tell the app how to prioritize different references when they contain overlapping information
+</Accordion>
+
+<Accordion title="Combine Reference Types for Better Results">
+  * Mix document types for comprehensive coverage
+  * Example: Combine curriculum standards, lesson plan templates, and content resources
+  * Use structured references (tables, lists) alongside narrative content
+  * Include both broad overview documents and detailed specific resources
+</Accordion>
+
+<Accordion title="Regularly Update Your References">
+  * Review and refresh materials to ensure accuracy
+  * Update seasonal or time-sensitive content
+  * Replace outdated information with current resources
+  * Add new references as curriculum or requirements change
+</Accordion>
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> Frequently Asked Questions
+
+<Accordion title="How many references should I include?">
+  Start with 3-5 core references that cover your app's main functionality. Quality is more important than quantity - each reference should serve a clear purpose. Too many references can actually make it harder for the app to focus on the most relevant information.
+</Accordion>
+
+<Accordion title="What file formats work best for references?">
+  PDFs, markdown files, and well-structured text documents work well. For tabular data, CSV files or documents with clear tables are ideal. The AI can parse most common formats, but clearer structure helps it understand the content better.
+</Accordion>
+
+<Accordion title="Should I test my app with and without references?">
+  Yes! Toggle the reference setting on and off to see how it impacts your results. This helps you determine if your references are actually improving the outputs or if they might be confusing the app.
+</Accordion>
+
+<Accordion title="How do I know if my references are being used effectively?">
+  Look for specific information from your references appearing in the app's outputs. The responses should be more specific, accurate, and aligned with your provided materials. If you don't see evidence that the references are being used, try adjusting your instructions to more explicitly direct the app to use them.
+</Accordion>
+
+## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> Need Support?
+
+<Info>
+  Have you created an app using references? We'd love to hear about your experience!
+
+  Join the discussion in our [Playlab Slack Channel](https://join.slack.com/t/playlabcommunity/shared_invite/zt-31mhwj7nl-49e1Mw5fYpyHJGOFyDIFtA).
+
+  Contact us at [support@playlab.ai](mailto:support@playlab.ai)
+</Info>
+
+<div className="mt-8">
+  <Button href="../index">Return to Home Page</Button>
+</div>
+
+Last updated: April 05, 2025
