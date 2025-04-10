@@ -5,7 +5,7 @@ description: 'Choose the perfect AI model for your Playlab application'
 
 ## <Icon icon="bell-on" size="24" className="inline-block align-text-bottom" /> What is this feature?
 
-You can now build on top of even more LLMs in Playlab! There are now 8 available AI models for you to build your Playlab apps on top of. We will try our best to always provide the latest models for you to build on top of.
+You can now build on top of even more LLMs in Playlab! There are now 9 available AI models for you to build your Playlab apps on top of. We will try our best to always provide the latest models for you to build on top of.
 
 <Warning>
   Changing the LLM may impact the performance of your app.
@@ -21,14 +21,14 @@ As you build, you might find that certain models perform better at different tas
 
 <Steps>
   <Step title="Click the LLM selector">
-    On the top left click the LLM. (By default it will say GPT-4o)
+    On the top left click the LLM. (By default it will be Claude 3.7)
     
     <img height="500" src="/images/Selectinganllm.gif" className="border border-gray-300 rounded-md shadow-sm" />
   </Step>
   <Step title="Choose your model">
     From the menu, select which LLM you want to build on top of.
     
-    <img height="200" src="/images/Selectinganllm.jpeg" className="border border-gray-300 rounded-md shadow-sm" />
+    <img width="300" src="/images/selectanllm.png" className="border border-gray-300 rounded-md shadow-sm" />
   </Step>
 </Steps>
 
@@ -50,12 +50,12 @@ Now that you know how to select models, here are some strengths and tradeoffs of
   </Card>
 
   <Card title="Claude 3.7 Sonnet (Anthropic)" icon="star">
-    <p><strong>Description:</strong> Latest version of Claude Sonnet series, upgrade from 3.5</p>
+    <p><strong>Description:</strong> Latest version of Claude Sonnet series, upgraded from 3.5</p>
     <p><strong>➕ Strengths:</strong> Improved accuracy and instruction following capabilities. Good speed to performance ratio.</p>
     <p><strong>➖ Trade Offs:</strong> Not optimized for reasoning tasks. Not as fast as smaller models like Flash or GPT-4o</p>
   </Card>
 
-  <Card title="Claude 3.7 Sonnet Reasoning (Anthropic)" icon="brain">
+  <Card title="Claude 3.7 Sonnet (Reasoning) (Anthropic)" icon="brain">
     <p><strong>Description:</strong> Latest version of Claude Sonnet series that allows for you to work through difficult problems using careful, step-by-step reasoning.</p>
     <p><strong>➕ Strengths:</strong> Exceptional step by step reasoning capabilities. Stronger at math and coding. Very good at explaining thought process</p>
     <p><strong>➖ Trade Offs:</strong> Slower response times. Not as optimized for creative tasks</p>
@@ -67,27 +67,27 @@ Now that you know how to select models, here are some strengths and tradeoffs of
     <p><strong>➖ Trade Offs:</strong> Not ideal for multi-step problem solving or instruction following. May miss nuance in instructions</p>
   </Card>
 
-  <Card title="LearnLM (Google)" icon="graduation-cap">
-    <p><strong>Description:</strong> Experimental: Incorporates educational research to enhance teaching and learning experiences. Specialized to work for educational contexts</p>
-    <p><strong>➕ Strengths:</strong> Explains educational concepts effectively.</p>
-    <p><strong>➖ Trade Offs:</strong> In experiment mode, and has not been tested as much. Not optimized for general purpose speed. Struggles with contexts outside of education</p>
-  </Card>
-
   <Card title="GPT-4o (OpenAI)" icon="circle-o">
     <p><strong>Description:</strong> Advanced model designed for complex, multi-step tasks.</p>
     <p><strong>➕ Strengths:</strong> Well balanced and strong at following instructions and speed. Versatile and effective in many domains.</p>
     <p><strong>➖ Trade Offs:</strong> Falls in the middle in terms of response time. Sometimes overcomplicates simple tasks</p>
   </Card>
 
-  <Card title="Llama 3.3 (Meta)" icon="meta">
+  <Card title="Llama 3.3 70B Instruct (Meta)" icon="meta">
     <p><strong>Description:</strong> Advanced model for reasoning, math, and general knowledge.</p>
     <p><strong>➕ Strengths:</strong> Strong general well balanced use cases. Performs well in math. Effective at following clear instructions.</p>
     <p><strong>➖ Trade Offs:</strong> Slower than smaller models. Does not follow instructions as well as Claude/GPT models.</p>
   </Card>
 
-  <Card title="O1 Reasoning (OpenAI)" icon="brain-circuit">
+  <Card title="Llama 4 Maverick (Meta)" icon="meta">
+    <p><strong>Description:</strong> Advanced open-weight model for reasoning, math, and general knowledge.</p>
+    <p><strong>➕ Strengths:</strong> Improved reasoning capabilities over Llama 3.3. Strong performance in general knowledge tasks.</p>
+    <p><strong>➖ Trade Offs:</strong> Not as fast as smaller models. May require more specific prompting for best results.</p>
+  </Card>
+
+  <Card title="o3 Mini (OpenAI)" icon="brain-circuit">
     <p><strong>Description:</strong> Advanced model with multistep reasoning and complex problem-solving.</p>
-    <p><strong>➕ Strengths:</strong> Excellent multi step reasoning capabilities. Strong at following detailed analytical instructions. High accuracy with complex tasks</p>
+    <p><strong>➕ Strengths:</strong> Excellent multi-step reasoning capabilities. Strong at following detailed analytical instructions. High accuracy with complex tasks</p>
     <p><strong>➖ Trade Offs:</strong> Noticeable slowdown versus other models. May be unnecessarily powerful for simple tasks. Not optimized for creative tasks.</p>
   </Card>
 </CardGroup>
@@ -115,9 +115,9 @@ Selecting can be tricky. That's why we encourage you to play and experiment as y
 ### <Icon icon="medal" size="24" className="inline-block align-text-bottom" /> Best Practices
 
 <Accordion title="Try to match your model with your use case:">
-  * Creative applications – Choose models with creative strengths like Claude 3.5 Sonnet, 3.7 Sonnet, GPT 4o
-  * Problem-solving tools – Select reasoning-focused models like Claude 3.7 Sonnet (Reasoning) or o1
-  * Educational explanation – Consider specialized models like Llama 3.3 or those with strong explanatory capabilities
+  * Creative applications – Choose models with creative strengths like Claude 3.5 Sonnet, 3.7 Sonnet, GPT-4o
+  * Problem-solving tools – Select reasoning-focused models like Claude 3.7 Sonnet (Reasoning), Llama 4 Maverick, or o3 Mini
+  * Educational explanation – Consider specialized models like Llama 3.3 70B Instruct, Llama 3.3. 70B Instruct, Llama 4 Maverick or those with strong explanatory capabilities
   * High-volume applications – Balance quality with speed using models like Claude 3.5/3.7 Sonnet or Gemini 2 Flash
 </Accordion>
 
@@ -162,4 +162,4 @@ Selecting can be tricky. That's why we encourage you to play and experiment as y
 </div>
 
 ---
-Last updated: 3/16/2025
+Last updated: 4/10/2025
