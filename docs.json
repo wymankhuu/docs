@@ -50,6 +50,7 @@
         "icon": "puzzle",
         "pages": [
           "features/Overview",
+          "features/Pinned References",
           "features/Escalating Flagged Conversations",
           "features/Richer Starter Inputs",
           "features/Selecting an LLM",
