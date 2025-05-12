@@ -124,7 +124,8 @@
         "icon": "newspaper",
         "pages": [
           "resources/main",
-          "resources/implementation"
+          "resources/organizingworkspaces",
+          "resources/markingstatus"
         ]
       }
     ]
