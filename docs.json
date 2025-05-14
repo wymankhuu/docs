@@ -116,10 +116,11 @@
         "icon": "newspaper",
         "pages": [
           "resources/main",
+          "resources/learningresources",
           "resources/organizingworkspaces",
           "resources/markingstatus"
         ]
-      }
+      },
       {
         "anchor": "About",
         "icon": "circle-info",
@@ -127,7 +128,7 @@
           "about/About Playlab",
           "about/Contact Us"
         ]
-      },
+      }
     ]
   },
   "navbar": {
