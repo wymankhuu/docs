@@ -112,14 +112,6 @@
         ]
       },
       {
-        "anchor": "About",
-        "icon": "circle-info",
-        "pages": [
-          "about/About Playlab",
-          "about/Contact Us"
-        ]
-      },
-      {
         "anchor": "Learning Resources",
         "icon": "newspaper",
         "pages": [
@@ -128,6 +120,14 @@
           "resources/markingstatus"
         ]
       }
+      {
+        "anchor": "About",
+        "icon": "circle-info",
+        "pages": [
+          "about/About Playlab",
+          "about/Contact Us"
+        ]
+      },
     ]
   },
   "navbar": {
