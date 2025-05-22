@@ -5,7 +5,7 @@ description: 'Choose the perfect AI model for your Playlab application'
 
 ## <Icon icon="bell-on" size="24" className="inline-block align-text-bottom" /> What is this feature?
 
-You can now build on top of even more LLMs in Playlab! There are now 9 available AI models for you to build your Playlab apps on top of. We will try our best to always provide the latest models for you to build on top of.
+You can now build on top of even more LLMs in Playlab! There are now 10 available AI models for you to build your Playlab apps on top of. We will try our best to always provide the latest models for you to build on top of.
 
 <Warning>
   Changing the LLM may impact the performance of your app.
@@ -21,14 +21,14 @@ As you build, you might find that certain models perform better at different tas
 
 <Steps>
   <Step title="Click the LLM selector">
-    On the top left click the LLM. (By default it will be Claude 3.7)
+    On the top left click the LLM. (By default it will be Claude 3.7 Sonnet)
     
     <img height="500" src="/images/Selectinganllm.gif" className="border border-gray-300 rounded-md shadow-sm" />
   </Step>
   <Step title="Choose your model">
     From the menu, select which LLM you want to build on top of.
     
-    <img width="300" src="/images/selectanllm.png" className="border border-gray-300 rounded-md shadow-sm" />
+    <img width="300" src="/images/selectinganllm.png" className="border border-gray-300 rounded-md shadow-sm" />
   </Step>
 </Steps>
 
@@ -84,6 +84,12 @@ Now that you know how to select models, here are some strengths and tradeoffs of
     <p><strong>➕ Strengths:</strong> Improved reasoning capabilities over Llama 3.3. Strong performance in general knowledge tasks.</p>
     <p><strong>➖ Trade Offs:</strong> Not as fast as smaller models. May require more specific prompting for best results.</p>
   </Card>
+  
+  <Card title="Llama 4 Scout (Meta)" icon="meta">
+    <p><strong>Description:</strong> Powerful for multi-document analysis, cross-lingual understanding, and context-aware reasoning.</p>
+    <p><strong>➕ Strengths:</strong> Excellent at analyzing multiple documents simultaneously. Strong cross-lingual capabilities. Advanced contextual understanding.</p>
+    <p><strong>➖ Trade Offs:</strong> May be slower for simple tasks. Specialized for document analysis rather than general usage.</p>
+  </Card>
 
   <Card title="o3 Mini (OpenAI)" icon="brain-circuit">
     <p><strong>Description:</strong> Advanced model with multistep reasoning and complex problem-solving.</p>
@@ -92,7 +98,7 @@ Now that you know how to select models, here are some strengths and tradeoffs of
   </Card>
 </CardGroup>
 
-## <Icon icon="wand-magic-sparkles" size="24" className="inline-block align-text-bottom" /> Tips for Selecting the Right Model
+## <Icon icon="ballot-check" size="24" className="inline-block align-text-bottom" /> Tips for Selecting the Right Model
 
 Selecting can be tricky. That's why we encourage you to play and experiment as you build to find the model that is best fit for your context.
 
@@ -116,8 +122,9 @@ Selecting can be tricky. That's why we encourage you to play and experiment as y
 
 <Accordion title="Try to match your model with your use case:">
   * Creative applications – Choose models with creative strengths like Claude 3.5 Sonnet, 3.7 Sonnet, GPT-4o
-  * Problem-solving tools – Select reasoning-focused models like Claude 3.7 Sonnet (Reasoning), Llama 4 Maverick, or o3 Mini
-  * Educational explanation – Consider specialized models like Llama 3.3 70B Instruct, Llama 3.3. 70B Instruct, Llama 4 Maverick or those with strong explanatory capabilities
+  * Problem-solving tools – Select reasoning-focused models like Claude 3.7 Sonnet (Reasoning), Llama 4 Maverick, o3 Mini
+  * Document analysis – Consider specialized models like Llama 4 Scout for multi-document or cross-lingual analysis
+  * Educational explanation – Consider specialized models like Llama 3.3 70B Instruct, Llama 4 Maverick, or those with strong explanatory capabilities
   * High-volume applications – Balance quality with speed using models like Claude 3.5/3.7 Sonnet or Gemini 2 Flash
 </Accordion>
 
@@ -147,6 +154,10 @@ Selecting can be tricky. That's why we encourage you to play and experiment as y
   Yes! We recommend using faster models for simple queries and reserving more powerful models for complex tasks if you're building a suite of apps.
 </Accordion>
 
+<Accordion title="When should I use Llama 4 Scout?">
+  Llama 4 Scout is ideal for applications that require analysis of multiple documents simultaneously, work with multiple languages, or need strong contextual understanding across large amounts of content. It's particularly useful for research tools, document comparison applications, and multilingual services.
+</Accordion>
+
 ## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> We Want Your Feedback!
 
 <Info>
@@ -160,4 +171,4 @@ Selecting can be tricky. That's why we encourage you to play and experiment as y
 </div>
 
 ---
-Last updated: 4/10/2025
+Last updated: 5/22/2025
