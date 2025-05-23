@@ -1,11 +1,11 @@
 ---
 title: 'Selecting an LLM'
-description: 'Choose the best fit AI model for your Playlab application'
+description: 'Choose the perfect AI model for your Playlab application'
 ---
 
 ## <Icon icon="bell-on" size="24" className="inline-block align-text-bottom" /> What is this feature?
 
-You can now build on top of even more LLMs in Playlab! There are now 10 available AI models for you to build your Playlab apps on top of. We will try our best to always provide the latest models for you to build on top of.
+You can now build on top of even more LLMs in Playlab! There are now 12 available AI models for you to build your Playlab apps on top of. We will try our best to always provide the latest models for you to build on top of.
 
 <Warning>
   Changing the LLM may impact the performance of your app.
@@ -36,30 +36,43 @@ As you build, you might find that certain models perform better at different tas
 
 Now that you know how to select models, here are some strengths and tradeoffs of each:
 
-<CardGroup cols={1}>
   <Card title="Claude 3 Opus (Anthropic)" icon="sparkles">
     <p><strong>Description:</strong> Advanced model which can handle complex analysis, longer tasks with many steps, and higher-order math and coding.</p>
     <p><strong>➕ Strengths:</strong> Accuracy and strong at following detailed step by step instructions</p>
-    <p><strong>➖ Trade Offs:</strong> Slower and may be overkill for simple, straightforward tasks</p>
+    <p><strong>➖ Trade Offs:</strong> Slower and may be overkill for simple, straightforward tasks. Superseded by Claude Opus 4 for most use cases.</p>
   </Card>
 
   <Card title="Claude 3.5 Sonnet (Anthropic)" icon="music">
     <p><strong>Description:</strong> General purpose model balanced between speed and accuracy with an emphasis on expression and creativity.</p>
     <p><strong>➕ Strengths:</strong> Good balance between speed and accuracy. Very creative and versatile.</p>
-    <p><strong>➖ Trade Offs:</strong> Less powerful than new Claude 3.7 models. Struggles with some complex, multi-step problems</p>
+    <p><strong>➖ Trade Offs:</strong> Less powerful than newer Claude 4 models. Struggles with some complex, multi-step problems</p>
   </Card>
 
   <Card title="Claude 3.7 Sonnet (Anthropic)" icon="star">
     <p><strong>Description:</strong> Latest version of Claude Sonnet series, upgraded from 3.5</p>
     <p><strong>➕ Strengths:</strong> Improved accuracy and instruction following capabilities. Good speed to performance ratio.</p>
-    <p><strong>➖ Trade Offs:</strong> Not optimized for reasoning tasks. Not as fast as smaller models like Flash or GPT-4o</p>
+    <p><strong>➖ Trade Offs:</strong> Not optimized for reasoning tasks. Not as fast as smaller models like Flash or GPT-4o. Superseded by Claude Sonnet 4.</p>
   </Card>
 
   <Card title="Claude 3.7 Sonnet (Reasoning) (Anthropic)" icon="brain">
     <p><strong>Description:</strong> Latest version of Claude Sonnet series that allows for you to work through difficult problems using careful, step-by-step reasoning.</p>
     <p><strong>➕ Strengths:</strong> Exceptional step by step reasoning capabilities. Stronger at math and coding. Very good at explaining thought process</p>
-    <p><strong>➖ Trade Offs:</strong> Slower response times. Not as optimized for creative tasks</p>
+    <p><strong>➖ Trade Offs:</strong> Slower response times. Not as optimized for creative tasks. Consider Claude Sonnet 4 or Opus 4 for better overall performance.</p>
   </Card>
+  
+  <CardGroup cols={1}>
+  <Card title="Claude Sonnet 4 (Anthropic)" icon="star">
+    <p><strong>Description:</strong> The latest Sonnet all purpose model that balances exceptional performance with efficiency. Smart, capable model for everyday use with advanced reasoning and creative capabilities.</p>
+    <p><strong>➕ Strengths:</strong> Excellent balance of speed and intelligence. Superior instruction following. Strong at both creative and analytical tasks. Efficient for a wide variety of tasks</p>
+    <p><strong>➖ Trade Offs:</strong> More expensive than smaller models. May be overkill for very simple tasks.</p>
+  </Card>
+
+  <Card title="Claude Opus 4 (Anthropic)" icon="crown">
+    <p><strong>Description:</strong> Anthropic's most powerful model Built for sustained performance on complex tasks that require numerous steps, including coding and complex workflows.</p>
+    <p><strong>➕ Strengths:</strong> Exceptional performance on complex multi-step problems. Superior accuracy and reasoning depth. Best for critical applications requiring highest quality output.</p>
+    <p><strong>➖ Trade Offs:</strong> Slower response times and higher cost. May be unnecessary for straightforward tasks.</p>
+  </Card>
+
 
   <Card title="Gemini 2 Flash (Google)" icon="bolt">
     <p><strong>Description:</strong> General purpose model optimized for fast response times.</p>
@@ -105,39 +118,44 @@ Selecting can be tricky. That's why we encourage you to play and experiment as y
 ### <Icon icon="scale-balanced" size="24" className="inline-block align-text-bottom" /> Selection Considerations
 
 <Accordion title="Ask yourself what is an ideal response time for your app?">
-  This will allow you to pick larger or smaller models that meet those needs
+  This will allow you to pick larger or smaller models that meet those needs. Claude Sonnet 4 offers the best balance, while Claude Opus 4 prioritizes quality over speed.
 </Accordion>
 
 <Accordion title="Identify what complexity level is your task?">
-  * For simple Q&A or content generation, lighter models may suffice
-  * For multi-step reasoning, choose reasoning-focused models
+  * For simple Q&A or content generation, lighter models like Gemini 2 Flash may suffice
+  * For balanced everyday tasks, Claude Sonnet 4 is ideal
+  * For the most complex multi-step reasoning, choose Claude Opus 4, o3 Mini, or reasoning-focused models
 </Accordion>
 
 <Accordion title="What is the level of accuracy you are requiring of your app?">
-  * Critical accuracy use cases like data analysis, or HR operations might require more powerful models even if they're slower.
-  * Use cases that require creativity or open ended responses might not call for reasoning models and may work better with more well balanced models.
+  * Critical accuracy use cases like data analysis, or HR operations might require Claude Opus 4 or other powerful models even if they're slower.
+  * Use cases that require creativity or open ended responses work well with Claude Sonnet 4, Claude 3.5 Sonnet, or GPT-4o.
 </Accordion>
 
 ### <Icon icon="medal" size="24" className="inline-block align-text-bottom" /> Best Practices
 
 <Accordion title="Try to match your model with your use case:">
-  * Creative applications – Choose models with creative strengths like Claude 3.5 Sonnet, 3.7 Sonnet, GPT-4o
-  * Problem-solving tools – Select reasoning-focused models like Claude 3.7 Sonnet (Reasoning), Llama 4 Maverick, o3 Mini
-  * Document analysis – Consider specialized models like Llama 4 Scout for multi-document or cross-lingual analysis
-  * Educational explanation – Consider specialized models like Llama 3.3 70B Instruct, Llama 4 Maverick, or those with strong explanatory capabilities
-  * High-volume applications – Balance quality with speed using models like Claude 3.5/3.7 Sonnet or Gemini 2 Flash
+  * **Everyday applications** – Claude Sonnet 4 provides the best balance of performance and efficiency
+  * **Critical/Complex applications** – Claude Opus 4 for highest accuracy and reasoning capability
+  * **Creative applications** – Claude Sonnet 4, Claude 3.5 Sonnet, 3.7 Sonnet, or GPT-4o
+  * **Problem-solving tools** – Claude Opus 4, Claude 3.7 Sonnet (Reasoning), Llama 4 Maverick, o3 Mini
+  * **Document analysis** – Claude Opus 4 or Llama 4 Scout for multi-document or cross-lingual analysis
+  * **Educational explanation** – Claude Sonnet 4, Llama 3.3 70B Instruct, Llama 4 Maverick, or those with strong explanatory capabilities
+  * **High-volume applications** – Balance quality with speed using Claude Sonnet 4 or Gemini 2 Flash
 </Accordion>
 
 <Accordion title="Test out multiple models for apps that you are building:">
   * Changing a model may change performance of an app in Playlab
   * Test multiple models before finalizing – Performance can vary significantly on your specific tasks
   * Implement A/B testing as you're building and testing to continually evaluate model performance
+  * Consider starting with Claude Sonnet 4 as your baseline for most applications
 </Accordion>
 
 <Accordion title="Additional best practices:">
   * We recommend that you remix apps as you're experimenting to not impact the original app
-  * You can review activity to see how multiple models handle similar tasks
-  * If you're building a suite of apps we recommend you use faster models for simple queries and reserve powerful models for complex tasks
+  * You can review activity to see how multiple models handle similar tasks  
+  * If you're building a suite of apps we recommend you use faster models for simple queries and reserve powerful models like Claude Opus 4 for complex tasks
+  * Consider cost implications - newer Claude 4 models may be more expensive but offer better performance
 </Accordion>
 
 ## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> FAQ
@@ -147,11 +165,19 @@ Selecting can be tricky. That's why we encourage you to play and experiment as y
 </Accordion>
 
 <Accordion title="How do I know which model is best for my specific use case?">
-  We recommend experimenting with different models for your specific use case. Consider factors like response time requirements, complexity level of tasks, and accuracy needs. You can implement A/B testing to evaluate model performance.
+  We recommend experimenting with different models for your specific use case. Consider factors like response time requirements, complexity level of tasks, and accuracy needs. You can implement A/B testing to evaluate model performance. For most applications, Claude Sonnet 4 is a great starting point.
 </Accordion>
 
 <Accordion title="Can I use different models for different parts of my app suite?">
-  Yes! We recommend using faster models for simple queries and reserving more powerful models for complex tasks if you're building a suite of apps.
+  Yes! We recommend using faster models for simple queries and reserving more powerful models like Claude Opus 4 for complex tasks if you're building a suite of apps.
+</Accordion>
+
+<Accordion title="When should I choose Claude Sonnet 4 vs Claude Opus 4?">
+  Choose Claude Sonnet 4 for most everyday applications where you need a good balance of performance and efficiency. Choose Claude Opus 4 when you need the highest accuracy and reasoning capability for complex, critical tasks where performance is more important than speed.
+</Accordion>
+
+<Accordion title="Should I upgrade from older Claude models?">
+  Yes, Claude Sonnet 4 and Claude Opus 4 generally outperform their predecessors. Claude Sonnet 4 is recommended over Claude 3.5/3.7 Sonnet for most use cases, while Claude Opus 4 supersedes Claude 3 Opus for complex reasoning tasks.
 </Accordion>
 
 <Accordion title="When should I use Llama 4 Scout?">
@@ -161,7 +187,7 @@ Selecting can be tricky. That's why we encourage you to play and experiment as y
 ## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> We Want Your Feedback!
 
 <Info>
-  Have you tried building with different LLM models? We'd love to hear about your experience!
+  Have you tried building with different LLM models? We'd love to hear about your experience with the new Claude 4 models!
 
   Contact us at [support@playlab.ai](mailto:support@playlab.ai)
 </Info>

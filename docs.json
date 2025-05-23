@@ -52,6 +52,7 @@
           "features/Overview",
           "features/Pinned References",
           "features/Submit Your App To Community",
+          "features/Using Dictation",
           "features/Richer Starter Inputs",
           "features/Selecting an LLM",
           "features/Avoid Answer Generation",
@@ -118,7 +119,8 @@
           "resources/main",
           "resources/learningresources",
           "resources/organizingworkspaces",
-          "resources/markingstatus"
+          "resources/markingstatus",
+          "resources/aiguidelines"
         ]
       },
       {
