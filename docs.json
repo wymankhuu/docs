@@ -1,77 +1,96 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
+  "$schema": "https://mintlify.com/schema.json",
   "theme": "mint",
   "name": "Playlab Learning Hub",
+  "logo": {
+    "light": "/logo/LightMode_Full.svg",
+    "dark": "/logo/DarkMode_Full.svg",
+    "href": "https://www.playlab.ai"
+  },
+  "favicon": "/favicon.svg",
   "colors": {
     "primary": "#4F46E5",
     "light": "#818CF8",
     "dark": "#3730A3"
   },
-  "typography": {
-    "headings": {
-      "color": {
-        "light": "#4F46E5",
-        "dark": "#FFFFFF"
-      }
-    },
-    "text": {
-      "color": {
-        "light": "#000000",
-        "dark": "#FFFFFF"
-      }
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "mailto:support@playlab.ai"
     }
+  ],
+  "topbarCtaButton": {
+    "name": "Home",
+    "url": "https://learn.playlab.ai"
   },
-  "favicon": "/favicon.svg",
   "navigation": {
-    "anchors": [
+    "tabs": [
       {
-        "anchor": "Get Started",
-        "icon": "play",
-        "pages": [
-          "introduction",
-          "getstarted/Signing Up",
-          "getstarted/Creating a Playlab App",
-          "getstarted/publishing",
-          "getstarted/Creating Your Own Workspace",
-          "getstarted/Adding Members to your Workspace",
-          "getstarted/Changing Name and Description",
-          "getstarted/Adding References",
-          "getstarted/Using the Design Tab",
-          "getstarted/Adding Starter Inputs",
-          "getstarted/Using the Playlab Assistant",
-          "getstarted/Remixing",
-          "getstarted/Deleting",
-          "getstarted/Reviewing Activity",
-          "getstarted/Building Safely"
-        ]
-      },
-      {
-        "anchor": "Features",
-        "icon": "puzzle",
-        "pages": [
-          "features/Overview",
-          "features/Pinned References",
-          "features/Submit Your App To Community",
-          "features/Using Dictation",
-          "features/Escalating Flagged Conversations",
-          "features/Richer Starter Inputs",
-          "features/Selecting an LLM",
-          "features/Avoid Answer Generation",
-          "features/Organizing Workspaces",
-          "features/User Profiles",
-          "features/Global References",
-          "features/Building with Illustrative Mathematics",
-          "features/Adaptive Memory",
-          "features/forking conversations"
-        ]
-      },
-      {
-        "anchor": "Playlab Prompting",
-        "icon": "shovel",
-        "pages": [
-          "prompting/intro",
+        "tab": "🎓 Learn Live with Us",
+        "color": "#10B981",
+        "groups": [
           {
-            "group": "Basic Prompting",
+            "group": "Live Learning",
+            "pages": [
+              "learn with us/onboarding",
+              "learn with us/skillsboost",
+              "learn with us/plc",
+              "learn with us/office hours"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "📖 Learn on Your Own",
+        "color": "#3B82F6",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "introduction"
+            ]
+          },
+          {
+            "group": "▶️ Getting Started",
+            "pages": [
+              "getstarted/Signing Up",
+              "getstarted/Creating a Playlab App",
+              "getstarted/publishing",
+              "getstarted/Creating Your Own Workspace",
+              "getstarted/Adding Members to your Workspace",
+              "getstarted/Changing Name and Description",
+              "getstarted/Adding References",
+              "getstarted/Using the Design Tab",
+              "getstarted/Adding Starter Inputs",
+              "getstarted/Using the Playlab Assistant",
+              "getstarted/Remixing",
+              "getstarted/Deleting",
+              "getstarted/Reviewing Activity",
+              "getstarted/markingstatus",
+              "getstarted/organizingworkspaces",
+              "getstarted/Building Safely"
+            ]
+          },
+          {
+            "group": "📋 Feature Documentation",
+            "pages": [
+              "features/Pinned References",
+              "features/Using Dictation",
+              "features/Submit Your App To Community",
+              "features/Escalating Flagged Conversations",
+              "features/Richer Starter Inputs",
+              "features/Selecting an LLM",
+              "features/Avoid Answer Generation",
+              "features/Organizing Workspaces",
+              "features/User Profiles",
+              "features/Global References",
+              "features/Building with Illustrative Mathematics",
+              "features/Adaptive Memory",
+              "features/forking conversations"
+            ]
+          },
+          {
+            "group": "🟡 Basic Prompting",
             "pages": [
               "prompting/basic/be clear concise and specific",
               "prompting/basic/context is key",
@@ -84,7 +103,7 @@
             ]
           },
           {
-            "group": "Advanced Prompting",
+            "group": "🔵 Advanced Prompting",
             "pages": [
               "prompting/advanced/intro",
               "prompting/advanced/selecting llm",
@@ -97,60 +116,40 @@
         ]
       },
       {
-        "anchor": "FAQ",
-        "icon": "square-question",
-        "pages": [
-          "faq/FAQ",
-          "faq/General",
-          "faq/Approach to Trust and Safety",
-          "faq/Privacy and Security",
-          "faq/Data Privacy Agreements",
-          "faq/Under 13 Use",
-          "faq/Account Management",
-          "faq/Technical",
-          "faq/Professional Development",
-          "faq/Research",
-          "faq/Partnerships"
+        "tab": "🍎 Lead a Workshop",
+        "color": "#F59E0B",
+        "groups": [
+          {
+            "group": "Workshop Resources",
+            "pages": [
+              "resources/learningresources",
+              "resources/aiguidelines"
+            ]
+          }
         ]
       },
       {
-        "anchor": "Learning Resources",
-        "icon": "newspaper",
-        "pages": [
-          "resources/main",
-          "resources/learningresources",
-          "resources/organizingworkspaces",
-          "resources/markingstatus",
-          "resources/aiguidelines"
-        ]
-      },
-      {
-        "anchor": "About",
-        "icon": "circle-info",
-        "pages": [
-          "about/About Playlab",
-          "about/Contact Us"
+        "tab": "❓ FAQ",
+        "color": "#EF4444",
+        "groups": [
+          {
+            "group": "Frequently Asked Questions",
+            "pages": [
+              "faq/FAQ",
+              "faq/Approach to Trust and Safety",
+              "faq/Privacy and Security",
+              "faq/Data Privacy Agreements",
+              "faq/Under 13 Use",
+              "faq/Account Management",
+              "faq/Technical",
+              "faq/Professional Development",
+              "faq/Research",
+              "faq/Partnerships"
+            ]
+          }
         ]
       }
     ]
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:support@playlab.ai"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Home",
-      "href": "https://learn.playlab.ai"
-    }
-  },
-  "logo": {
-    "light": "/logo/LightMode_Full.svg",
-    "dark": "/logo/DarkMode_Full.svg",
-    "href": "https://www.playlab.ai"
   },
   "footerSocials": {
     "slack": "https://playlabcommunity.slack.com",
