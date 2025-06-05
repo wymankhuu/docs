@@ -74,6 +74,7 @@
           {
             "group": "📋 Feature Documentation",
             "pages": [
+              "features/Remixing multiple apps",
               "features/Pinned References",
               "features/Using Dictation",
               "features/Submit Your App To Community",
@@ -122,7 +123,8 @@
           {
             "group": "Workshop Resources",
             "pages": [
-              "resources/learningresources",
+              "resources/introtoplaylab",
+              "resources/playlab101",
               "resources/aiguidelines"
             ]
           }
