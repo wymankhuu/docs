@@ -30,6 +30,12 @@
         "color": "#10B981",
         "groups": [
           {
+            "group": "Overview",
+            "pages": [
+              "introduction"
+            ]
+          },
+          {
             "group": "Live Learning",
             "pages": [
               "learn with us/onboarding",
@@ -44,12 +50,6 @@
         "tab": "📖 Learn on Your Own",
         "color": "#3B82F6",
         "groups": [
-          {
-            "group": "Overview",
-            "pages": [
-              "introduction"
-            ]
-          },
           {
             "group": "▶️ Getting Started",
             "pages": [
@@ -154,7 +154,6 @@
     ]
   },
   "footerSocials": {
-    "slack": "https://playlabcommunity.slack.com",
     "linkedin": "https://www.linkedin.com/company/playlab-ai/"
   }
 }
