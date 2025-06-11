@@ -74,6 +74,7 @@
           {
             "group": "📋 Feature Documentation",
             "pages": [
+              "features/AI assisted builder",
               "features/Remixing multiple apps",
               "features/Pinned References",
               "features/Using Dictation",

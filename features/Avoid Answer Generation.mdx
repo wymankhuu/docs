@@ -1,85 +1,218 @@
 ---
-title: 'Avoid Answer Generation Guide'
-description: 'Prevent AI from completing work directly for users'
+title: 'AI Assisted Builder'
+description: 'Let AI help you build and enhance your Playlab apps with intelligent suggestions and automation'
 ---
 
 ## <Icon icon="bell-on" size="24" className="inline-block align-text-bottom" /> What is this feature?
 
-This is a toggle in settings that Playlab builders can turn on to prevent AI from completing work directly for the user.
+The AI Assisted Builder provides AI-powered assistance to help you design, build, and enhance your Playlab applications. It offers intelligent suggestions, automates repetitive tasks, and guides you through complex development processes.
 
 <Warning>
-  Once enabled, users cannot toggle this feature off. Only creators can decide to turn it on or off.
+Using the AI Assisted Builder will provide suggestions that you can choose to adapt or not. You get to make the choice.
 </Warning>
 
 ## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Rationale for the feature
 
-There are times when providing answers or direct outputs is appropriate, but there are often times when the builder does not want the user to have direct access to the final answer or completed output. In the cases where you don't want the answer generated, you can toggle the Avoid Answer Generation setting as you're building.
+This feature enhances your development experience in several key ways:
 
-## <Icon icon="thought-bubble" size="24" className="inline-block align-text-bottom" /> Where can I access the feature?
+- **Faster Development:** AI automates repetitive tasks and generates boilerplate code
+- **Intelligent Suggestions:** Get contextual recommendations for features, configurations, and improvements
+- **Best Practices:** Built-in guidance ensures your app follows industry standards and patterns
+- **Error Prevention:** AI helps identify potential issues before they become problems
+- **Learning Assistant:** Provides explanations and educational content as you build
 
-<Frame>
-  <img src="/images/avoidanswers.gif" />
-</Frame>
+## <Icon icon="video" size="24" className="inline-block align-text-bottom" /> Watch how to use Assisted Builder
+
+<img height="600" src="/images/assistedbuilder.gif" className="border border-gray-300 rounded-md shadow-sm" />
 
 <Steps>
-  <Step title="You can toggle Avoid Answer Generation in the 'Settings' menu.">
-    <Frame>
-      <img src="/images/avoidanswers.jpeg" />
-    </Frame>
+  <Step title="Enable the feature">
+    Pull up your Playlab app in the builder view.
   </Step>
-  <Step title="You can check whether the setting was enabled while testing your app in the app builder, as well as when reviewing Activity.">
-    <Frame>
-      <img src="/images/avoidanswerscheck.jpeg" />
-    </Frame>
+  <Step title="Configure assistance preferences">
+    Set up your AI assistance preferences to match your development style and project requirements.
+  </Step>
+  <Step title="Start building with AI assistance">
+    Begin developing your app with real-time AI suggestions and automated assistance.
+    
+    <img height="600" src="/images/buildingwithassist.png" className="border border-gray-300 rounded-md shadow-sm" />
+    
+    <Warning>
+    Always review AI-generated code and suggestions before implementing them in production.
+    </Warning>
   </Step>
 </Steps>
 
-## <Icon icon="eye" size="24" className="inline-block align-text-bottom" /> See it in action
+## <Icon icon="list-check" size="24" className="inline-block align-text-bottom" /> What can Assisted Builder help with?
 
-Here is a sample writing feedback app where the builder does not want the app to be able to do any writing for the student and only to provide feedback on what the student provides themselves and also offer guiding questions to improve writing. The other thing to note is that the sample app does not have explicit prompting instructions to avoid providing final writing generation.
+Assisted Builder provides support across various aspects of app development:
 
-<Frame>
-  <img src="/images/avoidanswersdemo.gif" />
-</Frame>
+<CardGroup cols={2}>
+  <Card title="Code Generation" icon="code">
+    **Description:** Automatically generate code snippets and components.
+    
+    **Examples:**
+    - Component templates and boilerplate
+    - API integration code
+    - Database schema suggestions
+    - Error handling patterns
+  </Card>
 
-## <Icon icon="wand-magic-sparkles" size="24" className="inline-block align-text-bottom" /> Tips for Using Avoid Answer Generation
+  <Card title="UI/UX Design" icon="palette">
+    **Description:** Intelligent design suggestions and layout optimization.
+    
+    **Examples:**
+    - Component placement recommendations
+    - Color scheme suggestions
+    - Responsive design patterns
+    - Accessibility improvements
+  </Card>
 
-<Info>
-  <ul>
-    <li>This feature is not toggled on by default. You have to toggle it yourself.</li>
-    <li>Users cannot toggle this feature off.</li>
-    <li>Even if you toggle the feature, you should still test your app for edge cases to see if it works.</li>
-    <li>There might be ways that users can still get around it, but it's way more difficult.</li>
-    <li>When you change the setting, you need to re-publish your app for the changes to take effect in the published app.</li>
-    <li>You do <strong>NOT</strong> need to do this when only testing it yourself in the builder.</li>
-  </ul>
-</Info>
+  <Card title="Performance Optimization" icon="gauge-high">
+    **Description:** Identify and fix performance bottlenecks.
+    
+    **Examples:**
+    - Code optimization suggestions
+    - Bundle size reduction
+    - Loading time improvements
+    - Memory usage optimization
+  </Card>
+
+  <Card title="Testing & Debugging" icon="bug">
+    **Description:** Automated testing suggestions and debugging assistance.
+    
+    **Examples:**
+    - Test case generation
+    - Bug detection and fixes
+    - Code quality analysis
+    - Security vulnerability checks
+  </Card>
+</CardGroup>
+
+## <Icon icon="quote-left" size="24" className="inline-block align-text-bottom" /> Example Builder Configurations
+
+Here are some example configurations for different types of applications:
+
+<AccordionGroup>
+  <Accordion title="E-commerce Application" icon="shopping-cart">
+    **Assistance Focus:** Prioritize e-commerce best practices and features:
+    - Product catalog and inventory management components
+    - Shopping cart and checkout flow optimization
+    - Payment integration suggestions
+    - Order management and tracking features
+
+    **Security and performance considerations:**
+    - PCI compliance recommendations
+    - SSL certificate setup guidance
+    - Database security for customer data
+    - Performance optimization for high traffic
+  </Accordion>
+
+  <Accordion title="Educational Platform" icon="book-open">
+    **Assistance Focus:** Focus on learning and engagement features:
+    - Interactive content components
+    - Progress tracking and analytics
+    - Assessment and quiz functionality
+    - Gamification elements
+
+    **User experience optimization:**
+    - Accessibility compliance for diverse learners
+    - Mobile-responsive design patterns
+    - Offline functionality suggestions
+    - Multi-language support setup
+  </Accordion>
+
+  <Accordion title="SaaS Dashboard" icon="chart-line">
+    **Assistance Focus:** Emphasize data visualization and user management:
+    - Dashboard layout and component organization
+    - Chart and graph implementation
+    - User authentication and role management
+    - API integration for data sources
+
+    **Scalability and maintenance:**
+    - Database optimization strategies
+    - Caching implementation suggestions
+    - Monitoring and logging setup
+    - Deployment and CI/CD pipeline guidance
+  </Accordion>
+</AccordionGroup>
+
+## <Icon icon="star" size="24" className="inline-block align-text-bottom" /> Tips for Using Assisted Builder Effectively
+
+### <Icon icon="target" size="20" className="inline-block align-text-bottom" /> Best Practices
+
+<AccordionGroup>
+  <Accordion title="Clearly define your project requirements">
+    Provide detailed information about your app's purpose, target audience, and key features to receive more relevant assistance.
+  </Accordion>
+
+  <Accordion title="Review and understand AI suggestions">
+    Don't blindly accept all suggestions. Take time to understand the reasoning behind recommendations and how they fit your specific needs.
+  </Accordion>
+
+  <Accordion title="Iterate and refine">
+    Use the feedback loop to improve AI suggestions by rating recommendations and providing context about what works for your project.
+  </Accordion>
+
+  <Accordion title="Combine AI assistance with human expertise">
+    Use Assisted Builder as a powerful tool to augment your skills, not replace your decision-making and creative input.
+  </Accordion>
+</AccordionGroup>
+
+### <Icon icon="rocket" size="20" className="inline-block align-text-bottom" /> Advanced Features
+
+<AccordionGroup>
+  <Accordion title="Custom Templates">
+    Create and save custom templates for common patterns in your applications to speed up development of similar features.
+  </Accordion>
+
+  <Accordion title="Integration Suggestions">
+    Get recommendations for third-party services and APIs that complement your app's functionality.
+  </Accordion>
+
+  <Accordion title="Deployment Guidance">
+    Receive step-by-step guidance for deploying your app to various platforms and environments.
+  </Accordion>
+
+  <Accordion title="Maintenance Recommendations">
+    Get suggestions for ongoing maintenance, updates, and feature enhancements based on your app's usage patterns.
+  </Accordion>
+</AccordionGroup>
 
 ## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> FAQ
 
-<Accordion title="Will this completely prevent AI from generating answers?">
-  While the feature makes it significantly more difficult for users to get direct answers, you should still test your app thoroughly for edge cases.
-</Accordion>
+<AccordionGroup>
+  <Accordion title="How does Assisted Builder learn about my preferences?">
+    The AI learns from your choices, feedback, and development patterns to provide increasingly personalized suggestions over time.
+  </Accordion>
 
-<Accordion title="Do I need to add special prompting instructions?">
-  No, the feature works without explicit prompting instructions to avoid providing final writing generation.
-</Accordion>
+  <Accordion title="Can I disable specific types of assistance?">
+    Yes, you can customize which types of suggestions you want to receive and adjust the frequency of recommendations.
+  </Accordion>
 
-<Accordion title="How do I know if it's working correctly?">
-  You can check whether the setting was enabled while testing your app in the app builder, as well as when reviewing Activity.
-</Accordion>
+  <Accordion title="Will Assisted Builder work with my existing codebase?">
+    Assisted Builder analyzes your existing code and provides suggestions that are compatible with your current architecture and patterns.
+  </Accordion>
 
-## <Icon icon="comment-dots" size="24" className="inline-block align-text-bottom" /> We Want Your Feedback!
+  <Accordion title="Is my code secure when using Assisted Builder?">
+    Your code is processed securely and is not stored or shared. All assistance is provided in real-time without permanent data retention.
+  </Accordion>
+</AccordionGroup>
+
+## <Icon icon="warning" size="24" className="inline-block align-text-bottom" /> Important Considerations
+
+<Warning>
+Always review AI-generated code before implementing it in production. While Assisted Builder provides intelligent suggestions, human oversight is essential for quality and security.
+</Warning>
 
 <Info>
-  Have you tried using the Avoid Answer Generation feature? We'd love to hear about your experience!
-
-  Contact us at [support@playlab.ai](mailto:support@playlab.ai)
+Assisted Builder is designed to enhance your development process, not replace your expertise. Use it as a powerful tool to accelerate development while maintaining control over your app's architecture and design decisions.
 </Info>
 
-<div className="mt-8">
-  <Button href="../index.md">Return to Home Page</Button>
-</div>
+## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> We Want Your Feedback!
 
----
-Last updated: 3/17/2025
+<Info>
+Have you used Assisted Builder to create something amazing? We'd love to hear about your experience and any suggestions for improvement!
+
+Contact us at [support@playlab.ai](mailto:support@playlab.ai)
+</Info>
