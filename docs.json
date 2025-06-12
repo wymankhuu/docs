@@ -47,7 +47,7 @@
         ]
       },
       {
-        "tab": "📖 Learn on Your Own",
+        "tab": "✏️ Learn on Your Own",
         "color": "#3B82F6",
         "groups": [
           {
@@ -69,26 +69,6 @@
               "getstarted/markingstatus",
               "getstarted/organizingworkspaces",
               "getstarted/Building Safely"
-            ]
-          },
-          {
-            "group": "📋 Feature Documentation",
-            "pages": [
-              "features/AI assisted builder",
-              "features/Remixing multiple apps",
-              "features/Pinned References",
-              "features/Using Dictation",
-              "features/Submit Your App To Community",
-              "features/Escalating Flagged Conversations",
-              "features/Richer Starter Inputs",
-              "features/Selecting an LLM",
-              "features/Avoid Answer Generation",
-              "features/Organizing Workspaces",
-              "features/User Profiles",
-              "features/Global References",
-              "features/Building with Illustrative Mathematics",
-              "features/Adaptive Memory",
-              "features/forking conversations"
             ]
           },
           {
@@ -118,7 +98,33 @@
         ]
       },
       {
-        "tab": "🍎 Lead a Workshop",
+        "tab": "📋 Feature Documentation",
+        "color": "#8B5CF6",
+        "groups": [
+          {
+            "group": "📋 Feature Documentation",
+            "pages": [
+              "features/AI assisted builder",
+              "features/Remixing multiple apps",
+              "features/Pinned References",
+              "features/Using Dictation",
+              "features/Submit Your App To Community",
+              "features/Escalating Flagged Conversations",
+              "features/Richer Starter Inputs",
+              "features/Selecting an LLM",
+              "features/Avoid Answer Generation",
+              "features/Organizing Workspaces",
+              "features/User Profiles",
+              "features/Global References",
+              "features/Building with Illustrative Mathematics",
+              "features/Adaptive Memory",
+              "features/forking conversations"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "🟢 Lead a Workshop",
         "color": "#F59E0B",
         "groups": [
           {
