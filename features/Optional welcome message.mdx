@@ -1,85 +1,103 @@
 ---
-title: "🆕 Optional Welcome Message"
-description: "Customize how your Playlab app starts conversations with users"
+title: "🆕 Welcome Message"
+description: "Add or remove a custom welcome message for your Playlab app"
 ---
 
 ## <Icon icon="bell-on" size="24" /> What is this feature?
 
-The Optional Welcome Message feature allows Playlab builders to set a custom greeting that appears when users first interact with your app. **You can now get rid of the welcome message now as well!** 
-This helps establish context, set expectations, and guide users toward the intended experience.
+The Welcome Message feature gives you complete control over how conversations begin in your Playlab app. You can add a custom greeting to introduce your app and guide users, or remove the welcome message entirely for a clean, minimal start to conversations.
 
-## <Icon icon="lightbulb" size="24" /> Rationale for the feature
+<Note> If you remove your welcome message, we recomment you add starter inputs to gather information from your intended user </Note>
 
-You would want to do this if you want to impact the way the Playlab app starts its conversations. This is especially helpful if you have starter inputs and want to use those inputs to guide the interaction.
+## <Icon icon="lightbulb" size="24" /> Rationale for this Feature
 
-Instead of users starting with a blank conversation, a welcome message can introduce your app's purpose, provide instructions, or prompt users to engage with specific features right away.
+Whether you want to add context and guidance or prefer a streamlined experience without any introductory text, this feature adapts to your app's needs:
 
-## <Icon icon="gear" size="24" /> Where can I access the feature?
+<CardGroup cols={2}>
+  <Card title="Add a Welcome Message when you want to:" icon="plus">
+    - Introduce your app's purpose and capabilities
+    - Provide instructions or helpful context
+    - Guide users toward specific features or starter inputs
+    - Set expectations for the conversation
+  </Card>
+  <Card title="Remove the Welcome Message when you want to:" icon="minus">
+    - Create a clean, minimal interface
+    - Let users dive straight into conversations
+    - Avoid any introductory friction
+    - Maintain focus on user-initiated interactions
+  </Card>
+</CardGroup>
+## <Icon icon="gear" size="24" /> How to configure your welcome message
 
 <img height="400" src="/images/optionalwelcome.gif" className="border border-gray-300 rounded-md shadow-sm" />
 
-You can configure the Optional Welcome Message in the settings menu of your app builder, including deleting the entire welcome message.
+Access the Welcome Message settings through your app builder's settings menu.
 
 ### Step-by-Step Guide
 
 <Steps>
-  <Step title="Navigate to Settings Menu">
-    Open the settings menu on the right side of the Playlab builder to access your setting options.
+  <Step title="Open Settings Menu">
+    Navigate to the settings menu on the right side of the Playlab builder.
   </Step>
   
-  <Step title="Find Welcome Message Section">
-    Locate the "Optional Welcome Message" section in your settings panel.
+  <Step title="Locate Welcome Message Section">
+    Find the **Welcome Message (optional)** section in your settings panel.
     
     <img height="300" src="/images/optionalwelcome.png" className="border border-gray-300 rounded-md shadow-sm" alt="Welcome message settings" />
   </Step>
   
-  <Step title="Write Your Welcome Message">
-    Enter your custom welcome message in the text field. Keep it concise and actionable. **You can also delete it completely if you decide to as well.**
+  <Step title="Add or Remove Your Message">
+    **To add a welcome message:** Enter your custom text in the field. Keep it concise and actionable.
+    
+    **To remove the welcome message:** Clear the text field completely to disable the welcome message.
   </Step>
   
   <Step title="Save and Test">
-    Your welcome message or empty welcome message will automatically save. You are then able to test the welcome message by starting a new conversation in the builder.
+    Your changes automatically save. Test by starting a new conversation in the builder to see your welcome message (or lack thereof) in action.
   </Step>
 </Steps>
 
-## <Icon icon="thumbs-up" size="24" /> Tips for Writing Effective Welcome Messages
+## <Icon icon="thumbs-up" size="24" /> Tips for Welcome Messages
 
 <Card>
-### ✅ Best Practices
+### ➕ When Adding a Welcome Message
 
-- **Keep it concise** - Users want to start using your app quickly, so avoid long introductions.
+- **Keep it brief** - 1-3 sentences work best. It should end in a question.
+- **Be actionable** - Tell users what they can do next
+- **Test different approaches** - Try various styles to see what resonates
 
-- **Reference starter inputs** - If you have starter inputs, make sure your workflow directs the Playlab app what to do with the starter inputs to guide the interaction.
+### ➖ When Removing the Welcome Message
 
-- **Test different versions** - Try various welcome message styles to see what works best for your audience.
-
-- **Publishing** - Remember to republish your app after changing the welcome message for it to appear in your published version.
+- **Consider your audience** - Advanced users may prefer jumping straight in
+- **Leverage starter inputs** - Add starter inputs to guide your user interactions 
+- **Test user experience** - Verify that removing the message doesn't create confusion
 </Card>
+
 ## <Icon icon="circle-question" size="24" /> FAQ
+
+<Accordion title="Can I switch between having and not having a welcome message?">
+  Yes, you can add or remove the welcome message anytime. Just remember to republish your app for changes to take effect in the published version.
+</Accordion>
+
+<Accordion title="What happens when I remove the welcome message?">
+  When removed, users will see a clean interface and can immediately start typing or use starter inputs without any introductory text.
+</Accordion>
 
 <Accordion title="Can I use formatting in welcome messages?">
   Welcome messages support basic text formatting, but keep styling simple for best compatibility across devices.
 </Accordion>
 
-<Accordion title="How long should my welcome message be?">
-  Aim for 1-3 sentences that quickly convey your app's purpose and next steps for users.
+<Accordion title="How do I know if I should add or remove the welcome message?">
+  Consider your users and app purpose. Add one for guidance and context, remove it for a streamlined, advanced user experience.
 </Accordion>
 
-<Accordion title="Can I change the welcome message after publishing?">
-  Yes, you can update the welcome message anytime, but you'll need to republish your app for changes to take effect.
-</Accordion>
-
-<Accordion title="Do welcome messages appear in every new conversation?">
-  Yes, the welcome message appears at the start of each new conversation session with your app.
-</Accordion>
-
-<Accordion title="Can I disable the welcome message after enabling it?">
-  Yes, you can clear the welcome message field to disable it, then republish your app.
+<Accordion title="Do I need to republish after making changes?">
+  Yes, you'll need to republish your app for welcome message changes to appear in your published version.
 </Accordion>
 
 ## <Icon icon="bullhorn" size="24" /> We Want Your Feedback!
 
-Have you created welcome messages that significantly improved user engagement? We'd love to hear about your successful implementations and suggestions for enhancement!
+Have you found success with adding welcome messages, or do you prefer the clean approach of removing them? We'd love to hear about your experience and what works best for your users!
 
 Contact us at [support@playlab.ai](mailto:support@playlab.ai)
 
