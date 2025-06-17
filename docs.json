@@ -104,6 +104,7 @@
           {
             "group": "📋 Feature Documentation",
             "pages": [
+              "features/Optional welcome message",
               "features/AI assisted builder",
               "features/Remixing multiple apps",
               "features/Pinned References",
