@@ -125,6 +125,18 @@
         ]
       },
       {
+        "tab": "🎥 Skills Boost Videos",
+        "color": "#F59E0B",
+        "groups": [
+          {
+            "group": "Skills Boost Videos",
+            "pages": [
+              "skillsboost/smartreferencing"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "🟢 Lead a Workshop",
         "color": "#F59E0B",
         "groups": [
