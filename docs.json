@@ -132,7 +132,8 @@
           {
             "group": "Skills Boost Videos",
             "pages": [
-              "skillsboost/smartreferencing"
+              "skillsboost/smartreferencing",
+              "skillsboost/usability"
             ]
           }
         ]
