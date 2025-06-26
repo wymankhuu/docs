@@ -140,7 +140,7 @@
       },
       {
         "tab": "🟢 Lead a Workshop",
-        "color": "#F59E0B",
+        "color": "#059669",
         "groups": [
           {
             "group": "Workshop Resources",
@@ -154,7 +154,7 @@
       },
       {
         "tab": "📖 Blog",
-        "color": "#F59E0B",
+        "color": "#DC2626",
         "groups": [
           {
             "group": "Blog",
