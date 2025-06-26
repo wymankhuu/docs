@@ -104,6 +104,7 @@
           {
             "group": "📋 Feature Documentation",
             "pages": [
+              "features/MCP tools",
               "features/Optional welcome message",
               "features/AI assisted builder",
               "features/Remixing multiple apps",
@@ -146,6 +147,19 @@
               "resources/introtoplaylab",
               "resources/playlab101",
               "resources/aiguidelines"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "📖 Blog",
+        "color": "#F59E0B",
+        "groups": [
+          {
+            "group": "Blog",
+            "pages": [
+              "blog/mcp",
+              "blog/agency"
             ]
           }
         ]

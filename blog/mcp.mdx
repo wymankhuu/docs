@@ -1,0 +1,133 @@
+---
+title: "Model Context Protocol (MCP) in Playlab"
+description: "Building infrastructure to make AI more reliable for Education."
+---
+
+## What is MCP?
+
+Model Context Protocol (MCP) enables your Playlab apps to connect reliably with external tools and data sources. You can think of MCP as a USB port in that it's the universal adapter to connect AI to a variety of tools that it can properly and meaningfully interact with.
+
+Using MCP-enabled tools will change how your app functions, as it will execute specific tool calls rather than generating less controlled responses.
+
+## Why does this matter?
+
+For example, when you ask current AI LLMs to "draw a triangle," you might get wildly different results each time. You might get a text description, a different shape entirely, or vague instructions that vary with each interaction. This unpredictability makes AI often unreliable for deep and impactful educational applications requiring consistency and precision.
+
+Instead of relying on an LLM to "draw a triangle", MCP enables LLM-based apps to connect to a purpose-built, non-AI tool (i.e. a normal software program) that is designed specifically for creating math diagrams. This tool generates the diagram of a triangle (i.e. takes a given input, follows programmed instructions, and creates an output). The Playlab app can then take that output from the tool and use it.
+
+You might see MCP lead to improvements by providing:
+
+- **Consistent Results:** Same inputs always produce repeatable outputs, crucial for educational reliability
+- **Reduced Hallucination:** AI operates tools rather than generating potentially incorrect content  
+- **Educational Precision:** Mathematical diagrams, data queries, and research become consistently accurate
+## Watch how MCP Works in Playlab below
+
+<Frame>
+  <iframe 
+    src="https://www.loom.com/embed/8fbfb3127a18448181d5eff6465ec809?sid=9d96870e-1eb3-4f8d-b95c-382986fcf74d"
+    frameBorder="0" 
+    webkitAllowFullScreen 
+    mozAllowFullScreen 
+    allowFullScreen 
+    style={{ width: "100%", height: "400px" }}
+  />
+</Frame>
+
+## How does MCP work in Playlab?
+<Frame><img src="/images/mcpplaylab.png" /></Frame>
+
+The coordinate plane tool demoed is one of these tools - when AI needs a coordinate plane math diagram, it calls our tool with specific parameters and gets back a generated image.
+
+<Tip>
+We define the exact parameters that go into each tool. Instead of the AI unpredictably generating a diagram, the AI simply creates a **function call** with the right parameters that go into our tool, which deterministically builds the diagram.
+</Tip>
+It's reliable, and you can see exactly what parameters were used to create the diagram.
+
+### Before and After MCP
+
+<CardGroup cols={2}>
+  <Card title="Before MCP">
+    Ask AI to "draw a triangle" and get unpredictable results each time:
+    - Text descriptions: "Imagine a triangle..."
+    - Wrong shapes entirely
+    - Vague instructions that vary
+    - Different interpretations every time
+  </Card>
+  <Card title="After MCP">
+    Ask AI to "draw a triangle" and it calls our tool with specific coordinates like (0,0), (3,0), (1.5,2) - same input always produces the same triangle, every time.
+  </Card>
+</CardGroup>
+The tool execution itself is deterministic, but the AI can still make mistakes in choosing parameters or using the tool incorrectly. With well-designed, self-documenting tools, this is much more reliable than current AI image generators.
+
+## What can you do in Playlab right now with MCP?
+
+When Playlab users are building AI apps in Playlab, they can select tools in the Playlab builder by clicking on the Tools icon. This will show the available tools they have at their disposal.
+<Frame><img src="/images/mcppanel.png" /></Frame>
+When building AI apps in Playlab, users can select tools by clicking on the **Tools** icon in the builder. Currently available tools include:
+
+Here's what you can do right now in Playlab today.
+<CardGroup cols={2}>
+  <Card title="Echo Tool" icon="repeat">
+    Echo back the input for testing and validating data
+  </Card>
+  <Card title="Chart Generator Tool" icon="chart-bar">
+    Generate charts to visualize data. Supports bar, line, pie, doughnut, radar, and polar area charts
+  </Card>
+  <Card title="Number Line Generator Tool" icon="ruler-horizontal">
+    Generate a number line with specified range and marked numbers
+  </Card>
+  <Card title="Right Triangle Diagram Tool" icon="triangle">
+    Generate right triangles with specified sides and angles
+  </Card>
+  <Card title="Cylinder Diagram Tool" icon="circle">
+    Create simple 3D cylinder diagrams
+  </Card>
+  <Card title="To Be Announced" icon="ellipsis">
+    And so many more possibilities
+  </Card>
+</CardGroup>
+
+You can watch it in action here
+<Frame>
+  <iframe 
+    src="https://www.loom.com/embed/39be75345ee8498984ce88d29d824c1d?sid=854ac6d4-1af2-4070-b650-ca61833d5e22"
+    frameBorder="0" 
+    webkitAllowFullScreen 
+    mozAllowFullScreen 
+    allowFullScreen 
+    style={{ width: "100%", height: "400px" }}
+  />
+</Frame>
+
+## What might this lead to?
+MCP represents a fundamental shift from AI as a way to generate responses to AI as a reliable interface for actual tools and data. In educational contexts, this means moving from "AI might help" to "AI will consistently deliver the precise result you need." This can be a strong unlock to myriad ways of supporting educators in leveraging AI for impact.
+
+By having the infrastructure build, additional MCP tools can be added and be suggested to users based on the use cases and contexts they are building for. 
+
+As MCP adoption grows, the educational applications multiply. You can read some potential use cases below, but can also imagine many more.
+
+<Card title="Future Educational Applications" icon="graduation-cap">
+  - **"Find my lesson plans in my drive"** → AI searches your Google Drive
+  - **"Show me current research"** → AI queries academic databases
+  - **"Create a Desmos graph"** → AI generates interactive math visualizations
+  - **"Check student progress"** → AI pulls from your gradebook
+  - **"Schedule parent meetings"** → AI accesses your calendar
+  - **"Generate a quiz"** → AI pulls from your question bank
+  - **"Find relevant videos"** → AI searches YouTube/educational platforms
+  - **"Create a rubric"** → AI accesses your assessment templates
+  - **"Check attendance"** → AI queries your student database
+  - **"Find standards alignment"** → AI searches curriculum frameworks
+  - **"Generate a simulation"** → AI creates an interactive educational game, links to a Desmos graph, or connects to an education simulation
+</Card>
+
+## Doing it with Transparency
+
+MCP provides complete visibility into the AI process. You can see exactly which tools were called, what parameters were used, and how results were generated. This transparency is crucial for educational applications where understanding the underlying process is as important as the final result.
+
+The difference: Instead of the AI "imagining" what you want, it becomes a precise tool operator that follows exact specifications. While the tool execution itself is deterministic, the AI can still make mistakes in choosing parameters or using tools incorrectly. However, with well-designed, self-documenting tools, this approach is significantly more reliable than current AI systems.
+
+## Important Considerations
+
+While MCP dramatically improves reliability, AI can still make errors in tool selection or parameter choice. The system provides stronger guardrails and transparency than traditional AI approaches, but educators should always review generated content for accuracy, especially in high-stakes learning environments.
+
+The goal isn't perfect AI. We are still early. It's reliable, transparent AI that educators can understand, control, and trust in their classrooms that we can uplift through our growing Playlab community. 

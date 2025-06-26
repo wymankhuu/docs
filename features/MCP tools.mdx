@@ -1,0 +1,130 @@
+---
+title: "🆕 Model Context Protocol (MCP) in Playlab"
+description: "Building infrastructure to make AI more reliable for Education."
+---
+
+## <Icon icon="bell-on" size="24" className="inline-block align-text-bottom" /> What is MCP?
+#### 🧪 This feature is currently in BETA and only available to enterprise Playlab partners
+Model Context Protocol (MCP) enables your Playlab apps to connect reliably with external tools and data sources. You can think of MCP as a USB port in that it's the universal adapter to connect AI to a variety of tools that it can properly and meaningfully interact with.
+
+<Warning>
+  Using MCP-enabled tools will change how your app functions, as it will execute specific tool calls rather than generating less controlled responses.
+</Warning>
+
+## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Why does this matter?
+
+Traditional AI often produces unpredictable results when asked to perform specific tasks. You might ask for the same thing multiple times and get completely different outputs each time. This is sometimes helpful, sometimes not. This inconsistency makes AI unreliable for certain educational applications and use cases that require precision and dependability. 
+
+MCP solves this by connecting AI to purpose-built tools that work the same way every time. Instead of the AI trying to "imagine" what you want, it uses actual software tools designed for specific tasks. The AI becomes a smart interface that knows which tool to use and how to use it properly.
+
+You might see MCP lead to improvements by providing:
+
+* **Consistent Results:** Same inputs always produce repeatable outputs, crucial for educational reliability
+* **Reduced Hallucination:** AI operates tools rather than generating potentially incorrect content  
+* **Educational Precision:** Mathematical diagrams, data queries, and research become consistently accurate
+
+## <Icon icon="video" size="24" className="inline-block align-text-bottom" /> Watch how MCP Works in Playlab
+
+<Frame>
+  <iframe 
+    src="https://www.loom.com/embed/8fbfb3127a18448181d5eff6465ec809?sid=9d96870e-1eb3-4f8d-b95c-382986fcf74d"
+    frameBorder="0" 
+    webkitAllowFullScreen 
+    mozAllowFullScreen 
+    allowFullScreen 
+    style={{width: "100%", height: "400px"}}
+  />
+</Frame>
+
+## <Icon icon="stairs" size="24" className="inline-block align-text-bottom" /> How to Use MCP Tools in Your Playlab App
+<Frame><img src="/images/mcptools.gif" /></Frame>
+<Steps>
+  <Step title="Access the Tools Panel">
+    In the Playlab builder, click on the **Tools** icon to view available MCP tools.
+  </Step>
+  <Step title="Select Your Tools">
+    Choose which MCP tools you want to enable for your specific educational app. You can select as many or as few as you'd like.
+  </Step>
+  <Step title="Adjust your Playlab Instructions">
+    Modify your prompt instructions to instruct your Playlab app to leverage the tools and how you want users to interact with the MCP tool(s) you turned on.
+  </Step>
+  <Step title="Test Tool Integration">
+    Test out how the tool functions and modify your prompt or starter inputs to adjust to ensure the tools have the necessary information you need for it to function properly.
+  </Step>
+  <Step title="Iterate on App">
+    Review how tools are being called and adjust your app instructions if needed for optimal performance.
+  </Step>
+</Steps>
+
+## <Icon icon="timer" size="24" className="inline-block align-text-bottom" /> What can you do in Playlab right now with MCP?
+
+When Playlab users are building AI apps in Playlab, they can select tools in the Playlab builder by clicking on the Tools icon. This will show the available tools they have at their disposal.
+
+<Frame><img src="/images/mcppanel.png" /></Frame>
+
+When building AI apps in Playlab, users can select tools by clicking on the **Tools** icon in the builder. Here's what you can do right now in Playlab today:
+
+<CardGroup cols={2}>
+  <Card title="Chart Generator Tool" icon="chart-bar">
+    Generate charts to visualize data. Supports bar, line, pie, doughnut, radar, and polar area charts
+  </Card>
+  <Card title="Number Line Generator Tool" icon="ruler-horizontal">
+    Generate a number line with specified range and marked numbers
+  </Card>
+  <Card title="Right Triangle Diagram Tool" icon="triangle">
+    Generate right triangles with specified sides and angles
+  </Card>
+  <Card title="Cylinder Diagram Tool" icon="circle">
+    Create simple 3D cylinder diagrams
+  </Card>
+  <Card title="To Be Announced" icon="ellipsis">
+    And so many more possibilities
+  </Card>
+</CardGroup>
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> FAQ
+
+<Accordion title="How is MCP different from regular AI responses?">
+  MCP tools execute deterministic functions with specific parameters, while regular AI generates variable text responses. This makes MCP much more reliable for tasks requiring consistency, like mathematical diagrams or data visualization.
+</Accordion>
+
+<Accordion title="Can I see what parameters the AI used with each tool?">
+  Yes, MCP provides complete transparency. You can see exactly which tools were called, what parameters were used, and how results were generated - crucial for educational accountability.
+</Accordion>
+
+<Accordion title="What happens if the AI chooses wrong parameters?">
+  While the tool execution is deterministic, AI can still make mistakes in parameter selection. However, the transparency allows you to see exactly what went wrong and refine your app instructions accordingly.
+</Accordion>
+
+<Accordion title="Will more educational tools be added?">
+  Yes, additional MCP tools will be added based on community needs and use cases. The infrastructure is built to easily incorporate new tools for various educational contexts.
+</Accordion>
+
+<Accordion title="Do MCP tools work for all subjects?">
+  Currently, tools focus on math and data visualization, but the infrastructure supports tools for any subject. Future tools could include language learning, science simulations, history timelines, and more.
+</Accordion>
+
+<Accordion title="Can I use multiple MCP tools in a single app?">
+  Absolutely! You can enable multiple tools in one app. The AI will intelligently select the appropriate tool based on the user's request and your app's instructions. This allows for more comprehensive educational experiences.
+</Accordion>
+
+<Accordion title="How do MCP tools handle student data and privacy?">
+  MCP tools process data locally within your Playlab app environment and follow the same privacy standards as regular Playlab apps. Tool executions are transparent, allowing you to see exactly what data is being processed and how.
+</Accordion>
+
+<Accordion title="What if a tool doesn't work as expected in my app?">
+  If a tool isn't performing as expected, first check your app instructions to ensure they're clear about when and how to use the tool. You can also test with different input formats or contact support for help optimizing your app's tool integration.
+</Accordion>
+
+## <Icon icon="book" size="24" className="inline-block align-text-bottom" /> Want to learn more?
+<Card title="Read our blog about MCP and Playlab" icon="book-open-reader" href="https://learn.playlab.ai/blog/mcp">
+  Learn more about the technical details and implementation of Model Context Protocol in educational applications.
+</Card>
+
+## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> We Want Your Feedback!
+Have ideas for new MCP tools that would transform your educational applications? We'd love to hear what tools would make the biggest impact in your classroom!
+
+Contact us at [support@playlab.ai](mailto:support@playlab.ai)
+
+---
+Last updated: 6/25/2025
