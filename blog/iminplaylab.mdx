@@ -1,0 +1,155 @@
+---
+title: "Teaching AI to Build on Curriculum that Works"
+description: "How Playlab and teachers worked together to help AI build on Illustrative Mathematics"
+---
+
+<img 
+  src="/images/nadine headshot.jpg" 
+  style={{
+    width: "100px",
+    height: "100px",
+    borderRadius: "50%",
+    objectFit: "cover"
+  }}
+/>
+
+**By Nadine Dabby, PhD**  
+*Head of Machine Learning at [Playlab](https://www.playlab.ai)*  
+June 30, 2025
+
+Peer deep into the black box of Large Learning Models (LLMs) and you'll make what seems like a counter-intuitive discovery: LLMs can't understand everything. Further: some of the content we most want AI to help us use may be downright opaque to it.
+
+Since last October, machine learning engineers at [Playlab.ai](https://www.playlab.ai), a nonprofit devoted to building an open-source infrastructure for educators and students to learn about and build AI apps, have found themselves in the surprising position of becoming translators for some of the biggest AI models on the planet. We're not finished yet. But along the way, we've made some important insights into how to make AI systems "work" for educators–and what could make the difference between AI genuinely helping learners rather than simply rehashing the decades' long challenges we have had in education.
+
+<Tip>
+**Here's the key: For AI to help students make real progress, we should be building on what we know works in learning–not reinventing the wheel.** 
+</Tip>
+
+That takes more than just turning on AI. It takes both thoughtful engineering and a deep partnership between educators and technologists to align AI to support strong learning practices.
+
+## The Playlab Foundation
+
+[Playlab](https://www.playlab.ai) was founded in late 2023 based on several core tenets:
+
+- Great educators know how to help their students learn
+- Rather than lob new technologies (or even new curriculum) at teachers, AI will be most helpful if it supports strong, ongoing instruction
+- AI isn't magic. It's math. Both teachers and students should know what goes into what's frequently considered a "black box"
+- The most effective AI tools for learning should be shared widely
+
+Those principles led the Playlab team to build an infrastructure that taps the most powerful LLMs but in an environment that includes the data privacy safeguards already in place to protect educators and students. In addition, Playlab created training sessions, or professional development, that it offers widely (and for free) to teachers to show them how to build AI tools that serve their needs. Best of all: Playlab has been learning, step by step, from great educators.
+
+Educators' enthusiasm for AI has stunned even the Playlab founders: Teachers are hungry to build apps that follow the instructions that they provide. Within months of launching Playlab in private beta, thousands of teachers across the US were building apps. Some have captured how they teach their students writing, or guide them in choosing projects, or coach them through career choices. Others have built apps to help fellow teachers learn how to teach special needs students or to tackle routine administrative tasks.
+
+## The Illustrative Mathematics Challenge
+
+But it was in the fall 2024, that a soft-spoken instructional coach in New York, Varuni Tiruchelvam, would launch Playlab on a particularly ambitious learning journey: Weaving one of the best regarded math curricula directly into Playlab so AI apps in Playlab draw on a specific–and well-tested–pedagogical approach presenting math. This isn't just a technical achievement: it shows how much power is unlocked by a genuine partnership between technologists and educators.
+
+Varuni works with 50 schools, New York City's Consortium, Internationals, and Outward Bound (CIOB) District, which serves 21,000 students, who are among the most diverse in New York City: They come from 130 countries, speak 100 languages and may not have much formal training in mathematics. Over the years, teachers have found that these students learn core disciplines such as math or even language arts best by developing individual projects.
+
+The consortium has seen an upwelling of marvelously relevant projects, from "My NYC Commute," which helps students evaluate how to get to school on time, to projects that help students evaluate career and college options. In the fall of 2023, New York City decided to move all its students to a new mathematics curriculum called [Illustrative Mathematics](https://illustrativemathematics.org/). It became Varuni's job to help all 50 of the schools in her portfolio figure out how to use this powerful curriculum.
+
+**Illustrative Math is the rainforest of the math curriculum world: elegant, deeply interconnected and at times, wildly complex.** Work on [Illustrative Math](https://illustrativemathematics.org/) began in 2011 at the University of Arizona. Curriculum developers spent years refining a conceptual understanding of math concepts paired with procedural fluency. Each lesson, activity, and assessment is crafted to build mathematical thinking in a deliberate sequence, connecting math to real-world examples. Mathematical discussions are structured with explicit attention to how students learn and engage with the ideas. As a result, Illustrative Math ranks as one of the most rigorous, coherent and focused math curriculum available.
+
+Varuni figured that building an AI app in Playlab would help her connect New York's project-based learning practice with the rich curriculum of Illustrative Math. In other words, when a student was working on a project and confronted a math problem, Varuni wanted them to be able to easily pull up Illustrative Math's curriculum on that topic.
+
+She knew that Playlab would let her attach a reference document to an app she created. That way, the app would preferentially use the material in the reference document to answer a question.
+
+**But her app didn't work.** Playlab's engineers started digging into why.
+
+## Hidden Figures: The Math Notation Problem
+
+Many math teachers know they face an awkward challenge when working with digital tools: mathematical notation and regular text simply don't mix well in standard digital formats. For instance, fractions, exponents, square roots, and other mathematical symbols require special handling that most digital platforms don't support natively.
+
+For teachers trying to use Illustrative Mathematics' content creatively, this problem was worse than plucking weeds out of a meadow. Many equations on the [Illustrative Mathematics website](https://illustrativemathematics.org/) are embedded as image files throughout the text. That makes it easy to see online but when teachers try to copy and paste content from the IM website, the images of the equations would either disappear or break the formatting of the surrounding text. Even when simple expressions such as "½" or "x²" appeared in mid-sentence, they couldn't be copied properly because they were images not text.
+
+<img height="400" src="/images/imblog1.png" />
+
+If you can't access the math, you miss most of the value of the curriculum. After all, mathematics is its own language with its own grammar and syntax, and the equations aren't just pretty pictures—they're the core content that students need to learn and engage with.
+
+So when Varuni and other teachers tried to use IM content in their Playlab apps, the LLMs couldn't make sense of the content. The image files were just blanks to the AI. That meant the math content couldn't be parsed or manipulated. (Some teachers resorted to recreating the equations by hand–and so wasted precious time on formatting.)
+
+## The LaTeX Solution
+
+Happily, there is a specialized markup language designed specifically for mathematical and scientific content called LaTeX (pronounced "lay-tech"). It allows complex equations to be expressed in text format using commands like \frac{1}{2} for fractions or x^2 for exponents. These commands can then be rendered into properly formatted mathematical notation. Best of all: **LLMs natively understand LaTeX**.
+
+The LaTeX coding was there, hidden behind the scenes--just not readily accessible.
+
+Enter the [Chan Zuckerberg Initiative](https://chanzuckerberg.com/). A year ago, CZI kicked off a program it calls the [Knowledge Graph](https://docs.google.com/document/d/1Lp5ZrI44IWQ8AOZhqvuggmoW_iFLnd7yGpeL_1jcZB8/edit?tab=t.ahk1e4j1jwfo#heading=h.8bo3ygub24pz). Because education content is frequently locked in PDFs or hard to reach, CZI wants to create a structured network of datasets across curricula, state academic standards and learning science research that edtech organizations can use to improve the AI work they are doing. A Knowledge Graph doesn't just store information; it aims to organize connected information in a way that shows there are relationships between chunks of data that might otherwise seem unconnected.
+
+CZI started by absorbing two databases: all the US standards around education (including state and Common Core standards), as well as the curriculum of Illustrative Math. This unlocked the LaTeX code behind Illustrative Math. The LLMs, such as ChatGPT, Claude and Llama, which Playlab builds on, could now make sense of the equations.
+
+That turned out to be step one.
+
+## Connecting All the Pieces
+
+Part of the power of the Illustrative Math curriculum has to do with the clear way the curriculum is organized. It's like a beautiful set of matryoshka (or "nesting") dolls: Courses contain units, which contain sections, which contain lessons... and so on down to individual activities, assessments, and practice problems. Beyond this neat organizational structure lies a complex network of relationships. A lesson might build upon concepts from earlier units or grades while simultaneously addressing specific educational standards and introducing concepts that are the support structures of future lessons.
+
+<img height="400" src="/images/imblog2.png" />
+
+To tap the power of the IM curriculum, we needed to preserve all of these relationships — individual chunks of content, their position in the hierarchy and their connections to standards and concepts across different lessons and grades. What's more, we needed to put it into a format that works fluidly with all the LLMs that Playlab is built on – and yes, still preserve that tapestry of relationships.
+
+We chose JSON (a standard data format that's both human-readable and machine-processable) as our import format because it naturally preserves hierarchical structure and is a format that LLM's have been extensively trained on. Each file we created follows a consistent structure with three key components:
+
+1. The specific content such as an activity, lesson, assessment, or practice problem
+2. What we call the "parent context," a complete record of where this piece fits into the curriculum hierarchy
+3. An encapsulation of which Common Core standards this content addresses, is built on, or is building toward
+
+This additional context provides the LLM with a landscape of how every item in the reference is situated within a lesson, unit, course, or conceptual skill set.
+
+From educators such as Varuni, we learned that they wanted to be able to use content in different size chunks: sometimes a lesson, sometimes a group of lessons. For engineers, that meant the "just right" level of granularity–the chunks that would provide enough context without overwhelming detail–were individual lessons. That way, when teachers used a lesson unit, they'd pull up all the rich context about how those ideas fit into the broader curriculum.
+
+## Polishing up with RAG
+
+Now for the next step: Linking the Illustrative Mathematics curriculum to what the teachers building apps in Playlab know and care about–namely their students' projects. The techniques for doing this are called RAG, or Retrieval-Augmented Generation. All AI model builders are using RAG techniques to supplement their large knowledge bases on the fly with additional data or documents; it makes the AI responses more current and help them answer requests more specifically.
+
+Here's how RAG works in Playlab: When a teacher asks a math question in an app tied to IM, the AI doesn't rely on its general knowledge. Instead it sifts through the IM curriculum that we've prepared, along with any other materials that Playlab has stored in its global curriculum database, such as the state and Common Core standards. That way, its answer is grounded in the IM curriculum. RAG means that the AI isn't just looking for keywords; it's doing a "semantic" search, seeking content that's conceptually relevant to the query even if the wording doesn't exactly match.
+
+**Semantic searches don't just happen.** To make IM curriculum semantically searchable, we "embed" large chunks of reference information into a vector database–essentially long lists of numbers that capture the semantic meaning of the content. That way, similar concepts end up having similar numerical patterns, even if they use different words. Our embedding model was trained on multiple languages and maps the text so that similar words, phrases or sentences are located closely together. That means a semantic search for "two wheel automobiles" may return results containing the words "motorcycle" or "moped" – even if those exact terms never appear in the text.
+
+Our choice to preserve context and the relationship to curriculum standards dramatically improves these embeddings. When we vectorize a lesson on comparing fractions, for instance, the parent context ensures that it's mathematically connected to related concepts, such as equivalent fractions. Further, including the relationships to curriculum standards strengthens these connections, grouping content that addresses similar mathematical ideas even when the specific language differs.
+
+**What this means: Ask a question and the AI will return not just what you asked for, but related materials or ideas that you might not yet have considered.**
+
+Say a teacher is looking for resources on "comparing fractions with different denominators." She would discover lessons with those keywords along with conceptually related materials about, say, benchmark fractions and number lines. This makes the curriculum far more discoverable and interconnected than traditional keyword search alone could achieve.
+
+## Co-Design With Educators
+
+Driving our work from the beginning have been educators, such as Varuni, who have deep teaching experience, extensive experience using Illustrative Mathematics and a passion for pushing AI to serve them and their students.
+
+Since Varuni launched her app, ["PBL & Illustrative Math,"](https://www.playlab.ai/community/clzu1yhrs00q5t029i76x3bra) dozens of other teachers have used her work as a starting block (something we call "remixing.") Since late last year, we've collaborated with educators in New York City, Chicago and Denver to help them develop more than 200 applications grounded in Illustrative Mathematics. Chicago-based Instructional coach, LeAnita Garner, built a program she calls ["Cally The Pacing Guide,"](https://www.playlab.ai/community/clx1woxar024z134gz7v45cav) to help teachers plan out how much time they will need to roll out math units while still keeping conceptual integrity of the content.
+
+Here are two other examples:
+
+**Culturally Relevant Math Lesson Adapter** - This tool helps teachers tailor Illustrative Mathematics lessons for multilingual learners who are still learning the context and language typical in the U.S. One example of an easy swap: Changing references to "salt-water taffy" to "gulab jamun." Playlab is still exploring how to preserve mathematical rigor while enabling cultural and linguistic adaptations.
+
+**Un-stuck 2.0: Your AI Math Tutor** - This application explores how to provide direct support for students who are stuck on math problems. We realized that not every math problem can be solved with the existing IM curriculum. So we're trying to keep the spirit of IM even as we add more tutoring support. That means not giving students "answers" but instead coaching them to unravel the concepts.
+
+Each of these scenarios presented unique challenges. But Playlab engineers haven't tackled them alone. We've worked side by side with educators, drawing inspiration from how they teach and relying on them to test early prototypes, provide candid feedback, and help us confirm that our technical choices provide real improvements over what they had to do to make AI work for their students.
+
+## 'Pinning' - a New Technique
+
+Teachers–and Illustrative Math curriculum creators–have learned a lot about teaching math during the 15 years that they have been using that content. Tucked into the [IM site](https://illustrativemathematics.org/), for instance, are a treasure trove of planning guides, warm-up routines for students and their families, reflection tools and so on–all developed with the goal of helping teachers do the best possible job in math instruction. Most important: Teachers told us that they wanted AI apps to make use of all these resources.
+
+That nudge encouraged Playlab to make these additional materials AI-ready as well. For instance, rather than leaving Course Contents buried, we extracted detailed, unit-by-unit and lesson-by-lesson breakdowns from CZI's [knowledge graph](https://docs.google.com/document/d/1Lp5ZrI44IWQ8AOZhqvuggmoW_iFLnd7yGpeL_1jcZB8/edit?tab=t.ahk1e4j1jwfo#heading=h.8bo3ygub24pz) and structured them so the AI could use it. We took IM's Dependency Guides–crucial roadmaps that show prerequisites within and across courses, which units lead to future content, and so on–transformed them from static "image" into structured text, and invited educators to check the accuracy.
+
+Along the way, we made a discovery: Making the IM curriculum a "global resource" means that AI apps draw from semantically relevant material–along with the rest of its knowledge base–when seeking to answer a query. But sometimes educators want to insist that their AI app always pay attention to a particular reference.
+
+**We call this "pinning."** Pinning a reference forces that reference to be served to the LLM with every query-- like keeping a book open in front of you at all times instead of pulling a new book off the shelf and returning it after each query. Teachers love this feature.
+
+The result? Applications that don't just reference isolated lessons or activities, but understand the curriculum's broader structure, sequence, and philosophical approach.
+
+## Where From Here
+
+For teachers using [Playlab](https://www.playlab.ai), this integration fundamentally changes how they can work with Illustrative Mathematics content. Rather than spending hours reformatting content or losing mathematical notation in the process, they can focus on what matters most: adapting high-quality materials to meet their students' specific needs.
+
+By transforming the Illustrative Mathematics curriculum into an AI-ready format, we've opened new possibilities for teachers to create more responsive, adaptive, and inclusive mathematical learning experiences—all while honoring the curriculum's thoughtful design and mathematical integrity. Perhaps most importantly, this work paves the way for bringing other high-quality curricula into Playlab in AI-first formats. The insights we've already unlocked create a blueprint for transforming complex educational content across subjects and grade levels.
+
+We want to weave more open-source curriculum into Playlab so that all educators can use the power of great pedagogical tools. And not just math: We can pull any public domain resource into Playlab, from open-source work included in [Project Gutenberg](https://www.gutenberg.org/) to, say, all the works of Shakespeare.
+
+We're also working hard to make the Playlab platform "smarter." This involves identifying "best in class" Playlab apps, then pointing new builders to these apps as a way to help them learn to improve the tools they make.
+
+**And after that? You can bet that we're asking educators what they need, every day.**
+
+---
+
+*Dr. Nadine Dabby is the head of Machine Learning at [Playlab](https://www.playlab.ai). Dr. Dabby holds a doctorate in Computation & Neural Programming from the California Institute of Technology. Prior to joining Playlab she was an adjunct professor, worked in R&D in silicon valley and ran a start-up. She is passionate about both the humanities and sciences and if given the choice, would still be an undergraduate at UC Berkeley where she didn't even get to enroll in 1 percent of course offerings.*

@@ -147,8 +147,7 @@
             "pages": [
               "resources/introtoplaylab",
               "resources/playlab101",
-              "resources/aiguidelines",
-              "resources/arcofaik12"
+              "resources/aiguidelines"
             ]
           }
         ]
@@ -161,7 +160,9 @@
             "group": "Blog",
             "pages": [
               "blog/mcp",
-              "blog/agency"
+              "blog/agency",
+              "blog/iminplaylab",
+              "blog/arcofaik12"
             ]
           }
         ]
