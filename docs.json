@@ -153,21 +153,6 @@
         ]
       },
       {
-        "tab": "📖 Blog",
-        "color": "#DC2626",
-        "groups": [
-          {
-            "group": "Blog",
-            "pages": [
-              "blog/mcp",
-              "blog/agency",
-              "blog/iminplaylab",
-              "blog/arcofaik12"
-            ]
-          }
-        ]
-      },
-      {
         "tab": "❓ FAQ",
         "color": "#EF4444",
         "groups": [
