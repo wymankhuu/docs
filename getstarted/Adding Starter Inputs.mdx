@@ -62,7 +62,8 @@ Watch a short video of how to add starter inputs to your Playlab app.
     
        - **Short Text:** For brief responses like names or short answers
        - **Long Text:** For extended responses like descriptions or feedback
-       - **Dropdown:** For selecting from predefined options
+       - **Dropdown:** For selecting a single option from predefined choices
+       - **Checkbox:** For selecting multiple options from predefined choices (multiselect)
        - **File Upload:** For accepting files up to 5MB (images, PDFs, CSVs, etc.)
     
     3. Configure each input:
@@ -70,6 +71,7 @@ Watch a short video of how to add starter inputs to your Playlab app.
        - Decide whether the input should be required or optional
        - Add helpful placeholder text to guide users
        - For dropdowns, add at least two options
+       - For checkboxes, add multiple options and users can select any combination
     
     4. Arrange inputs in a logical order
     
@@ -94,7 +96,8 @@ When adding starter inputs to your Playlab app, keep these tips in mind:
   - **Use appropriate input types** for different kinds of information:
     - Short text for names, simple responses
     - Long text for detailed feedback or descriptions
-    - Dropdowns for categorized data or limited choices
+    - Dropdowns for single-choice categorized data or limited options
+    - Checkboxes for multi-choice selections where users might choose multiple relevant options
     - File uploads when documents or images are needed
   - **Make labels clear and specific** so users understand exactly what information to provide
   - **Use placeholder text** to provide examples or clarification
@@ -106,11 +109,12 @@ When adding starter inputs to your Playlab app, keep these tips in mind:
 ## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> Frequently Asked Questions
 
 <Accordion title="What types of starter inputs can I add to my app?">
-  Playlab currently supports four types of starter inputs:
+  Playlab currently supports five types of starter inputs:
   
   - **Short Text:** Ideal for brief responses like names, single words, or short phrases
   - **Long Text:** Perfect for extended responses, descriptions, feedback, or essays
-  - **Dropdown:** Allows users to select from predefined options, ensuring structured responses
+  - **Dropdown:** Allows users to select a single option from predefined choices, ensuring structured responses
+  - **Checkbox:** Enables users to select multiple options from predefined choices, perfect for collecting multiple preferences or categories
   - **File Upload:** Enables users to upload files (up to 5MB) such as images, PDFs, or CSVs
   
   Each type serves different purposes, so choose based on the kind of information you need to collect.
@@ -135,6 +139,7 @@ When adding starter inputs to your Playlab app, keep these tips in mind:
   - Reference specific inputs in your app's instructions and prompts
   - Use the information to customize the conversation flow
   - Process uploaded files to extract relevant data
+  - Handle multiple selections from checkbox inputs to personalize responses
   
   Make sure your app effectively utilizes this information to provide value to users.
 </Accordion>
@@ -157,15 +162,20 @@ When adding starter inputs to your Playlab app, keep these tips in mind:
   Ensure your app includes appropriate instructions for handling uploaded files.
 </Accordion>
 
-<Accordion title="Why should I use dropdown inputs instead of text inputs?">
-  Dropdown inputs offer several advantages:
+<Accordion title="When should I use dropdown vs. checkbox inputs?">
+  Choose based on how many selections you want users to make:
   
-  - They ensure consistent, predictable responses
-  - They prevent typos and formatting issues
-  - They guide users by showing available options
-  - They're easier and faster for users to complete
+  **Dropdown inputs** are best when:
+  - Users should select only one option
+  - You want to ensure mutually exclusive choices
+  - You have a limited set of predefined options
   
-  Use dropdowns when you need structured data or when there's a limited set of valid responses.
+  **Checkbox inputs** are ideal when:
+  - Users might want to select multiple relevant options
+  - Choices aren't mutually exclusive
+  - You want to gather comprehensive preferences or multiple categories
+  
+  Both ensure consistent, predictable responses and prevent typos compared to free-text inputs.
 </Accordion>
 
 ## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> Need Support?

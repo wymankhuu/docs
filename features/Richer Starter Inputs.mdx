@@ -1,146 +1,187 @@
 ---
-title: 'Richer Starter Inputs Guide'
-description: 'Add diverse input types when creating Playlab apps for enhanced user interaction'
+title: 'Richer Starter Inputs'
+description: 'Learn how to streamline your Playlab apps with starter inputs to enhance your Playlab app functionality'
 ---
 
-## <Icon icon="bell-on" size="24" className="inline-block align-text-bottom" /> What is this feature?
-
-Playlab now supports Richer Starter Inputs, allowing builders to add diverse input types when creating apps. You can now include short text, long text, dropdown selections, and file uploads (up to 5MB), giving your users more flexibility in how they interact with your apps.
+In Playlab, Starter Inputs allow you to collect information from users before they begin interacting with your app. This guide will walk you through the process of adding and configuring different types of starter inputs to enhance your app's functionality and user experience.
 
 <Warning>
-  When using dropdown inputs, you must include at least two options for users to select from.
+  **Preview Required**
+  
+  You must preview your app to test how starter inputs work! To effectively implement starter inputs, you should:
+  - Test your inputs in preview mode
+  - Ensure they collect the right information
+  - Check that required fields appear as intended
 </Warning>
 
-## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Rationale for the feature
+<Info>
+  **Enhance User Experience**
+  
+  Well-designed starter inputs can streamline interactions, collect necessary information upfront, and make your app more effective. They're often essential for creating structured, purposeful conversations.
+</Info>
 
-Previously, Playlab users were limited in how they could structure inputs. With Richer Starter Inputs, builders can tailor input types to fit specific use cases, enhancing the overall user experience.
+## <Icon icon="video" size="24" className="inline-block align-text-bottom" /> Watch How to Add Starter Inputs
 
-Whether you need structured responses via dropdowns, open-ended text input, or an upload file to help you get your interaction started, this update makes it easier to collect and leverage the required data to get you started.
-
-## <Icon icon="clipboard-question" size="24" className="inline-block align-text-bottom" /> How do I add a Richer Starter Input?
-
-<img height="600" src="/images/Richer Starter Inputs.gif" className="border border-gray-300 rounded-md shadow-sm" />
-
-### Apps with Richer Starter Inputs:
-
-**With this feature, you can now create apps that:**
-
-* Collect precisely the type of data you need
-* Offer a more intuitive user experience
-* Process a variety of input formats
-* Guide users with predefined selection options
-* Support file-based workflows
-
-## <Icon icon="circle-plus" size="24" className="inline-block align-text-bottom" /> Adding Richer Starter Inputs
-
-<Steps>
-  <Step title="Access the input menu">
-    On the right hand navigation menu click the Inputs button
-  </Step>
-  <Step title="Add new input">
-    Click "**Add Starter Input**" in the new panel and choose from the available options
-  </Step>
-  <Step title="Select input type">
-    Choose the appropriate input type for your needs:
-    
-    - **Short Text:** Ideal for brief responses (e.g., names, grade, short answers)
-    - **Long Text:** For extended responses such as descriptions, feedback, or essays
-    - **Dropdown:** Provide users with a set of predefined choices to streamline input
-    - **File Upload:** Accepts files up to 5MB, great for images, PDFs, CSVs, and other relevant documents
-  </Step>
-  <Step title="Configure your input">
-    Set parameters like required fields, placeholder text, and dropdown options
-  </Step>
-</Steps>
-
-<Check>
-  Don't forget to try combining different input types for the best user experience!
-</Check>
-
-## <Icon icon="play" size="24" className="inline-block align-text-bottom" /> How to Build with Richer Starter inputs
-
-Watch a short 3 minute video to see how to build with Richer Starter Inputs
-
+Watch a short video of how to add starter inputs to your Playlab app.
 <Frame>
   <iframe
     src="https://www.loom.com/embed/d2678de775d54095b2879f13838eddb6?sid=bcfc6aa2-61ca-41bd-a195-fa2fd94d42ab"
-    frameBorder="0"
-    webkitallowfullscreen="true"
-    mozallowfullscreen="true"
-    allowFullScreen
+    frameborder="0"
+    webkitallowfullscreen
+    mozallowfullscreen
+    allowfullscreen
     style={{ width: "100%", height: "400px" }}
   ></iframe>
   <figcaption>Watch how to build with Richer Starter Inputs [3:05]</figcaption>
 </Frame>
 
-## <Icon icon="key" size="24" className="inline-block align-text-bottom" /> Tips for Using Richer Starter Inputs
+## <Icon icon="arrow-right" size="24" className="inline-block align-text-bottom" /> Adding Starter Inputs Process
 
-### Best Practices
+<Steps>
+  <Step title="Access the Inputs Menu">
+    **Navigate to the Inputs section in your app editor.**
+    
+    1. On the right-hand navigation menu, click the **Inputs** button
+    2. This will open the starter inputs configuration panel
+  </Step>
 
-<Accordion title="Combine multiple input types">
-  Create a seamless user experience by combining different input types (e.g., name as short text + description as long text).
+  <Step title="Add and Configure Inputs">
+    **Begin setting up your inputs.**
+    
+    1. Click "Add Starter Input" to begin
+    
+    <Frame>
+      <img src="/images/starterinput.jpeg" alt="Starter Input" width="300" className="bordered-image" />
+    </Frame>
+    
+    2. Select from the following input types:
+    
+    <Frame>
+      <img src="/images/richerstarterinputsstill.png" alt="Starter Input Types" width="300" className="bordered-image" />
+    </Frame>
+    
+       - **Short Text:** For brief responses like names or short answers
+       - **Long Text:** For extended responses like descriptions or feedback
+       - **Dropdown:** For selecting a single option from predefined choices
+       - **Checkbox:** For selecting multiple options from predefined choices (multiselect)
+       - **File Upload:** For accepting files up to 5MB (images, PDFs, CSVs, etc.)
+    
+    3. Configure each input:
+       - Add a clear, descriptive label
+       - Decide whether the input should be required or optional
+       - Add helpful placeholder text to guide users
+       - For dropdowns, add at least two options
+       - For checkboxes, add multiple options and users can select any combination
+    
+    4. Arrange inputs in a logical order
+    
+    5. Preview your app to test the inputs
+  </Step>
+
+  <Step title="Utilize Input Data in Your App">
+    **Make your app responsive to the information collected.**
+    
+    1. Reference input data in your app's instructions
+    2. Update prompts to incorporate user-provided information
+    3. Test different approaches to see how inputs enhance the user experience
+    4. Refine your inputs based on testing results
+  </Step>
+</Steps>
+
+## <Icon icon="lightbulb-on" size="24" className="inline-block align-text-bottom" /> Starter Input Best Practices
+
+When adding starter inputs to your Playlab app, keep these tips in mind:
+
+  - **Keep it focused** - Only ask for information that's essential for your app's function
+  - **Use appropriate input types** for different kinds of information:
+    - Short text for names, simple responses
+    - Long text for detailed feedback or descriptions
+    - Dropdowns for single-choice categorized data or limited options
+    - Checkboxes for multi-choice selections where users might choose multiple relevant options
+    - File uploads when documents or images are needed
+  - **Make labels clear and specific** so users understand exactly what information to provide
+  - **Use placeholder text** to provide examples or clarification
+  - **Consider the user journey** - arrange inputs in a logical sequence
+  - **Balance required vs. optional fields** - too many required fields can be overwhelming
+  - **Test with different inputs** to ensure your app handles all responses appropriately
+  - **Preview before publishing** to experience your app from the user's perspective
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> Frequently Asked Questions
+
+<Accordion title="What types of starter inputs can I add to my app?">
+  Playlab currently supports five types of starter inputs:
+  
+  - **Short Text:** Ideal for brief responses like names, single words, or short phrases
+  - **Long Text:** Perfect for extended responses, descriptions, feedback, or essays
+  - **Dropdown:** Allows users to select a single option from predefined choices, ensuring structured responses
+  - **Checkbox:** Enables users to select multiple options from predefined choices, perfect for collecting multiple preferences or categories
+  - **File Upload:** Enables users to upload files (up to 5MB) such as images, PDFs, or CSVs
+  
+  Each type serves different purposes, so choose based on the kind of information you need to collect.
 </Accordion>
 
-<Accordion title="Use dropdowns strategically">
-  When responses should be structured and predictable, dropdowns help maintain consistency.
+<Accordion title="How many starter inputs should I include in my app?">
+  While there's no strict limit, we recommend keeping the number of inputs focused and relevant to your app's purpose. Too many inputs might overwhelm users and create friction. Consider what information is absolutely necessary for your app to function effectively.
 </Accordion>
 
-<Accordion title="Optimize file uploads">
-  Allow file uploads only when necessary to avoid unnecessary storage usage.
+<Accordion title="Can I make changes to starter inputs after publishing my app?">
+  Yes, you can modify starter inputs even after publishing your app. However, be aware that:
+  
+  - Removing inputs that existing users have relied on might create confusion
+  - Adding new required inputs might break the experience for returning users
+  
+  Consider creating a new version of your app for significant changes to starter inputs.
 </Accordion>
 
-<Accordion title="Test different formats">
-  Experiment with different input combinations to see which ones work best for your app's goals.
+<Accordion title="How do I use the information collected from starter inputs?">
+  The information users provide through starter inputs becomes available in your app's context. You can:
+  
+  - Reference specific inputs in your app's instructions and prompts
+  - Use the information to customize the conversation flow
+  - Process uploaded files to extract relevant data
+  - Handle multiple selections from checkbox inputs to personalize responses
+  
+  Make sure your app effectively utilizes this information to provide value to users.
 </Accordion>
 
-<Accordion title="Preview before publishing">
-  Always preview your app before publishing to ensure a good user experience. Ask yourself what should be required and what you want to happen during conversation.
+<Accordion title="Are starter inputs visible to all users of my app?">
+  Yes, all users who access your app will see the starter inputs you've configured. If you have inputs that should only be visible to certain users, consider creating separate versions of your app for different audiences.
 </Accordion>
 
-<Accordion title="Consider required vs. optional">
-  Determine which starter inputs are required and which are optional. If you have too many optional starter inputs, you may want to move them to the builder instructions.
+<Accordion title="What happens if a user skips an optional starter input?">
+  If a starter input is marked as optional and a user doesn't provide information, your app will proceed without that data. Make sure your app's logic can handle missing optional inputs gracefully.
 </Accordion>
 
-## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> FAQ
-
-<Accordion title="What file types can be uploaded?">
-  The file upload input accepts most common file types including images, PDFs, CSVs, and documents up to 5MB in size.
+<Accordion title="Can I use uploaded files in my app's functionality?">
+  Yes, files uploaded through starter inputs can be processed within your app. This is particularly useful for:
+  
+  - Analyzing data from CSV files
+  - Extracting text from PDFs
+  - Using images as reference material
+  
+  Ensure your app includes appropriate instructions for handling uploaded files.
 </Accordion>
 
-<Accordion title="Can I make some inputs required and others optional?">
-  Yes, you can designate which inputs are required and which are optional when configuring each input field.
+<Accordion title="When should I use dropdown vs. checkbox inputs?">
+  Choose based on how many selections you want users to make:
+  
+  **Dropdown inputs** are best when:
+  - Users should select only one option
+  - You want to ensure mutually exclusive choices
+  - You have a limited set of predefined options
+  
+  **Checkbox inputs** are ideal when:
+  - Users might want to select multiple relevant options
+  - Choices aren't mutually exclusive
+  - You want to gather comprehensive preferences or multiple categories
+  
+  Both ensure consistent, predictable responses and prevent typos compared to free-text inputs.
 </Accordion>
 
-<Accordion title="How many input fields can I add to my app?">
-  While there's no strict limit, we recommend keeping the number of input fields manageable to ensure a good user experience.
-</Accordion>
+## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> Need Support?
 
-<Accordion title="Can dropdown options be dynamically generated?">
-  Currently, dropdown options must be predefined when creating the app.
-</Accordion>
+If you encounter any issues while adding starter inputs:
 
-## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> We Want Your Feedback!
+* Contact us at [support@playlab.ai](mailto:support@playlab.ai)
 
-<Info>
-  Have you tried using Richer Starter Inputs in your Playlab apps? We'd love to hear about your experience!
-
-  <Tooltip tip="Join our community of builders">
-    Join the discussion in our [Playlab Slack Channel](https://join.slack.com/t/playlabcommunity/shared_invite/zt-31mhwj7nl-49e1Mw5fYpyHJGOFyDIFtA).
-  </Tooltip>
-
-  <CodeGroup>
-    <Code title="Email">
-      ```
-      support@playlab.ai
-      ```
-    </Code>
-  </CodeGroup>
-</Info>
-
-<div className="mt-8 flex gap-4">
-  <Button href="../introduction.mdx">Return to Home Page</Button>
-  <Button variant="outline" href="../features/index.md">Explore More Features</Button>
-</div>
-
----
-Last updated: 3/20/2025
+Last updated: March 21, 2025
