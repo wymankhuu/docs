@@ -4,14 +4,7 @@ description: 'Learn how to add references to your Playlab app for better context
 ---
 In order to add context and background information for your Playlab app, you can upload reference documents or links to fine-tune your app's performance. Think of external references as giving your Playlab app additional knowledge to guide its responses.
 <Info>
-  **Reference Benefits**
-  
-  Adding references to your app:
-  - Ensures AI responses align with specific, verified information
-  - Tailors content to your exact curriculum or teaching standards
-  - Provides AI with rich context for more comprehensive responses
-  - Allows incorporation of up-to-date information
-  - Enables creation of unique, school-specific or organizational content
+Playlab now supports multiple file uploads (up to 10 files at once) for efficient setup of your app.
 </Info>
 
 ## <Icon icon="book-open" size="24" className="inline-block align-text-bottom" /> Understanding References
@@ -62,7 +55,7 @@ Watch a short clip of how to add references to your Playlab app.
       <img src="/images/reference types.png" alt="Add References" width="300" />
     </Frame>
     2. Select from these reference options:
-       - **File Upload**: Upload documents directly from your computer
+       - **File Upload**: Upload documents directly from your computer (up to 10 files at once)
        - **Public URL**: Link to publicly accessible web resources
        - **Browse Library**: Access pre-curated reference collections
          - Global Workspace Library
@@ -70,6 +63,19 @@ Watch a short clip of how to add references to your Playlab app.
     
     <Frame>
       <img src="/images/globallibrary.jpeg" alt="Reference Types" width="600" />
+    </Frame>
+  </Step>
+
+  <Step title="Upload Multiple Files (Optional)">
+    **Efficiently add multiple references at once.**
+    
+    1. When selecting "File Upload", you can now select up to 10 files simultaneously
+    2. Hold Ctrl (Windows) or Cmd (Mac) to select multiple files
+    3. All selected files must be in supported formats (PDF, DOCX, TXT, CSV, JSON, XLSX)
+    4. Each file must be under 30 MB
+    
+    <Frame>
+      <img src="/images/multiplereferencesupload.gif" alt="Multiple References Upload" width="800" />
     </Frame>
   </Step>
 
@@ -91,7 +97,12 @@ Watch a short clip of how to add references to your Playlab app.
 >* **Embedded Content**: Videos, presentations, and interactive content
 >* **Playlab Library Resources**: Pre-vetted educational materials
 
-<Warning>Maximum file size for uploaded references is 30 MB</Warning>
+<Warning>
+  **File Upload Limits**
+  - Maximum of 10 files can be uploaded at once
+  - Each file has a maximum size limit of 30 MB
+  - All files must be in supported formats
+</Warning>
 
 ## <Icon icon="circle-check" size="24" className="inline-block align-text-bottom" /> Using References Effectively
 
@@ -121,6 +132,7 @@ When adding references to your Playlab app, keep these tips in mind:
   - **Start Small**: Begin with 3-5 core references that cover your app's main functionality
   - **Expand Gradually**: Add more references as needed. More is not always better
   - **Quality Over Quantity**: Prioritize comprehensive, high-quality references over a large number of superficial ones
+  - **Use Batch Upload Wisely**: The ability to upload 10 files at once is great for efficiency, but ensure each file serves a clear purpose
   
   💡 For each reference you add, ask yourself: does this improve the output? If it does not, it might not be worth including.
 </Accordion>
@@ -130,11 +142,13 @@ When adding references to your Playlab app, keep these tips in mind:
   - **Optimize File Sizes**: Large files can slow down processing. Break up very large documents into smaller, focused files
   - **Ensure Readability**: Use clear formatting and structure within documents for easier AI parsing
   - **Tables > Paragraphs**: Tables are much stronger reference files since they're easier for the AI to parse and categorize information
+  - **Organize Before Upload**: When uploading multiple files, organize them logically and ensure they complement each other
 </Accordion>
 
 <Accordion title="Testing and Refinement">
   - Test your apps with references checked and unchecked to verify if the references are helping
   - Sometimes key information from a reference is best just inserted into the prompt itself
+  - When using multiple references, test to ensure they work well together and don't create conflicting information
 </Accordion>
 
 <Accordion title="Additional Tips">
@@ -143,16 +157,33 @@ When adding references to your Playlab app, keep these tips in mind:
   - **Combine Resources**: Use multiple types of resources for more comprehensive responses
   - **Update Regularly**: Especially for public links, ensure your resources stay current
   - **Respect Copyright**: Always use resources that you have permission to use or that are openly licensed
+  - **Group Related Files**: When uploading multiple files, consider grouping related content together for better organization
 </Accordion>
 
 ## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> Frequently Asked Questions
 
 <Accordion title="What types of files can I upload as references?">
-  Playlab supports various reference formats including PDF, DOCX, TXT, CSV, JSON, and XLSX files. The maximum file size for uploaded references is 30 MB.
+  Playlab supports various reference formats including PDF, DOCX, TXT, CSV, JSON, and XLSX files. Each file has a maximum size limit of 30 MB, and you can upload up to 10 files at once.
 </Accordion>
 
 <Accordion title="How many references should I add to my app?">
-  Start with 3-5 core references that cover your app's main functionality. Quality is more important than quantity. Each reference should have a clear purpose and improve your app's output.
+  Start with 3-5 core references that cover your app's main functionality. Quality is more important than quantity. Each reference should have a clear purpose and improve your app's output. While you can upload up to 10 files at once, focus on relevance over volume.
+</Accordion>
+
+<Accordion title="Can I upload multiple files at the same time?">
+  Yes! You can now upload up to 10 files simultaneously. Simply hold Ctrl (Windows) or Cmd (Mac) while selecting your files. All files must be in supported formats and under 30 MB each. This feature is designed to streamline your workflow when setting up apps with multiple reference materials.
+</Accordion>
+
+<Accordion title="What's the best way to organize multiple file uploads?">
+  When uploading multiple files at once, organize them by topic or purpose before uploading. For example, group all curriculum documents together, or upload related worksheets and answer keys in the same batch. This helps ensure your references work well together and don't create conflicting information.
+</Accordion>
+
+<Accordion title="Do all files upload at the same time, or one by one?">
+  When you select multiple files, they all upload simultaneously in the background. You'll see a progress indicator showing the overall upload status. If one file fails to upload, the others will still process successfully.
+</Accordion>
+
+<Accordion title="Can I mix different file types in a single upload?">
+  Absolutely! You can select a combination of PDFs, Word documents, text files, CSVs, JSON files, and Excel spreadsheets in a single upload session, as long as you don't exceed the 10-file limit.
 </Accordion>
 
 <Accordion title="What are Global References?">
@@ -163,10 +194,18 @@ When adding references to your Playlab app, keep these tips in mind:
   Test your app with references checked and unchecked to verify if they're improving the output. If you don't see a difference, you might need to be more specific in your instructions about how to use the references.
 </Accordion>
 
+<Accordion title="What happens if I try to upload more than 10 files?">
+  The system will limit you to 10 files per upload session. If you need to add more references, you can perform multiple upload sessions or remove existing references to make room for new ones.
+</Accordion>
+
+<Accordion title="What happens if one file fails during a multiple file upload?">
+  If one file encounters an error (such as unsupported format or file too large), the other files in your selection will continue to upload successfully. You'll receive a notification about which specific file failed and why, so you can address the issue and re-upload if needed.
+</Accordion>
+
 ## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> Need Support?
 
 If you encounter any issues while adding references:
 
 * Contact us at [support@playlab.ai](mailto:support@playlab.ai)
 
-Last updated: March 21, 2025
+Last updated: August 8, 2025
