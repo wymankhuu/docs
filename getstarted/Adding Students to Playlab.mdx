@@ -1,0 +1,228 @@
+---
+title: 'Adding Students to Playlab'
+description: 'Step-by-step instructions and best practices for adding students to Playlab organizations and workspaces.'
+---
+
+It is really important that administrators and teachers understand how to best share and organize Playlab apps to be leveraged with students. This document provides step-by-step instructions for adding students to Playlab organizations and workspaces so they can access educational apps.
+
+<Info>
+**Important to Know**
+
+Proper student access management in Playlab:
+- Ensures students can focus on learning without technical barriers
+- Maintains appropriate classroom boundaries with Explorer roles
+- Protects student privacy and educational content
+- Allows efficient management of which students see which apps
+- Scales easily as you add new students and classes
+</Info>
+
+## <Icon icon="video" size="24" className="inline-block align-text-bottom" /> Watch a Video on how to organize your apps in Playlab for Students
+
+<div style={{position: 'relative', paddingBottom: '56.85920577617328%', height: 0, width: '75%'}}>
+  <iframe 
+    src="https://www.loom.com/embed/a63f583704a54de08553862d9bce4345?sid=78063beb-c5ca-4e0b-8cc3-9173c0f6b9a3" 
+    frameBorder="0" 
+    webkitAllowFullScreen 
+    mozAllowFullScreen 
+    allowFullScreen 
+    style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
+  />
+</div>
+
+## <Icon icon="building" size="24" className="inline-block align-text-bottom" /> Understanding Playlab's Structure
+
+Before adding students, it's important to understand how Playlab is organized. Organizations (marked with a school building icon) pull student data directly from Clever and serve as the top-level container for your school or district. Workspaces are specific areas within organizations where apps can be published and shared with targeted groups.
+
+<Warning>
+**Important:** Students automatically get access to organization-level content, but workspace access must be managed manually.
+</Warning>
+
+<Note>
+**Access Rules**
+
+Remember how access works in Playlab:
+- Organization-level publishing makes apps available to ALL students and staff with Clever access
+- Workspace-level publishing only makes apps available to specific students you've added to that workspace
+- Choose organization-level for school-wide resources, workspace-level for class-specific content
+</Note>
+
+## <Icon icon="globe" size="24" className="inline-block align-text-bottom" /> Publishing Apps for All Students (Recommended)
+
+This method gives all students and staff in your organization access to specific apps.
+
+<Steps>
+<Step title="Navigate to Your App">
+Open the app you want students to access.
+
+1. Go to your workspace (e.g., "Impact Student Writing Apps")
+2. Find the app you want students to access
+3. Click "Edit" on the app
+</Step>
+
+<Step title="Publish to Organization">
+Make the app available to all students.
+
+1. Look for the "Publish" button in the top right corner
+2. Click "Publish"
+3. Select your organization name (you'll see the school building icon next to it)
+4. Confirm the publication
+
+<Frame>
+  <img src="/images/publishtoorg.gif" alt="Publishing app to organization level" style={{width: '75%'}} />
+</Frame>
+</Step>
+</Steps>
+
+**Result:** All students and staff connected through Clever will now have access to this app.
+
+## <Icon icon="mail" size="24" className="inline-block align-text-bottom" /> Adding Students by Email Address
+
+Use this method when you want to share apps with only certain classes or student groups by adding them directly via email addresses.
+
+<Steps>
+<Step title="Create New Workspace">
+Set up a dedicated workspace for your student group.
+
+1. Click "New Workspace"
+2. Name your workspace (e.g., "Algebra One", "Grade 6 Science")
+3. Click "Create Workspace"
+
+<Frame>
+  <img src="/images/createworkspace.gif" alt="Create Workspace" style={{width: '75%'}} />
+</Frame>
+</Step>
+
+<Step title="Add Students by Email">
+Add students directly using their email addresses.
+
+1. Go to "Workspace Members"
+2. Add student emails one by one
+3. Set their role to "Explorer" (this allows them to use apps but not create them)
+
+<Frame>
+  <img src="/images/addexplorers.gif" alt="Add Student Explorers" style={{width: '75%'}} />
+</Frame>
+</Step>
+
+<Step title="Publish Apps to the Workspace">
+Make your apps available to the workspace members.
+
+1. Go to your app that you want to share
+2. Click "Edit"
+3. Click "Publish"
+4. Select your specific workspace (not the organization)
+</Step>
+</Steps>
+
+## <Icon icon="link" size="24" className="inline-block align-text-bottom" /> Adding Students via Team Invite Link
+
+Use this method when you want to quickly add multiple students using a shareable link.
+
+<Steps>
+<Step title="Create New Workspace">
+Set up a dedicated workspace for your student group (if you haven't already).
+
+1. Click "New Workspace"
+2. Name your workspace (e.g., "Algebra One", "Grade 6 Science")
+3. Click "Create Workspace"
+</Step>
+
+<Step title="Generate and Share Team Invite Link">
+Create a shareable link for students to join.
+
+1. Copy the team invite link from workspace settings
+2. Send link to students
+3. Students will be added as "Creators" by default
+
+<Frame>
+  <img src="/images/workspacelink.gif" alt="Workspace Link" />
+</Frame>
+
+<Warning>
+**Role Management Critical:** Students join as "Creators" by default when using invite links. You must change their role to "Explorer" to prevent them from creating or editing apps.
+</Warning>
+</Step>
+
+<Step title="Change Student Roles to Explorer">
+Ensure students have appropriate access levels.
+
+1. Go to "Workspace Members"
+2. Find each student who joined via the invite link
+3. Click "Edit Role" next to their name
+4. Change from "Creator" to "Explorer"
+
+<Frame>
+  <img src="/images/changestudentrole.gif" alt="Change Student Role" />
+</Frame>
+</Step>
+
+<Step title="Publish Apps to the Workspace">
+Make your apps available to the workspace members.
+
+1. Go to your app that you want to share
+2. Click "Edit"
+3. Click "Publish"
+4. Select your specific workspace (not the organization)
+</Step>
+</Steps>
+
+## <Icon icon="shield-check" size="24" className="inline-block align-text-bottom" /> Understanding Workspace Roles
+
+When adding students to workspaces, assign them the appropriate role based on their needs and your classroom management preferences.
+
+**Available Roles:**
+- **Owners (Admins):** Have full control, including adding/removing members and changing roles
+- **Creators:** Can build and edit apps but cannot manage workspace membership
+- **Reviewers:** Can view app activity and structure but cannot make edits
+- **Explorers:** Can only use published apps within the workspace (recommended for students)
+
+<Note>
+**Student Role Recommendation**
+
+Set students as "Explorers" to ensure they can access and use apps without the ability to modify or create new ones. This maintains focus on educational content while preventing accidental changes.
+</Note>
+
+## <Icon icon="lightbulb-on" size="24" className="inline-block align-text-bottom" /> Best Practices for Student Management
+
+**When managing student access in Playlab, keep these tips in mind:**
+
+- **Verify members regularly** by checking "Workspace Members" to review access and roles
+- **Confirm app access** by remembering that students only see apps published to their specific workspace or organization
+- **Use organization-level publishing** for school-wide educational resources
+- **Create specific workspaces** for class-specific content and targeted student groups
+- **Always set student roles to Explorer** to maintain appropriate classroom boundaries
+- **Test student access** by having a student verify they can see and use the published apps
+- **Keep workspace names descriptive** (e.g., "Grade 6 Science", "AP Biology") for easy identification
+- **Document which apps are published where** to avoid confusion about student access
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> Frequently Asked Questions
+
+<AccordionGroup>
+<Accordion title="What's the difference between publishing to organization vs. workspace?">
+Organization-level publishing makes the app available to ALL students and staff who have Clever access. Workspace-level publishing only makes the app available to specific students you've added to that workspace. Choose organization-level for school-wide resources, and workspace-level for class-specific content.
+</Accordion>
+
+<Accordion title="Why can't students see my app even though I published it?">
+Check these common issues: Wrong publication level (ensure you published to the correct organization or workspace), Student not in workspace (if publishing to a workspace, verify the student is a member), Incorrect role (make sure students have "Explorer" role or higher), Clever sync issues (organization-level access requires active Clever integration).
+</Accordion>
+
+<Accordion title="Can students create their own apps?">
+This depends on their role assignment. Explorer role means students can only use published apps (recommended for most educational scenarios). Creator role allows students to build and edit their own apps. Reviewer role lets students view app structure but not create or edit. Most educators prefer keeping students as Explorers to maintain focus on using educational content rather than creating apps.
+</Accordion>
+
+<Accordion title="How do I remove a student from a workspace?">
+Navigate to "Workspace Members", find the student's name in the member list, click the menu button (three dots) next to their name, select "Remove from workspace", and confirm the removal. Note: This only removes them from the specific workspace, not from organization-level access.
+</Accordion>
+
+<Accordion title="What happens when students graduate or leave?">
+For organization-level access, students will automatically lose access when they're removed from your school's Clever roster. For workspace-level access, you'll need to manually remove graduated students from individual workspaces, or they'll retain access even after leaving the school.
+</Accordion>
+</AccordionGroup>
+
+## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> Need Support?
+
+If you encounter any issues while adding students or managing workspace access:
+
+* Contact us at [support@playlab.ai](mailto:support@playlab.ai)
+
+Last updated: August 15, 2025

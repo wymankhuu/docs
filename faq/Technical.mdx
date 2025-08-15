@@ -46,7 +46,7 @@ Playlab regularly updates its platform with new features and improvements. Major
 
 ## Is this a ChatGPT wrapper?
 
-No, Playlab is not just a ChatGPT wrapper. While it does support OpenAI models including GPT4o and o1, it also supports models from Anthropic, Meta, and Google, allowing users to build on multiple different AI foundations.
+No, Playlab is not just a ChatGPT wrapper. While it does support OpenAI models, it also supports models from Anthropic, Meta, Google, DeepSeek, and Moonshot, allowing users to build on multiple different AI foundations.
 
 ## How can users control who has access to their AI apps?
 
@@ -58,11 +58,20 @@ Playlab currently allows users to create chatbots and tools. We currently allow 
 
 ## What LLMs does Playlab currently support?
 
-Playlab currently supports models from:
-- OpenAI (GPT4o, o1)
-- Anthropic (Claude Opus, Claude 3.5, Claude 3.7, Claude 3.7 Reasoning)
-- Meta (Llama 3.2)
-- Google (LearnLM [experimental], Flash)
+Playlab supports over 20 AI models from multiple providers, including:
+
+### Frontier Models (Cutting-edge proprietary models)
+- **Anthropic**: Claude 4 Opus, Claude 4 Sonnet, Claude 4 Sonnet (Reasoning), Claude 3 Opus, Claude 3.5 Haiku, Claude 3.7 Sonnet
+- **OpenAI**: GPT-4.1, GPT-4.1 Nano, GPT-4o, o3 Mini
+- **Google**: Gemini 2.5 Flash, Gemini 2.5 Pro
+
+### Open Weight Models (Publicly available model parameters)
+- **Meta**: Llama 3.3 70B Instruct, Llama 4 Maverick, Llama 4 Scout
+- **OpenAI**: GPT OSS 120B, GPT OSS 20B
+- **DeepSeek**: DeepSeek R1
+- **Moonshot**: Kimi K2
+
+New models are added regularly to provide users with access to the latest AI capabilities, with a focus on providing more open weight and eventually open source models for maximum flexibility and control.
 
 ## Does Playlab support RAG?
 
@@ -70,5 +79,16 @@ Yes, we allow builders to upload references that can be leveraged by their Playl
 
 ## What's the difference between the Playlab apps and a custom made GPT or Gemini Gem?
 
-Playlab apps offer more flexibility by supporting multiple AI models from different providers (OpenAI, Anthropic, Meta, and Google). Unlike custom GPTs which are limited to OpenAI's ecosystem or Gemini Gems which are limited to Google's ecosystem, Playlab allows you to create educational tools using various models and provides additional education-specific features and safeguards.
+Playlab apps offer more flexibility by supporting multiple AI models from different providers (OpenAI, Anthropic, Meta, Google, DeepSeek, and Moonshot). Unlike custom GPTs which are limited to OpenAI's ecosystem or Gemini Gems which are limited to Google's ecosystem, Playlab allows you to create educational tools using various models and provides additional education-specific features and safeguards.
 
+## Canvas LTI Integration
+
+### Does Playlab offer Canvas LTI integration?
+
+We are currently in beta phase and testing Canvas LTI integration with a few select partners. Our current implementation is based on LTI 1.1. This does not currently support deep linking to content but makes it easier to sign in and log on.  
+
+We are targeting end of fall 2025 for a broader release that will include LTI 1.3 support, which will provide enhanced functionality including deep linking capabilities. Until then, we are focusing our development efforts on improving how apps are organized and shared, evaluations, and making new interfaces available for people building apps on Playlab.
+
+### Are there future integrations on the roadmap?
+
+Yes, as a non-profit we are balancing which integrations to include. If you have suggestions please send them to support@playlab.ai

@@ -1,0 +1,154 @@
+---
+title: 'Move Apps to Workspace'
+description: 'Transfer your apps between workspaces to better organize your apps in Playlab'
+---
+
+## <Icon icon="arrows-rotate" size="24" className="inline-block align-text-bottom" /> What is this feature?
+
+Moving apps to workspace allows you to transfer apps you've created from one workspace to another within your organization. This feature helps you reorganize your projects without the need to remix or duplicate apps when your workspace needs change.
+
+This is particularly useful when you initially create an app in one workspace but later decide it would be better suited in a different workspace, or when you need to transfer personal projects to team workspaces.
+
+<Warning>
+  You can only move apps to other workspaces within the same organization. Moving between private workspaces is not supported. You must be a **workspace owner** to use this feature.
+</Warning>
+
+## <Icon icon="circle-arrow-right" size="24" className="inline-block align-text-bottom" /> Watch How to Move Apps to Workspace
+
+<div style={{ margin: "20px 0" }}>
+  <div style={{ 
+    position: "relative", 
+    paddingBottom: "72.08333333333333%", 
+    height: 0,
+    borderRadius: "12px",
+    overflow: "hidden",
+    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)"
+  }}>
+    <iframe 
+      src="https://www.loom.com/embed/171a27ee360842d7a25ae75bc021395a?sid=4ef5361e-2417-4536-99c3-e8c0ea8ce891" 
+      frameBorder="0" 
+      webkitAllowFullScreen 
+      mozAllowFullScreen 
+      allowFullScreen 
+      style={{ 
+        position: "absolute", 
+        top: 0, 
+        left: 0, 
+        width: "100%", 
+        height: "100%",
+        borderRadius: "12px"
+      }}
+    />
+  </div>
+  <p style={{ 
+    fontSize: "14px", 
+    color: "#6b7280", 
+    marginTop: "12px",
+    fontStyle: "italic",
+    textAlign: "center"
+  }}>
+    Watch: Moving Apps Between Workspaces in Playlab
+  </p>
+</div>
+
+## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Why Use App Moving
+
+<Steps>
+  <Step title="Correct workspace placement">
+    Move apps that were accidentally created in the wrong workspace or apps that need to be moved to another workspace to their intended location without losing work.
+  </Step>
+  <Step title="Avoid duplicate apps">
+    Transfer apps directly instead of remixing, which prevents having multiple outdated copies of the same project.
+  </Step>
+  <Step title="Streamline organization">
+    Reorganize your projects as your workspace structure evolves without complex multi-step processes.
+  </Step>
+  <Step title="Maintain app history">
+    Preserve all app data and development history when transferring between workspaces.
+  </Step>
+</Steps>
+
+## <Icon icon="circle-arrow-right" size="24" className="inline-block align-text-bottom" /> How to move an app to a different workspace
+
+<img width="400" src="/images/movetoworkspace.png" className="border border-gray-300 rounded-md shadow-sm" />
+
+Look for the move app option in your app settings. Remember, you must be a workspace owner to access this feature.
+
+## <Icon icon="thought-bubble" size="24" className="inline-block align-text-bottom" /> When would I want to move an app?
+
+### Correcting Initial Placement
+
+Sometimes you might start building an app in your personal workspace but realize it should be in a team workspace for collaboration.
+
+* In this example, I initially created a customer service chatbot in my personal workspace.
+* After building it out, I realized the marketing team needs to collaborate on it, so I move it to the marketing workspace.
+
+### Evolving Project Needs
+
+As projects grow and requirements change, you might need to move apps to workspaces that better align with their current purpose.
+
+## <Icon icon="thumbs-up" size="24" className="inline-block align-text-bottom" /> Tips for Moving Apps
+
+### Best Practices
+
+* **Plan workspace structure**: Consider your long-term organization needs, but don't let perfect planning prevent you from starting to build.
+
+* **Check permissions**: Ensure you have workspace owner permissions in both the source and destination workspaces.
+
+* **Review dependencies**: Before moving, check if your app uses any workspace-specific references or libraries.
+
+* **Communicate changes**: Let team members know when you've moved shared apps to new workspaces.
+
+* **Clean up regularly**: Use the move feature to maintain organized workspaces instead of accumulating outdated remixes.
+
+## <Icon icon="triangle-exclamation" size="24" className="inline-block align-text-bottom" /> Important Limitations
+
+### Workspace Reference Libraries
+
+Apps that use references from workspace libraries cannot be moved. You'll need to:
+1. Remove any workspace library references from your app
+2. Try the move operation again
+3. Re-add references from the destination workspace's library if needed
+
+### Permission Requirements
+
+* You must be a workspace owner to see and use this feature
+* You can only move apps to workspaces where you have app creation permissions
+* Moving between private workspaces is not supported
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> FAQ
+
+<Accordion title="Can I move apps between different organizations?">
+  No, you can only move apps between workspaces within the same organization.
+</Accordion>
+
+<Accordion title="Will moving an app affect its functionality?">
+  The app's core functionality will remain intact, but you may need to update workspace-specific references or libraries.
+</Accordion>
+
+<Accordion title="What happens to app collaborators when I move an app?">
+  App collaborators will lose access if they don't have permissions in the destination workspace.
+</Accordion>
+
+<Accordion title="Can I move an app back to its original workspace?">
+  Yes, as long as you maintain workspace owner permissions in both workspaces.
+</Accordion>
+
+<Accordion title="Is there a limit to how many apps I can move?">
+  There is no specific limit, but you must have appropriate permissions for each move operation.
+</Accordion>
+
+## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> We Want Your Feedback!
+
+<Info>
+  Have you used the move apps feature in Playlab? We'd love to hear about your experience and how it's helped organize your projects!
+
+  Contact us at [support@playlab.ai](mailto:support@playlab.ai)
+</Info>
+
+<div className="mt-8">
+  <Button href="../index.md">Return to Home Page</Button>
+</div>
+
+---
+Last updated: 8/15/2025

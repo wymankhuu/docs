@@ -68,7 +68,8 @@
               "getstarted/Reviewing Activity",
               "getstarted/markingstatus",
               "getstarted/organizingworkspaces",
-              "getstarted/Building Safely"
+              "getstarted/Building Safely",
+              "getstarted/Adding Students to Playlab"
             ]
           },
           {
@@ -106,6 +107,7 @@
             "pages": [
               "features/Selecting an LLM",
               "features/MCP tools",
+              "features/Move Apps to Workspace",
               "features/Optional welcome message",
               "features/AI assisted builder",
               "features/Remixing multiple apps",
@@ -165,6 +167,7 @@
               "faq/Data Privacy Agreements",
               "faq/Under 13 Use",
               "faq/Account Management",
+              "faq/Single Sign On",
               "faq/Technical",
               "faq/Professional Development",
               "faq/Research",
