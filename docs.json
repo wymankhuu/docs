@@ -107,6 +107,7 @@
           {
             "group": "📋 Feature Documentation",
             "pages": [
+              "features/Organizational References",
               "features/Selecting an LLM",
               "features/MCP tools",
               "features/Move Apps to Workspace",
