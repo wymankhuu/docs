@@ -107,6 +107,7 @@
           {
             "group": "📋 Feature Documentation",
             "pages": [
+              "features/MCP Standards",
               "features/MCP IMKG",
               "features/Organizational References",
               "features/Selecting an LLM",
