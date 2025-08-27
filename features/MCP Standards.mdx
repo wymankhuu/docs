@@ -3,11 +3,11 @@ title: "🆕 State Standards Knowledge Graph Tool in Playlab"
 description: "Access comprehensive state educational standards through AI-powered knowledge graph queries including Common Core, NGSS, and WIDA"
 ---
 
-## Overview
-
 <Note>
 🧪 This feature is currently in BETA and available to all users
 </Note>
+
+## <Icon icon="bell-on" size="24" /> What is this feature?
 
 The State Standards Knowledge Graph Tool transforms your Playlab apps by providing direct access to a comprehensive database of educational standards including Common Core State Standards (CCSS), Next Generation Science Standards (NGSS), and WIDA English Language Development standards. Rather than relying on generic AI responses about educational standards, your app can now query specific, standards-aligned content that understands how every standard connects within state frameworks.
 
@@ -15,7 +15,8 @@ The State Standards Knowledge Graph Tool transforms your Playlab apps by providi
 Enabling this tool will modify your app's behavior to prioritize specific state standards queries over general educational responses.
 </Warning>
 
-## Quick Start Video
+## <Icon icon="circle-play" size="24" /> Watch How to Leverage the MCP Standards Tool
+
 <iframe
   src="https://www.loom.com/embed/f417dc227e054c0bb5c3d525400b3296?sid=6c8afce3-573a-42c3-9b63-9d6fe27aeb09"
   width="100%"
@@ -24,46 +25,47 @@ Enabling this tool will modify your app's behavior to prioritize specific state 
   allowFullScreen
 ></iframe>
 
-## Setup Instructions
+## <Icon icon="gear" size="24" /> Setup Instructions
 
 <Steps>
-  <Step title="Open Tools Panel">
-    Navigate to the **Tools** section in your Playlab builder interface.
-  </Step>
-  
-  <Step title="Enable the Standards Knowledge Graph Tool">
-    Select **State Standards Knowledge Graph Tool** from the available MCP tools list.
-    
-    <img src="/images/sskg.png" alt="Adding State Standards Tool to Playlab" />
-  </Step>
-  
-  <Step title="Configure Your App Prompt">
-    Add these instructions to your Playlab app prompt for optimal performance:
+<Step title="Open Tools Panel">
+Navigate to the **Tools** section in your Playlab builder interface.
+</Step>
 
-    ```text
+<Step title="Enable the Standards Knowledge Graph Tool">
+Select **State Standards Knowledge Graph Tool** from the available MCP tools list.
+
+<img src="/images/sskg.png" alt="Adding State Standards Tool to Playlab" />
+</Step>
+
+<Step title="Configure Your App Prompt">
+Add these instructions to your Playlab app prompt for optimal performance:
+
+```text
 You have access to the State Standards knowledge graph tool for curriculum-specific queries. When users ask about educational standards, alignment requirements, or standards-based content, prioritize State Standards results over general knowledge. 
 You can reference specific standards codes and alignment information to enhance explanations with accurate standards-based content.
-    ```
-  </Step>
-  
-  <Step title="Test Different Query Types">
-    Validate the tool works correctly by testing various query categories:
-    
-    **Standards Queries:** "Find Common Core math standards for 4th grade fractions"
-    
-    **Science Standards:** "What NGSS standards cover ecosystems in middle school?"
-    
-    **Language Standards:** "WIDA standards for academic writing proficiency"
-    
-    **Cross-Standards Alignment:** "How do Common Core and NGSS align in elementary grades?"
-  </Step>
-  
-  <Step title="Optimize Integration">
-    Refine your app instructions based on testing results to maximize the tool's effectiveness for your specific use case.
-  </Step>
+When searching for the correct standards document, use the get_documents_by_state operation.
+```
+</Step>
+
+<Step title="Test Different Query Types">
+Validate the tool works correctly by testing various query categories:
+
+**Standards Queries:** "Find Common Core math standards for 4th grade fractions"
+
+**Science Standards:** "What NGSS standards cover ecosystems in middle school?"
+
+**Language Standards:** "WIDA standards for academic writing proficiency"
+
+**Cross-Standards Alignment:** "How do Common Core and NGSS align in elementary grades?"
+</Step>
+
+<Step title="Optimize Integration">
+Refine your app instructions based on testing results to maximize the tool's effectiveness for your specific use case. Pay attention to which operations work best for your app's workflow and include explicit guidance in your prompts.
+</Step>
 </Steps>
 
-## Understanding Standards Knowledge Graphs
+## <Icon icon="brain" size="24" /> Understanding Standards Knowledge Graphs
 
 ### What Makes This Different
 
@@ -73,175 +75,144 @@ A standards knowledge graph goes beyond simple content storage. It maps the rela
 
 This knowledge graph captures the interconnected nature of educational standards across subjects and grade levels. It understands:
 
-* **Vertical Alignment:** How standards progress from grade to grade
-* **Cross-Curricular Connections:** How standards connect across subject areas
-* **Assessment Alignment:** How standards align with state assessments
-* **Implementation Guidance:** Best practices for standards implementation
+- **Vertical Alignment:** How standards progress from grade to grade
+- **Cross-Curricular Connections:** How standards connect across subject areas
+- **Assessment Alignment:** How standards align with state assessments
+- **Implementation Guidance:** Best practices for standards implementation
 
-## Supported Standards Frameworks
+## <Icon icon="book" size="24" /> Subjects & Standards Coverage
+
+### National Standards Frameworks
 
 <CardGroup cols={2}>
-  <Card title="Common Core State Standards (CCSS)" icon="graduation-cap" href="https://www.thecorestandards.org/">
-    Comprehensive mathematics and English language arts standards for grades K-12, adopted by most U.S. states
-  </Card>
-  
-  <Card title="Next Generation Science Standards (NGSS)" icon="flask" href="https://www.nextgenscience.org/">
-    Three-dimensional science standards emphasizing scientific practices, crosscutting concepts, and disciplinary core ideas
-  </Card>
-  
-  <Card title="WIDA ELD Standards" icon="comments" href="https://wida.wisc.edu/teach/standards/eld">
-    English Language Development standards supporting multilingual learners across content areas
-  </Card>
-</CardGroup>
-
-## Use Case Examples by Role
-
-<div className="overflow-x-auto">
-  <table className="w-full border-collapse border border-gray-300">
-    <thead>
-      <tr className="bg-gray-100">
-        <th className="border border-gray-300 px-4 py-2 text-left font-semibold">Role</th>
-        <th className="border border-gray-300 px-4 py-2 text-left font-semibold">Primary Use Cases</th>
-        <th className="border border-gray-300 px-4 py-2 text-left font-semibold">Example Queries</th>
-        <th className="border border-gray-300 px-4 py-2 text-left font-semibold">Standards Focus</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td className="border border-gray-300 px-4 py-2 font-medium">Teachers</td>
-        <td className="border border-gray-300 px-4 py-2">
-          • Lesson planning<br/>
-          • Standards alignment<br/>
-          • Assessment design<br/>
-          • ELL support
-        </td>
-        <td className="border border-gray-300 px-4 py-2">
-          "What Common Core standards should I address in my 3rd grade fractions unit?"<br/>
-          "Which NGSS standards align with my elementary weather unit?"
-        </td>
-        <td className="border border-gray-300 px-4 py-2">CCSS, NGSS, WIDA</td>
-      </tr>
-      <tr className="bg-gray-50">
-        <td className="border border-gray-300 px-4 py-2 font-medium">Curriculum Coordinators</td>
-        <td className="border border-gray-300 px-4 py-2">
-          • Vertical alignment<br/>
-          • Cross-curricular mapping<br/>
-          • Scope and sequence<br/>
-          • Standards audit
-        </td>
-        <td className="border border-gray-300 px-4 py-2">
-          "How do Common Core reading standards progress from grades 3-5?"<br/>
-          "Where do math and science standards intersect in middle school?"
-        </td>
-        <td className="border border-gray-300 px-4 py-2">CCSS, NGSS</td>
-      </tr>
-      <tr>
-        <td className="border border-gray-300 px-4 py-2 font-medium">Administrators</td>
-        <td className="border border-gray-300 px-4 py-2">
-          • Implementation planning<br/>
-          • Compliance monitoring<br/>
-          • Resource allocation<br/>
-          • Professional development
-        </td>
-        <td className="border border-gray-300 px-4 py-2">
-          "What does research-based NGSS implementation look like?"<br/>
-          "How can we ensure our curriculum meets all required standards?"
-        </td>
-        <td className="border border-gray-300 px-4 py-2">All frameworks</td>
-      </tr>
-      <tr className="bg-gray-50">
-        <td className="border border-gray-300 px-4 py-2 font-medium">Instructional Coaches</td>
-        <td className="border border-gray-300 px-4 py-2">
-          • Teacher mentoring<br/>
-          • Standards training<br/>
-          • Best practices<br/>
-          • Resource alignment
-        </td>
-        <td className="border border-gray-300 px-4 py-2">
-          "How can I help teachers understand three-dimensional learning?"<br/>
-          "What training do teachers need for WIDA standards?"
-        </td>
-        <td className="border border-gray-300 px-4 py-2">NGSS, WIDA</td>
-      </tr>
-      <tr>
-        <td className="border border-gray-300 px-4 py-2 font-medium">Assessment Specialists</td>
-        <td className="border border-gray-300 px-4 py-2">
-          • Test alignment<br/>
-          • Item development<br/>
-          • Performance analysis<br/>
-          • Rubric creation
-        </td>
-        <td className="border border-gray-300 px-4 py-2">
-          "What standards are assessed on state science tests?"<br/>
-          "How do WIDA proficiency levels align with content standards?"
-        </td>
-        <td className="border border-gray-300 px-4 py-2">CCSS, NGSS, WIDA</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-
-
-## Frequently Asked Questions
-
-<AccordionGroup>
-  <Accordion title="Which state standards are included in the knowledge graph?">
-    The knowledge graph includes Common Core State Standards for Mathematics and ELA, Next Generation Science Standards (NGSS), and WIDA English Language Development standards. These represent the most widely adopted standards frameworks across U.S. states and territories.
-  </Accordion>
-
-  <Accordion title="How current are the standards in the database?">
-    The knowledge graph reflects the most recent versions of each standards framework, including the 2020 WIDA ELD Standards Framework and current NGSS performance expectations, ensuring you have access to the latest standards requirements.
-  </Accordion>
-
-  <Accordion title="Which AI models work best with this tool?">
-    For optimal performance with the State Standards Knowledge Graph Tool:
-    
-    **Tier 1 Performance (Recommended):** Claude 4 Sonnet (excellent balance of speed, accuracy, and standards analysis), GPT-4.1 (superior for complex standards alignment and detailed responses), and Gemini 2.5 Pro (high accuracy with comprehensive educational standards analysis).
-    
-    **Tier 2 Performance:** Claude 4 Opus (most thorough standards analysis but slower response times), Claude 3 Opus (strong standards interpretation with good reasoning), and Kimi K2 (advanced tool usage with solid educational standards handling).
-    
-    **Speed-Optimized Options:** Claude 3.5 Haiku (faster responses with reduced analysis depth) and GPT-4.1 Nano (quick queries for simple standards questions).
-    
-    For most educational applications, Claude 4 Sonnet or GPT-4.1 provide the optimal balance of capability and efficiency for standards-based queries.
-  </Accordion>
-
-  <Accordion title="Can I find connections between different standards frameworks?">
-    Yes! The knowledge graph excels at revealing cross-curricular connections, such as how Common Core mathematics standards align with NGSS science practices, or how WIDA language standards support content area learning.
-  </Accordion>
-
-  <Accordion title="What about state-specific adaptations of these standards?">
-    While the tool focuses on the core national frameworks, it includes information about common state adaptations and implementation variations. You can supplement with state-specific resources through Playlab's reference system.
-  </Accordion>
-
-  <Accordion title="How does this support standards-based lesson planning?">
-    The tool helps identify specific standards codes, understand grade-level expectations, find prerequisite skills, and discover cross-curricular connections to support comprehensive standards-aligned lesson design.
-  </Accordion>
-
-  <Accordion title="Can this help with assessment alignment?">
-    Absolutely! The knowledge graph includes information about standards-aligned assessment practices, performance indicators, and evaluation criteria to support both formative and summative assessment design.
-  </Accordion>
-
-  <Accordion title="How does this support multilingual learners?">
-    Through WIDA standards integration, the tool provides guidance on language development expectations, academic language support, and strategies for integrating content and language learning across disciplines.
-  </Accordion>
-
-  <Accordion title="Does this work with existing Playlab features?">
-    Yes! The State Standards Knowledge Graph Tool integrates seamlessly with other Playlab features, including reference files, custom instructions, and existing MCP tools for comprehensive educational support.
-  </Accordion>
-
-  <Accordion title="What performance should I expect with different models?">
-    Claude 4 Sonnet and GPT-4.1 typically provide responses in 3-8 seconds with high accuracy. Claude 4 Opus offers the most comprehensive analysis but may take 8-15 seconds. Speed-optimized models like Claude 3.5 Haiku respond in 1-3 seconds but with simpler analysis suitable for basic standards queries.
-  </Accordion>
-</AccordionGroup>
-
-## Learn More
-<Card title="Learn About MCP" icon="book-open-reader" href="/mcp-overview">
-  Discover how Model Context Protocol enables reliable AI tools for education
+<Card title="Common Core State Standards (CCSS)" icon="graduation-cap" href="https://www.thecorestandards.org/">
+Comprehensive mathematics and English language arts standards for grades K-12, adopted by most U.S. states
 </Card>
 
-## Need Support?
+<Card title="Next Generation Science Standards (NGSS)" icon="flask" href="https://www.nextgenscience.org/">
+Three-dimensional science standards emphasizing scientific practices, crosscutting concepts, and disciplinary core ideas
+</Card>
+
+<Card title="WIDA ELD Standards" icon="comments" href="https://wida.wisc.edu/teach/standards/eld">
+English Language Development standards supporting multilingual learners across content areas
+</Card>
+
+<Card title="WIDA Spanish Standards (Marco DALE)" icon="language" href="https://wida.wisc.edu/">
+Spanish Language Development standards supporting Spanish-speaking multilingual learners
+</Card>
+</CardGroup>
+
+### <Icon icon="map" size="24" /> State Subject Areas
+
+The tool provides access to standards across four core educational areas:
+- **English Language Arts**
+- **Mathematics**  
+- **Science**
+- **Social Studies**
+
+<Note>
+For each State-Subject pair, there is a dedicated "document" that contains the standards information. In some cases, like Pennsylvania Social Studies, there are several documents within a single state-subject combination.
+</Note>
+
+## <Icon icon="triangle-exclamation" size="24" /> Current Gaps in Coverage
+<Accordion title="Missing State-Subject Documents (Temporary)">
+- New Jersey → Math
+- Arkansas → English
+- Iowa → English
+- Minnesota → English
+- South Carolina → English
+- Alabama → Science
+These documents will be added in future updates to the knowledge graph.
+</Accordion>
+
+## <Icon icon="users" size="24" /> Use Case Examples by Role
+
+| Role | Primary Use Cases | Example Queries | Standards Focus |
+|------|------------------|-----------------|-----------------|
+| **Teachers** | • Lesson planning<br/>• Standards alignment<br/>• Assessment design<br/>• ELL support | "Find Common Core math standards for 4th grade fractions"<br/>"Which NGSS standards cover ecosystems in middle school?" | CCSS, NGSS, WIDA |
+| **Curriculum Coordinators** | • Vertical alignment<br/>• Cross-curricular mapping<br/>• Scope and sequence<br/>• Standards audit | "How do Common Core reading standards progress from grades 3-5?"<br/>"Where do math and science standards intersect in middle school?" | CCSS, NGSS |
+| **Administrators** | • Implementation planning<br/>• Compliance monitoring<br/>• Resource allocation<br/>• Professional development | "What does research-based NGSS implementation look like?"<br/>"How can we ensure our curriculum meets all required standards?" | All frameworks |
+| **Instructional Coaches** | • Teacher mentoring<br/>• Standards training<br/>• Best practices<br/>• Resource alignment | "How can I help teachers understand three-dimensional learning?"<br/>"What training do teachers need for WIDA standards?" | NGSS, WIDA |
+| **Assessment Specialists** | • Test alignment<br/>• Item development<br/>• Performance analysis<br/>• Rubric creation | "What standards are assessed on state science tests?"<br/>"How do WIDA proficiency levels align with content standards?" | CCSS, NGSS, WIDA |
+
+## <Icon icon="circle-question" size="24" /> Frequently Asked Questions
+
+<Accordion title="Which state standards are included in the knowledge graph?">
+The knowledge graph includes standards for English, Math, Science, and Social Studies across participating states, plus national frameworks including Common Core State Standards for Mathematics and ELA, Next Generation Science Standards (NGSS), WIDA English Language Development standards, and WIDA Spanish Language Development Standards (Marco DALE). Note that some state-subject combinations are temporarily missing from the current database.
+</Accordion>
+
+<Accordion title="What are the current system limitations and known issues?">
+The tool is currently in BETA with some known performance characteristics:
+
+**Tool Call Reliability:** You may notice the tool requires multiple calls to find the correct information due to formatting inconsistencies across states. An update to the knowledge graph is expected in the next few months that will improve tool call dependability.
+
+**Inconsistent Formatting:** One of the biggest limitations is inconsistent formatting from one state-subject to another. For example, the tool may attempt to filter by grade level, which won't work for some documents that organize grades differently because:
+- Grade level attributes might not exist in some documents
+- Grades might be written as "middle school" or "grades 3-5" rather than the expected list format (e.g., [7,8,9])
+- Different states use varying organizational schemes for the same content areas
+
+**West Virginia Mislabeling:** West Virginia standards documents are incorrectly listed with `state="Virginia"` in the system. The tool can usually recognize and correct this error automatically, but you may see Virginia results when searching for West Virginia standards.
+
+**Varied Organizational Schemes:** Different states organize their standards using different structural approaches. Some documents use domains/clusters organization while others employ different hierarchical structures, causing inconsistent knowledge graph traversal when moving between state-subject combinations.
+</Accordion>
+
+<Accordion title="How current are the standards in the database?">
+The knowledge graph reflects the most recent versions of each standards framework, including the 2020 WIDA ELD Standards Framework and current NGSS performance expectations, ensuring you have access to the latest standards requirements.
+</Accordion>
+
+<Accordion title="Which AI models work best with this tool?">
+For optimal performance with the State Standards Knowledge Graph Tool:
+
+**Tier 1 Performance (Recommended):** Claude 4 Sonnet (excellent balance of speed, accuracy, and standards analysis), GPT-4.1 (superior for complex standards alignment and detailed responses), and Gemini 2.5 Pro (high accuracy with comprehensive educational standards analysis).
+
+**Tier 2 Performance:** Claude 4 Opus (most thorough standards analysis but slower response times), Claude 3 Opus (strong standards interpretation with good reasoning), and Kimi K2 (advanced tool usage with solid educational standards handling).
+
+**Speed-Optimized Options:** Claude 3.5 Haiku (faster responses with reduced analysis depth) and GPT-4.1 Nano (quick queries for simple standards questions).
+
+For most educational applications, Claude 4 Sonnet or GPT-4.1 provide the optimal balance of capability and efficiency for standards-based queries.
+</Accordion>
+
+<Accordion title="Can I find connections between different standards frameworks?">
+Yes! The knowledge graph excels at revealing cross-curricular connections, such as how Common Core mathematics standards align with NGSS science practices, or how WIDA language standards support content area learning.
+</Accordion>
+
+<Accordion title="What about state-specific adaptations of these standards?">
+While the tool focuses on the core national frameworks, it includes information about common state adaptations and implementation variations. You can supplement with state-specific resources through Playlab's reference system.
+</Accordion>
+
+<Accordion title="How does this support standards-based lesson planning?">
+The tool helps identify specific standards codes, understand grade-level expectations, find prerequisite skills, and discover cross-curricular connections to support comprehensive standards-aligned lesson design.
+</Accordion>
+
+<Accordion title="Can this help with assessment alignment?">
+Absolutely! The knowledge graph includes information about standards-aligned assessment practices, performance indicators, and evaluation criteria to support both formative and summative assessment design.
+</Accordion>
+
+<Accordion title="How does this support multilingual learners?">
+Through WIDA standards integration, the tool provides guidance on language development expectations, academic language support, and strategies for integrating content and language learning across disciplines.
+</Accordion>
+
+<Accordion title="Does this work with existing Playlab features?">
+Yes! The State Standards Knowledge Graph Tool integrates seamlessly with other Playlab features, including reference files, custom instructions, and existing MCP tools for comprehensive educational support.
+</Accordion>
+
+<Accordion title="What performance should I expect with different models?">
+Claude 4 Sonnet and GPT-4.1 typically provide responses in 3-8 seconds with high accuracy. Claude 4 Opus offers the most thorough standards analysis but may take 8-15 seconds. Speed-optimized options like Claude 3.5 Haiku respond in 1-3 seconds but with simpler analysis suitable for basic standards queries.
+
+For most educational applications, Claude 4 Sonnet or GPT-4.1 provide the optimal balance of capability and efficiency for standards-based queries.
+</Accordion>
+
+## <Icon icon="book" size="24" /> Learn More
+
+<Card title="Learn About MCP" icon="book-open-reader" href="/mcp-overview">
+Discover how Model Context Protocol enables reliable AI tools for education
+</Card>
+
+## <Icon icon="bullhorn" size="24" /> Need Support?
+
 We're continuously improving this tool based on user feedback. Contact our team at [support@playlab.ai](mailto:support@playlab.ai) for implementation guidance, troubleshooting, or to share your success stories.
 
+We'll keep you updated as improvements roll out!
+
 ---
-*Last updated: August 26, 2025*
+*Last updated: August 27, 2025*
