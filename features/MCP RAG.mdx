@@ -1,0 +1,221 @@
+---
+title: "🆕 Improving Referencing with Reference Search Tool"
+description: "Enhanced reference retrieval through AI-powered search tools that provide more precise and contextual access to your uploaded documents"
+---
+
+<Note>
+🧪 This feature is currently in BETA and available to all users
+</Note>
+
+## <Icon icon="bell-on" size="24" /> What is this feature?
+
+The Reference Search Tool transforms how your Playlab apps access and utilize uploaded reference materials. Instead of relying on the traditional reference system that finds only the 10 most similar snippets, this MCP-powered tool provides intelligent search capabilities that can navigate through your documents like an expert would, finding specific information with greater precision and context awareness.
+
+Think of it like having a knowledgeable research assistant who knows exactly where to look in your filing cabinet. Rather than randomly pulling out the first 10 files that seem related, this tool can systematically search through your organized materials until it finds exactly what's needed for the conversation.
+
+<Warning>
+Enabling this tool will modify your app's behavior to use MCP-based reference search instead of the traditional "references used" widget display.
+</Warning>
+
+## <Icon icon="lightbulb" size="24" /> What is the Rationale for this feature?
+
+<CardGroup cols={2}>
+<Card title="Traditional Reference System Limitations" icon="list" color="#ff6b6b">
+The current reference system works by reading your conversation and finding the 10 most *similar* snippets from your reference collection. While helpful, this approach has several limitations:
+
+**Limited Scope**: What if the answer isn't in those 10 snippets?
+
+**Shallow Search**: What if you need information from multiple sections or documents?
+
+**Scale Challenges**: With a large number of references, finding the right information in one try becomes unlikely
+
+**Manual Overhead**: You need to carefully select references for each app
+</Card>
+
+<Card title="The Knowledge Graph Advantage" icon="network-wired" color="#51cf66">
+The Reference Search Tool treats your uploaded documents as an organized knowledge system. Just like a well-organized teacher's filing cabinet with clearly labeled folders and sections, the AI can:
+
+**Navigate Systematically**: Move through document structures logically to find relevant information
+
+**Search Comprehensively**: Continue searching until it has all needed information (up to system limits)
+
+**Understand Context**: Recognize relationships between different pieces of information
+
+**Access Everything**: Work with your entire reference collection rather than pre-selected subsets
+</Card>
+</CardGroup>
+
+## <Icon icon="circle-play" size="24" /> Watch How to Leverage the Reference Search Tool
+
+<iframe
+  src="https://www.loom.com/embed/55b26f97f2304792ade4cd55fc6639f1?sid=6c8afce3-573a-42c3-9b63-9d6fe27aeb09"
+  width="100%"
+  height="400"
+  frameBorder="0"
+  allowFullScreen
+></iframe>
+
+## <Icon icon="gear" size="24" /> Setup Instructions
+
+<Steps>
+<Step title="Open Tools Panel">
+Navigate to the **Tools** section in your Playlab builder interface.
+</Step>
+
+<Step title="Enable the Reference Search Tools">
+Select both **References Search Tool** and **List Conversation Reference Tool** from the available MCP tools list.
+<img src="/images/mcpreferences.png" alt="Adding Reference MCP Standards Tools to Playlab" className="bordered-image" />
+<Note>
+We recommend enabling both tools for optimal performance. The List tool helps identify available references while the Search tool does the heavy lifting of finding specific information.
+</Note>
+</Step>
+
+<Step title="Configure Your App Prompt">
+Add these instructions to your Playlab app prompt for optimal performance:
+
+```text
+You have access to enhanced reference search capabilities through MCP tools. When users ask questions that might be answered by uploaded documents, use the reference search tools to find specific, relevant information. The List Conversation Reference Tool helps identify available references, while the References Search Tool performs targeted searches within those documents.
+
+Continue searching until you have comprehensive information to answer the user's question. Always check tool outputs for detailed reference information and cite sources appropriately.
+```
+</Step>
+
+<Step title="Optimize Your Document Organization">
+For best results, organize your reference materials with:
+- **Descriptive file names**: Use clear, specific names like "Grade-5-Math-Unit-3-Fractions-Teacher-Manual.pdf" instead of "Document1.pdf"
+- **Well-structured documents**: Files with clear headings and sections work best
+</Step>
+
+<Step title="Test Different Query Types">
+Validate the tools work correctly by testing various query categories to search your reference files.
+
+**Multi-Step Research:** "What are the prerequisites for teaching fractions, and what common misconceptions should I watch for?"
+</Step>
+</Steps>
+
+## <Icon icon="brain" size="24" /> Understanding the Reference Search System
+### Core Search Tools
+
+<CardGroup cols={2}>
+<Card title="References Search Tool" icon="magnifying-glass" href="#primary-search">
+The primary search engine that queries your uploaded documents for specific information and content, continuing to search until comprehensive information is found
+</Card>
+
+<Card title="List Conversation Reference Tool" icon="list" href="#reference-listing">
+Lists available references to help the search tool identify accessible documents more efficiently and understand the scope of available materials
+</Card>
+</CardGroup>
+
+### <Icon icon="key" size="24" /> Key Features
+
+The Reference Search Tool system provides several advantages over traditional reference handling:
+
+- **Intelligent Navigation**: Understands document structure and can move through sections systematically
+- **Comprehensive Search**: Continues searching until it has sufficient information to answer your question
+- **Context Preservation**: Maintains understanding of how different pieces of information relate to each other
+- **Organizational Awareness**: Respects and utilizes your document organization system
+- **Tool Output Transparency**: Detailed search results visible in tool outputs instead of widget display
+- **Scalable Access**: Works with large reference collections without requiring manual subset selection
+
+<Note>
+Models that cannot use MCP tools will lose reference access when these tools are enabled, so ensure your chosen AI model supports MCP functionality.
+</Note>
+
+## <Icon icon="triangle-exclamation" size="24" /> Important Changes in Behavior
+
+<Accordion title="Reference Widget Replacement">
+When you enable the References Search Tool, the traditional "references used" widget will no longer appear. Instead, you'll see detailed reference information in the tool outputs, providing more granular insight into how your documents are being accessed and utilized. This actually gives you better transparency into the AI's research process.
+</Accordion>
+
+<Accordion title="Model Compatibility Requirements">
+This is an MCP tool, which means AI models that don't support Model Context Protocol will lose the ability to access references when the tool is enabled. Ensure your selected model has MCP capabilities before enabling these tools.
+</Accordion>
+
+<Accordion title="Enhanced Search Behavior">
+Unlike the traditional system that stops after finding 10 similar snippets, the Reference Search Tool will continue searching your documents until it has comprehensive information to answer your question. This means more thorough responses but potentially longer processing times for complex queries.
+</Accordion>
+
+## <Icon icon="file-arrow-up" size="24" /> Optimizing Your Reference Materials
+
+### Supported File Types
+The system works with PDF, Word documents (.docx), and PowerPoint files (.pptx) through intelligent conversion that preserves document structure.
+
+### Best Practices for Organization
+
+**File Naming Strategy:**
+- ✅ Good: `Grade-5-Math-Unit-3-Fractions-Teacher-Manual.pdf`
+- ✅ Good: `Science-Standards-Grade-6-Earth-Systems.docx`
+- ❌ Avoid: `Document1.pdf` or `H05JL - (copy 2).pdf`
+
+**Folder Structure:**
+- Organize by subject area, grade level, unit, or topic
+- Use consistent naming conventions
+- Create logical hierarchies that match how you think about the content
+- The AI will learn and respect your organizational choices
+
+**Document Quality:**
+- Well-structured documents with clear headings work best
+- Consistent formatting helps the AI understand content relationships
+- Documents with table of contents or clear section divisions are ideal
+
+## <Icon icon="circle-question" size="24" /> Frequently Asked Questions
+
+<Accordion title="How does this differ from the traditional reference system?">
+The traditional system finds the 10 most similar snippets and stops there. The Reference Search Tool works more like an intelligent research assistant that can navigate through your organized materials, understand document structures, and continue searching until it finds comprehensive information to answer your question. Instead of seeing a simple "references used" widget, you get detailed tool outputs showing the AI's research process.
+</Accordion>
+
+<Accordion title="Will this work with my existing document organization?">
+Yes! The system is designed to respect and utilize whatever organizational structure you already have. Whether you organize by subject, grade level, unit, or any other system, the AI will learn your structure and navigate accordingly. You don't need to reorganize your existing materials.
+</Accordion>
+
+<Accordion title="How many documents can this handle?">
+The system is designed to work with large collections of references. Rather than requiring you to manually select subsets for each app, you can enable the tool and give your app access to your entire reference collection. The AI will only search through documents that are relevant to the current conversation.
+</Accordion>
+
+<Accordion title="Do I need both tools enabled?">
+We strongly recommend enabling both the References Search Tool and the List Conversation Reference Tool. The List tool helps the Search tool identify available documents more efficiently, leading to faster and more accurate results. Think of the List tool as providing a "table of contents" for your reference collection.
+</Accordion>
+
+<Accordion title="What happens to my existing references?">
+Your uploaded reference documents remain unchanged and accessible. The tools simply provide a new, more powerful way to search and retrieve information from those same documents. All your content stays exactly where it is.
+</Accordion>
+
+<Accordion title="Which AI models work best with these tools?">
+For optimal performance with Reference Search Tools:
+
+**Tier 1 Performance (Recommended):** Claude 4 Sonnet (excellent balance of search accuracy and response quality), GPT-4.1 (superior for complex document analysis and precise retrieval), and Gemini 2.5 Pro (high accuracy with comprehensive document understanding).
+
+**Tier 2 Performance:** Claude 4 Opus (most thorough document analysis but slower response times), Claude 3 Opus (strong document interpretation with good reasoning), and Kimi K2 (advanced tool usage with solid reference handling).
+
+**Speed-Optimized Options:** Claude 3.5 Haiku (faster searches with reduced analysis depth) and GPT-4.1 Nano (quick queries for simple reference questions).
+
+All selected models must support MCP (Model Context Protocol) to use these tools effectively.
+</Accordion>
+
+
+<Accordion title="Can I still see which references are being used?">
+Yes, but in a more detailed format. Instead of the traditional "references used" widget, you'll see comprehensive information in the tool outputs showing exactly which documents were searched, what queries were performed, what specific content was retrieved, and how the AI navigated through your materials. This provides much more transparency than the previous system.
+</Accordion>
+
+<Accordion title="What performance should I expect with different models?">
+Claude 4 Sonnet and GPT-4.1 typically provide search results in 2-6 seconds with high accuracy. Claude 4 Opus offers the most thorough document analysis but may take 5-12 seconds. Speed-optimized options like Claude 3.5 Haiku respond in 1-3 seconds but with simpler analysis suitable for basic reference queries.
+
+For comprehensive reference work requiring detailed document analysis, Claude 4 Sonnet or GPT-4.1 provide the optimal balance of speed, accuracy, and thorough search capabilities.
+</Accordion>
+
+<Accordion title="Can I disable these tools and return to the old system?">
+Yes, you can disable the Reference Search Tools at any time through the Tools panel. When disabled, your Playlab app will return to the traditional reference system with the "references used" widget display. Your documents and organization remain unchanged.
+</Accordion>
+
+## <Icon icon="book" size="24" /> Learn More
+
+<Card title="Learn About MCP" icon="book-open-reader" href="/mcp-overview">
+Discover how Model Context Protocol enables reliable AI tools for enhanced functionality
+</Card>
+
+## <Icon icon="bullhorn" size="24" /> Need Support?
+
+We're continuously improving this tool based on user feedback. Contact our team at [support@playlab.ai](mailto:support@playlab.ai) for implementation guidance, troubleshooting, or to share your success stories.
+
+---
+*Last updated: August 29, 2025*

@@ -107,6 +107,7 @@
           {
             "group": "📋 Feature Documentation",
             "pages": [
+              "features/MCP RAG",
               "features/MCP Standards",
               "features/MCP IMKG",
               "features/Organizational References",
@@ -133,7 +134,19 @@
         ]
       },
       {
-        "tab": "🎥 Skills Boost Videos",
+        "tab": "⚙️ Changelog",
+        "color": "#10B981",
+        "groups": [
+          {
+            "group": "⚙️ Changelog",
+            "pages": [
+              "changelog/Product Changelog"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "📚 Resources",
         "color": "#F59E0B",
         "groups": [
           {
@@ -142,15 +155,9 @@
               "skillsboost/smartreferencing",
               "skillsboost/usability"
             ]
-          }
-        ]
-      },
-      {
-        "tab": "🟢 Lead a Workshop",
-        "color": "#059669",
-        "groups": [
+          },
           {
-            "group": "Workshop Resources",
+            "group": "🟢 Lead a Workshop",
             "pages": [
               "resources/introtoplaylab",
               "resources/playlab101",
