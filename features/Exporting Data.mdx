@@ -1,0 +1,222 @@
+---
+title: 'Playlab Data Export Guide'
+description: 'Export activity data and analytics from your Playlab workspace for Enterprise Organizations'
+---
+
+<div style={{ display:"inline-flex",gap:"6px",marginBottom:"12px",flexWrap:"wrap" }}>
+<span style={{ backgroundColor:"#7c3aed",color:"white",padding:"2px 8px",fontSize:"11px",fontWeight:"500",borderRadius:"4px",textTransform:"uppercase",letterSpacing:"0.025em" }}>
+🏢 Enterprise
+
+</span>
+</div>
+
+## <Icon icon="bell-on" size="24" className="inline-block align-text-bottom" /> What is this feature?
+
+Playlab offers two types of exports to help Enterprise Organizations track and understand platform usage: **Activity Exports** and **Org Analytics Exports**. These exports provide detailed insights into user interactions, app usage, and organizational trends across your workspace.
+
+## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Rationale for the feature
+
+Enterprise Organizations need comprehensive data insights to understand how their teams are using Playlab, track engagement patterns, and make informed decisions about AI tool adoption. The data export features provide detailed analytics and activity logs that help administrators monitor usage, identify trends, and optimize their Playlab deployment.
+
+## <Icon icon="chart-bar" size="24" className="inline-block align-text-bottom" /> Types of Data Exports
+
+### 1. Activity Export (JSON file)
+
+This export gives you a detailed look at user interactions across selected apps during a specific time range (up to 31 days). Perfect for analyzing detailed usage patterns and AI interactions.
+
+<CardGroup cols={2}>
+<Card title="Activity Export" icon="file-code">
+**Format:** JSON file  
+**Time Range:** Up to 31 days  
+**Best for:** Detailed conversation analysis
+
+Get granular insights into user interactions across selected apps. Perfect for analyzing detailed usage patterns and AI interactions.
+What you'll get:
+
+Time range and export metadata
+Selected apps and users (id, name, email)
+Detailed conversation data including:
+
+Model name and temperature settings
+User information and timestamps
+Conversation metrics (message counts, flags, moderation)
+Complete message content with feedback and file attachments
+Source attribution (AI provider vs. user)
+</Card>
+
+<Card title="Org Analytics Export" icon="chart-line">
+**Format:** ZIP file with 4 CSVs  
+**Time Range:** Monthly snapshots  
+**Best for:** High-level organizational trends
+
+Get comprehensive organizational insights across your entire Playlab deployment with four detailed CSV reports.
+What you'll get:
+
+user-analytics.csv: Creator activity, apps created/published, categories
+app-analytics.csv: App performance, user engagement, session metrics
+category-analytics.csv: Category distribution across active apps
+general-analytics.csv: Organization-wide summary statistics
+
+</Card>
+</CardGroup>
+
+## <Icon icon="user-check" size="24" className="inline-block align-text-bottom" /> Who can export data?
+
+**Activity Export**: Org administrators who also belong to a specific workspace.
+
+**Org Analytics Export**: Org administrators who can view the org analytics page.
+
+## <Icon icon="stairs" size="24" className="inline-block align-text-bottom" /> How to export Activity Data
+
+<Steps>
+  <Step title="Navigate to your workspace">
+    Log into your Playlab account and go to your workspace.
+  </Step>
+  <Step title="Access the activity section">
+    Click on "Activity" in your workspace.
+  </Step>
+  <Step title="Select date range">
+    **Important**: Select a date range of up to 31 days. Without a date range, you will not be allowed to export data.
+  </Step>
+  <Step title="Apply filters (optional)">
+    Any filters you select for users, apps, or sections will also be applied to the export.
+  </Step>
+  <Step title="Export the data">
+    In the dropdown menu, select "Export activity data (JSON)" to download your export file.
+    <Frame>
+  <img src="/images/exportdata.png" />
+</Frame>
+  </Step>
+</Steps>
+
+## <Icon icon="stairs" size="24" className="inline-block align-text-bottom" /> How to export Org Analytics
+
+<Steps>
+  <Step title="Access organization analytics">
+    Navigate to the organization analytics page in your admin dashboard.
+  </Step>
+  <Step title="Download the export">
+    Click on "Export" to download the ZIP file containing all four CSV analytics files.
+  </Step>
+</Steps>
+
+## <Icon icon="code" size="24" className="inline-block align-text-bottom" /> Sample Activity Export
+
+```json
+{
+  "workspaceId": "cma4jh63d0042okihsyjy9uil",
+  "startDate": "2025-06-02",
+  "endDate": "2025-06-03",
+  "selectedApps": [
+    {
+      "id": "appId1",
+      "name": "app1"
+    },
+    {
+      "id": "appId2",
+      "name": "app2"
+    }
+  ],
+  "selectedUsers": [
+    {
+      "id": "id1",
+      "email": "someone@playlab.ai"
+    },
+    {
+      "id": "id2",
+      "email": "someone_else@playlab.ai"
+    }
+  ],
+  "exportedAt": "2025-06-03T18:04:34.124Z",
+  "conversations": [
+    {
+      "appId": "appId1",
+      "appName": "app1",
+      "conversationId": "...",
+      "modelName": "claude-3-7-sonnet-20250219",
+      "temperature": 0.7,
+      "userId": "id1",
+      "userEmail": "someone@playlab.ai",
+      "createdAt": "2025-06-03T18:03:38.979Z",
+      "endedAt": "2025-06-03T18:03:47.255Z",
+      "conversationMetric": {
+        "userMessageCount": 1,
+        "messageCount": 3,
+        "flaggedMessageCount": 0,
+        "moderatedMessageCount": 0
+      },
+      "messages": [
+        {
+          "content": "Welcome to test rmx! Are you ready to get started?",
+          "timestamp": "2025-06-03T18:03:39.015Z",
+          "source": "provider",
+          "messageFeedback": {
+            "isBiased": false,
+            "isInaccurate": false,
+            "isInappropriate": false,
+            "moderationResults": []
+          },
+          "messageFile": null
+        },
+        {
+          "content": "hi this is a test for activity",
+          "timestamp": "2025-06-03T18:03:45.565Z",
+          "source": "user",
+          "messageFeedback": {
+            "isBiased": false,
+            "isInaccurate": false,
+            "isInappropriate": false,
+            "moderationResults": []
+          },
+          "messageFile": null
+        }
+      ]
+    }
+  ]
+}
+```
+
+## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Tips for Using Data Exports
+
+- **Plan your date ranges**: Activity exports are limited to 31-day periods, so plan multiple exports for longer time ranges.
+- **Use filters strategically**: Apply user and app filters to focus on specific teams or projects.
+- **Regular monitoring**: Set up regular export schedules to track trends over time.
+- **Data analysis**: Use the CSV format from Org Analytics for easy analysis in spreadsheet applications.
+- **Privacy considerations**: Ensure exported data is handled according to your organization's data privacy policies.
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> FAQ
+
+<Accordion title="How do I request export functionality for my organization?">
+  Data export features are available to enterprise Playlab partners only and must be enabled by our team. Contact support at [partnerships@playlab.ai](mailto:partnerships@playlab.ai) to enable export functionality for your organization.
+</Accordion>
+
+<Accordion title="What's the difference between Activity Export and Org Analytics Export?">
+  Activity Export provides detailed conversation-level data for a specific time period (up to 31 days), while Org Analytics Export gives you monthly organizational trends and high-level statistics across four different categories.
+</Accordion>
+
+<Accordion title="Can I export data for longer than 31 days?">
+  For Activity Exports, you're limited to 31-day periods. For longer time ranges, you'll need to make multiple export requests. Org Analytics Exports can cover longer periods as they're designed for monthly snapshots.
+</Accordion>
+
+<Accordion title="What data is included about user interactions?">
+  Activity exports include detailed message content, timestamps, user information, conversation metrics, moderation flags, and file attachment information. All data respects user privacy while providing comprehensive usage insights.
+</Accordion>
+
+<Accordion title="How often can I export data?">
+  There are no specific limits on export frequency, but exports are designed for periodic analysis rather than real-time monitoring. Contact support if you need frequent exports for specific use cases.
+</Accordion>
+
+<Accordion title="What file formats are the exports in?">
+  Activity Exports are provided as JSON files for detailed data structure, while Org Analytics Exports are ZIP files containing CSV files for easy analysis in spreadsheet applications.
+</Accordion>
+
+## <Icon icon="comment-dots" size="24" className="inline-block align-text-bottom" /> We Want Your Feedback!
+
+ If you need additional support or have feedback please contact us at [support@playlab.ai](mailto:support@playlab.ai)
+
+<div className="mt-8">
+  <Button href="../index.md">Return to Home Page</Button>
+</div>
+
+---
+Last updated: 9/2/2025
