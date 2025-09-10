@@ -106,6 +106,7 @@
           {
             "group": "📋 Feature Documentation",
             "pages": [
+              "features/Submitting Feedback",
               "features/MCP RAG",
               "features/MCP Standards",
               "features/MCP IMKG",
