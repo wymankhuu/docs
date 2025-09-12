@@ -151,7 +151,15 @@
         "color": "#F59E0B",
         "groups": [
           {
-            "group": "Skills Boost Videos",
+            "group": "📄 AI Policies",
+            "pages": [
+              "resources/aipolicies",
+              "resources/aistatepolicies",
+              "resources/aiguidelines"
+            ]
+          },
+          {
+            "group": "🎥 Skills Boost Videos",
             "pages": [
               "skillsboost/smartreferencing",
               "skillsboost/usability"
@@ -161,8 +169,7 @@
             "group": "🟢 Lead a Workshop",
             "pages": [
               "resources/introtoplaylab",
-              "resources/playlab101",
-              "resources/aiguidelines"
+              "resources/playlab101"
             ]
           }
         ]
