@@ -106,6 +106,7 @@
           {
             "group": "📋 Feature Documentation",
             "pages": [
+              "features/Exporting to Google Drive",
               "features/Submitting Feedback",
               "features/MCP RAG",
               "features/MCP Standards",
