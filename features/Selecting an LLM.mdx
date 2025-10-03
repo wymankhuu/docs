@@ -6,13 +6,14 @@ description: 'Choose the right AI model for your Playlab project'
 <div className="bg-blue-500 text-white px-6 py-4 rounded-lg mb-6 shadow-lg">
   <div className="flex items-center">
     <Icon icon="" size="2" className="mr-3 text-yellow-300" />
-    <span className="font-semibold">🎉 NEW: <code className="bg-white/20 px-2 py-1 rounded text-sm">GPT-5</code>, <code className="bg-white/20 px-2 py-1 rounded text-sm">GPT-5 Mini</code>, and <code className="bg-white/20 px-2 py-1 rounded text-sm">GPT-5 Nano</code> are now available in Playlab!</span>
+    <span className="font-semibold">🎉 NEW: <code className="bg-white/20 px-2 py-1 rounded text-sm">Claude Sonnet 4.5</code> is now available in Playlab!</span>
   </div>
 </div>
 
 <Note>
 **New Models Added Regularly!** We're constantly adding and updating models to give Playlabbers access to the latest AI capabilities. Our goal is to provide more open weight models and eventually open source models to give you maximum flexibility and control over your applications.
 </Note>
+
 ## <Icon icon="bell-on" size="24" className="inline-block align-text-bottom" /> What is this feature?
 
 You can now build on top of even more LLMs in Playlab! There are now over 20 available AI models for you to build your Playlab apps on top of. We will try our best to always provide the latest models for you to build on top of.
@@ -41,7 +42,7 @@ Before selecting a model, it's helpful to understand the different categories of
 
 <Steps>
   <Step title="Click the LLM selector">
-    On the top left click the LLM. (By default it will be Claude 4 Sonnet)
+    On the top left click the LLM. (By default it will be Claude Sonnet 4.5)
     
     <img height="500" src="/images/Selectinganllm.gif" className="border border-gray-300 rounded-md shadow-sm" />
   </Step>
@@ -76,7 +77,7 @@ Now that you know how to select models, here are some strengths and tradeoffs of
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
     <p><strong>Description:</strong> General purpose model balanced between speed and accuracy with an emphasis on expression and creativity.</p>
     <p><strong>➕ Strengths:</strong> Improved accuracy and instruction following capabilities. Good speed to performance ratio.</p>
-    <p><strong>➖ Trade Offs:</strong> Not optimized for reasoning tasks. Not as fast as smaller models like Flash or GPT-4o. Superseded by Claude 4 Sonnet.</p>
+    <p><strong>➖ Trade Offs:</strong> Not optimized for reasoning tasks. Not as fast as smaller models like Flash or GPT-4o. Superseded by Claude 4 Sonnet and Claude Sonnet 4.5.</p>
   </Card>
 
   <Card title="Claude 4 Opus (Anthropic)" icon="crown">
@@ -88,16 +89,23 @@ Now that you know how to select models, here are some strengths and tradeoffs of
 
   <Card title="Claude 4 Sonnet (Anthropic)" icon="star">
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
-    <p><strong>Description:</strong> Latest version of Claude Sonnet series. High-performance model balanced between speed and accuracy.</p>
+    <p><strong>Description:</strong> High-performance model balanced between speed and accuracy from the Claude 4 series.</p>
     <p><strong>➕ Strengths:</strong> Excellent balance of speed and intelligence. Superior instruction following. Strong at both creative and analytical tasks. Efficient for a wide variety of tasks</p>
-    <p><strong>➖ Trade Offs:</strong> More expensive than smaller models. May be overkill for very simple tasks.</p>
+    <p><strong>➖ Trade Offs:</strong> More expensive than smaller models. May be overkill for very simple tasks. Superseded by Claude Sonnet 4.5 for most use cases.</p>
+  </Card>
+
+  <Card title="Claude Sonnet 4.5 (Anthropic)" icon="diamond">
+    <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
+    <p><strong>Description:</strong> Latest and most advanced version of Claude Sonnet. The smartest model in the Claude family, efficient for everyday use with breakthrough performance.</p>
+    <p><strong>➕ Strengths:</strong> State-of-the-art intelligence and reasoning. Superior instruction following and nuance understanding. Exceptional balance of speed and capability. Best-in-class for most applications requiring high quality output.</p>
+    <p><strong>➖ Trade Offs:</strong> More expensive than smaller models. May be more than needed for very simple tasks.</p>
   </Card>
 
   <Card title="Claude 4 Sonnet (Reasoning) (Anthropic)" icon="brain">
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
     <p><strong>Description:</strong> Work through difficult problems using careful, step-by-step reasoning.</p>
     <p><strong>➕ Strengths:</strong> Exceptional step by step reasoning capabilities. Stronger at math and coding. Very good at explaining thought process</p>
-    <p><strong>➖ Trade Offs:</strong> Slower response times. Not as optimized for creative tasks. Consider Claude 4 Sonnet or Claude 4 Opus for better overall performance.</p>
+    <p><strong>➖ Trade Offs:</strong> Slower response times. Not as optimized for creative tasks. Consider Claude Sonnet 4.5, Claude 4 Sonnet or Claude 4 Opus for better overall performance.</p>
   </Card>
 
   <Card title="DeepSeek R1 (DeepSeek)" icon="water">
@@ -220,37 +228,37 @@ Selecting can be tricky. That's why we encourage you to play and experiment as y
 ### <Icon icon="scale-balanced" size="24" className="inline-block align-text-bottom" /> Selection Considerations
 
 <Accordion title="Ask yourself what is an ideal response time for your app?">
-  This will allow you to pick larger or smaller models that meet those needs. Claude 4 Sonnet and GPT-5 Mini offer excellent balance, while Claude 4 Opus and GPT-5 prioritize quality over speed. Gemini 2.5 Flash and GPT-5 Nano excel at speed for simple tasks.
+  This will allow you to pick larger or smaller models that meet those needs. Claude Sonnet 4.5, Claude 4 Sonnet and GPT-5 Mini offer excellent balance, while Claude 4 Opus and GPT-5 prioritize quality over speed. Gemini 2.5 Flash and GPT-5 Nano excel at speed for simple tasks.
 </Accordion>
 
 <Accordion title="Identify what complexity level is your task?">
   * For simple Q&A or content generation, lighter models like Gemini 2.5 Flash, Claude 3.5 Haiku, or GPT-5 Nano may suffice
-  * For balanced everyday tasks, Claude 4 Sonnet, GPT-5 Mini, or GPT-4o are ideal
+  * For balanced everyday tasks, Claude Sonnet 4.5, Claude 4 Sonnet, GPT-5 Mini, or GPT-4o are ideal
   * For the most complex multi-step reasoning, choose GPT-5, Claude 4 Opus, o3 Mini, Gemini 2.5 Pro, or reasoning-focused models
 </Accordion>
 
 <Accordion title="What is the level of accuracy you are requiring of your app?">
-  * Critical accuracy use cases like data analysis, or HR operations might require GPT-5, Claude 4 Opus, Gemini 2.5 Pro, or other powerful models even if they're slower.
-  * Use cases that require creativity or open ended responses work well with GPT-5, GPT-5 Mini, Claude 4 Sonnet, GPT-4o, or creative-focused models.
+  * Critical accuracy use cases like data analysis, or HR operations might require GPT-5, Claude Sonnet 4.5, Claude 4 Opus, Gemini 2.5 Pro, or other powerful models even if they're slower.
+  * Use cases that require creativity or open ended responses work well with GPT-5, GPT-5 Mini, Claude Sonnet 4.5, Claude 4 Sonnet, GPT-4o, or creative-focused models.
 </Accordion>
 
 <Accordion title="Do you need open weights or source code access?">
-  * If you need model customization, local deployment, or transparency, consider open weight models like Llama 4 series, DeepSeek R1, or GPT OSS models
-  * For maximum performance and latest capabilities, frontier models like GPT-5 series, Claude 4 series, GPT-4.1, or Gemini 2.5 series are typically best
+  * If you need model customization, local deployment, or transparency into model operations, consider open weight models like Llama 4 series, DeepSeek R1, or GPT OSS models
+  * For maximum performance and latest capabilities, frontier models like GPT-5 series, Claude Sonnet 4.5, Claude 4 series, GPT-4.1, or Gemini 2.5 series are typically best
   * Consider your long-term deployment and customization needs when choosing between proprietary and open models
 </Accordion>
 
 ### <Icon icon="medal" size="24" className="inline-block align-text-bottom" /> Best Practices
 
 <Accordion title="Try to match your model with your use case:">
-  * **Everyday applications** – Claude 4 Sonnet, GPT-5 Mini, or GPT-4o provide the best balance of performance and efficiency
-  * **Critical/Complex applications** – GPT-5, Claude 4 Opus, Gemini 2.5 Pro, or o3 Mini for highest accuracy and reasoning capability
-  * **Creative applications** – GPT-5, GPT-5 Mini, Claude 4 Sonnet, GPT-4o, or GPT-4.1 for creative tasks
-  * **Problem-solving tools** – GPT-5, Claude 4 Opus, o3 Mini, Gemini 2.5 Pro, or Llama 4 Maverick
-  * **Document analysis** – Claude 4 Opus or Llama 4 Scout for multi-document or cross-lingual analysis
-  * **Technical/Coding tasks** – GPT-5, GPT-4.1, Claude 4 Opus, or Kimi K2 for tool usage
-  * **Educational explanation** – GPT-5 Mini, Claude 4 Sonnet, Llama 3.3 70B Instruct, Llama 4 Maverick, or those with strong explanatory capabilities
-  * **High-volume applications** – Balance quality with speed using GPT-5 Nano, Claude 4 Sonnet, Gemini 2.5 Flash, or GPT-4.1 Nano
+  * **Everyday applications** – Claude Sonnet 4.5, Claude 4 Sonnet, GPT-5 Mini, or GPT-4o provide the best balance of performance and efficiency
+  * **Critical/Complex applications** – Claude Sonnet 4.5, GPT-5, Claude 4 Opus, Gemini 2.5 Pro, or o3 Mini for highest accuracy and reasoning capability
+  * **Creative applications** – GPT-5, GPT-5 Mini, Claude Sonnet 4.5, Claude 4 Sonnet, GPT-4o, or GPT-4.1 for creative tasks
+  * **Problem-solving tools** – Claude Sonnet 4.5, GPT-5, Claude 4 Opus, o3 Mini, Gemini 2.5 Pro, or Llama 4 Maverick
+  * **Document analysis** – Claude Sonnet 4.5, Claude 4 Opus or Llama 4 Scout for multi-document or cross-lingual analysis
+  * **Technical/Coding tasks** – Claude Sonnet 4.5, GPT-5, GPT-4.1, Claude 4 Opus, or Kimi K2 for tool usage
+  * **Educational explanation** – Claude Sonnet 4.5, GPT-5 Mini, Claude 4 Sonnet, Llama 3.3 70B Instruct, Llama 4 Maverick, or those with strong explanatory capabilities
+  * **High-volume applications** – Balance quality with speed using Claude Sonnet 4.5, GPT-5 Nano, Claude 4 Sonnet, Gemini 2.5 Flash, or GPT-4.1 Nano
   * **Budget-conscious applications** – GPT-5 Nano, DeepSeek R1 or open weight models for cost-effective solutions
   * **Research/Experimentation** – Open weight models like Llama 4 series or GPT OSS models for flexibility
 </Accordion>
@@ -259,15 +267,15 @@ Selecting can be tricky. That's why we encourage you to play and experiment as y
   * Changing a model may change performance of an app in Playlab
   * Test multiple models before finalizing – Performance can vary significantly on your specific tasks
   * Implement A/B testing as you're building and testing to continually evaluate model performance
-  * Consider starting with Claude 4 Sonnet or GPT-5 Mini as your baseline for most applications
+  * Consider starting with Claude Sonnet 4.5 or GPT-5 Mini as your baseline for most applications
   * Test both frontier and open weight models to find the best fit for your needs
 </Accordion>
 
 <Accordion title="Additional best practices:">
   * We recommend that you remix apps as you're experimenting to not impact the original app
   * You can review activity to see how multiple models handle similar tasks  
-  * If you're building a suite of apps we recommend you use faster models for simple queries and reserve powerful models like GPT-5, Claude 4 Opus or Gemini 2.5 Pro for complex tasks
-  * Consider cost implications - newer frontier models like GPT-5 may be more expensive but offer better performance
+  * If you're building a suite of apps we recommend you use faster models for simple queries and reserve powerful models like Claude Sonnet 4.5, GPT-5, Claude 4 Opus or Gemini 2.5 Pro for complex tasks
+  * Consider cost implications - newer frontier models like Claude Sonnet 4.5 and GPT-5 may be more expensive but offer better performance
   * For production apps requiring customization, evaluate open weight models alongside frontier options
   * Keep track of which models work best for your specific use cases to build your own selection guidelines
 </Accordion>
@@ -279,19 +287,19 @@ Selecting can be tricky. That's why we encourage you to play and experiment as y
 </Accordion>
 
 <Accordion title="How do I know which model is best for my specific use case?">
-  We recommend experimenting with different models for your specific use case. Consider factors like response time requirements, complexity level of tasks, accuracy needs, and whether you need open weights. You can implement A/B testing to evaluate model performance. For most applications, Claude 4 Sonnet or GPT-5 Mini are great starting points.
+  We recommend experimenting with different models for your specific use case. Consider factors like response time requirements, complexity level of tasks, accuracy needs, and whether you need open weights. You can implement A/B testing to evaluate model performance. For most applications, Claude Sonnet 4.5 or GPT-5 Mini are great starting points.
 </Accordion>
 
 <Accordion title="Can I use different models for different parts of my app suite?">
-  Yes! We recommend using faster models for simple queries and reserving more powerful models like GPT-5, Claude 4 Opus, Gemini 2.5 Pro, or o3 Mini for complex tasks if you're building a suite of apps.
+  Yes! We recommend using faster models for simple queries and reserving more powerful models like Claude Sonnet 4.5, GPT-5, Claude 4 Opus, Gemini 2.5 Pro, or o3 Mini for complex tasks if you're building a suite of apps.
 </Accordion>
 
-<Accordion title="When should I choose Claude 4 Sonnet vs Claude 4 Opus vs GPT-5?">
-  Choose Claude 4 Sonnet for most everyday applications where you need a good balance of performance and efficiency. Choose Claude 4 Opus when you need the highest accuracy and reasoning capability for complex, critical tasks where performance is more important than speed. Choose GPT-5 when you need the absolute latest capabilities and breakthrough performance across all domains, especially for cutting-edge applications.
+<Accordion title="When should I choose Claude Sonnet 4.5 vs Claude 4 Sonnet vs Claude 4 Opus vs GPT-5?">
+  Choose Claude Sonnet 4.5 for most applications where you need the smartest model with excellent balance of performance and efficiency. It's the latest and most advanced Sonnet model. Choose Claude 4 Sonnet when you need strong performance but Claude Sonnet 4.5 isn't available or needed. Choose Claude 4 Opus when you need the highest accuracy for complex, critical tasks where performance is more important than speed. Choose GPT-5 when you need OpenAI's latest capabilities and breakthrough performance across all domains.
 </Accordion>
 
 <Accordion title="Should I upgrade from older Claude models?">
-  Yes, Claude 4 Sonnet and Claude 4 Opus generally outperform their predecessors. Claude 4 Sonnet is recommended over Claude 3.5/3.7 Sonnet for most use cases, while Claude 4 Opus supersedes Claude 3 Opus for complex reasoning tasks.
+  Yes, Claude Sonnet 4.5 is the latest and smartest model in the Claude family, offering superior performance over all previous versions. It's recommended for most use cases. Claude 4 Sonnet and Claude 4 Opus also generally outperform their predecessors. Claude 4 Opus is best for complex reasoning tasks requiring maximum capability.
 </Accordion>
 
 <Accordion title="What's the difference between GPT-5, GPT-5 Mini, and GPT-5 Nano?">
@@ -323,4 +331,4 @@ Selecting can be tricky. That's why we encourage you to play and experiment as y
 </div>
 
 ---
-Last updated: 8/8/2025
+Last updated: 10/3/2025
