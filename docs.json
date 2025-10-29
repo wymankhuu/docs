@@ -103,6 +103,7 @@
           {
             "group": "📋 Feature Documentation",
             "pages": [
+              "features/Math Inputs",
               "features/Reviewing App Activity",
               "features/Exporting to Google Drive",
               "features/Submitting Feedback",
