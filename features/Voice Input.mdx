@@ -1,0 +1,182 @@
+---
+title: "🆕 Voice Inputs"
+description: "Speak naturally to Playlab and watch your words convert to text in real-time with voice input"
+---
+
+<Note>
+🧪 This feature is currently in BETA and available to all users
+</Note>
+
+## <Icon icon="bell-on" size="24" /> What is this feature?
+
+Voice Inputs enables real-time speech-to-text transcription directly within the Playlab interface, providing a multimodal interface for natural language interaction. The feature leverages speech recognition to convert spoken input into text with high accuracy, supporting a more accessible and efficient workflow for users across different contexts and abilities.
+
+This implementation provides an alternative input modality to provide greater accessiblity and to support those who simply prefer verbal communication. Voice and text input can be used interchangeably or in combination.
+
+<Warning>
+Voice inputs require microphone permissions in your browser. You'll be prompted to grant access when you first use the feature.
+</Warning>
+
+## <Icon icon="lightbulb" size="24" /> What is the Rationale for this feature?
+
+Typing can be slow and cumbersome, especially when you're working through complex ideas, brainstorming, or need to communicate detailed instructions. Many people can speak much faster than they can type, and speaking feels more natural for certain types of communication. This creates friction in workflows where you want to quickly capture thoughts or have fluid conversations with AI.
+
+The Voice Inputs feature eliminates these barriers by providing speech-to-text transcription directly in Playlab. Instead of switching between typing and speaking, or using external dictation tools, you can now speak your thoughts directly into any Playlab conversation. The system handles the transcription in real-time, providing immediate visual feedback so you know exactly what's being captured. This makes it easier to work with Playlab in a more natural, conversational way while maintaining your flow of thought.
+
+## <Icon icon="circle-play" size="24" /> How to Use Voice Inputs
+
+<iframe 
+  src="https://drive.google.com/file/d/1K_K_4EdZP9VUQZIDm6J_K8vMr5WdoGpl/preview" 
+  frameBorder="0" 
+  webkitAllowFullScreen 
+  mozAllowFullScreen 
+  allowFullScreen 
+  style={{width: "100%", height: "500px"}}
+/>
+<figcaption>How to use voice input in Playlab</figcaption>
+
+<Steps>
+<Step title="Locate the Microphone Icon">
+Look for the microphone icon in the chat input bar at the bottom of your Playlab interface.
+<Frame>
+  <img src="/images/voiceinput.png" />
+</Frame>
+</Step>
+
+<Step title="Grant Microphone Permission">
+Click the microphone icon. If this is your first time using the feature, your browser will prompt you to grant microphone access to Playlab. Click "Allow" to proceed.
+</Step>
+
+<Step title="Start Speaking">
+Once the microphone icon turns blue with a glowing ring animation, you're actively recording. Simply start speaking naturally, the transcription will appear in real-time in the chat input field.
+<Frame>
+  <img src="/images/voiceicongif.gif" />
+</Frame>
+</Step>
+
+<Step title="Monitor Your Recording">
+Watch the visual indicator to confirm you're recording. The glowing ring animation provides clear feedback that the system is capturing your voice. A countdown timer will appear as you approach the recording time limit.
+</Step>
+
+<Step title="Stop Recording">
+Click the microphone icon again to stop recording. Your transcribed text will remain in the chat input field, ready for you to review or edit.
+</Step>
+
+<Step title="Review and Send">
+Review the transcribed text for accuracy. You can edit it manually if needed, add additional context by typing, or click send to submit your message to Playlab.
+</Step>
+</Steps>
+
+## <Icon icon="star" size="24" /> Best Practices
+
+<Accordion title="Speak Clearly and Naturally">
+The transcription system works best when you speak at a normal conversational pace. You don't need to speak slowly or enunciate excessively, just speak as you naturally would in a conversation. The system is designed to handle natural speech patterns.
+</Accordion>
+
+<Accordion title="Use in Quiet Environments">
+For best results, use voice input in relatively quiet environments. Background noise, music, or other conversations can interfere with transcription accuracy. If you're in a noisy environment, consider moving to a quieter space or using typed input instead.
+</Accordion>
+
+<Accordion title="Stick to One Language Per Recording">
+The transcription system performs best when you speak consistently in one language throughout a recording session. Switching between languages mid-recording may reduce accuracy. If you need to communicate in multiple languages, consider using separate recordings for each language.
+</Accordion>
+
+<Accordion title="Be Mindful of Recording Limits">
+Voice recordings have a maximum time limit to prevent accidental extended recordings. A countdown timer will appear during the final seconds before the recording automatically stops. Plan to break longer messages into multiple recordings if needed.
+</Accordion>
+
+<Accordion title="Combine Voice with Text Input">
+You can use voice input alongside traditional typing. If you have some text already in the chat input, clicking the microphone will preserve that text and append your voice transcription. This makes it easy to mix both input methods as needed.
+</Accordion>
+
+<Accordion title="Review Before Sending">
+While the transcription is highly accurate, it's always good practice to quickly review the transcribed text before sending. This helps catch any transcription errors or unclear phrasing that might need clarification.
+</Accordion>
+
+## <Icon icon="triangle-exclamation" size="24" /> Known Issues
+
+As this feature is currently in beta, there are a few known limitations to be aware of:
+
+<Accordion title="First Few Words May Be Missed">
+**Issue**: There can be a brief initialization period when you first click the microphone button. In some cases, if you start speaking immediately, the first few words might not be captured.
+
+**Workaround**: Wait for the microphone icon to turn blue with the glowing ring animation before you start speaking. This visual indicator confirms that transcription is active and ready to capture your voice.
+</Accordion>
+
+<Accordion title="Cannot Type While Recording">
+**Issue**: To prevent conflicts and ensure clean transcription, you cannot type into the chat input field while actively recording with the microphone.
+
+**Workaround**: This is intentional behavior. Simply stop your recording by clicking the microphone icon again, then you can type additional text or edits as needed.
+</Accordion>
+
+<Accordion title="Language Switching Challenges">
+**Issue**: If you start speaking in one language and then switch to another language mid-recording, the transcription accuracy may decrease.
+
+**Workaround**: Use consistent language within each recording session. If you need to communicate in multiple languages, stop the current recording and start a new one for the different language.
+</Accordion>
+
+## <Icon icon="shield-check" size="24" /> Privacy & Security
+
+Your privacy and security are important to us. Here's what you should know about voice input:
+
+- **Microphone Access**: Voice input requires microphone permissions in your browser. You'll be prompted to grant access when you first use the feature.
+- **Data Processing**: Voice recordings are processed to generate transcriptions and are handled in accordance with our privacy policy.
+- **Control**: You have complete control over when the microphone is active. The visual indicators (blue microphone icon and glowing ring) always show when recording is in progress.
+- **Secure**: All voice data transmission uses secure protocols to protect your privacy.
+
+## <Icon icon="circle-question" size="24" /> Frequently Asked Questions
+
+<Accordion title="How accurate is the voice transcription?">
+The voice transcription system is highly accurate for clear speech in supported languages, particularly English. Accuracy depends on factors like audio quality, speaking clarity, background noise, and accent. The system is designed to handle natural conversational speech patterns effectively.
+</Accordion>
+
+<Accordion title="What languages are supported?">
+Voice input works particularly well for English. Support for additional languages may vary in accuracy. The system performs best when you speak consistently in one language throughout a recording session.
+</Accordion>
+
+<Accordion title="How long can I record for?">
+Voice recordings have a maximum time limit (typically at least one minute) to prevent accidental extended recordings. A countdown timer will appear during the final seconds (usually the last 10 seconds) before the recording automatically stops. If you need to communicate more, you can start additional recordings.
+</Accordion>
+
+<Accordion title="Can I edit the transcription after recording?">
+Yes! Once your voice is transcribed into text, it appears in the chat input field just like any typed text. You can edit, add to, or modify the transcribed content before sending your message.
+</Accordion>
+
+<Accordion title="What if the transcription makes a mistake?">
+Simply edit the text in the chat input field to correct any transcription errors before sending your message. You can manually type corrections or use voice input again to re-record sections that weren't captured accurately.
+</Accordion>
+
+<Accordion title="Can I use voice input on mobile devices?">
+Yes, voice input is available on mobile devices through the Playlab mobile app. The feature works the same way as on desktop, using your device's microphone.
+</Accordion>
+
+<Accordion title="Does voice input work with all Playlab apps?">
+Yes, voice input is a core feature of the Playlab chat interface and works across all Playlab apps and conversations. Any app that accepts text input can be used with voice input.
+</Accordion>
+
+<Accordion title="What happens if I walk away during recording?">
+The recording will automatically stop when the maximum time limit is reached. The countdown timer in the final seconds provides a warning. This prevents accidentally leaving the microphone on indefinitely.
+</Accordion>
+
+<Accordion title="Can I use voice input if I already have text in the input field?">
+Yes! If you have text already in the chat input, clicking the microphone will preserve that existing text and append your voice transcription to it. This makes it easy to combine typed and spoken input.
+</Accordion>
+
+<Accordion title="Is voice output or text-to-speech available?">
+Not yet, but it's coming! Voice output (text-to-speech) is currently on our roadmap and will be released after voice input. This will allow Playlab to speak responses back to you, creating a fully conversational voice experience.
+</Accordion>
+
+## <Icon icon="road" size="24" /> Coming Soon: Voice Output
+
+We're excited to share that **voice output** is on our roadmap! After the release of voice input, we'll be introducing text-to-speech capabilities that will allow Playlab to speak responses back to you. This will create a complete conversational voice experience, making interactions with Playlab even more natural and hands-free.
+
+Stay tuned for updates on this upcoming feature!
+
+## <Icon icon="bullhorn" size="24" /> We Want Your Feedback!
+
+Thank you for trying out Voice Inputs in Playlab. We're continuously working to improve the accuracy, reliability, and user experience of this feature. Since this is still in beta, your feedback is invaluable.
+
+Contact us at [support@playlab.ai](mailto:support@playlab.ai)
+
+---
+*Last updated: October 30, 2025*
