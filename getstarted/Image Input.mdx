@@ -1,0 +1,159 @@
+---
+title: 'Image Inputs in Playlab'
+description: 'Learn how to enable and use image inputs in your Playlab applications'
+---
+
+<Warning>
+  **Enterprise Feature**
+  
+  Image inputs are an enterprise-only feature. Contact your organization administrator if you need access to this capability.
+</Warning>
+
+Image inputs allow users to upload images to your Playlab app, enabling visual interactions and image-based workflows. Before you can use this feature, it must be enabled at both the organization and app levels.
+
+## <Icon icon="shield-check" size="24" className="inline-block align-text-bottom" /> Prerequisites
+
+Before adding image inputs to your app, ensure:
+
+* Your organization has an enterprise plan
+* You have admin access to organization settings (or can request an admin to enable the feature)
+* You are the creator or have edit access to the app you want to modify
+
+## <Icon icon="toggle-on" size="24" className="inline-block align-text-bottom" /> Enabling Image Inputs at the Organization Level
+
+Organization administrators must first enable image inputs for the entire organization.
+    <Frame>
+      <img src="/images/imagesettings.png" alt="Organization Image Input Setting" width="600" className="bordered-image" />
+    </Frame>
+    **Access your organization's settings panel.**
+<Steps>
+
+  <Step title="Navigate to Organization Settings">
+    1. Click on **Settings** in the top navigation bar
+    2. You will see the App Capabilities section
+  </Step>
+
+  <Step title="Enable Allow Images as Inputs to Apps">
+    **Toggle the image input setting.**
+    
+    1. Locate the **Allow Images as Inputs to Apps** toggle
+    2. Switch the toggle to the ON position (blue)
+    3. The setting is automatically saved for all apps in your organization
+  </Step>
+
+  <Step title="Optional: Enable People Analysis in Images">
+    **Control whether apps can analyze people in images.**
+    
+    1. Locate the **Allow Apps to Analyze People in Images** toggle
+    2. It is recommended to leave this disabled for privacy reasons
+    3. When disabled, new or returning sessions will not have people in images analyzed
+  </Step>
+</Steps>
+
+<Info>
+  When the organization-level setting is off, all new sessions or people returning to prior sessions with apps will not have access to images, regardless of individual app settings.
+</Info>
+
+## <Icon icon="gear" size="24" className="inline-block align-text-bottom" /> Enabling Image Inputs for Your App
+
+After the organization setting is enabled, you can turn on image inputs for individual apps.
+
+<Steps>
+  <Step title="Open Your App">
+    **Navigate to the app you want to configure.**
+    
+    1. Go to your Playlab workspace
+    2. Select the app where you want to enable image inputs
+  </Step>
+
+  <Step title="Access App Settings">
+    **Open the settings panel.**
+    
+    1. Click on the **Settings** icon in the right sidebar
+    2. The Settings panel will open
+    
+    <Frame>
+      <img src="/images/" alt="App Settings Panel" width="600" className="bordered-image" />
+    </Frame>
+  </Step>
+
+  <Step title="Enable Allow Image Input">
+    **Toggle the image input setting for your app.**
+    
+    1. Scroll down to find the **Allow Image Input** toggle
+    2. Switch the toggle to the ON position (blue)
+    3. Note: If this option is grayed out, image inputs are disabled at the organization level
+    
+<iframe 
+  src="https://drive.google.com/file/d/1hRNi6HdQfbBdVMol97jcip_ryN_vofmo/preview" 
+  frameBorder="0" 
+  webkitAllowFullScreen 
+  mozAllowFullScreen 
+  allowFullScreen 
+  style={{width: "100%", height: "500px"}}
+/>
+<figcaption>How to use image input in Playlab</figcaption>
+  </Step>
+
+  <Step title="Republish Your App">
+    **Make the changes active for your users.**
+    
+    <Warning>
+      Remember to republish your app to make settings changes active for your users. Testing changes in the Builder does not need republishing.
+    </Warning>
+    
+    1. Click the **Publish** button in the top toolbar
+    2. Confirm the publication
+    3. Image inputs are now available to your app users
+  </Step>
+</Steps>
+
+## <Icon icon="image" size="24" className="inline-block align-text-bottom" /> Using Image Inputs
+
+Once enabled, users can send images to your app in several ways:
+
+* **Upload**: Click the image icon in the chat input to upload an image file
+* **Drag and Drop**: Drag an image file directly into the chat window
+
+Your app can then process, analyze, or respond to these images based on your builder instructions.
+
+## <Icon icon="lightbulb-on" size="24" className="inline-block align-text-bottom" /> Best Practices
+
+When working with image inputs in your Playlab app:
+
+* **Be clear about expectations**: Tell users what types of images your app can process
+* **Set appropriate limits**: Consider file size and format limitations in your instructions
+* **Handle errors gracefully**: Provide helpful feedback when images cannot be processed
+* **Privacy considerations**: Be transparent about how images are used and stored
+* **Test thoroughly**: Try various image types and sizes before publishing
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> Frequently Asked Questions
+
+<Accordion title="Why is the image input toggle grayed out in my app settings?">
+  The image input feature must first be enabled at the organization level by an administrator. Contact your organization admin to enable "Allow Images as Inputs to Apps" in the organization settings.
+</Accordion>
+
+<Accordion title="What image formats are supported?">
+  Playlab supports common image formats including JPG, JPEG, PNG, GIF, and WebP. Check with your organization administrator for any specific restrictions.
+</Accordion>
+
+<Accordion title="Can I disable image inputs after enabling them?">
+  Yes, you can toggle off image inputs at any time in either the organization settings or individual app settings. Remember to republish your app after making changes.
+</Accordion>
+
+<Accordion title="What happens if I enable people analysis in images?">
+  When enabled, your app can analyze and identify people in uploaded images. However, this is not recommended for privacy reasons and should only be enabled when absolutely necessary for your app's functionality.
+</Accordion>
+
+<Accordion title="Do image input settings affect existing user sessions?">
+  When organization-level settings are changed, all new sessions and returning users will be affected. App-level changes require republishing to take effect for users.
+</Accordion>
+
+## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> Need Support?
+
+If you encounter any issues while setting up image inputs:
+
+* Contact us at [support@playlab.ai](mailto:support@playlab.ai)
+* Check the [Playlab Learning Hub](https://docs.playlab.ai) for additional resources
+
+Last updated: November 1, 2025
