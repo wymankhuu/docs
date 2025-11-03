@@ -107,6 +107,7 @@
               "features/Voice Input",
               "features/Math Inputs",
               "features/Reviewing App Activity",
+              "features/Exporting to Docx",
               "features/Exporting to Google Drive",
               "features/Submitting Feedback",
               "features/MCP RAG",
