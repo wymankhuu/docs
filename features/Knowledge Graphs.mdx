@@ -3,6 +3,8 @@ title: "Knowledge Graph Tools"
 description: "Access specialized educational knowledge graphs and organizational content through intelligent search capabilities."
 ---
 
+<Note>**Beta Feature** - Knowledge Graph Tools are now available to all Playlab users!</Note>
+
 ## <Icon icon="diagram-project" size="24" className="inline-block align-text-bottom" /> What are Knowledge Graph Tools?
 
 Knowledge Graph Tools give your Playlab apps access to specialized educational databases and organizational content and improve the accuracy and reliability of your Playlab apps. Instead of searching for a few snippets at a time, these tools can navigate through entire content collections, following the structure and connections between topics until they find exactly what's needed.
@@ -29,7 +31,7 @@ This is different from traditional search, which might only find a few isolated 
   </Card>
   
   <Card title="For App Builders" icon="wrench">
-    - Simple toggle on/off instead of manually adding references
+    - Simple toggle on/off in the References panel
     - Apps automatically find relevant content from your library
     - One knowledge graph serves all your apps
   </Card>
@@ -50,18 +52,96 @@ This is different from traditional search, which might only find a few isolated 
   allowFullScreen
 ></iframe>
 
+## <Icon icon="toggle-on" size="24" className="inline-block align-text-bottom" /> How to Enable Knowledge Graph Tools
+
+<iframe 
+  src="https://drive.google.com/file/d/1cYAUlDqTLe3IJvYNGDZpAVzgzh0tqdtq/preview" 
+  frameBorder="0" 
+  webkitAllowFullScreen 
+  mozAllowFullScreen 
+  allowFullScreen 
+  style={{width: "100%", height: "500px"}}
+/>
+<figcaption>How to use voice input in Playlab</figcaption>
+
+Knowledge Graph Tools are now easily accessible through your app's References panel:
+
+1. Open the **References** panel in your app builder
+2. Look for the **Knowledge Graph** menu at the bottom of the panel
+3. Click to expand the Knowledge Graph drawer
+4. **Toggle on** the knowledge graphs you need for your app
+
+<Tip>You can enable multiple knowledge graphs at once to give your app access to different content libraries!</Tip>
 
 ## <Icon icon="network-wired" size="24" className="inline-block align-text-bottom" /> Available Knowledge Graph Tools
 
-<CardGroup cols={1}>
-  <Card title="Illustrative Mathematics Knowledge Graph" icon="square-root-variable" href="https://learn.playlab.ai/features/MCP%20IMKG">
-    Access the complete Illustrative Mathematics curriculum through a tool that understands mathematical concepts, learning progressions, and instructional resources.
+### Curriculum Knowledge Graphs
+
+Access complete, high-quality curriculum content from leading educational publishers. Each knowledge graph includes the full scope and sequence, lesson materials, teacher guides, student resources, and standards alignments.
+
+<CardGroup cols={2}>
+  <Card title="Illustrative Mathematics" icon="square-root-variable" href="https://learn.playlab.ai/features/MCP%20IMKG">
+    **Grades K-12 Mathematics**
+    
+    Access the complete Illustrative Mathematics curriculum, including:
+    - Complete lesson plans and activity guides
+    - Mathematical learning progressions and concept connections
+    - Practice problems and assessment materials
+    - Teacher notes and instructional strategies
+    - Standards alignments (CCSS and state standards)
+    
+    Perfect for building math tutors, lesson planners, practice generators, and assessment tools.
     
     [**Read more about IM Knowledge Graph** →](https://learn.playlab.ai/features/MCP%20IMKG)
   </Card>
   
+  <Card title="Open Sci Ed" icon="flask">
+    **Grades 6-8 Science (expanding to K-5 and High School)**
+    
+    Navigate the complete OpenSciEd curriculum with access to:
+    - Phenomenon-based learning units
+    - Investigation guides and lab materials
+    - Student thinking routines and science practices
+    - Formative assessment guidance
+    - NGSS three-dimensional learning alignments
+    
+    Ideal for creating science lesson assistants, lab prep tools, and phenomenon explorers.
+  </Card>
+  
+  <Card title="Expeditionary Learning (EL Education)" icon="compass">
+    **Grades K-8 ELA and K-5 Skills Block**
+    
+    Access EL Education's comprehensive literacy curriculum including:
+    - Module lessons and supporting materials
+    - Reading, writing, speaking, and listening activities
+    - High-quality text selections and text-dependent questions
+    - Language standards and grammar instruction
+    - Character education and crew resources
+    
+    Great for literacy coaching apps, reading comprehension tools, and writing assistants.
+  </Card>
+  
+  <Card title="OER Project" icon="globe">
+    **Grades 6-12 World History and Social Studies**
+    
+    Explore OER Project's engaging history resources:
+    - Big History Project (Grades 6-10)
+    - World History Project (Grades 9-12)
+    - Primary and secondary source collections
+    - Historical thinking frameworks and inquiry tools
+    - Multimedia resources and lesson activities
+    
+    Perfect for building historical inquiry tools, timeline generators, and source analysis assistants.
+  </Card>
+</CardGroup>
+
+### Standards and Custom Knowledge Graphs
+
+<CardGroup cols={1}>
   <Card title="State Standards Knowledge Graph" icon="landmark" href="https://learn.playlab.ai/features/MCP%20Standards">
     Navigate state educational standards with precision. This tool understands the relationships between standards, grade levels, and subject areas across different state frameworks.
+    
+    Includes standards for all 50 states across multiple subject areas and grade levels.
     
     [**Read more about State Standards** →](https://learn.playlab.ai/features/MCP%20Standards)
   </Card>
@@ -69,12 +149,21 @@ This is different from traditional search, which might only find a few isolated 
   <Card title="Organizational Knowledge Graphs" icon="building">
     Custom-built knowledge graphs created from your organization's documents and resources. These understand your content's structure and can intelligently navigate to find relevant information.
     
+    <Warning>**Enterprise Only** - Organizational Knowledge Graphs are available exclusively to enterprise customers.</Warning>
+    
+    Organizational knowledge graphs can include:
+    - District curriculum materials and scope & sequence documents
+    - Proprietary instructional resources and frameworks
+    - Professional development materials and teacher guides
+    - Assessment banks and rubrics
+    - Policy documents and implementation guides
+    
     **Interested in building a custom organizational knowledge graph?**  
     Contact us at [**partnerships@playlab.ai**](mailto:partnerships@playlab.ai)
   </Card>
 </CardGroup>
 
-<Note> There are more on the way including Open Sci Ed, EL Education, OER Project, and others. </Note>
+<Note>More knowledge graphs are on the way. Check back regularly for new additions!</Note>
 
 ## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> FAQ
 
@@ -85,11 +174,21 @@ This is different from traditional search, which might only find a few isolated 
 </Accordion>
 
 <Accordion title="Can I use multiple Knowledge Graph Tools in one app?">
-  Yes! You can enable multiple knowledge graph tools together. For example, an app could access both Illustrative Mathematics and your organizational content simultaneously.
+  Yes! You can enable multiple knowledge graph tools together in the References panel. For example, an app could access both Illustrative Mathematics and Open Sci Ed simultaneously. Simply toggle on all the graphs you need.
+</Accordion>
+
+<Accordion title="Where do I find Knowledge Graph Tools?">
+  Knowledge Graph Tools are located in the References panel of your app builder. Look for the "Knowledge Graph" menu drawer at the bottom of the panel, where you can expand it and toggle on the tools you need.
+</Accordion>
+
+<Accordion title="Are Knowledge Graph Tools available to everyone?">
+  Yes! Most Knowledge Graph Tools (including Illustrative Mathematics, Open Sci Ed, Expeditionary Learning, OER Project, and State Standards) are available to all Playlab users as a beta feature.
+  
+  However, Organizational Knowledge Graphs are available only to enterprise customers.
 </Accordion>
 
 <Accordion title="How much content can an Organizational Knowledge Graph handle?">
-  These are designed to scale. They can handle hundreds of documents totaling thousands of pages while maintaining fast, accurate search. For example the IM knowledge graph tool includes all of IM.
+  These are designed to scale. They can handle hundreds of documents totaling thousands of pages while maintaining fast, accurate search. For example, the IM knowledge graph tool includes all of IM.
 </Accordion>
 
 <Accordion title="What if my organization has copyrighted materials?">
@@ -102,9 +201,9 @@ This is different from traditional search, which might only find a few isolated 
 
 ## <Icon icon="envelope" size="24" className="inline-block align-text-bottom" /> Get in Touch
 
-Interested in building a custom knowledge graph for your organization?
+Interested in building a custom organizational knowledge graph for your enterprise?
 
 Contact us at [partnerships@playlab.ai](mailto:partnerships@playlab.ai)
 
 ---
-Last updated: 10/3/2025
+Last updated: 11/3/2025
