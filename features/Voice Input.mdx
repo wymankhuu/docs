@@ -4,7 +4,7 @@ description: "Speak naturally to Playlab and transcribe text in real-time with v
 ---
 
 <Note>
-  🧪 This feature is currently in BETA and available to all users. 
+  🧪 This feature is currently in BETA and is currently available to Organizations only. 
 </Note>
 
 ## <Icon icon="bell-on" size="24" /> What is this feature?
@@ -29,6 +29,26 @@ The Voice Inputs feature eliminates these barriers by providing speech-to-text t
 
 <figcaption>How to use voice input in Playlab</figcaption>
 <Steps>
+<Step title="Enable Voice Input at Organization Level">
+    Your organizational owner needs to enable voice input in organization settings by toggling on "Allow Voice Inputs to Apps". 
+    
+    <Warning>
+      We do not recommend enabling this feature for organizations with students under the age of 13.
+    </Warning>
+
+    <Frame>
+      ![Organization settings toggle for voice input](/images/voiceinputtoggle.png)
+    </Frame>
+  </Step>
+  
+  <Step title="Enable Voice Input in App Builder">
+    In the app builder settings, toggle on "Allow Voice Input" to enable voice input functionality for your specific app.
+
+    <Frame>
+      ![App builder settings toggle for voice input](/images/allowvoiceinput.png)
+    </Frame>
+  </Step>
+
   <Step title="Locate the Microphone Icon">
     Look for the microphone icon in the chat input bar at the bottom of your Playlab interface.
 
@@ -111,7 +131,7 @@ Your privacy and security are important to us. Here's what you should know about
 
 - **Microphone Access**: Voice input requires microphone permissions in your browser. You'll be prompted to grant access when you first use the feature.
 - **Data Processing**: This feature uses AssemblyAI to enable users to transcribe text responses using their voice. Playlab and AssemblyAI will never use voice recordings to train Playlab. 
-- **Under 13 Use: **We receommend disabling this feature if your organization has studends under age 13 using Playlab. 
+- **Under 13 Use:** We receommend disabling this feature if your organization has studends under age 13 using Playlab. 
 - **Control**: You have complete control over when the microphone is active. The visual indicators (blue microphone icon and glowing ring) always show when recording is in progress.
 - **Secure**: All voice data transmission uses secure protocols to protect your privacy.
 
