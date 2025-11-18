@@ -104,6 +104,8 @@
           {
             "group": "📋 Feature Documentation",
             "pages": [
+              "features/Spanish Mode",
+              "features/Modo Espanol",
               "features/Voice Input",
               "features/Math Inputs",
               "features/Reviewing App Activity",
