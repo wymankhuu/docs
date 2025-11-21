@@ -104,6 +104,7 @@
           {
             "group": "📋 Feature Documentation",
             "pages": [
+              "features/Voice Output",
               "features/Spanish Mode",
               "features/Modo Espanol",
               "features/Voice Input",
