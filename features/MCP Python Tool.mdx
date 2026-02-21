@@ -1,0 +1,190 @@
+---
+title: "MCP Python Tool"
+description: "Execute Python code directly in your Playlab conversations for data analysis, file generation, and computation"
+---
+
+<Note>
+🧪 This feature is currently in early access and available to select organizations.
+</Note>
+
+## <Icon icon="bell-on" size="24" /> What is this feature?
+
+The MCP Python Tool allows AI in your Playlab apps to write and execute real Python code during a conversation. Instead of generating code for users to run elsewhere, the AI writes code, executes it in a secure sandbox, reads the output, and returns the actual result, all within a single turn.
+
+When a student uploads a gradebook and asks "what's the average score by grade level?", the AI writes the Python, runs it, and returns the computed answer directly in the chat.
+
+<Warning>
+This is an MCP tool. AI models that do not support Model Context Protocol will not be able to execute code when this tool is enabled. Ensure your selected model supports MCP before enabling.
+</Warning>
+
+## <Icon icon="lightbulb" size="24" /> What is the Rationale for this feature?
+
+Language models are probabilistic: they predict likely outputs based on patterns, which makes them powerful for language tasks but unreliable for precise computation. Math, data aggregation, and file generation require deterministic execution, where the same input always produces the same correct output. Python code provides that guarantee. By combining LLM reasoning with actual code execution, the Python Tool lets AI handle the logic and language while Python handles the numbers. This is especially important in education, where grade calculations, data summaries, and generated reports need to be accurate, not approximate.
+
+<CardGroup cols={2}>
+<Card title="Without the Python Tool" icon="xmark" color="#ff6b6b">
+AI can only describe or generate code, it cannot run it. Educators and students working with data, calculations, or file processing must:
+
+**Copy code manually**: Paste generated code into a separate environment to run it
+
+**Interpret errors alone**: If the code has a bug, users must debug it themselves
+
+**Re-upload results**: Bring outputs back into the conversation manually
+
+**Limited for non-coders**: Teachers and students without coding experience cannot benefit from computational workflows
+</Card>
+
+<Card title="With the Python Tool" icon="check" color="#51cf66">
+AI writes and runs Python code inline, returning real results to the conversation:
+
+**Live execution**: Code runs in a secure sandbox and results appear directly in chat
+
+**Self-correcting**: AI can see errors and retry with corrected code automatically
+
+**File output**: Generate CSV, XLSX, DOCX, PPTX, and other files for users to download
+
+**Accessible to all**: Teachers and students benefit from computational power without writing a single line of code
+</Card>
+</CardGroup>
+
+## <Icon icon="gear" size="24" /> Setup Instructions
+
+<Steps>
+<Step title="Enable the MCP Python Tool">
+Navigate to your app's **Tools** settings and toggle on the **Python Tool**. It will appear in the tools list with a `< >` icon and the description: *"Run code to make calculations, analyse data, create plots, and more (can access CSV, JSON, and XLSX file attachments)."*
+
+<Frame>
+  <img src="/images/pythontoggle.png" alt="Python Tool toggle in app Tools settings" />
+</Frame>
+
+<Note>
+If you do not see the Python Tool option, your organization may not yet have access. Contact [support@playlab.ai](mailto:support@playlab.ai) to request early access.
+</Note>
+</Step>
+
+<Step title="Select an MCP-Compatible Model">
+Ensure your app is using an AI model that supports MCP tool calls. Recommended models:
+- **Claude Sonnet 4.5**: strong balance of reasoning and execution speed
+- **GPT-5.1**: excellent for data analysis and structured outputs
+- **Gemini 3 Pro**: high accuracy with complex multi-step computations
+
+Models that do not support MCP will not be able to use this tool.
+</Step>
+
+<Step title="Configure Your App Prompt">
+Add instructions to your app prompt to help the AI know when and how to use the tool:
+
+```text
+You have access to a Python Tool. When users ask questions that involve calculations, data analysis, file processing, or generating structured outputs, use this tool to write and execute Python code. Always show the user what you computed and explain the result in plain language. If the code produces a file, offer it as a download.
+```
+</Step>
+
+<Step title="Test with a Sample Task">
+Try a query that exercises the tool end-to-end. Good starter prompts:
+
+- "A student scored 78, 84, 91, and 65 on four assignments. What is their average grade?"
+- "I'll upload my class roster as a CSV. Can you group students by reading level and count how many are in each group?"
+- "Generate a bar chart of quiz scores by class period and export it as an image"
+</Step>
+</Steps>
+
+## <Icon icon="code" size="24" /> What Can It Do?
+
+### Supported File Types
+The MCP Python Tool can read and generate the following file types:
+
+| File Type | Read | Generate |
+|-----------|------|----------|
+| JSON | ✅ | ✅ |
+| XLSX / Excel | ✅ | ✅ |
+| CSV | ✅ | ✅ |
+| Plain text | ✅ | ✅ |
+| DOCX / Word | ✅ | ✅ |
+| PPTX / PowerPoint | ✅ | ✅ |
+
+### Sample Workflows
+
+<CardGroup cols={2}>
+<Card title="Grading & Scoring" icon="graduation-cap">
+Grade calculations require exact arithmetic. The Python Tool computes weighted averages, flags students below thresholds, and exports a formatted gradebook with no rounding errors and no hallucinated scores.
+</Card>
+
+<Card title="Data Analysis" icon="chart-bar">
+LLMs summarize data in words; Python actually counts it. Upload attendance records or survey results and get real aggregates grouped, filtered, and sorted correctly every time.
+</Card>
+
+<Card title="Report Generation" icon="file-export">
+Generating a structured XLSX or CSV from data is not something a language model can do reliably on its own. The Python Tool writes and runs the code that builds the file and hands it back as a download.
+</Card>
+
+<Card title="Math & Computation" icon="calculator">
+Multi-step calculations are where LLMs drift. Python executes them exactly, useful for checking student work, running statistical analyses, or computing results that need to be verifiably correct.
+</Card>
+
+<Card title="Data Visualization" icon="chart-line">
+Charts require precise data bindings that LLMs cannot render. Python generates accurate bar charts, line graphs, and scatter plots from real data and exports them as images ready to use in slides or handouts.
+</Card>
+
+<Card title="Lesson Material Generation" icon="chalkboard-teacher">
+Turn a structured outline or dataset into a formatted .docx with headers, tables, and content blocks. Teachers get an editable Word file, not a block of text to copy and paste.
+</Card>
+
+<Card title="PowerPoint Generation" icon="file-powerpoint">
+Python builds .pptx files with real slide structure. Feed it a lesson outline or vocabulary list and get a downloadable deck ready to present, something a language model alone cannot produce.
+</Card>
+
+<Card title="Math Diagrams" icon="square-root-variable">
+Geometric figures, function plots, and number lines require precise rendering. Python generates them from equations or descriptions and exports them as images for worksheets or assignments.
+</Card>
+</CardGroup>
+
+## <Icon icon="triangle-exclamation" size="24" /> Important Behavior Changes
+
+<Accordion title="Sandbox Resets After Limits">
+Code runs in an isolated sandbox that is automatically reset after it reaches resource limits (memory, execution time, or after the conversation ends). Variables and files created in one turn are not guaranteed to persist to the next. Design prompts and workflows with this in mind, as each code execution should be self-contained when possible.
+</Accordion>
+
+<Accordion title="Code Execution vs. Code Generation">
+When the MCP Python Tool is enabled, the AI will attempt to *run* code rather than just display it. Users will see the actual output (numbers, tables, files) rather than a code block. If you want the AI to show code without running it in specific cases, instruct it explicitly in your prompt (e.g., "show the code but do not execute it").
+</Accordion>
+
+<Accordion title="Model Compatibility">
+This is an MCP tool, which requires a model that supports the Model Context Protocol. If a non-MCP model is selected in your app, the tool will be silently unavailable and the AI will fall back to generating code without running it. Always verify your selected model supports MCP before enabling this tool.
+</Accordion>
+
+<Accordion title="No Internet Access in Sandbox">
+The execution sandbox does not have internet access. Code that attempts to fetch URLs, call external APIs, or download packages will fail. All data processing must use files or data already present in the conversation.
+</Accordion>
+
+## <Icon icon="circle-question" size="24" /> Frequently Asked Questions
+
+<Accordion title="Is the code execution secure?">
+Yes. Python code runs in an isolated sandbox with no access to your server, other users' data, or the internet. Each execution environment is separate and automatically cleaned up after use.
+</Accordion>
+
+<Accordion title="Can students upload files for the AI to analyze?">
+Yes. If your app allows file uploads, users can upload spreadsheets or data files and ask the AI to analyze them using Python. The tool can read the uploaded file and return results inline.
+</Accordion>
+
+<Accordion title="What happens if the code has an error?">
+The AI can see the error output and will typically retry with corrected code automatically. This self-correcting behavior means most minor bugs are resolved without the user needing to intervene.
+</Accordion>
+
+<Accordion title="Can the AI generate files for users to download?">
+Yes. The AI can generate files (XLSX, CSV, DOCX, PPTX, JSON, etc.) and surface them as downloads in the conversation. This is useful for apps that help teachers produce gradebooks, slide decks, lesson materials, or data exports.
+</Accordion>
+
+<Accordion title="Which organizations have access?">
+The MCP Python Tool is currently in early access and available to select organizations. Contact [support@playlab.ai](mailto:support@playlab.ai) to request access for your organization.
+</Accordion>
+
+<Accordion title="Can I disable the tool after enabling it?">
+Yes. You can disable the MCP Python Tool at any time from your app's Tools settings. The AI will return to generating code descriptions without executing them.
+</Accordion>
+
+## <Icon icon="bullhorn" size="24" /> Need Support?
+
+We're actively expanding access and improving the MCP Python Tool based on feedback. Reach out to [support@playlab.ai](mailto:support@playlab.ai) for help with setup, troubleshooting, or to request early access for your organization.
+
+---
+*Last updated: February 2026*
