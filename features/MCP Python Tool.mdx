@@ -1,6 +1,6 @@
 ---
 title: "MCP Python Tool"
-description: "Execute Python code directly in your Playlab conversations for data analysis, file generation, and computation"
+description: "Execute Python code directly in your Playlab conversations for data analysis, file generation, computation, and so much more."
 ---
 
 <Note>
@@ -10,9 +10,6 @@ description: "Execute Python code directly in your Playlab conversations for dat
 ## <Icon icon="bell-on" size="24" /> What is this feature?
 
 The MCP Python Tool allows AI in your Playlab apps to write and execute real Python code during a conversation. Instead of generating code for users to run elsewhere, the AI writes code, executes it in a secure sandbox, reads the output, and returns the actual result, all within a single turn.
-
-When a student uploads a gradebook and asks "what's the average score by grade level?", the AI writes the Python, runs it, and returns the computed answer directly in the chat.
-
 <Warning>
 This is an MCP tool. AI models that do not support Model Context Protocol will not be able to execute code when this tool is enabled. Ensure your selected model supports MCP before enabling.
 </Warning>
@@ -21,31 +18,16 @@ This is an MCP tool. AI models that do not support Model Context Protocol will n
 
 Language models are probabilistic: they predict likely outputs based on patterns, which makes them powerful for language tasks but unreliable for precise computation. Math, data aggregation, and file generation require deterministic execution, where the same input always produces the same correct output. Python code provides that guarantee. By combining LLM reasoning with actual code execution, the Python Tool lets AI handle the logic and language while Python handles the numbers. This is especially important in education, where grade calculations, data summaries, and generated reports need to be accurate, not approximate.
 
-<CardGroup cols={2}>
-<Card title="Without the Python Tool" icon="xmark" color="#ff6b6b">
-AI can only describe or generate code, it cannot run it. Educators and students working with data, calculations, or file processing must:
+## <Icon icon="circle-play" size="24" /> Watch MCP Python Tool in Action
 
-**Copy code manually**: Paste generated code into a separate environment to run it
-
-**Interpret errors alone**: If the code has a bug, users must debug it themselves
-
-**Re-upload results**: Bring outputs back into the conversation manually
-
-**Limited for non-coders**: Teachers and students without coding experience cannot benefit from computational workflows
-</Card>
-
-<Card title="With the Python Tool" icon="check" color="#51cf66">
-AI writes and runs Python code inline, returning real results to the conversation:
-
-**Live execution**: Code runs in a secure sandbox and results appear directly in chat
-
-**Self-correcting**: AI can see errors and retry with corrected code automatically
-
-**File output**: Generate CSV, XLSX, DOCX, PPTX, and other files for users to download
-
-**Accessible to all**: Teachers and students benefit from computational power without writing a single line of code
-</Card>
-</CardGroup>
+<Frame>
+  <iframe
+    src="https://drive.google.com/file/d/1M5dZxWXgAEaFhdV7O1CtA9onUabsomsN/preview"
+    width="100%"
+    height="480"
+    allow="autoplay"
+  />
+</Frame>
 
 ## <Icon icon="gear" size="24" /> Setup Instructions
 
@@ -88,21 +70,11 @@ Try a query that exercises the tool end-to-end. Good starter prompts:
 </Step>
 </Steps>
 
-## <Icon icon="code" size="24" /> What Can It Do?
-
-### Supported File Types
-The MCP Python Tool can read and generate the following file types:
-
-| File Type | Read | Generate |
-|-----------|------|----------|
-| JSON | ✅ | ✅ |
-| XLSX / Excel | ✅ | ✅ |
-| CSV | ✅ | ✅ |
-| Plain text | ✅ | ✅ |
-| DOCX / Word | ✅ | ✅ |
-| PPTX / PowerPoint | ✅ | ✅ |
+## <Icon icon="diagram-project" size="24" /> What Can It Do?
 
 ### Sample Workflows
+
+Here are a few ideas to get you started, but don't stop here. The best way to discover what's possible is to play around and experiment. Describe whaat you want and try things you're not sure will work, and see what happens.
 
 <CardGroup cols={2}>
 <Card title="Grading & Scoring" icon="graduation-cap">
@@ -158,6 +130,19 @@ The execution sandbox does not have internet access. Code that attempts to fetch
 
 ## <Icon icon="circle-question" size="24" /> Frequently Asked Questions
 
+<Accordion title="What file types are supported?">
+The list below covers commonly used formats, but it is not exhaustive — the Python Tool can work with additional file types depending on the task.
+
+| File Type | Read | Generate |
+|-----------|------|----------|
+| JSON | ✅ | ✅ |
+| XLSX / Excel | ✅ | ✅ |
+| CSV | ✅ | ✅ |
+| Plain text | ✅ | ✅ |
+| DOCX / Word | ✅ | ✅ |
+| PPTX / PowerPoint | ✅ | ✅ |
+</Accordion>
+
 <Accordion title="Is the code execution secure?">
 Yes. Python code runs in an isolated sandbox with no access to your server, other users' data, or the internet. Each execution environment is separate and automatically cleaned up after use.
 </Accordion>
@@ -180,6 +165,12 @@ The MCP Python Tool is currently in early access and available to select organiz
 
 <Accordion title="Can I disable the tool after enabling it?">
 Yes. You can disable the MCP Python Tool at any time from your app's Tools settings. The AI will return to generating code descriptions without executing them.
+</Accordion>
+
+<Accordion title="What's the difference between running code and deploying code?">
+**Running code** means the AI writes Python and executes it immediately inside a secure, temporary sandbox during your conversation. The code runs once, returns a result (a number, table, file, or chart), and is then discarded. Nothing persists after the conversation ends.
+
+**Deploying code** means publishing code to a server or environment where it runs continuously or on demand over time — like a web app, scheduled job, or API. The MCP Python Tool does not deploy code. It is strictly for in-conversation execution, not for building or hosting persistent applications.
 </Accordion>
 
 ## <Icon icon="bullhorn" size="24" /> Need Support?
