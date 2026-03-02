@@ -104,6 +104,7 @@
           {
             "group": "📋 Feature Documentation",
             "pages": [
+              "features/MCP Python Tool",
               "features/Voice Output",
               "features/Spanish Mode",
               "features/Modo Espanol",
@@ -114,7 +115,6 @@
               "features/Exporting to Google Drive",
               "features/Submitting Feedback",
               "features/MCP RAG",
-              "features/MCP Python Tool",
               "features/Knowledge Graphs",
               "features/MCP Standards",
               "features/MCP IMKG",
