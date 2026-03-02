@@ -1,13 +1,13 @@
 ---
 title: Selecting an LLM
-icon: "book-open"
 description: 'Choose the right AI model for your Playlab project'
+tag: "Updated"
 ---
 
 <div className="bg-blue-500 text-white px-6 py-4 rounded-lg mb-6 shadow-lg">
   <div className="flex items-center">
     <Icon icon="" size="2" className="mr-3 text-yellow-300" />
-    <span className="font-semibold">🎉 NEW: <code className="bg-white/20 px-2 py-1 rounded text-sm">Claude Sonnet 4.6</code>, <code className="bg-white/20 px-2 py-1 rounded text-sm">Claude Opus 4.6</code>, <code className="bg-white/20 px-2 py-1 rounded text-sm">Gemini 3.1 Pro</code>, <code className="bg-white/20 px-2 py-1 rounded text-sm">GPT 5.2</code>, and <code className="bg-white/20 px-2 py-1 rounded text-sm">Mistral Large 3</code> are now available in Playlab!</span>
+    <span className="font-semibold">🎉 NEW: <code className="bg-white/20 px-2 py-1 rounded text-sm">Claude Sonnet 4.6</code>, <code className="bg-white/20 px-2 py-1 rounded text-sm">Claude Opus 4.6</code>, <code className="bg-white/20 px-2 py-1 rounded text-sm">Claude 4.6 Sonnet (Reasoning)</code>, <code className="bg-white/20 px-2 py-1 rounded text-sm">Gemini 3.1 Pro</code>, <code className="bg-white/20 px-2 py-1 rounded text-sm">GPT 5.2</code>, and <code className="bg-white/20 px-2 py-1 rounded text-sm">Mistral Large 3</code> are now available in Playlab!</span>
   </div>
 </div>
 
@@ -17,7 +17,7 @@ description: 'Choose the right AI model for your Playlab project'
 
 ## <Icon icon="bell-on" size="24" className="inline-block align-text-bottom" /> What is this feature?
 
-You can now build on top of even more LLMs in Playlab! There are now over 20 available AI models for you to build your Playlab apps on top of. We will try our best to always provide the latest models for you to build on top of.
+You can now build on top of even more LLMs in Playlab! There are now over 15 available AI models for you to build your Playlab apps on top of. We will try our best to always provide the latest models for you to build on top of.
 
 <Warning>
   Changing the LLM may impact the performance of your app.
@@ -37,7 +37,7 @@ Before selecting a model, it's helpful to understand the different categories of
 |---|---|---|
 | Cutting-edge, proprietary models developed by major AI companies | Models with publicly available parameters (weights) that can be downloaded and run independently | Fully open models where both weights and training code are publicly available |
 | Typically offer the most advanced capabilities and are continuously updated with the latest research breakthroughs | While training code may not be available, you have more control over deployment and customization | Offer maximum transparency and customization potential |
-| Examples: Claude Opus 4.6, Claude 4.6 models, GPT 5.2, ChatGPT 5.1, Gemini 3.1 Pro, Gemini models | Examples: Llama models, DeepSeek R1, GPT OSS models, Kimi K2.5, Qwen 3, Mistral Large 3 | Coming soon! |
+| Examples: Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.2, GPT-5 Mini, Gemini 3.1 Pro, Gemini 3 Flash | Examples: Llama models, DeepSeek R1, GPT OSS 120B, Kimi K2.5, Qwen 3, Mistral Large 3 | Coming soon! |
 
 ## <Icon icon="thought-bubble" size="24" className="inline-block align-text-bottom" /> How do I access these models?
 
@@ -62,64 +62,43 @@ Now that you know how to select models, here are some strengths and tradeoffs of
 <CardGroup cols={2}>
   <Card title="Claude Opus 4.6 (Anthropic)" icon="crown">
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
-    <p><strong>Description:</strong> The most powerful and intelligent model in the Claude family. Designed for the most demanding tasks requiring exceptional reasoning, creativity, and nuanced understanding.</p>
-    <p><strong>Plus Strengths:</strong> Unmatched intelligence and reasoning depth. Superior performance on complex multi-step problems. Exceptional creative and analytical capabilities. Best-in-class instruction following and nuance understanding.</p>
+    <p><strong>Description:</strong> Advanced model for complex analysis, even longer tasks with many steps, and higher-order math and coding.</p>
+    <p><strong>Plus Strengths:</strong> Unmatched intelligence and reasoning depth. Superior performance on complex multi-step problems. Exceptional analytical and coding capabilities. Best-in-class for higher-order math and extended tasks.</p>
     <p><strong>Minus Trade Offs:</strong> Slower response times and higher cost. Best reserved for tasks that truly require maximum capability.</p>
   </Card>
 
   <Card title="Claude Sonnet 4.6 (Anthropic)" icon="diamond">
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
-    <p><strong>Description:</strong> Latest and most advanced version of Claude Sonnet. The new default model for all Playlab apps, offering breakthrough performance for everyday use.</p>
-    <p><strong>Plus Strengths:</strong> State-of-the-art intelligence and reasoning. Superior instruction following and nuance understanding. Exceptional balance of speed and capability. Best-in-class for most applications requiring high quality output.</p>
+    <p><strong>Description:</strong> Latest version of Claude Sonnet series - with the highest intelligence across most tasks.</p>
+    <p><strong>Plus Strengths:</strong> Highest intelligence across most tasks. Superior instruction following and nuance understanding. Exceptional balance of speed and capability. Best-in-class for most applications requiring high quality output.</p>
     <p><strong>Minus Trade Offs:</strong> More expensive than smaller models. May be more than needed for very simple tasks.</p>
-  </Card>
-
-  <Card title="Claude Opus 4.5 (Anthropic)" icon="gem">
-    <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
-    <p><strong>Description:</strong> Highly capable model designed for demanding tasks requiring exceptional reasoning, creativity, and nuanced understanding.</p>
-    <p><strong>Plus Strengths:</strong> Excellent intelligence and reasoning depth. Strong performance on complex multi-step problems. Great creative and analytical capabilities.</p>
-    <p><strong>Minus Trade Offs:</strong> Slower response times and higher cost. Superseded by Claude Opus 4.6 for maximum capability.</p>
-  </Card>
-
-  <Card title="Claude Sonnet 4.5 (Anthropic)" icon="star">
-    <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
-    <p><strong>Description:</strong> Highly efficient model for everyday use with strong performance across a wide range of tasks.</p>
-    <p><strong>Plus Strengths:</strong> Excellent intelligence and reasoning. Strong instruction following. Good balance of speed and capability.</p>
-    <p><strong>Minus Trade Offs:</strong> Superseded by Claude Sonnet 4.6 for most use cases. More expensive than smaller models.</p>
   </Card>
 
   <Card title="Claude Haiku 4.5 (Anthropic)" icon="leaf">
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
-    <p><strong>Description:</strong> Latest and fastest model in the Claude family, optimized for speed and efficiency on everyday tasks.</p>
-    <p><strong>Plus Strengths:</strong> Fastest response times among Claude models. Excellent for quick questions and lightweight tasks. Strong performance for its speed tier.</p>
+    <p><strong>Description:</strong> Near-frontier intelligence at blazing speeds with extended thinking and exceptional cost-efficiency.</p>
+    <p><strong>Plus Strengths:</strong> Blazing fast response times with extended thinking capabilities. Near-frontier intelligence at exceptional cost-efficiency. Excellent for quick questions and lightweight tasks.</p>
     <p><strong>Minus Trade Offs:</strong> Less capable than Sonnet or Opus models. May struggle with complex multi-step reasoning and advanced analysis.</p>
   </Card>
 
-  <Card title="Claude 4 Sonnet (Reasoning) (Anthropic)" icon="brain">
+  <Card title="Claude 4.6 Sonnet (Reasoning) (Anthropic)" icon="brain">
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
     <p><strong>Description:</strong> Work through difficult problems using careful, step-by-step reasoning.</p>
-    <p><strong>Plus Strengths:</strong> Exceptional step by step reasoning capabilities. Stronger at math and coding. Very good at explaining thought process</p>
+    <p><strong>Plus Strengths:</strong> Exceptional step by step reasoning capabilities. Stronger at math and coding. Very good at explaining thought process.</p>
     <p><strong>Minus Trade Offs:</strong> Slower response times. Not as optimized for creative tasks. Consider Claude Sonnet 4.6 or Claude Opus 4.6 for better overall performance.</p>
   </Card>
 
   <Card title="GPT 5.2 (OpenAI)" icon="circle-star">
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
-    <p><strong>Description:</strong> OpenAI's latest flagship model with breakthrough capabilities in reasoning, creativity, and multimodal understanding.</p>
-    <p><strong>Plus Strengths:</strong> State-of-the-art performance across all domains. Exceptional reasoning and problem-solving. Advanced creative capabilities. Superior instruction following and nuance understanding.</p>
+    <p><strong>Description:</strong> OpenAI's latest coding and reasoning model.</p>
+    <p><strong>Plus Strengths:</strong> State-of-the-art coding and reasoning performance. Exceptional problem-solving capabilities. Superior instruction following and nuance understanding.</p>
     <p><strong>Minus Trade Offs:</strong> Slower response times and higher cost. May be unnecessary for simple tasks. Premium pricing for cutting-edge capabilities.</p>
-  </Card>
-
-  <Card title="ChatGPT 5.1 (OpenAI)" icon="message-bot">
-    <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
-    <p><strong>Description:</strong> OpenAI's latest conversational AI model optimized for natural dialogue, helpfulness, and versatile task completion.</p>
-    <p><strong>Plus Strengths:</strong> Exceptional conversational fluency and natural dialogue. Strong general-purpose capabilities across diverse tasks. Improved safety and helpfulness. Excellent at explaining complex topics accessibly.</p>
-    <p><strong>Minus Trade Offs:</strong> May be slower than lightweight models. Premium pricing for cutting-edge conversational capabilities.</p>
   </Card>
 
   <Card title="GPT-5 Mini (OpenAI)" icon="circle-star">
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
-    <p><strong>Description:</strong> A balanced version of GPT-5 optimized for everyday use with improved speed and efficiency.</p>
-    <p><strong>Plus Strengths:</strong> Excellent balance of GPT-5 capabilities with faster response times. Cost-effective for regular applications. Strong performance across most tasks without premium overhead.</p>
+    <p><strong>Description:</strong> Faster model for well-defined tasks.</p>
+    <p><strong>Plus Strengths:</strong> Fast response times for well-defined tasks. Cost-effective for regular applications. Strong performance across most tasks without premium overhead.</p>
     <p><strong>Minus Trade Offs:</strong> Slightly reduced capabilities compared to GPT 5.2. May not excel at the most complex reasoning challenges requiring maximum model capacity.</p>
   </Card>
 
@@ -132,42 +111,28 @@ Now that you know how to select models, here are some strengths and tradeoffs of
 
   <Card title="Gemini 3.1 Pro (Google)" icon="stars">
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
-    <p><strong>Description:</strong> Google's latest and most advanced model featuring superior multimodal capabilities, enhanced reasoning, and improved creative performance.</p>
-    <p><strong>Plus Strengths:</strong> State-of-the-art multimodal understanding. Exceptional reasoning and problem-solving. Superior performance on complex analytical tasks. Enhanced creative and coding capabilities. Best-in-class for applications requiring advanced Google AI.</p>
+    <p><strong>Description:</strong> Google's most powerful thinking model with maximum response accuracy and state-of-the-art performance.</p>
+    <p><strong>Plus Strengths:</strong> Maximum response accuracy and state-of-the-art performance. Exceptional reasoning and problem-solving. Superior performance on complex analytical tasks. Enhanced creative and coding capabilities. Best-in-class for applications requiring advanced Google AI.</p>
     <p><strong>Minus Trade Offs:</strong> Slower response times compared to Flash models. Higher cost for premium capabilities. May be unnecessary for simple tasks.</p>
   </Card>
 
   <Card title="Gemini 3 Flash (Google)" icon="bolt">
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
-    <p><strong>Description:</strong> Google's latest fast model optimized for quick response times with strong general capabilities.</p>
+    <p><strong>Description:</strong> General purpose model optimized for fast response times.</p>
     <p><strong>Plus Strengths:</strong> Extremely fast response times. Strong general-purpose performance. Good for simple instruction following and high volume tasks.</p>
     <p><strong>Minus Trade Offs:</strong> Not ideal for multi-step problem solving or complex instruction following. May miss nuance in instructions.</p>
   </Card>
 
-  <Card title="Gemini 3 Pro (Google)" icon="stars">
-    <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
-    <p><strong>Description:</strong> Advanced Google model featuring strong multimodal capabilities, reasoning, and creative performance.</p>
-    <p><strong>Plus Strengths:</strong> Strong multimodal understanding. Good reasoning and problem-solving. Solid performance on analytical tasks.</p>
-    <p><strong>Minus Trade Offs:</strong> Slower response times compared to Flash models. Superseded by Gemini 3.1 Pro for most use cases.</p>
-  </Card>
-
-  <Card title="Gemini 2.5 Pro (Google)" icon="crown">
-    <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
-    <p><strong>Description:</strong> Google's powerful thinking model with maximum response accuracy and state-of-the-art performance</p>
-    <p><strong>Plus Strengths:</strong> Exceptional reasoning capabilities. High accuracy on complex tasks. Advanced problem-solving abilities.</p>
-    <p><strong>Minus Trade Offs:</strong> Slower response times. Higher computational cost. Superseded by Gemini 3.1 Pro for most use cases.</p>
-  </Card>
-
   <Card title="Gemini 2.5 Flash (Google)" icon="bolt">
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
-    <p><strong>Description:</strong> General purpose model optimized for fast response times.</p>
-    <p><strong>Plus Strengths:</strong> Extremely fast response times. Good for simple instruction following and high volume tasks</p>
+    <p><strong>Description:</strong> Previous version of Google's general purpose model optimized for fast response times.</p>
+    <p><strong>Plus Strengths:</strong> Extremely fast response times. Good for simple instruction following and high volume tasks.</p>
     <p><strong>Minus Trade Offs:</strong> Not ideal for multi-step problem solving or complex instruction following. Superseded by Gemini 3 Flash for most use cases.</p>
   </Card>
 
   <Card title="Mistral Large 3 (Mistral)" icon="sparkles">
     <div className="text-xs bg-green-100 px-2 py-1 rounded mb-2 inline-block">Open Weight Model</div>
-    <p><strong>Description:</strong> Mistral's latest large language model with strong reasoning and multilingual capabilities.</p>
+    <p><strong>Description:</strong> Mistral's 675B parameter flagship model with strong multilingual capabilities.</p>
     <p><strong>Plus Strengths:</strong> Strong reasoning and analytical capabilities. Excellent multilingual support. Open weight flexibility for customization and deployment.</p>
     <p><strong>Minus Trade Offs:</strong> May not match top frontier models on the most demanding tasks. Performance varies by domain.</p>
   </Card>
@@ -189,7 +154,7 @@ Now that you know how to select models, here are some strengths and tradeoffs of
   <Card title="Llama 4 Maverick (Meta)" icon="meta">
     <div className="text-xs bg-green-100 px-2 py-1 rounded mb-2 inline-block">Open Weight Model</div>
     <p><strong>Description:</strong> Advanced open-weight model for reasoning, math, and general knowledge.</p>
-    <p><strong>Plus Strengths:</strong> Improved reasoning capabilities over Llama 3.3. Strong performance in general knowledge tasks. Open weight benefits.</p>
+    <p><strong>Plus Strengths:</strong> Strong reasoning capabilities for math and general knowledge. Open weight benefits. Good performance across diverse tasks.</p>
     <p><strong>Minus Trade Offs:</strong> Not as fast as smaller models. May require more specific prompting for best results.</p>
   </Card>
 
@@ -209,8 +174,8 @@ Now that you know how to select models, here are some strengths and tradeoffs of
 
   <Card title="Qwen 3 (Alibaba)" icon="sparkles">
     <div className="text-xs bg-green-100 px-2 py-1 rounded mb-2 inline-block">Open Weight Model</div>
-    <p><strong>Description:</strong> Advanced open weight model with strong multimodal and multilingual capabilities.</p>
-    <p><strong>Plus Strengths:</strong> Excellent multilingual support. Strong performance on reasoning tasks. Good balance of performance and efficiency. Open weight flexibility.</p>
+    <p><strong>Description:</strong> Large-scale Qwen3 model with 235B parameters, optimized for instruction following and reasoning tasks.</p>
+    <p><strong>Plus Strengths:</strong> Excellent multilingual support. Strong performance on reasoning and instruction following tasks. Good balance of performance and efficiency. Open weight flexibility.</p>
     <p><strong>Minus Trade Offs:</strong> May not match frontier model performance on highly specialized tasks. Performance varies depending on language and domain.</p>
   </Card>
 </CardGroup>
@@ -222,25 +187,25 @@ Selecting can be tricky. That's why we encourage you to play and experiment as y
 ### <Icon icon="scale-balanced" size="24" className="inline-block align-text-bottom" /> Selection Considerations
 
 <Accordion title="Ask yourself what is an ideal response time for your app?">
-  This will allow you to pick larger or smaller models that meet those needs. Claude Sonnet 4.6, GPT-5 Mini, and ChatGPT 5.1 offer excellent balance, while Claude Opus 4.6, Gemini 3.1 Pro, and GPT 5.2 prioritize quality over speed. Claude Haiku 4.5, Gemini 3 Flash, and Gemini 2.5 Flash excel at speed for simple tasks.
+  This will allow you to pick larger or smaller models that meet those needs. Claude Sonnet 4.6 and GPT-5 Mini offer excellent balance, while Claude Opus 4.6, Gemini 3.1 Pro, and GPT 5.2 prioritize quality over speed. Claude Haiku 4.5, Gemini 3 Flash, and Gemini 2.5 Flash excel at speed for simple tasks.
 </Accordion>
 
 <Accordion title="Identify what complexity level is your task?">
-  For simple Q&A or content generation, lighter models like Claude Haiku 4.5, Gemini 3 Flash, or Gemini 2.5 Flash may suffice. For balanced everyday tasks, Claude Sonnet 4.6, GPT-5 Mini, or ChatGPT 5.1 are ideal. For the most complex multi-step reasoning, choose Claude Opus 4.6, GPT 5.2, Gemini 3.1 Pro, or Gemini 2.5 Pro.
+  For simple Q&A or content generation, lighter models like Claude Haiku 4.5, Gemini 3 Flash, or Gemini 2.5 Flash may suffice. For balanced everyday tasks, Claude Sonnet 4.6 or GPT-5 Mini are ideal. For the most complex multi-step reasoning, choose Claude Opus 4.6, GPT 5.2, or Gemini 3.1 Pro.
 </Accordion>
 
 <Accordion title="What is the level of accuracy you are requiring of your app?">
-  Critical accuracy use cases like data analysis, or HR operations might require Claude Opus 4.6, GPT 5.2, Gemini 3.1 Pro, or other powerful models even if they're slower. Use cases that require creativity or open ended responses work well with GPT 5.2, GPT-5 Mini, ChatGPT 5.1, Claude Sonnet 4.6, or creative-focused models.
+  Critical accuracy use cases like data analysis, or HR operations might require Claude Opus 4.6, GPT 5.2, Gemini 3.1 Pro, or other powerful models even if they're slower. Use cases that require creativity or open ended responses work well with GPT 5.2, GPT-5 Mini, Claude Sonnet 4.6, or creative-focused models.
 </Accordion>
 
 <Accordion title="Do you need open weights or source code access?">
-  If you need model customization, local deployment, or transparency into model operations, consider open weight models like Llama 4 series, Qwen 3, DeepSeek R1, Mistral Large 3, or GPT OSS 120B. For maximum performance and latest capabilities, frontier models like Claude Opus 4.6, GPT 5.2, ChatGPT 5.1, Claude Sonnet 4.6, or Gemini 3.1 Pro are typically best. Consider your long-term deployment and customization needs when choosing between proprietary and open models.
+  If you need model customization, local deployment, or transparency into model operations, consider open weight models like Llama 4 series, Qwen 3, DeepSeek R1, Mistral Large 3, or GPT OSS 120B. For maximum performance and latest capabilities, frontier models like Claude Opus 4.6, GPT 5.2, Claude Sonnet 4.6, or Gemini 3.1 Pro are typically best. Consider your long-term deployment and customization needs when choosing between proprietary and open models.
 </Accordion>
 
 ### <Icon icon="medal" size="24" className="inline-block align-text-bottom" /> Best Practices
 
 <Accordion title="Try to match your model with your use case:">
-  Everyday applications: Claude Sonnet 4.6, Claude Haiku 4.5, GPT-5 Mini, or ChatGPT 5.1 provide the best balance of performance and efficiency. Critical/Complex applications: Claude Opus 4.6, GPT 5.2, Gemini 3.1 Pro, or Gemini 2.5 Pro for highest accuracy and reasoning capability. Creative applications: GPT 5.2, GPT-5 Mini, ChatGPT 5.1, or Claude Sonnet 4.6 for creative tasks. Problem-solving tools: Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.2, Gemini 3.1 Pro, or Llama 4 Maverick. Document analysis: Claude Opus 4.6, Claude Sonnet 4.6, or Llama 4 Scout for multi-document or cross-lingual analysis. Technical/Coding tasks: Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.2, or Kimi K2.5 for tool usage. Educational explanation: Claude Sonnet 4.6, GPT-5 Mini, ChatGPT 5.1, Llama 3.3 70B Instruct, Llama 4 Maverick, or those with strong explanatory capabilities. High-volume applications: Balance quality with speed using Claude Sonnet 4.6, Claude Haiku 4.5, Gemini 3 Flash, or GPT-5 Mini. Budget-conscious applications: Claude Haiku 4.5, Qwen 3, DeepSeek R1, Mistral Large 3, or other open weight models for cost-effective solutions. Research/Experimentation: Open weight models like Llama 4 series, Qwen 3, Mistral Large 3, or GPT OSS 120B for flexibility.
+  Everyday applications: Claude Sonnet 4.6, Claude Haiku 4.5, or GPT-5 Mini provide the best balance of performance and efficiency. Critical/Complex applications: Claude Opus 4.6, GPT 5.2, or Gemini 3.1 Pro for highest accuracy and reasoning capability. Creative applications: GPT 5.2, GPT-5 Mini, or Claude Sonnet 4.6 for creative tasks. Problem-solving tools: Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.2, Gemini 3.1 Pro, or Llama 4 Maverick. Document analysis: Claude Opus 4.6, Claude Sonnet 4.6, or Llama 4 Scout for multi-document or cross-lingual analysis. Technical/Coding tasks: Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.2, or Kimi K2.5 for tool usage. Educational explanation: Claude Sonnet 4.6, GPT-5 Mini, Llama 3.3 70B Instruct, Llama 4 Maverick, or those with strong explanatory capabilities. High-volume applications: Balance quality with speed using Claude Sonnet 4.6, Claude Haiku 4.5, Gemini 3 Flash, or GPT-5 Mini. Budget-conscious applications: Claude Haiku 4.5, Qwen 3, DeepSeek R1, Mistral Large 3, or other open weight models for cost-effective solutions. Research/Experimentation: Open weight models like Llama 4 series, Qwen 3, Mistral Large 3, or GPT OSS 120B for flexibility.
 </Accordion>
 
 <Accordion title="Test out multiple models for apps that you are building:">
@@ -248,7 +213,7 @@ Selecting can be tricky. That's why we encourage you to play and experiment as y
 </Accordion>
 
 <Accordion title="Additional best practices:">
-  We recommend that you remix apps as you're experimenting to not impact the original app. You can review activity to see how multiple models handle similar tasks. If you're building a suite of apps we recommend you use faster models like Claude Haiku 4.5 for simple queries and reserve powerful models like Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.2, Gemini 3.1 Pro, or Gemini 2.5 Pro for complex tasks. Consider cost implications, as newer frontier models like Claude Opus 4.6, Claude Sonnet 4.6, ChatGPT 5.1, Gemini 3.1 Pro, and GPT 5.2 may be more expensive but offer better performance. For production apps requiring customization, evaluate open weight models like Qwen 3, Mistral Large 3, and Kimi K2.5 alongside frontier options. Keep track of which models work best for your specific use cases to build your own selection guidelines.
+  We recommend that you remix apps as you're experimenting to not impact the original app. You can review activity to see how multiple models handle similar tasks. If you're building a suite of apps we recommend you use faster models like Claude Haiku 4.5 for simple queries and reserve powerful models like Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.2, or Gemini 3.1 Pro for complex tasks. Consider cost implications, as newer frontier models like Claude Opus 4.6, Claude Sonnet 4.6, Gemini 3.1 Pro, and GPT 5.2 may be more expensive but offer better performance. For production apps requiring customization, evaluate open weight models like Qwen 3, Mistral Large 3, and Kimi K2.5 alongside frontier options. Keep track of which models work best for your specific use cases to build your own selection guidelines.
 </Accordion>
 
 ## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> FAQ
@@ -262,23 +227,15 @@ Selecting can be tricky. That's why we encourage you to play and experiment as y
 </Accordion>
 
 <Accordion title="Can I use different models for different parts of my app suite?">
-  Yes! We recommend using faster models like Claude Haiku 4.5 for simple queries and reserving more powerful models like Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.2, Gemini 3.1 Pro, or Claude 4 Sonnet (Reasoning) for complex tasks if you're building a suite of apps.
+  Yes! We recommend using faster models like Claude Haiku 4.5 for simple queries and reserving more powerful models like Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.2, Gemini 3.1 Pro, or Claude 4.6 Sonnet (Reasoning) for complex tasks if you're building a suite of apps.
 </Accordion>
 
 <Accordion title="When should I choose Claude Opus 4.6 vs Claude Sonnet 4.6 vs Claude Haiku 4.5?">
   Choose Claude Opus 4.6 for the most demanding tasks requiring maximum intelligence, reasoning depth, and nuanced understanding. It's the most powerful model in the Claude family. Choose Claude Sonnet 4.6 for most applications where you need excellent intelligence with a good balance of performance and efficiency — it's the new default for all Playlab apps. Choose Claude Haiku 4.5 for fast, lightweight tasks requiring quick response times.
 </Accordion>
 
-<Accordion title="What's the difference between Gemini 3.1 Pro and Gemini 3 Pro?">
-  Gemini 3.1 Pro is Google's latest and most advanced model, building on Gemini 3 Pro with improved multimodal capabilities, stronger reasoning, and enhanced performance. Gemini 3 Pro remains available but is generally superseded by Gemini 3.1 Pro for most use cases.
-</Accordion>
-
-<Accordion title="When should I use ChatGPT 5.1?">
-  ChatGPT 5.1 is ideal for applications requiring exceptional conversational fluency and natural dialogue. It excels at general-purpose tasks, explaining complex topics accessibly, and providing helpful, safe responses. Consider it for chatbots, customer service applications, educational tools, and any use case where natural conversation is a priority.
-</Accordion>
-
-<Accordion title="What's the difference between GPT 5.2, GPT-5 Mini, and ChatGPT 5.1?">
-  GPT 5.2 is OpenAI's most powerful model with breakthrough capabilities across all domains. GPT-5 Mini provides a balanced option with faster response times and better cost efficiency. ChatGPT 5.1 is specifically optimized for natural conversational dialogue and helpfulness. Choose based on whether you need maximum capability (GPT 5.2), balanced performance (GPT-5 Mini), or conversational excellence (ChatGPT 5.1).
+<Accordion title="What's the difference between GPT 5.2 and GPT-5 Mini?">
+  GPT 5.2 is OpenAI's latest coding and reasoning model with top capabilities across all domains. GPT-5 Mini is a faster model for well-defined tasks with better cost efficiency. Choose GPT 5.2 when you need maximum capability and GPT-5 Mini when you need speed and cost-effectiveness.
 </Accordion>
 
 <Accordion title="What's the difference between frontier, open weight, and open source models?">
@@ -302,4 +259,4 @@ Selecting can be tricky. That's why we encourage you to play and experiment as y
 </div>
 
 ---
-Last updated: 02/28/2026
+Last updated: 03/02/2026
