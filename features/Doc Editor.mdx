@@ -1,37 +1,53 @@
 ---
 title: "Doc Editor"
-description: "Create, edit, and export polished documents directly inside your Playlab apps with AI assistance"
+description: "Create, edit, and export documents directly inside your Playlab apps"
 tag: "New"
 ---
 
 ## <Icon icon="bell-on" size="24" className="inline-block align-text-bottom" /> What is this feature?
 
-The Doc Editor is a writing panel built into Playlab apps that lets you create documents without leaving the platform. You can type directly into the editor, use the AI chat to generate content, or combine both approaches — then export your finished document as a DOCX file.
+The Doc Editor is a writing panel built into Playlab apps that lets you create documents without leaving the platform. You can type directly into the editor, use the AI chat to generate content, or combine both approaches, then export your finished document as a DOCX file or PDF.
 
-The Doc Editor supports rich formatting including headings, bold, italic, bullet points, numbered lists, tables, and checkboxes — giving you everything you need to produce polished, structured documents from your AI conversations.
+The Doc Editor supports rich formatting including headings, bold, italic, bullet points, numbered lists, tables, and checkboxes, giving you everything you need to produce polished, structured documents from your AI conversations.
 
 ## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Why is this useful?
 
-This feature bridges the gap between AI conversation and document creation:
+Creating documents from AI conversations usually means copying and pasting between tools, reformatting content, and losing context along the way. The Doc Editor eliminates that friction by letting you generate and refine documents right where the conversation happens. No switching tabs, no lost formatting.
 
-* **No more copy-paste:** Generate and refine documents right where the conversation happens
-* **AI-assisted writing:** Ask the AI to draft, edit, or restructure your content through the chat
-* **Structured output:** Create formatted tables, lists, and layouts directly in the editor
-* **Export ready:** Download your document as a DOCX file when you're done — ready to share, print, or edit further
+Because the editor lives alongside the AI chat, you can ask the AI to draft, edit, or restructure your content at any point. Need a table added? Want to change the tone of a paragraph? Just ask. The AI works directly in your document so you can iterate quickly without starting over.
+
+The editor also supports structured formatting like tables, lists, headings, and checkboxes, so your documents come out polished and organized. When you're finished, export the document as a DOCX file, ready to share, print, or continue editing in Word or Google Docs.
+
+## <Icon icon="circle-play" size="24" className="inline-block align-text-bottom" /> Watch Doc Editor in Action
+
+<Frame>
+  <iframe
+    src="https://drive.google.com/file/d/1gz7vV1SIux2O8S6LEwYeuY5eXIzZZDnZ/preview"
+    width="100%"
+    height="480"
+    allow="autoplay"
+  />
+</Frame>
 
 ## <Icon icon="thought-bubble" size="24" className="inline-block align-text-bottom" /> How do I use the Doc Editor?
 
 <Steps>
-  <Step title="Open a Playlab app with Doc Editor enabled">
-    Navigate to a Playlab app that has the Doc Editor tool turned on. You can try it out with the [Doc Editor Preview app](https://www.playlab.ai/project/cmkyeclje43k1ow0u6sim0p25/cml83ez9b53nsme0u937o9jaa).
+  <Step title="Enable the Doc Editor in your app">
+    In the app builder, open the **Tools** panel and toggle on **Doc Editor**. This makes the Doc Editor available to users when they open your app.
+    <Frame>
+      <img src="/images/toggledoceditor.png" alt="Toggle Doc Editor in the Tools panel" />
+    </Frame>
   </Step>
   <Step title="Open the Doc Editor panel">
     Click the **Doc Editor icon** in the chat window. This opens a blank document panel alongside your conversation.
+    <Frame>
+      <img src="/images/doceditoricon.png" alt="Doc Editor icon" />
+    </Frame>
   </Step>
   <Step title="Create your content">
     You have two options:
     - **Type directly** into the document panel to write and format content yourself
-    - **Use the AI chat** to generate content — ask for a lesson plan, table, schedule, or any structured document and it will appear in the editor
+    - **Use the AI chat** to generate content. Ask for a lesson plan, table, schedule, or any structured document and it will appear in the editor
   </Step>
   <Step title="Edit and refine">
     Make changes directly in the editor, or ask the AI to modify specific parts of your document through the chat interface. You can format text, add tables, and restructure content as needed.
@@ -49,7 +65,7 @@ This feature bridges the gap between AI conversation and document creation:
   </Card>
 
   <Card title="Use Tables" icon="table">
-    The Doc Editor supports table creation. Ask the AI to organize information into tables for cleaner, more structured documents — great for lesson plans, schedules, and comparison charts.
+    The Doc Editor supports table creation. Ask the AI to organize information into tables for cleaner, more structured documents. Great for lesson plans, schedules, and comparison charts.
   </Card>
 
   <Card title="Iterate with AI" icon="comments">
@@ -73,8 +89,8 @@ The Doc Editor is actively being developed. The following limitations are known 
 * Strikethrough is not supported
 * No math LaTeX display support
 * Checkboxes work in the editor but do not carry over to DOCX export
-* Cannot display inline images or videos without a direct URL
-* Some messages may not trigger live doc editing — if this happens, try re-entering your request
+* Images and videos only work with publicly hosted URLs. Private or local file links will not display in the editor
+* Some messages may not trigger live doc editing. If this happens, try re-entering your request
 
 ## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> Frequently Asked Questions
 
@@ -83,7 +99,7 @@ The Doc Editor is actively being developed. The following limitations are known 
 </Accordion>
 
 <Accordion title="Can I edit the document after the AI generates it?">
-  Yes! The document is fully editable. You can make changes directly in the editor panel — add text, adjust formatting, rearrange content, or delete sections. You can also ask the AI to make specific changes through the chat.
+  Yes! The document is fully editable. You can make changes directly in the editor panel. You can add text, adjust formatting, rearrange content, or delete sections. You can also ask the AI to make specific changes through the chat.
 </Accordion>
 
 <Accordion title="What file format does the export use?">
@@ -95,7 +111,7 @@ The Doc Editor is actively being developed. The following limitations are known 
 </Accordion>
 
 <Accordion title="Why isn't the Doc Editor icon appearing in my chat?">
-  Make sure the Doc Creator tool is enabled in your app's builder settings. In some cases — particularly with Python-based or data analysis apps — the icon may not appear. Try toggling the tool off and on again.
+  Make sure the Doc Creator tool is enabled in your app's builder settings. In some cases, particularly with Python-based or data analysis apps, the icon may not appear. Try toggling the tool off and on again.
 </Accordion>
 
 ---
