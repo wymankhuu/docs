@@ -1,0 +1,92 @@
+---
+title: "Safety and Moderation Updates"
+description: "How Playlab keeps student interactions safe with moderation, notifications, and org-level controls"
+tag: "Updated"
+---
+
+## <Icon icon="bell-on" size="24" className="inline-block align-text-bottom" /> What's Changing?
+
+Playlab is strengthening its safety and moderation systems to give educators and administrators better visibility into student interactions. These updates focus on three areas: improved moderation accuracy, org-level notification controls, and clearer tools for reviewing flagged content.
+
+These changes are designed to help organizations feel confident that Playlab is a safe environment for students, without turning Playlab into a full incident management system. The goal is notification and attention management so admins know what needs their attention and can act on it quickly.
+
+## <Icon icon="shield-halved" size="24" className="inline-block align-text-bottom" /> Moderation Improvements
+
+Playlab's moderation system automatically detects and hides potentially inappropriate content in student conversations. The team is actively refining how moderation works to reduce false positives and improve clarity.
+
+Ongoing improvements include refining moderation categories to be more intuitive and clearly labeled, building a data annotation pipeline to train more accurate moderation models, and reviewing edge cases where moderation may be too aggressive or too lenient. As these improvements roll out, you may notice fewer false flags and more accurate categorization of moderated content.
+
+<Note>
+Moderation is still in active development. If you encounter a moderation decision that seems incorrect, please let us know at support@playlab.ai.
+</Note>
+
+## <Icon icon="envelope" size="24" className="inline-block align-text-bottom" /> Org-Level Moderation Notifications
+
+Organization admins and workspace owners now receive email notifications when moderated content is detected in their apps. These batch emails provide a digest of flagged activity so you can stay informed without being overwhelmed.
+
+### How Notifications Work
+
+- **Organization admins** receive a moderation digest summarizing flagged activity across their org's apps
+- **Workspace owners** receive notifications for moderated content within their workspaces
+- **Private workspace owners** also receive notifications when moderation occurs in their spaces
+- Notifications are batched and sent periodically rather than in real time, so your inbox stays manageable
+
+### What's Included in a Notification
+
+Each moderation email includes the moderation category that was triggered, the app where the conversation occurred, and enough context for you to decide whether to review the flagged conversation in more detail.
+
+<Info>
+If you received a moderation email and are unsure about a category label, this is expected as the team works to refine category names. Reach out to support@playlab.ai with any questions.
+</Info>
+
+## <Icon icon="user-shield" size="24" className="inline-block align-text-bottom" /> Safety Admin Designation
+
+Organizations can now designate **Safety Admins** at the org level. Safety Admins have visibility into moderated and flagged content across the organization, giving your team a clear point of responsibility for reviewing safety-related activity.
+
+This role is separate from general org admin permissions and is designed specifically for the people in your organization responsible for student safety oversight.
+
+## <Icon icon="flag" size="24" className="inline-block align-text-bottom" /> Flag Visibility and Acknowledgement
+
+The safety team is building toward a system where flagged content is not only visible but actionable. Upcoming improvements include:
+
+- **Flag visibility at the workspace and member level** so admins can see what needs attention across their organization
+- **Acknowledge and mark as seen** functionality that lets admins indicate they have reviewed a flag while preserving a full audit trail
+- **Insights views** that surface patterns and trends in flagged content, starting with simple metrics and expanding over time
+
+These features are informed by educator feedback and are being prioritized for the next development cycle as part of the Workspaces V2 work.
+
+<Warning>
+Flag acknowledgement and insights views are currently in development and not yet available. This page will be updated as these features ship.
+</Warning>
+
+## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> Frequently Asked Questions
+
+<Accordion title="How do I become a Safety Admin for my organization?">
+  Contact your organization's Playlab admin or reach out to support@playlab.ai to have Safety Admin permissions enabled for your account.
+</Accordion>
+
+<Accordion title="Can I turn off moderation notifications?">
+  Moderation notifications are enabled by default for org admins and workspace owners. If you need to adjust notification settings, contact support@playlab.ai.
+</Accordion>
+
+<Accordion title="What moderation categories does Playlab use?">
+  Playlab uses a set of moderation categories to classify flagged content. These categories are being refined for clarity and accuracy. If you see a category label that is confusing, please let us know.
+</Accordion>
+
+<Accordion title="What should I do when I receive a moderation email?">
+  Review the flagged conversation in your Playlab activity view. If the content was correctly flagged, consider updating your app's instructions or guardrails. If it appears to be a false positive, no action is needed, but reporting it helps improve the system.
+</Accordion>
+
+<Accordion title="Does Playlab replace my school's safety protocols?">
+  No. Playlab's moderation and notification tools are designed to complement your existing safety protocols, not replace them. Playlab focuses on surfacing what needs attention so your team can follow your own established procedures.
+</Accordion>
+
+---
+
+<Note>
+**We want your feedback!** These safety features are actively evolving based on educator input. If you have ideas, questions, or feedback on how moderation and notifications are working for your organization, reach out to us.
+</Note>
+
+**Contact us:** support@playlab.ai
+
+*Last updated: April 2026*
