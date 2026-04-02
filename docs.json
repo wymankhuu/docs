@@ -102,6 +102,14 @@
         "color": "#8B5CF6",
         "groups": [
           {
+            "group": "🆕 Recently Added",
+            "pages": [
+              "features/Camera Handwriting Input",
+              "features/Doc Editor",
+              "features/Safety and Moderation Updates"
+            ]
+          },
+          {
             "group": "🟣 Building Your App",
             "pages": [
               "features/AI assisted builder",
