@@ -102,7 +102,36 @@
         "color": "#8B5CF6",
         "groups": [
           {
-            "group": "🎤 Voice & Accessibility",
+            "group": "🟣 Building Your App",
+            "pages": [
+              "features/AI assisted builder",
+              "features/Selecting an LLM",
+              "features/Richer Starter Inputs",
+              "features/Optional welcome message",
+              "features/forking conversations"
+            ]
+          },
+          {
+            "group": "🟠 Personalizing App Behavior",
+            "pages": [
+              "features/Adaptive Memory",
+              "features/User Profiles",
+              "features/Avoid Answer Generation",
+              "features/Knowledge Graphs"
+            ]
+          },
+          {
+            "group": "🔵 References & Curriculum",
+            "pages": [
+              "features/Global References",
+              "features/Organizational References",
+              "features/Pinned References",
+              "features/MCP Standards",
+              "features/Building with Illustrative Mathematics"
+            ]
+          },
+          {
+            "group": "🟢 Voice, Language & Accessibility",
             "pages": [
               "features/Voice Input",
               "features/Voice Output",
@@ -113,60 +142,36 @@
             ]
           },
           {
-            "group": "📎 References & Knowledge",
-            "pages": [
-              "features/Global References",
-              "features/Organizational References",
-              "features/Pinned References",
-              "features/Knowledge Graphs"
-            ]
-          },
-          {
-            "group": "🔧 AI Tools (MCP)",
+            "group": "⚪ AI Tools (MCP)",
             "pages": [
               "features/MCP tools",
               "features/MCP Python Tool",
               "features/MCP RAG",
-              "features/MCP Standards",
-              "features/MCP IMKG",
-              "features/Building with Illustrative Mathematics"
+              "features/MCP IMKG"
             ]
           },
           {
-            "group": "📊 Activity & Data",
+            "group": "🟡 Activity, Exports & Documents",
             "pages": [
               "features/Reviewing App Activity",
               "features/Exporting Data",
+              "features/Doc Editor",
               "features/Exporting to Docx",
               "features/Exporting to Google Drive"
             ]
           },
           {
-            "group": "✍️ Writing & Documents",
-            "pages": [
-              "features/Doc Editor"
-            ]
-          },
-          {
-            "group": "🏗️ Building & Customization",
-            "pages": [
-              "features/AI assisted builder",
-              "features/Selecting an LLM",
-              "features/Richer Starter Inputs",
-              "features/Optional welcome message",
-              "features/Adaptive Memory",
-              "features/User Profiles",
-              "features/Avoid Answer Generation",
-              "features/forking conversations"
-            ]
-          },
-          {
-            "group": "👥 Workspace & Community",
+            "group": "🟤 Workspace & Community",
             "pages": [
               "features/Organizing Workspaces",
               "features/Move Apps to Workspace",
               "features/Remixing multiple apps",
-              "features/Submit Your App To Community",
+              "features/Submit Your App To Community"
+            ]
+          },
+          {
+            "group": "🔴 Safety & Feedback",
+            "pages": [
               "features/Submitting Feedback",
               "features/Escalating Flagged Conversations",
               "features/Safety and Moderation Updates"
