@@ -235,6 +235,7 @@
           {
             "group": "Frequently Asked Questions",
             "pages": [
+              "faq/FAQ",
               {
                 "page": "faq/General",
                 "badge": {
