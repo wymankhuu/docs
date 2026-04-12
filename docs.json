@@ -241,7 +241,12 @@
           {
             "group": "💡 Why Playlab",
             "pages": [
-              "faq/The Playlab Difference"
+              {
+                "page": "faq/The Playlab Difference",
+                "badge": {
+                  "text": "New"
+                }
+              }
             ]
           },
           {
