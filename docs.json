@@ -235,14 +235,35 @@
           {
             "group": "Frequently Asked Questions",
             "pages": [
-              "faq/FAQ",
+              "faq/FAQ"
+            ]
+          },
+          {
+            "group": "💡 Why Playlab",
+            "pages": [
+              "faq/The Playlab Difference"
+            ]
+          },
+          {
+            "group": "🔒 Privacy, Safety & Compliance",
+            "pages": [
               "faq/Approach to Trust and Safety",
               "faq/Privacy and Security",
               "faq/Data Privacy Agreements",
-              "faq/Under 13 Use",
+              "faq/Under 13 Use"
+            ]
+          },
+          {
+            "group": "👤 Account & Technical",
+            "pages": [
               "faq/Account Management",
               "faq/Single Sign On",
-              "faq/Technical",
+              "faq/Technical"
+            ]
+          },
+          {
+            "group": "🤝 Programs & Partnerships",
+            "pages": [
               "faq/Professional Development",
               "faq/Research",
               "faq/Partnerships"
