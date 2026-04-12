@@ -235,7 +235,12 @@
           {
             "group": "Frequently Asked Questions",
             "pages": [
-              "faq/General"
+              {
+                "page": "faq/General",
+                "badge": {
+                  "text": "Updated"
+                }
+              }
             ]
           },
           {
