@@ -231,6 +231,7 @@
       {
         "tab": "❓ FAQ",
         "color": "#EF4444",
+        "url": "faq/FAQ",
         "groups": [
           {
             "group": "Frequently Asked Questions",
