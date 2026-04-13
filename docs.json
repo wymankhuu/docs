@@ -35,7 +35,7 @@
               "introduction"
             ]
           },
-{
+          {
             "group": "🔍 Explore Learning Opportunities",
             "pages": [
               "learn with us/onboarding",
@@ -231,18 +231,11 @@
       {
         "tab": "❓ FAQ",
         "color": "#EF4444",
-        "url": "faq/General",
         "groups": [
           {
             "group": "Frequently Asked Questions",
             "pages": [
-              "faq/FAQ",
-              {
-                "page": "faq/General",
-                "badge": {
-                  "text": "Updated"
-                }
-              }
+              "faq/General"
             ]
           },
           {
