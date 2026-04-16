@@ -6,7 +6,7 @@ description: 'Choose the right AI model for your Playlab project'
 <div className="bg-blue-500 text-white px-6 py-4 rounded-lg mb-6 shadow-lg">
   <div className="flex items-center">
     <Icon icon="" size="2" className="mr-3 text-yellow-300" />
-    <span className="font-semibold">🎉 NEW: <code className="bg-white/20 px-2 py-1 rounded text-sm">Claude Sonnet 4.6</code>, <code className="bg-white/20 px-2 py-1 rounded text-sm">Claude Opus 4.6</code>, <code className="bg-white/20 px-2 py-1 rounded text-sm">Gemini 3.1 Pro</code>, <code className="bg-white/20 px-2 py-1 rounded text-sm">GPT 5.2</code>, and <code className="bg-white/20 px-2 py-1 rounded text-sm">Mistral Large 3</code> are now available in Playlab!</span>
+    <span className="font-semibold">🎉 NEW: <code className="bg-white/20 px-2 py-1 rounded text-sm">Claude Sonnet 4.6</code>, <code className="bg-white/20 px-2 py-1 rounded text-sm">Claude Opus 4.6</code>, <code className="bg-white/20 px-2 py-1 rounded text-sm">Gemini 3.1 Pro</code>, <code className="bg-white/20 px-2 py-1 rounded text-sm">GPT 5.4</code>, and <code className="bg-white/20 px-2 py-1 rounded text-sm">Mistral Large 3</code> are now available in Playlab!</span>
   </div>
 </div>
 
@@ -36,7 +36,7 @@ Before selecting a model, it's helpful to understand the different categories of
 |---|---|---|
 | Cutting-edge, proprietary models developed by major AI companies | Models with publicly available parameters (weights) that can be downloaded and run independently | Fully open models where both weights and training code are publicly available |
 | Typically offer the most advanced capabilities and are continuously updated with the latest research breakthroughs | While training code may not be available, you have more control over deployment and customization | Offer maximum transparency and customization potential |
-| Examples: Claude Opus 4.6, Claude 4.6 models, GPT 5.2, ChatGPT 5.1, Gemini 3.1 Pro, Gemini models | Examples: Llama models, DeepSeek R1, GPT OSS models, Kimi K2.5, Qwen 3, Mistral Large 3 | Coming soon! |
+| Examples: Claude Opus 4.6, Claude 4.6 models, GPT 5.4, ChatGPT 5.1, Gemini 3.1 Pro, Gemini models | Examples: Llama models, DeepSeek R1, GPT OSS models, Kimi K2.5, Qwen 3, Mistral Large 3 | Coming soon! |
 
 ## <Icon icon="thought-bubble" size="24" className="inline-block align-text-bottom" /> How do I access these models?
 
@@ -101,7 +101,7 @@ Now that you know how to select models, here are the currently available models 
     <p><strong>Minus Trade Offs:</strong> Slower response times. Not as optimized for creative tasks. Consider Claude Sonnet 4.6 or Claude Opus 4.6 for better overall performance.</p>
   </Card>
 
-  <Card title="GPT 5.2 (OpenAI)" icon="circle-star">
+  <Card title="GPT 5.4 (OpenAI)" icon="circle-star">
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
     <p><strong>Description:</strong> OpenAI's latest flagship model with breakthrough capabilities in reasoning, creativity, and multimodal understanding.</p>
     <p><strong>Plus Strengths:</strong> State-of-the-art performance across all domains. Exceptional reasoning and problem-solving. Advanced creative capabilities. Superior instruction following and nuance understanding.</p>
@@ -119,7 +119,7 @@ Now that you know how to select models, here are the currently available models 
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
     <p><strong>Description:</strong> A balanced version of GPT-5 optimized for everyday use with improved speed and efficiency.</p>
     <p><strong>Plus Strengths:</strong> Excellent balance of GPT-5 capabilities with faster response times. Cost-effective for regular applications. Strong performance across most tasks without premium overhead.</p>
-    <p><strong>Minus Trade Offs:</strong> Slightly reduced capabilities compared to GPT 5.2. May not excel at the most complex reasoning challenges requiring maximum model capacity.</p>
+    <p><strong>Minus Trade Offs:</strong> Slightly reduced capabilities compared to GPT 5.4. May not excel at the most complex reasoning challenges requiring maximum model capacity.</p>
   </Card>
 
   <Card title="GPT OSS 120B (OpenAI)" icon="circle">
@@ -148,20 +148,6 @@ Now that you know how to select models, here are the currently available models 
     <p><strong>Description:</strong> Advanced Google model featuring strong multimodal capabilities, reasoning, and creative performance.</p>
     <p><strong>Plus Strengths:</strong> Strong multimodal understanding. Good reasoning and problem-solving. Solid performance on analytical tasks.</p>
     <p><strong>Minus Trade Offs:</strong> Slower response times compared to Flash models. Superseded by Gemini 3.1 Pro for most use cases.</p>
-  </Card>
-
-  <Card title="Gemini 2.5 Pro (Google)" icon="crown">
-    <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
-    <p><strong>Description:</strong> Google's powerful thinking model with maximum response accuracy and state-of-the-art performance</p>
-    <p><strong>Plus Strengths:</strong> Exceptional reasoning capabilities. High accuracy on complex tasks. Advanced problem-solving abilities.</p>
-    <p><strong>Minus Trade Offs:</strong> Slower response times. Higher computational cost. Superseded by Gemini 3.1 Pro for most use cases.</p>
-  </Card>
-
-  <Card title="Gemini 2.5 Flash (Google)" icon="bolt">
-    <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
-    <p><strong>Description:</strong> General purpose model optimized for fast response times.</p>
-    <p><strong>Plus Strengths:</strong> Extremely fast response times. Good for simple instruction following and high volume tasks</p>
-    <p><strong>Minus Trade Offs:</strong> Not ideal for multi-step problem solving or complex instruction following. Superseded by Gemini 3 Flash for most use cases.</p>
   </Card>
 
   <Card title="Mistral Large 3 (Mistral)" icon="sparkles">
@@ -221,25 +207,25 @@ Selecting can be tricky. That's why we encourage you to play and experiment as y
 ### <Icon icon="scale-balanced" size="24" className="inline-block align-text-bottom" /> Selection Considerations
 
 <Accordion title="Ask yourself what is an ideal response time for your app?">
-  This will allow you to pick larger or smaller models that meet those needs. Claude Sonnet 4.6, GPT-5 Mini, and ChatGPT 5.1 offer excellent balance, while Claude Opus 4.6, Gemini 3.1 Pro, and GPT 5.2 prioritize quality over speed. Claude Haiku 4.5, Gemini 3 Flash, and Gemini 2.5 Flash excel at speed for simple tasks.
+  This will allow you to pick larger or smaller models that meet those needs. Claude Sonnet 4.6, GPT-5 Mini, and ChatGPT 5.1 offer excellent balance, while Claude Opus 4.6, Gemini 3.1 Pro, and GPT 5.4 prioritize quality over speed. Claude Haiku 4.5 and Gemini 3 Flash excel at speed for simple tasks.
 </Accordion>
 
 <Accordion title="Identify what complexity level is your task?">
-  For simple Q&A or content generation, lighter models like Claude Haiku 4.5, Gemini 3 Flash, or Gemini 2.5 Flash may suffice. For balanced everyday tasks, Claude Sonnet 4.6, GPT-5 Mini, or ChatGPT 5.1 are ideal. For the most complex multi-step reasoning, choose Claude Opus 4.6, GPT 5.2, Gemini 3.1 Pro, or Gemini 2.5 Pro.
+  For simple Q&A or content generation, lighter models like Claude Haiku 4.5 or Gemini 3 Flash may suffice. For balanced everyday tasks, Claude Sonnet 4.6, GPT-5 Mini, or ChatGPT 5.1 are ideal. For the most complex multi-step reasoning, choose Claude Opus 4.6, GPT 5.4, or Gemini 3.1 Pro.
 </Accordion>
 
 <Accordion title="What is the level of accuracy you are requiring of your app?">
-  Critical accuracy use cases like data analysis, or HR operations might require Claude Opus 4.6, GPT 5.2, Gemini 3.1 Pro, or other powerful models even if they're slower. Use cases that require creativity or open ended responses work well with GPT 5.2, GPT-5 Mini, ChatGPT 5.1, Claude Sonnet 4.6, or creative-focused models.
+  Critical accuracy use cases like data analysis, or HR operations might require Claude Opus 4.6, GPT 5.4, Gemini 3.1 Pro, or other powerful models even if they're slower. Use cases that require creativity or open ended responses work well with GPT 5.4, GPT-5 Mini, ChatGPT 5.1, Claude Sonnet 4.6, or creative-focused models.
 </Accordion>
 
 <Accordion title="Do you need open weights or source code access?">
-  If you need model customization, local deployment, or transparency into model operations, consider open weight models like Llama 4 series, Qwen 3, DeepSeek R1, Mistral Large 3, or GPT OSS 120B. For maximum performance and latest capabilities, frontier models like Claude Opus 4.6, GPT 5.2, ChatGPT 5.1, Claude Sonnet 4.6, or Gemini 3.1 Pro are typically best. Consider your long-term deployment and customization needs when choosing between proprietary and open models.
+  If you need model customization, local deployment, or transparency into model operations, consider open weight models like Llama 4 series, Qwen 3, DeepSeek R1, Mistral Large 3, or GPT OSS 120B. For maximum performance and latest capabilities, frontier models like Claude Opus 4.6, GPT 5.4, ChatGPT 5.1, Claude Sonnet 4.6, or Gemini 3.1 Pro are typically best. Consider your long-term deployment and customization needs when choosing between proprietary and open models.
 </Accordion>
 
 ### <Icon icon="medal" size="24" className="inline-block align-text-bottom" /> Best Practices
 
 <Accordion title="Try to match your model with your use case:">
-  Everyday applications: Claude Sonnet 4.6, Claude Haiku 4.5, GPT-5 Mini, or ChatGPT 5.1 provide the best balance of performance and efficiency. Critical/Complex applications: Claude Opus 4.6, GPT 5.2, Gemini 3.1 Pro, or Gemini 2.5 Pro for highest accuracy and reasoning capability. Creative applications: GPT 5.2, GPT-5 Mini, ChatGPT 5.1, or Claude Sonnet 4.6 for creative tasks. Problem-solving tools: Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.2, Gemini 3.1 Pro, or Llama 4 Maverick. Document analysis: Claude Opus 4.6, Claude Sonnet 4.6, or Llama 4 Scout for multi-document or cross-lingual analysis. Technical/Coding tasks: Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.2, or Kimi K2.5 for tool usage. Educational explanation: Claude Sonnet 4.6, GPT-5 Mini, ChatGPT 5.1, Llama 3.3 70B Instruct, Llama 4 Maverick, or those with strong explanatory capabilities. High-volume applications: Balance quality with speed using Claude Sonnet 4.6, Claude Haiku 4.5, Gemini 3 Flash, or GPT-5 Mini. Budget-conscious applications: Claude Haiku 4.5, Qwen 3, DeepSeek R1, Mistral Large 3, or other open weight models for cost-effective solutions. Research/Experimentation: Open weight models like Llama 4 series, Qwen 3, Mistral Large 3, or GPT OSS 120B for flexibility.
+  Everyday applications: Claude Sonnet 4.6, Claude Haiku 4.5, GPT-5 Mini, or ChatGPT 5.1 provide the best balance of performance and efficiency. Critical/Complex applications: Claude Opus 4.6, GPT 5.4, or Gemini 3.1 Pro for highest accuracy and reasoning capability. Creative applications: GPT 5.4, GPT-5 Mini, ChatGPT 5.1, or Claude Sonnet 4.6 for creative tasks. Problem-solving tools: Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.4, Gemini 3.1 Pro, or Llama 4 Maverick. Document analysis: Claude Opus 4.6, Claude Sonnet 4.6, or Llama 4 Scout for multi-document or cross-lingual analysis. Technical/Coding tasks: Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.4, or Kimi K2.5 for tool usage. Educational explanation: Claude Sonnet 4.6, GPT-5 Mini, ChatGPT 5.1, Llama 3.3 70B Instruct, Llama 4 Maverick, or those with strong explanatory capabilities. High-volume applications: Balance quality with speed using Claude Sonnet 4.6, Claude Haiku 4.5, Gemini 3 Flash, or GPT-5 Mini. Budget-conscious applications: Claude Haiku 4.5, Qwen 3, DeepSeek R1, Mistral Large 3, or other open weight models for cost-effective solutions. Research/Experimentation: Open weight models like Llama 4 series, Qwen 3, Mistral Large 3, or GPT OSS 120B for flexibility.
 </Accordion>
 
 <Accordion title="Test out multiple models for apps that you are building:">
@@ -247,7 +233,7 @@ Selecting can be tricky. That's why we encourage you to play and experiment as y
 </Accordion>
 
 <Accordion title="Additional best practices:">
-  We recommend that you remix apps as you're experimenting to not impact the original app. You can review activity to see how multiple models handle similar tasks. If you're building a suite of apps we recommend you use faster models like Claude Haiku 4.5 for simple queries and reserve powerful models like Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.2, Gemini 3.1 Pro, or Gemini 2.5 Pro for complex tasks. Consider cost implications, as newer frontier models like Claude Opus 4.6, Claude Sonnet 4.6, ChatGPT 5.1, Gemini 3.1 Pro, and GPT 5.2 may be more expensive but offer better performance. For production apps requiring customization, evaluate open weight models like Qwen 3, Mistral Large 3, and Kimi K2.5 alongside frontier options. Keep track of which models work best for your specific use cases to build your own selection guidelines.
+  We recommend that you remix apps as you're experimenting to not impact the original app. You can review activity to see how multiple models handle similar tasks. If you're building a suite of apps we recommend you use faster models like Claude Haiku 4.5 for simple queries and reserve powerful models like Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.4, or Gemini 3.1 Pro for complex tasks. Consider cost implications, as newer frontier models like Claude Opus 4.6, Claude Sonnet 4.6, ChatGPT 5.1, Gemini 3.1 Pro, and GPT 5.4 may be more expensive but offer better performance. For production apps requiring customization, evaluate open weight models like Qwen 3, Mistral Large 3, and Kimi K2.5 alongside frontier options. Keep track of which models work best for your specific use cases to build your own selection guidelines.
 </Accordion>
 
 ## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> FAQ
@@ -276,8 +262,8 @@ Selecting can be tricky. That's why we encourage you to play and experiment as y
   ChatGPT 5.1 is ideal for applications requiring exceptional conversational fluency and natural dialogue. It excels at general-purpose tasks, explaining complex topics accessibly, and providing helpful, safe responses. Consider it for chatbots, customer service applications, educational tools, and any use case where natural conversation is a priority.
 </Accordion>
 
-<Accordion title="What's the difference between GPT 5.2, GPT-5 Mini, and ChatGPT 5.1?">
-  GPT 5.2 is OpenAI's most powerful model with breakthrough capabilities across all domains. GPT-5 Mini provides a balanced option with faster response times and better cost efficiency. ChatGPT 5.1 is specifically optimized for natural conversational dialogue and helpfulness. Choose based on whether you need maximum capability (GPT 5.2), balanced performance (GPT-5 Mini), or conversational excellence (ChatGPT 5.1).
+<Accordion title="What's the difference between GPT 5.4, GPT-5 Mini, and ChatGPT 5.1?">
+  GPT 5.4 is OpenAI's most powerful model with breakthrough capabilities across all domains. GPT-5 Mini provides a balanced option with faster response times and better cost efficiency. ChatGPT 5.1 is specifically optimized for natural conversational dialogue and helpfulness. Choose based on whether you need maximum capability (GPT 5.4), balanced performance (GPT-5 Mini), or conversational excellence (ChatGPT 5.1).
 </Accordion>
 
 <Accordion title="What's the difference between frontier, open weight, and open source models?">
