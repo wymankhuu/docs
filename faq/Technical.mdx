@@ -16,6 +16,10 @@ For optimal performance, users should have:
 
 Playlab can run on both desktop and laptop computers.
 
+## What browsers does Playlab support?
+
+Playlab supports the current and previous major versions of Chrome, Safari, Firefox, and Edge. For the best experience — especially when using voice input, voice output, or file uploads — we recommend staying on the latest release of your browser. Internet Explorer is not supported.
+
 ## Can Playlab be used on mobile devices?
 
 Playlab is primarily designed for desktop and laptop computers. While some features may work on tablets and mobile, the full functionality is best experienced on a computer with a keyboard and mouse.
@@ -24,17 +28,25 @@ Playlab is primarily designed for desktop and laptop computers. While some featu
 
 Currently there are no limits on how many apps a user can build in Playlab.
 
+## Does Playlab have rate limits?
+
+Playlab pools capacity across multiple providers so most users never encounter limits during normal use. During unusual bursts of traffic — for example, a whole class running a heavy prompt at once — some requests may be slowed or retried against a fallback provider. Organizations with sustained high-volume needs should contact support@playlab.ai to discuss enterprise capacity.
+
 ## What file formats can be uploaded to Playlab?
 
-Playlab supports common file formats including PDF, DOCX, TXT, JPG, PNG, and others. There may be file size limitations on the type of upload.
+Playlab supports common file formats including PDF, DOCX, TXT, JPG, PNG, and others. There may be file size limitations on the type of upload. See [Adding References](/getstarted/Adding%20References) for current format and size guidance.
 
 ## How can users share their AI apps?
 
-Users can share their AI apps with others via direct links or by publishing them to their organization's workspace.
+Users can share their AI apps with others via direct links or by [publishing](/getstarted/publishing) them to their organization's workspace.
+
+## Can I export my data or conversations from Playlab?
+
+Yes. Builders can export app activity and conversations, and end users can export their own conversations. See [Exporting Data](/features/Exporting%20Data), [Exporting to Docx](/features/Exporting%20to%20Docx), and [Exporting to Google Drive](/features/Exporting%20to%20Google%20Drive) for the available formats and flows.
 
 ## How can users embed their Playlab app into a website, Canvas, or other LMS?
 
-Embedding is only allowed by enterprise Playlab partners due to the increased usage and other considerations. Users can share their AI apps with others via direct links or by publishing them to their organization's workspace.
+Embedding is only available to enterprise Playlab partners due to the increased usage and integration considerations involved. For broader sharing, users can share apps via direct links or publish them to their organization's workspace. See the [Partnerships FAQ](/faq/Partnerships) for details on integration options.
 
 ## Can users access Playlab offline?
 
@@ -46,7 +58,7 @@ Playlab regularly updates its platform with new features and improvements. Major
 
 ## Is this a ChatGPT wrapper?
 
-No, Playlab is not just a ChatGPT wrapper. While it does support OpenAI models, it also supports models from Anthropic, Meta, Google, DeepSeek, and Moonshot, allowing users to build on multiple different AI foundations.
+No, Playlab is not just a ChatGPT wrapper. While it does support OpenAI models, it also supports models from Anthropic, Meta, Google, DeepSeek, Moonshot, Mistral, and Alibaba, allowing users to build on multiple different AI foundations.
 
 ## How can users control who has access to their AI apps?
 
@@ -54,18 +66,18 @@ Playlab provides permission settings that allow administrators to make their app
 
 ## Is Playlab Multimodal?
 
-Playlab currently allows users to create chatbots and tools. We support image inputs, voice input, and voice output. We continue to expand our multimodal capabilities as the technology evolves.
+Yes. Playlab apps support image inputs, [voice input](/features/Voice%20Input), and [voice output](/features/Voice%20Output). We continue to expand our multimodal capabilities as the technology evolves.
 
 ## What LLMs does Playlab currently support?
 
 Playlab supports over 20 AI models from multiple providers, including:
 
-### Frontier Models (Cutting-edge proprietary models)
+### Frontier Models
 - **Anthropic**: Claude Opus 4.6, Claude Sonnet 4.6, Claude Opus 4.5, Claude Sonnet 4.5, Claude Haiku 4.5, Claude 4 Sonnet (Reasoning)
 - **OpenAI**: GPT 5.4, ChatGPT 5.1, GPT-5 Mini
 - **Google**: Gemini 3.1 Pro, Gemini 3 Flash, Gemini 3 Pro
 
-### Open Weight Models (Publicly available model parameters)
+### Open Weight Models
 - **Meta**: Llama 3.3 70B Instruct, Llama 4 Maverick, Llama 4 Scout
 - **OpenAI**: GPT OSS 120B
 - **DeepSeek**: DeepSeek R1
@@ -75,13 +87,63 @@ Playlab supports over 20 AI models from multiple providers, including:
 
 New models are added regularly to provide users with access to the latest AI capabilities, with a focus on providing more open weight and eventually open source models for maximum flexibility and control.
 
+## What are the context limits on each model?
+
+Context limits vary by model and change over time as providers release new versions. Rather than duplicate that information here, we recommend checking the model provider's documentation (Anthropic, OpenAI, Google, etc.) for the current context window of any specific model. Playlab surfaces the full context window offered by the provider.
+
+## Does Playlab support reasoning / thinking models?
+
+Yes. Reasoning-capable models such as Claude 4 Sonnet (Reasoning) are available in the model picker and can be selected for apps that benefit from extended step-by-step thinking. See [Selecting an LLM](/features/Selecting%20an%20LLM) for guidance on choosing a model for your app.
+
+## Where are Playlab's AI models hosted and how are requests routed?
+
+Playlab does not train or host its own large language models. Instead, we integrate with third-party AI providers through enterprise cloud infrastructure that gives us stronger data controls, higher rate limits, and regional resilience than consumer API access would allow. Requests are routed through a managed gateway that applies automatic, transparent fallbacks if a primary provider is unavailable.
+
+```mermaid
+flowchart LR
+    U["User request"] --> GW["Model routing gateway"]
+    GW --> AN["Anthropic Claude"]
+    GW --> OA["OpenAI GPT / o-series"]
+    GW --> GG["Google Gemini"]
+    GW --> OW["Meta Llama, Mistral,<br/>Qwen 3, DeepSeek R1, Kimi K2.5"]
+    GW --> FW["GPT OSS 120B"]
+
+    AN -->|primary| BED["AWS Bedrock"]
+    AN -.->|fallback| ANT["Anthropic direct"]
+
+    OA -->|primary| OAI["OpenAI direct"]
+    OA -.->|fallback| AZ["Microsoft Azure<br/>OpenAI Service"]
+
+    GG --> GGL["Google direct"]
+    OW --> BED
+    FW --> FWD["Fireworks"]
+```
+
+**Served via AWS Bedrock:**
+- Anthropic Claude models (Claude 4.6 family, Claude 4.5 family, Claude Haiku 4.5)
+- Meta Llama (Llama 3.3 70B Instruct, Llama 4 Scout, Llama 4 Maverick)
+- Mistral Large 3
+- Qwen 3
+- DeepSeek R1
+- Kimi K2.5
+
+**Served via Microsoft Azure OpenAI Service** (fallback path for OpenAI models):
+- GPT 5.4, ChatGPT 5.1, GPT-5 Mini
+
+**Accessed directly from the provider:**
+- OpenAI GPT and o-series models (primary path; Azure is the fallback)
+- Google Gemini (all models)
+- Fireworks-hosted open-weight models (GPT OSS 120B)
+
+The general pattern is: **Anthropic → AWS Bedrock primary**, **OpenAI → OpenAI direct primary / Azure fallback**, with Google models going direct. Fallbacks are automatic and transparent to end users.
+
 ## Does Playlab support RAG?
 
-Yes, we allow builders to upload references that can be leveraged by their Playlab apps. Anything uploaded cannot be downloaded. We support files up to 30MB and allow websites to be referenced as well.
+Yes, we allow builders to upload references that can be leveraged by their Playlab apps. Anything uploaded cannot be downloaded. We support files up to 30MB and allow websites to be referenced as well. See [Adding References](/getstarted/Adding%20References) for details.
 
 ## What's the difference between the Playlab apps and a custom made GPT or Gemini Gem?
 
-Playlab apps offer more flexibility by supporting multiple AI models from different providers (OpenAI, Anthropic, Meta, Google, DeepSeek, and Moonshot). Unlike custom GPTs which are limited to OpenAI's ecosystem or Gemini Gems which are limited to Google's ecosystem, Playlab allows you to create educational tools using various models and provides additional education-specific features and safeguards.
+Playlab apps offer more flexibility by supporting multiple AI models from different providers (OpenAI, Anthropic, Meta, Google, DeepSeek, Moonshot, Mistral, and Alibaba). Unlike custom GPTs which are limited to OpenAI's ecosystem or Gemini Gems which are limited to Google's ecosystem, Playlab allows you to create educational tools using various models and provides additional education-specific features and safeguards.
 
 ## Canvas LTI Integration
 
