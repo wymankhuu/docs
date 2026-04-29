@@ -344,6 +344,28 @@ body[data-route*="/whatsnew/v2/"] main hr + p {
    below; whichever the live build emits will hit.
    -------------------------------------------------------------------------- */
 
+/* Highlight the LINK background (not the icon directly).
+   Padding/box-sizing on an <svg> can break icon rendering, so we mark the
+   link itself with highlighter yellow and let the icon ride on top. */
+
+aside a[aria-current="page"],
+nav a[aria-current="page"],
+[class*="sidebar"] a[aria-current="page"],
+aside a[data-active="true"],
+nav a[data-active="true"],
+[class*="sidebar"] [class*="active"]:not(svg),
+[class*="nav-link"][class*="active"]:not(svg),
+[class*="nav-item"][class*="active"]:not(svg),
+[class*="NavLink"][aria-current] {
+  background-color: var(--pl-highlighter) !important;
+  color: var(--pl-ink) !important;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 120ms ease;
+}
+
+/* Active icon: keep it visible. Just shift to ink color. No background,
+   padding, or transforms — those interfere with SVG sizing. */
 aside a[aria-current="page"] svg,
 nav a[aria-current="page"] svg,
 [class*="sidebar"] a[aria-current="page"] svg,
@@ -353,22 +375,10 @@ nav a[data-active="true"] svg,
 [class*="nav-link"][class*="active"] svg,
 [class*="nav-item"][class*="active"] svg,
 [class*="NavLink"][aria-current] svg {
-  background-color: var(--pl-highlighter);
-  color: var(--pl-ink);
-  border-radius: 3px;
-  padding: 2px;
-  box-sizing: content-box;
-  transform: scale(1.05);
-  transition: transform 120ms ease, background-color 120ms ease;
-}
-
-aside a[aria-current="page"],
-nav a[aria-current="page"],
-[class*="sidebar"] a[aria-current="page"],
-aside a[data-active="true"],
-nav a[data-active="true"] {
-  font-weight: 600;
   color: var(--pl-ink) !important;
+  opacity: 1 !important;
+  display: inline-block !important;
+  visibility: visible !important;
 }
 
 /* On hover for non-active sidebar items: subtle parchment background, ink icon */
