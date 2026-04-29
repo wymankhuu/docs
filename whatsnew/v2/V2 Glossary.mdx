@@ -17,6 +17,17 @@ If you read another V2 doc and hit a term you do not recognize, look it up here.
 
 The four places content lives in V2.
 
+```mermaid
+graph LR
+    Org["🏛️ Organization"] --> WS["📁 Workspace"]
+    Org --> Coll["📚 Collection"]
+    WS --> App["✏️ App"]
+    Coll -.references.-> App
+
+    classDef container fill:#fbf9f6,stroke:#0c0f14,stroke-width:2px,color:#0c0f14
+    class Org,WS,Coll,App container
+```
+
 **Organization (Org)**
 
 The top-level container. Usually a school, district, university, or partner. Holds workspaces, members, collections, and policies. Most people belong to a single organization. See [Navigating Playlab V2](https://learn.playlab.ai/getstarted/Navigating%20Playlab%20V2).
