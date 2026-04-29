@@ -63,7 +63,7 @@
 body:has(a[href$="/V2 for Builders"]),
 body:has(a[href$="/V2 for Educators"]),
 body:has(a[href$="/V2 for Admins"]),
-body:has(a[href$="/V2 for Changemakers"]),
+body:has(a[href$="/V2 for Networks or Districts"]),
 /* fallback: explicit class on a wrapper */
 .v2-page,
 /* fallback: data attribute set by mintlify per route */
