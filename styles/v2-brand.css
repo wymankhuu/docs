@@ -133,17 +133,19 @@ body[data-route*="/whatsnew/v2/"] main h3 {
   color: var(--pl-ink);
 }
 
-/* The italic lede paragraph that opens every V2 page.
-   This is the editorial moment. EB Garamond Italic carries the literary
-   register the brand reserves for statement headlines and pull quotes. */
-.v2-page > em:first-of-type,
-.v2-page p:first-of-type em:only-child,
-body[data-route*="/whatsnew/v2/"] main > p:first-of-type em,
-body[data-route*="/features/collections/"] main > p:first-of-type em,
-body[data-route*="/getstarted/Navigating"] main > p:first-of-type em {
+/* Mintlify renders the frontmatter description as a subheader below the
+   page title. Style it as the editorial moment (EB Garamond Italic),
+   so the description carries the literary register the brand reserves
+   for statement headlines. The italic markdown lede is no longer used —
+   description-in-frontmatter handles that role. */
+.v2-page [class*="subtitle"],
+.v2-page [class*="description"],
+body[data-route*="/whatsnew/v2/"] main [class*="subtitle"],
+body[data-route*="/features/collections/"] main [class*="subtitle"],
+body[data-route*="/getstarted/Navigating"] main [class*="subtitle"] {
   font-family: var(--pl-font-serif);
   font-style: italic;
-  font-size: 1.25em;
+  font-size: 1.15em;
   font-weight: 400;
   color: var(--pl-ink);
   letter-spacing: 0;
