@@ -88,7 +88,11 @@ body[data-route*="/changelog/Playlab Q2 2026 V2 Launch"] {
      -------------------------------------------------------------------------- */
   --background: var(--pl-paper);
   --foreground: var(--pl-ink);
-  --primary: var(--pl-chalk-blue);
+  /* Do NOT override --primary here. Mintlify uses --primary as the
+     background-color for masked icons (bg-primary class). Setting it to
+     chalk-blue made every Card icon and active sidebar icon render as
+     pale blue on white — invisible in light mode. Mintlify already maps
+     --primary from docs.json colors.primary (#0c0f14, ink). Leave it. */
 
   background-color: var(--pl-paper);
   color: var(--pl-ink);
