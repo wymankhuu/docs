@@ -369,9 +369,26 @@ a[class*="bg-primary/10"] {
   transition: background-color 120ms ease;
 }
 
-/* Active sidebar icon: keep the same size Mintlify gave it (size-4 = 1rem),
-   override the mask background-color so the icon visibly contrasts against
-   our chalk-blue tinted active background. */
+/* Mintlify renders sidebar icons as empty <svg> elements with the icon
+   shape applied via mask-image. The visible color is the SVG's
+   background-color. Default inactive: bg-gray-400 (#9ca3af) — too light
+   against paper. Override across the board. */
+
+svg[class*="bg-gray-400"][style*="mask-image"],
+svg[class*="bg-gray-500"][style*="mask-image"],
+svg[class*="bg-gray-400"]:not([style*="mask-image"]),
+svg[class*="size-4"][class*="bg-gray"] {
+  background-color: rgba(12, 15, 20, 0.7) !important; /* ink at 70% */
+}
+
+/* Hover bumps it to full ink */
+a:hover svg[class*="size-"][class*="bg-gray"],
+a:hover svg[class*="bg-gray"][style*="mask-image"] {
+  background-color: var(--pl-ink) !important;
+}
+
+/* Active sidebar icon: full ink, full size (Mintlify size-4 stays),
+   visibly contrasts against the chalk-blue tinted active background. */
 a[class*="bg-primary/10"] svg[class*="size-"] {
   background-color: var(--pl-ink) !important;
   opacity: 1 !important;
