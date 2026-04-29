@@ -346,80 +346,53 @@ body[data-route*="/whatsnew/v2/"] main hr + p {
    below; whichever the live build emits will hit.
    -------------------------------------------------------------------------- */
 
-/* Active sidebar item:
-   - Strong chalk-blue tinted background (different from hover) + left rule
-   - Icon explicitly kept visible (opacity, visibility, display overrides)
-   - Ink text + ink icon
-   - Bold weight
-   Hover state is a subtle parchment, visually distinct from active. */
+/* Mintlify sidebar active state.
+   The active sidebar link does NOT use aria-current or data-active. It is
+   identified by the Tailwind utility classes `bg-primary/10` and
+   `text-primary` (verified against the live DOM at playlabai-v2-preview).
 
-aside a[aria-current="page"],
-nav a[aria-current="page"],
-[class*="sidebar"] a[aria-current="page"],
-aside a[data-active="true"],
-nav a[data-active="true"],
-[class*="sidebar"] [class*="active"]:not(svg),
-[class*="nav-link"][class*="active"]:not(svg),
-[class*="nav-item"][class*="active"]:not(svg),
-[class*="NavLink"][aria-current] {
+   Mintlify renders sidebar icons as empty <svg> elements whose visible
+   color comes from `background-color` (the SVG itself is masked by an
+   external Lucide URL via mask-image). So to color the icon we override
+   `background-color` on the SVG, NOT `color`/`fill`/`stroke`.
+
+   Critical: never set `width: auto` on these SVGs. Mintlify gives them
+   `size-4` (= 1rem). Forcing auto collapses the icon to zero width and
+   it disappears. */
+
+a[class*="bg-primary/10"] {
   background-color: rgba(164, 190, 235, 0.32) !important; /* chalk-blue tint */
   color: var(--pl-ink) !important;
   font-weight: 600 !important;
-  /* inset box-shadow instead of border-left so the icon does not get
-     pushed to the right and clipped by overflow:hidden on the link */
   box-shadow: inset 3px 0 0 0 var(--pl-chalk-blue) !important;
   border-radius: 4px !important;
   transition: background-color 120ms ease;
 }
 
-/* Active icon: force visible across every Mintlify icon-rendering pattern
-   (svg, img, span with icon class, ::before pseudo, font-icon char). */
-aside a[aria-current="page"] svg,
-aside a[aria-current="page"] [class*="icon"],
-aside a[aria-current="page"] img,
-aside a[aria-current="page"] [class*="Icon"],
-nav a[aria-current="page"] svg,
-nav a[aria-current="page"] [class*="icon"],
-nav a[aria-current="page"] img,
-nav a[aria-current="page"] [class*="Icon"],
-[class*="sidebar"] a[aria-current="page"] svg,
-[class*="sidebar"] a[aria-current="page"] [class*="icon"],
-[class*="sidebar"] a[aria-current="page"] img,
-[class*="sidebar"] a[aria-current="page"] [class*="Icon"],
-aside a[data-active="true"] svg,
-nav a[data-active="true"] svg,
-[class*="sidebar"] [class*="active"] svg,
-[class*="sidebar"] [class*="active"] [class*="icon"],
-[class*="sidebar"] [class*="active"] [class*="Icon"],
-[class*="nav-link"][class*="active"] svg,
-[class*="nav-item"][class*="active"] svg,
-[class*="NavLink"][aria-current] svg {
-  color: var(--pl-ink) !important;
-  fill: currentColor !important;
-  stroke: currentColor !important;
+/* Active sidebar icon: keep the same size Mintlify gave it (size-4 = 1rem),
+   override the mask background-color so the icon visibly contrasts against
+   our chalk-blue tinted active background. */
+a[class*="bg-primary/10"] svg[class*="size-"] {
+  background-color: var(--pl-ink) !important;
   opacity: 1 !important;
-  display: inline-flex !important;
   visibility: visible !important;
-  width: auto !important;
-  height: auto !important;
-  min-width: 1em !important;
-  min-height: 1em !important;
+  /* width and height intentionally NOT set — Mintlify's size-4 must win */
 }
 
-/* Hover state — distinctly different from active.
-   Active = chalk-blue tint + left rule.
-   Hover = parchment, no border. */
-aside a:not([aria-current="page"]):hover,
-nav a:not([aria-current="page"]):hover,
-[class*="sidebar"] a:not([aria-current="page"]):hover {
-  background-color: var(--pl-parchment);
+/* Hover (sidebar) — distinctly different from active.
+   Mintlify already supplies hover:bg-gray-600/5 on inactive links. We
+   reinforce with parchment so it's clearly visible on V2 routes. */
+aside a:not([class*="bg-primary/10"]):hover,
+nav a:not([class*="bg-primary/10"]):hover,
+[class*="sidebar"] a:not([class*="bg-primary/10"]):hover {
+  background-color: var(--pl-parchment) !important;
   border-radius: 4px;
 }
 
+/* Inactive icon hover: keep its gray fill, just bump opacity so nothing fades. */
 aside a:hover svg,
 nav a:hover svg,
 [class*="sidebar"] a:hover svg {
-  color: var(--pl-ink);
   opacity: 1 !important;
   visibility: visible !important;
 }
