@@ -1,0 +1,147 @@
+---
+title: "Migrating from V1 to V2"
+description: "What changes during the migration from Playlab V1 to V2, what stays the same, and what to do before, during, and after."
+sidebarTitle: "Migrating to V2"
+icon: "arrow-right-arrow-left"
+---
+
+*What to expect when your Playlab organization migrates from V1 to V2.*
+
+Most Playlab orgs migrate to V2 with their Learning Partner during a scheduled migration window. This page is the self-serve overview. It covers what changes, what stays the same, what to do before and after, and where to get help.
+
+<Note>
+  Partner orgs follow a coordinated migration with their Learning Partner. The walkthrough on this page is for self-serve users on smaller orgs.
+</Note>
+
+## What's actually changing
+
+V2 reorganizes how content and permissions work. The mental model and the workflow comparisons are documented in:
+
+- [Navigating Playlab V2](https://learn.playlab.ai/getstarted/Navigating%20Playlab%20V2)
+- [V1 → V2 cheat sheet](https://learn.playlab.ai/whatsnew/v2/V1%20to%20V2%20Cheat%20Sheet)
+
+The short version: org > workspace > app > collection becomes the explicit hierarchy. Sharing happens through a Share modal on each app. Activity is visible at workspace, member, and org levels. Collections enable curated bundles for partner deployment.
+
+## What stays the same
+
+Migration preserves what was already working. Your apps, workspace members, conversation history, references, and integrations all carry forward.
+
+| Thing | What happens during migration |
+| --- | --- |
+| Your apps | Move to V2 with the same prompts, references, and starter inputs |
+| App owners | Preserved |
+| Workspaces | Move to V2 with the same names, members, and apps |
+| Workspace members | Preserved with mapped roles |
+| Conversation history | Preserved and queryable |
+| References (org, workspace, app level) | Preserved |
+| Integrations (SSO, rostering) | Preserved |
+| Activity history | Preserved |
+| URLs and saved links | Old URLs continue to redirect to V2 paths |
+
+You do not lose work in migration. The structure of how content lives changes; the content itself does not.
+
+## Where things moved
+
+A short reference for the most-asked relocations.
+
+| In V1 you went to... | In V2 you go to... |
+| --- | --- |
+| Workspace > Members > Add Member | Workspace > Members > **Add Members** or **Create Invite Link** |
+| Workspace > Apps > New App | Org or Workspace > **New App** |
+| App > Publish > Pick visibility | App > **Share** > Publish toggle and visibility selector |
+| Workspace > Activity | Workspace > Activity (workspace-segmented) or Org > Activity (cross-workspace) |
+| Remix to deploy | App > **Share** > target org or **Add to Workspace** in another workspace |
+| Curated bundles by remixing | Org > **Collections** > New Collection |
+
+For the full mapping, see the [V1 → V2 cheat sheet](https://learn.playlab.ai/whatsnew/v2/V1%20to%20V2%20Cheat%20Sheet).
+
+## Migration walkthrough video
+
+{/* VID-06: Self-serve migration walkthrough */}
+<Frame caption="Self-serve migration walkthrough. Coordinated with the partner playbook for consistency.">
+  <iframe
+    src="https://www.loom.com/embed/TODO-VID-06"
+    frameborder="0"
+    webkitallowfullscreen=""
+    mozallowfullscreen=""
+    allowfullscreen=""
+    style={{ width: "100%", height: "400px" }}
+  ></iframe>
+</Frame>
+
+## What to do before migration
+
+A short checklist:
+
+- [ ] Note your active workspaces and the apps you care about
+- [ ] If you have apps with shared collaborators, note who has edit access in V1
+- [ ] If your org uses rostering, talk to your IT contact about sync timing
+- [ ] Schedule a 30-minute review session for the day after migration
+- [ ] Bookmark the [V1 → V2 cheat sheet](https://learn.playlab.ai/whatsnew/v2/V1%20to%20V2%20Cheat%20Sheet) for reference
+
+If you have V1-specific URLs deeply embedded in class materials, those URLs continue to work. The redirects route them to the V2 equivalents.
+
+## What happens during migration
+
+Migration runs as a background process. The visible effects in your org:
+
+- A short window (usually under an hour) where the org is read-only
+- An announcement banner letting users know migration is in progress
+- A welcome banner once migration completes, pointing to V2 introduction materials
+
+Members do not need to log out and back in. The next page load after migration shows the V2 interface.
+
+## What to do after migration
+
+A short checklist:
+
+- [ ] Open your dashboard and verify your workspaces and apps are present
+- [ ] Try sharing an app from the new Share modal to confirm the flow
+- [ ] Set workspace building permissions for any classes you run (these are off by default)
+- [ ] Review members in your workspaces and adjust roles if needed
+- [ ] Read [V2 for Builders](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Builders), [V2 for Educators](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Educators), or [V2 for Admins](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Admins) depending on your role
+
+If anything looks wrong, email [support@playlab.ai](mailto:support@playlab.ai). We can roll back individual issues.
+
+## Help
+
+For org admins on partner accounts, your Learning Partner is the first point of contact. They have a coordinated migration playbook and can walk you through the changes.
+
+For self-serve users, [support@playlab.ai](mailto:support@playlab.ai) is the right starting point.
+
+For role-specific overviews:
+
+- [V2 for Builders](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Builders)
+- [V2 for Educators](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Educators)
+- [V2 for Admins](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Admins)
+- [V2 for Changemakers](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Changemakers)
+
+For honest context on what V2 does not yet do, see [Known limitations](https://learn.playlab.ai/whatsnew/v2/Known%20Limitations).
+
+## FAQ
+
+**Can I roll back to V1 if something goes wrong?**
+
+Per-issue rollback is supported. We can revert specific apps, workspaces, or settings. Org-level rollback after migration is not supported.
+
+**Will my links break?**
+
+V1 URLs continue to redirect to V2 paths. Bookmarks, saved links, and references in class materials should continue to work.
+
+**Will my org admins change?**
+
+Roles map automatically. V1 Org Admins become V2 Admins. V1 Workspace Owners become V2 Managers in their workspaces.
+
+**What if a student is in a class that hasn't migrated yet?**
+
+Each org migrates as a unit. If your org has migrated, all your workspaces are on V2. Cross-org sharing with a non-migrated org is supported during the transition window.
+
+**How long does migration take?**
+
+For most orgs, under an hour. Larger orgs with many workspaces and references may take longer. Your migration meeting is when this is scheduled.
+
+---
+
+Last updated: 2026-05-05
+
+Contact us at [support@playlab.ai](mailto:support@playlab.ai)

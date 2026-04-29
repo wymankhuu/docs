@@ -1,140 +1,118 @@
 ---
-title: 'Reviewing Activity in Playlab'
-description: 'Learn how to monitor usage and analyze app engagement in your workspace'
+title: "Reviewing student activity per class"
+description: "How to monitor usage and analyze app engagement in a Playlab V2 workspace."
+sidebarTitle: "Reviewing Activity"
+icon: "chart-line"
 ---
-The **Activity** view allows workspace administrators and creators to monitor usage and engagement with their Playlab apps. This guide will walk you through the process of reviewing and analyzing activity data to gain insights into how your apps are being used.
+
+*How to monitor usage and engagement at the workspace level in V2.*
+
+The Activity view lets workspace managers and org admins see how members are using the apps in a workspace. V2 keeps the V1 filtering and adds two things: per-class segmentation when an app is used in multiple workspaces, and a member detail page reachable from any activity row.
 
 <Warning>
-  **Access Requirements**
-  
-  To review activity in Playlab, you must have appropriate permissions. Only admins and creators in the workspace can review activity.
+  **Access requirements**
+
+  Activity views are visible to workspace managers and org admins. Members see their own activity from their dashboard.
 </Warning>
 
-## <Icon icon="video" size="24" className="inline-block align-text-bottom" /> Watch How to Review Activity in Playlab
+## What activity shows
 
-Watch a short clip of how to review activity in Playlab.
+The Activity view inside a workspace lists every app session that took place there. For each session, you see:
 
-<Frame>
-  <img src="../images/workspaceactivity.gif" alt="Workspace Activity Review" width="800" className="bordered-image" />
-  <figcaption>Reviewing Workspace Activity</figcaption>
+- The app used
+- The member who used it
+- Start time and duration
+- Message count
+- Any flags raised during the session
+
+You can click into any session to read the full transcript. Conversations are preserved in V2 the same way they were in V1.
+
+## Filtering by app, user, date
+
+The filter controls at the top of the view let you narrow by:
+
+**App.** Show sessions for one specific app, or for a subset.
+
+**Member.** Show sessions from one member.
+
+**Date range.** Last 7 days, last 30 days, custom range.
+
+**Flag status.** Show only flagged sessions.
+
+Filters combine. Showing a single member's flagged sessions on one app is one path through the same view.
+
+## Activity per class in V2
+
+V2 segments activity by workspace. When the same app is used in three different classes (workspaces), each class sees only its own sessions. As an admin spanning multiple workspaces, you can switch the workspace selector to see each class separately, or use the org-level view for an aggregated picture.
+
+This is the change that supports cross-workspace app use: a teacher running three sections of the same class adds one app to three workspaces and sees three segmented activity views.
+
+{/* IMG-17: Activity view with workspace filter */}
+<Frame caption="Activity is filtered by workspace. The same app shows different activity in each class.">
+  <img src="/images/v2_activity_workspace_filter.png" alt="A V2 activity view filtered to a specific workspace, showing conversations from one class." />
 </Frame>
 
-You can also review activity in an individual app:
+For more on this pattern, see [Using an app across multiple classes](https://learn.playlab.ai/features/Cross-Workspace%20App%20Use).
 
-<Frame>
-  <img src="../images/individualactivity.gif" alt="Individual App Activity Review" width="800" className="bordered-image" />
-  <figcaption>Reviewing Individual App Activity</figcaption>
+## Drilling into a member
+
+V2 adds a member detail page reachable from the Members tab or by clicking a member's name in any activity row. The detail page collects everything that member did inside the workspace: apps used, conversations, flags, and apps built.
+
+For the full guide, see [Workspace member detail](https://learn.playlab.ai/features/Workspace%20Member%20Detail).
+
+{/* IMG-12: Member detail page */}
+<Frame caption="From any activity row, click the member's name to open their detail page.">
+  <img src="/images/v2_member_detail_page.png" alt="A V2 member detail page with sections for apps used, conversations, flagged messages, and apps built." />
 </Frame>
+
+{/* VID-05: Insights & monitoring in V2 */}
+<Frame caption="Walkthrough: workspace activity to member detail to org-level flags.">
+  <iframe
+    src="https://www.loom.com/embed/TODO-VID-05"
+    frameborder="0"
+    webkitallowfullscreen=""
+    mozallowfullscreen=""
+    allowfullscreen=""
+    style={{ width: "100%", height: "400px" }}
+  ></iframe>
+</Frame>
+
+## Best practices
+
+A few things teachers have asked about and that have worked:
+
+Set a weekly review cadence. Open the Activity view every Friday and scan for sessions that stalled or members who have not engaged. Five minutes catches most issues.
+
+Use date filtering to avoid being overwhelmed. The all-time view is rarely useful for monitoring. Last 7 days or last 14 days is the right window.
+
+Pay attention to flags first. Filter by flag status when you open the view. Anything flagged is worth a quick read.
+
+Open conversations that look unusual. A very long session for a brief assignment, or a very short session for a complex assignment, are signals worth investigating.
+
+## FAQ
+
+**Can I export activity data?**
+
+Yes. The Export button on the Activity view downloads filtered data as CSV. Org admins can export from the org-level dashboard.
+
+**Cross-class views?**
+
+For viewing the same app across multiple classes you teach, switch the workspace selector or use the org-level view if you have admin access.
+
+**What is the difference between this and org-level monitoring?**
+
+Workspace activity is scoped to one class. Org-level monitoring (admins only) sees activity across every workspace in the org and surfaces flags from across the network. See [Centralized org monitoring](https://learn.playlab.ai/features/Reviewing%20App%20Activity).
+
+**How long is activity history retained?**
+
+For the lifetime of the workspace. Archived workspaces retain history. Deleted workspaces' activity remains visible to org admins for compliance and review.
+
+**Can students see other members' activity?**
+
+No. Members see their own conversations and their own apps. Cross-member visibility is a manager and admin role.
 
 ---
 
-## <Icon icon="arrow-right" size="24" className="inline-block align-text-bottom" /> Follow these steps to review activity:
+Last updated: 2026-05-05
 
-<Steps>
-  <Step title="Access the Activity Tab">
-    **Navigate to the Activity section of your workspace.**
-    
-    1. Go to your Playlab workspace
-    2. Click on the **"Activity"** tab in the top navigation menu
-    3. The activity dashboard will display recent app usage
-    4. You'll see a list of apps with recent activity, along with dates and message counts
-  </Step>
-
-  <Step title="Apply Filters to Focus Your Analysis">
-    **Use the dropdown filters to narrow down your view.**
-    
-    1. Filter by app name using the **"Apps"** dropdown
-    2. Filter by specific users with the **"Users"** dropdown
-    3. Set a custom date range using the date picker
-    4. Toggle **"Show Community Activity"** to include or exclude public community usage
-    5. The activity list will update automatically as you apply filters
-  </Step>
-
-  <Step title="Analyze the Activity Data">
-    **Understand what the activity data is telling you.**
-    
-    1. Review app names to see which apps are being used
-    2. Check user names to see who is engaging with your apps
-    3. Note the dates to understand usage patterns over time
-    4. Look at the message counts (indicated by the message icon) to gauge conversation depth
-    5. Use pagination at the bottom of the screen to view more activity records
-    6. Click on specific activity entries to view more details (if available)
-  </Step>
-</Steps>
-
-## <Icon icon="lightbulb-on" size="24" className="inline-block align-text-bottom" /> Activity Analysis Best Practices
-
-Consider these recommendations when analyzing activity in Playlab:
-
-- **Look for patterns in app usage** over time to identify trends
-- **Compare activity before and after updates** to measure impact of changes
-- **Identify your most active users** to gather focused feedback
-- **Note which apps have little to no activity** and consider ways to improve them
-- **Use date filters to analyze seasonal or time-based patterns** in usage
-- **Monitor community activity** to understand how public users engage with your apps
-- **Review message counts** to determine which apps generate deeper conversations
-
-## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> Frequently Asked Questions
-
-<Accordion title="Who can see activity data in a workspace?">
-  Activity data visibility depends on workspace permissions. Generally, workspace administrators can see all activity, while regular members may have limited visibility depending on their assigned permissions.
-  
-  If you need access to activity data but don't currently have it, contact your workspace administrator to request appropriate permissions.
-</Accordion>
-
-<Accordion title="What does the message count represent?">
-  The message count (shown with a message icon) represents the total number of interactions between users and the app during a conversation session. Higher message counts typically indicate deeper engagement and more back-and-forth conversation with the app.
-  
-  This metric can help you understand which apps are generating more extensive interactions versus those that might be used for quick, single-query purposes.
-</Accordion>
-
-<Accordion title="Can I export activity data for further analysis?">
-  Currently, Playlab doesn't offer a direct export feature for activity data. However, for detailed analytics needs, you can:
-  
-  - Save or export existing conversations
-  - Enterprise organizations can export all data
-  - Contact Playlab support to inquire about custom reporting options
-  
-  Playlab is continuously improving analytics capabilities, so export features may be added in future updates.
-</Accordion>
-
-<Accordion title="How far back does the activity history go?">
-  Playlab retains activity data for the duration of the app's lifespan.
-</Accordion>
-
-<Accordion title="Why can't I see certain users' activity?">
-  There are several possible reasons why you might not see activity from certain users:
-  
-  - The user may not have the necessary permissions to appear in activity logs
-  - Your permission level might restrict which users' activity you can view
-  - The user may not have used any apps during the selected time period
-  - Filtering settings might be excluding that user's activity
-  
-  Adjust your filters and date range to ensure you're not inadvertently excluding relevant activity data.
-</Accordion>
-
-<Accordion title="What's the difference between workspace and community activity?">
-  Workspace activity shows only the usage of apps by members of your workspace, which may include private apps and conversations.
-  
-  Community activity includes usage of your public apps by anyone in the broader Playlab community who has accessed them. The "Show Community Activity" toggle lets you include or exclude this public usage from your activity view.
-</Accordion>
-
-<Accordion title="Why do some conversations show up as anonymous?">
-  If your app is used by somebody who is not in your Playlab workspace, their conversation will show up as anonymous.
-  
-  If you want to log their user name, you have to add that user to your Playlab workspace.
-</Accordion>
-
-## <Icon icon="link" size="24" className="inline-block align-text-bottom" /> Related
-
-<Card title="Individual App Activity Review" icon="magnifying-glass" href="/features/Reviewing App Activity">
-  Want to dive deeper into a specific app's performance? Check out the Individual App Activity Review feature for conversation-level insights and AI-powered analysis.
-</Card>
-
-## <Icon icon="bullhorn" size="24" className="inline-block align-text-bottom" /> Need Support?
-
-If you need assistance with reviewing activity in Playlab:
-
-* Contact us at [support@playlab.ai](mailto:support@playlab.ai)
-
-Last updated: March 15, 2026
+Contact us at [support@playlab.ai](mailto:support@playlab.ai)

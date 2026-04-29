@@ -8,6 +8,11 @@
     "href": "https://www.playlab.ai"
   },
   "favicon": "/favicon.svg",
+  "css": ["/styles/v2-brand.css"],
+  "banner": {
+    "content": "🚧 V2 Preview · This is a draft of the new Playlab Learning Hub. The live site is at [learn.playlab.ai](https://learn.playlab.ai).",
+    "dismissible": false
+  },
   "colors": {
     "primary": "#4F46E5",
     "light": "#818CF8",
@@ -25,6 +30,78 @@
   },
   "navigation": {
     "tabs": [
+      {
+        "tab": "🆕 V2 Preview",
+        "color": "#a4beeb",
+        "groups": [
+          {
+            "group": "Start Here",
+            "pages": [
+              "introduction",
+              "getstarted/Navigating Playlab V2",
+              "getstarted/Getting Started",
+              "whatsnew/v2/V1 to V2 Cheat Sheet",
+              "whatsnew/v2/V2 Glossary"
+            ]
+          },
+          {
+            "group": "By Persona",
+            "pages": [
+              "whatsnew/v2/V2 for Builders",
+              "whatsnew/v2/V2 for Educators",
+              "whatsnew/v2/V2 for Admins",
+              "whatsnew/v2/V2 for Changemakers"
+            ]
+          },
+          {
+            "group": "Building & Sharing",
+            "pages": [
+              "getstarted/Creating a Playlab App",
+              "getstarted/Collaborating on an App",
+              "features/Publishing",
+              "features/Sharing with Individuals",
+              "features/Sharing with Groups and Orgs",
+              "features/App Privacy and Visibility"
+            ]
+          },
+          {
+            "group": "Workspaces",
+            "pages": [
+              "getstarted/Creating Your Own Workspace",
+              "getstarted/Adding Members to your Workspace",
+              "getstarted/Workspace Building Permissions",
+              "features/Cross-Workspace App Use"
+            ]
+          },
+          {
+            "group": "Insights",
+            "pages": [
+              "getstarted/Reviewing Activity",
+              "features/Workspace Member Detail",
+              "features/Reviewing App Activity",
+              "features/App-Level Insights"
+            ]
+          },
+          {
+            "group": "Collections",
+            "pages": [
+              "features/collections/What are Collections",
+              "features/collections/Creating and Sharing a Collection"
+            ]
+          },
+          {
+            "group": "Admin & Migration",
+            "pages": [
+              "getstarted/Signing Up",
+              "getstarted/Adding Students to Playlab",
+              "features/Org Permissions and Roles",
+              "whatsnew/v2/Migrating from V1 to V2",
+              "whatsnew/v2/Known Limitations",
+              "changelog/Playlab Q2 2026 V2 Launch"
+            ]
+          }
+        ]
+      },
       {
         "tab": "🎓 Learn Live with Us",
         "color": "#10B981",

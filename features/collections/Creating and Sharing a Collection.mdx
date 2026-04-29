@@ -1,0 +1,132 @@
+---
+title: "Creating and sharing a Collection"
+description: "How to build a Collection of apps and share it with individuals, groups, or organizations."
+sidebarTitle: "Creating a Collection"
+icon: "plus"
+---
+
+*How to build a Collection and share it.*
+
+This page covers the create and share flow. For the concept, see [What are Collections](https://learn.playlab.ai/features/collections/What%20are%20Collections).
+
+## How to create a Collection
+
+<Steps>
+  <Step title="Go to your organization">
+    Open the org dashboard. Collections are an org-level container.
+  </Step>
+  <Step title="Open the Collections tab">
+    The tab lists existing Collections in your org and shows a button to create a new one.
+  </Step>
+  <Step title="Click New Collection">
+    The Create Collection form opens.
+  </Step>
+  <Step title="Name and describe">
+    Pick a clear name. The description is for recipients to understand what the Collection contains.
+  </Step>
+  <Step title="Add apps">
+    Click **Add Apps**. Search for apps you have access to and pick the ones to include. You can change the contents anytime.
+  </Step>
+  <Step title="Save">
+    The Collection is created. You land on its overview page where you can manage apps and share.
+  </Step>
+</Steps>
+
+{/* IMG-14: Create Collection form */}
+<Frame caption="The Create Collection form. Name, description, and the Add Apps affordance.">
+  <img src="/images/v2_collection_create.png" alt="The V2 Create Collection form showing fields for name and description and an Add Apps button." />
+</Frame>
+
+## How to share a Collection
+
+<Steps>
+  <Step title="Open the Collection">
+    Go to the Collection's overview page.
+  </Step>
+  <Step title="Click Share">
+    The **Share** button is in the top right.
+  </Step>
+  <Step title="Type the recipient">
+    Add an individual, a group inside your org, or another organization. The recipient picker is the same as for app sharing.
+  </Step>
+  <Step title="Set permissions">
+    Pick the permission level. For most cases, **Viewer** is the right level.
+  </Step>
+  <Step title="Send">
+    The Collection appears in the recipient's view. They can add it to workspaces or use the apps directly.
+  </Step>
+</Steps>
+
+{/* IMG-15: Share Collection modal */}
+<Frame caption="Sharing a Collection works the same as sharing an app: type the recipient, set permissions, send.">
+  <img src="/images/v2_collection_share.png" alt="The V2 Share Collection modal with a recipient field, permission selector, and Send button." />
+</Frame>
+
+{/* VID-04: Collections walkthrough */}
+<Frame caption="Walkthrough: create a Collection, add apps, share it with a partner organization.">
+  <iframe
+    src="https://www.loom.com/embed/TODO-VID-04"
+    frameborder="0"
+    webkitallowfullscreen=""
+    mozallowfullscreen=""
+    allowfullscreen=""
+    style={{ width: "100%", height: "400px" }}
+  ></iframe>
+</Frame>
+
+## Updating a Collection
+
+To add or remove apps from an existing Collection:
+
+1. Open the Collection
+2. Click **Manage Apps**
+3. Add new apps or remove existing ones
+4. Save
+
+Recipients see the updated set on their next visit. They do not need to re-add the Collection. Apps you remove disappear from recipient views. Apps you add appear automatically.
+
+When the owner of an app inside the Collection publishes a new version, recipients see the new version too. Updates flow through the Collection.
+
+## Permission levels for Collections
+
+**Viewer** (most common)
+
+Recipients can use the apps in the Collection. They cannot edit the Collection itself or the apps inside.
+
+**Editor** (rare)
+
+Recipients can add or remove apps from the Collection. Useful for co-curation between orgs. Requires that the editor has access to the apps they want to add.
+
+For most partner deployments, Viewer is the right level. Editor is for collaborative curation between trusted partners.
+
+## FAQ
+
+**Can recipients add their own apps to my Collection?**
+
+Only if you grant them Editor permission. Default Viewer permission lets them use the apps but not modify the Collection.
+
+**Do permissions cascade to apps inside?**
+
+Yes. Sharing a Collection at Viewer level grants the recipient Viewer access to each app in the Collection. If you remove the Collection share, app access is removed too.
+
+**How do I unshare a Collection?**
+
+Open the Collection, click Share, find the recipient, and remove. Their access drops on their next visit. Activity history is preserved on your side.
+
+**What if an app inside a Collection is unpublished by its owner?**
+
+Recipients see a "no longer available" state for that app. The Collection stays. The app is no longer usable until it is published again.
+
+**Can I make a Collection public?**
+
+Public Collection sharing is supported. Set the visibility to Public and anyone on Playlab can find and use it.
+
+**Can a Collection contain another Collection?**
+
+Not in this release. A Collection holds apps. For nested groupings, use multiple Collections.
+
+---
+
+Last updated: 2026-05-05
+
+Contact us at [support@playlab.ai](mailto:support@playlab.ai)

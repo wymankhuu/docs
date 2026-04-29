@@ -1,0 +1,96 @@
+---
+title: "Collaborating on an app"
+description: "How to add Editors to a Playlab app in V2 using the Share modal."
+sidebarTitle: "Collaborating on an App"
+icon: "users"
+---
+
+*How peer collaboration works on a single app in V2.*
+
+V2 separates app collaboration from workspace membership. To let a peer help build an app, you add them as an **Editor** on that app. Editor access is per-app, so the peer gets to edit the one app you shared and nothing else.
+
+## What changed from V1
+
+In V1, collaboration on an app worked through workspace membership. To give a peer edit access to your app, you added them to the workspace as a **Creator**. That granted edit access to your app along with every other app in the workspace.
+
+V2 keeps the workspace concept and moves collaboration onto each app. The Share modal on any app lets you add specific people with specific permissions. Workspace membership is still useful for activity grouping, but it is no longer how you grant edit access.
+
+## How to add an Editor
+
+<Steps>
+  <Step title="Open the app">
+    Go to the app you want to collaborate on. The app builder or the app overview page both work.
+  </Step>
+  <Step title="Click Share">
+    The **Share** button is in the top right of the app view.
+  </Step>
+  <Step title="Add the peer's email or name">
+    Type their email address or, if they are in your organization, start typing their name. The matching members appear as you type.
+  </Step>
+  <Step title="Set the permission to Editor">
+    Pick **Editor** from the permission dropdown. This is the only permission level that grants editing rights.
+  </Step>
+  <Step title="Send">
+    Click **Send**. The peer gets a notification and can open the app from their dashboard.
+  </Step>
+</Steps>
+
+{/* IMG-03: Share modal with Editor selected */}
+<Frame caption="The Share modal with a peer added as an Editor. The permission dropdown is the key step.">
+  <img src="/images/v2_share_modal_individual.png" alt="The V2 Share modal with an email entered, Editor permission selected, and a Send button visible." />
+</Frame>
+
+## Editor permissions
+
+An Editor on your app can do the following:
+
+- Edit the app's instructions and prompt
+- Add, remove, and reorder references
+- Change starter inputs and welcome message
+- Adjust model selection and conversation settings
+- Test the app and view its activity
+
+An Editor cannot:
+
+- Reassign ownership
+- Delete the app
+- Change who else has access
+- Publish the app
+
+Publishing stays with the owner. If your Editor is ready to ship a new version, the owner clicks **Publish**.
+
+## When to use Editor vs Viewer
+
+Add a peer as **Editor** when you want them to help build, refine, or maintain the app.
+
+Add a peer as **Viewer** when you want them to use the app or see its activity without changing it. Viewers see the app on their dashboard once it is published. They cannot edit anything.
+
+For sharing with people who only need to use the app, see [Sharing with individuals](https://learn.playlab.ai/features/Sharing%20with%20Individuals).
+
+## Removing or changing access
+
+Open the app, click **Share**, find the person in the recipient list, and either change their permission or remove them. Changes take effect immediately.
+
+## FAQ
+
+**Can I have more than one Editor on an app?**
+
+Yes. Add as many Editors as you need. Each one has the same edit rights.
+
+**Do Editors see other apps in my workspace?**
+
+No. Editor access is per-app. Adding someone as an Editor on App A does not give them any access to your other apps.
+
+**Does this replace workspace-level sharing?**
+
+For collaboration on a specific app, yes. Workspace membership still controls workspace-level activity views and access to apps that are added to the workspace as a whole.
+
+**What if my peer is in a different organization?**
+
+That works the same way. Type their email in the recipient field. They get an invite if they are not already in Playlab. Cross-org Editor access is supported in V2.
+
+---
+
+Last updated: 2026-05-05
+
+Contact us at [support@playlab.ai](mailto:support@playlab.ai)

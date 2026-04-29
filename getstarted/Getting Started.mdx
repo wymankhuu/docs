@@ -1,92 +1,99 @@
 ---
-title: Welcome!
-description: Your landing page to learn about all things Playlab
+title: "Getting started in V2"
+description: "Welcome to Playlab. A short tour of how V2 is organized and where to go next."
+sidebarTitle: "Getting Started"
+icon: "pen-ruler"
 ---
-<img height="200" src="/images/playlab hero.jpeg" />
-We're thrilled to have you join the Playlab community. We hope that you continue to learn with us as you become a critical consumer and creator of AI for your context.
 
-## <Icon icon="compass" size="24" className="inline-block align-text-bottom" /> Overview
+*Your landing page to learn about all things Playlab.*
 
-The Playlab Learning Hub is your one stop shop for a self-guided learning exploration and is also a place where you can hopefully find answers to lingering questions you may have. Whether you're a beginner or an expert, we hope that you can find what you're looking for to support you in your Playlab journey.
+{/* IMG-25: V2 hero. May reuse existing playlab hero.jpeg or refresh. */}
+<Frame>
+  <img src="/images/v2_hero.jpeg" alt="Playlab V2 welcome hero image showing the new organization dashboard with workspaces and collections." />
+</Frame>
 
-<Divider />
+Welcome to Playlab. This page is the starting point for using V2. If you are returning from V1, the [V1 → V2 cheat sheet](https://learn.playlab.ai/whatsnew/v2/V1%20to%20V2%20Cheat%20Sheet) is the fastest way to find what changed.
 
-## <Icon icon="heart" size="24" className="inline-block align-text-bottom" /> Values
+{/* VID-01: 90-second orientation video */}
+<Frame caption="V2 in 90 seconds: the mental model and the three changes most people ask about.">
+  <iframe
+    src="https://www.loom.com/embed/TODO-VID-01"
+    frameborder="0"
+    webkitallowfullscreen=""
+    mozallowfullscreen=""
+    allowfullscreen=""
+    style={{ width: "100%", height: "400px" }}
+  ></iframe>
+</Frame>
 
-We're at the start of the AI era. We believe an open-source, community-driven approach is key to harnessing AI in education. We're a community of learners, supporting each other in creating, experimenting, and using AI.
+## What's new in V2
+
+V2 keeps the V1 building experience and changes how content is shared, deployed, and monitored.
 
 <CardGroup cols={2}>
-  <Card
-    title="Learn"
-    icon="book-open"
-  >
-    Understand what AI means for you. Build AI literacy by starting with hands-on workshops, rooted in your unique issues and context.
+  <Card title="For builders" icon="hammer" href="/whatsnew/v2/V2 for Builders">
+    Your apps are private until you share them. New Editor role for collaboration. Cross-org deployment without remixing.
   </Card>
-  <Card
-    title="Create"
-    icon="wrench"
-  >
-    Your context matters. A lot. Create AI apps that respond to your challenges. And that bring your ideas to life.
+  <Card title="For educators" icon="chalkboard-user" href="/whatsnew/v2/V2 for Educators">
+    Curate apps as well as create them. Manager visibility into all member activity. Granular building permissions.
   </Card>
-  <Card
-    title="Experiment"
-    icon="flask"
-  >
-    Responsible AI requires experimentation. We help you refine, evaluate, and responsibly use your AI tools.
+  <Card title="For admins" icon="shield" href="/whatsnew/v2/V2 for Admins">
+    Org-level data, insights, and centralized monitoring of flags. Deploy at scale without workarounds.
   </Card>
-  <Card
-    title="Share"
-    icon="users"
-  >
-    As you learn, share your work and learn from others. Together, we can discover how to use AI to advance education for all.
+  <Card title="For changemakers" icon="globe" href="/whatsnew/v2/V2 for Changemakers">
+    Multi-org deployment. Activity segmentation. Collections for curated app sets that update everywhere.
   </Card>
 </CardGroup>
 
-<Divider />
+## Where to start
 
-## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Big Ideas
+V2 organizes everything into four containers: organizations, workspaces, apps, and collections. Get oriented before you build.
 
-<Accordion title="AI isn't magic... it's math" icon="circle-info" defaultClose>
-  Understanding the fundamental principles behind AI demystifies it and empowers you to use it effectively.
-  
-  Behind every AI system are algorithms and data that you can learn to understand!
-</Accordion>
+<Card title="Read the mental model" icon="compass" href="/getstarted/Navigating Playlab V2">
+  Five minutes. Maps every V1 concept to its V2 home and explains how content moves between containers.
+</Card>
 
-<Accordion title="AI has both great potential and great risks" icon="triangle-exclamation">
-  We explore AI's possibilities while critically examining its limitations and ethical implications.
-  
-  Every AI tool comes with tradeoffs. Learn to identify both opportunities and challenges!
-</Accordion>
+## Big ideas about AI
 
-<Accordion title="To learn about AI, you have to play with AI in community" icon="circle-check">
-  Hands-on experimentation and collaborative learning create deeper understanding than passive consumption.
-  
-  Your questions and insights help everyone learn better. Don't be afraid to experiment!
-</Accordion>
+These ideas shape how we build Playlab. V2 follows the same approach.
 
-<Accordion title="You're already an AI person" icon="user">
-  Everyone interacts with AI daily, and everyone deserves the right to learn how to shape how AI can affect our lives.
-  
-  You will build your AI intuition over time as you become a critical consumer and creator of AI.
-</Accordion>
+<AccordionGroup>
+  <Accordion title="AI as a thinking partner" icon="lightbulb">
+    Playlab apps work best when they support a learner's thinking. We design for productive struggle.
+  </Accordion>
+  <Accordion title="Context is what makes AI useful for education" icon="book">
+    A general AI assistant becomes a tutor when it has the right context: the curriculum, the standards, the student's prior work, the goal of the lesson. Playlab gives educators a way to assemble that context.
+  </Accordion>
+  <Accordion title="Trust and safety belong in the core" icon="shield">
+    Privacy, flagging, and admin oversight are part of the product surface. V2 adds centralized monitoring and finer building permissions.
+  </Accordion>
+</AccordionGroup>
 
-## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> How to Use This Guide
+## Next steps
 
-This getting started guide is designed to help you navigate your first steps with Playlab. Whether you're completely new to the platform or looking to refresh your knowledge, you'll find everything you need to begin building in Playlab.
+<CardGroup cols={2}>
+  <Card title="Create your first app" icon="square-pen" href="/getstarted/Creating a Playlab App">
+    A 10-minute walkthrough. Works the same in V2 with a slightly simpler entry point.
+  </Card>
+  <Card title="Set up a workspace" icon="folder-plus" href="/getstarted/Creating Your Own Workspace">
+    Add members, configure building permissions, and start curating apps for a class or team.
+  </Card>
+  <Card title="Understand Collections" icon="layer-group" href="/features/collections/What are Collections">
+    The new way to share curated sets of apps across organizations.
+  </Card>
+  <Card title="Glossary" icon="book-open" href="/whatsnew/v2/V2 Glossary">
+    Quick definitions for V2 vocabulary: Editor, Collection, Org Admin, and more.
+  </Card>
+</CardGroup>
 
-<Note>
-  **Guide Structure**
-  
-  Each section of this guide focuses on a specific aspect of using Playlab.
-  
-  We recommend following this guide sequentially if you're new, but feel free to jump to specific sections if you need targeted information.
-</Note>
+## Need help?
 
-<Divider />
-## <Icon icon="circle-info" size="24" className="inline-block align-text-bottom" /> Need Help?
-
-* Contact us at [support@playlab.ai](mailto:support@playlab.ai)
+<Info>
+  Questions, feedback, or stuck on something? Email [support@playlab.ai](mailto:support@playlab.ai) or check the [FAQ](https://learn.playlab.ai/faq/FAQ). We respond within one business day.
+</Info>
 
 ---
 
-Last updated: March 16, 2025
+Last updated: 2026-05-05
+
+Contact us at [support@playlab.ai](mailto:support@playlab.ai)

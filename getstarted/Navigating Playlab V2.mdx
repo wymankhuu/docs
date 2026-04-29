@@ -1,0 +1,131 @@
+---
+title: "Navigating Playlab V2"
+description: "The new mental model. How organizations, workspaces, apps, and collections fit together."
+sidebarTitle: "Navigating V2"
+icon: "compass"
+---
+
+*The new mental model. How organizations, workspaces, apps, and collections fit together.*
+
+Playlab V2 reorganizes how content lives and travels across your organization. If you used V1, most of what you knew still works, but the way pieces relate to each other has shifted toward something closer to Google Drive: clearly nested containers, explicit sharing, and content that can move without being copied.
+
+<Note>
+  Read this page first. Almost every other V2 doc references the four-container model below.
+</Note>
+
+{/* IMG-02: Hierarchy diagram showing Org → Workspace → App → Collection with arrows for sharing scope */}
+<Frame caption="The V2 hierarchy: organizations contain workspaces and collections; apps live in workspaces and can be added to collections.">
+  <img src="/images/v2_mental_model_diagram.svg" alt="Diagram of the V2 hierarchy with Org at the top, branching into Workspaces and Collections, with Apps sitting under Workspaces and referenced from Collections." />
+</Frame>
+
+## The four containers
+
+Playlab V2 has four containers. Everything you do happens inside one of them.
+
+<CardGroup cols={2}>
+  <Card title="Organization" icon="building">
+    Your school, district, or partner. Holds workspaces, members, collections, and policies. Most people belong to one organization.
+  </Card>
+  <Card title="Workspace" icon="folder-tree">
+    A class, team, or group inside the org. Workspaces hold members and apps, with their own activity and permissions.
+  </Card>
+  <Card title="App" icon="square-pen">
+    A Playlab app. Lives in a workspace. Can be added to other workspaces and to collections without remixing.
+  </Card>
+  <Card title="Collection" icon="layer-group">
+    A curated set of apps you can share like a single resource. Useful for partner deployments and starter packs.
+  </Card>
+</CardGroup>
+
+## How content moves
+
+V2 lets you share an app, add it to another workspace, or include it in a collection. Duplicating to share is no longer required.
+
+<Steps>
+  <Step title="An app is owned in one place">
+    The person who creates the app owns it. The app lives in a single workspace.
+  </Step>
+  <Step title="The owner shares it">
+    Sharing happens through the **Share** modal: with individuals, groups, organizations, or as a Collection.
+  </Step>
+  <Step title="Recipients add it where they need it">
+    A teacher can add a shared app to any of their workspaces. A partner can drop a Collection into their org and use it immediately.
+  </Step>
+  <Step title="Updates flow automatically">
+    When the owner publishes a new version, everyone with access sees the update. No re-sharing required.
+  </Step>
+</Steps>
+
+<Tip>
+  This replaces the V1 pattern of remixing an app per class. See [Using an app across multiple classes](https://learn.playlab.ai/features/Cross-Workspace%20App%20Use) for the educator workflow.
+</Tip>
+
+## How V1 maps to V2
+
+Most V1 concepts have a V2 home. A few moved.
+
+| V1 concept | V2 home | What changed |
+| --- | --- | --- |
+| Organization | Organization | Same. More visibility for admins. |
+| Workspace | Workspace | Same container. Now supports granular building permissions. |
+| App owner = workspace creator | App owner = the person who built it | Apps have direct owners. Editors are added per-app. |
+| Remix-per-class | Add the same app to multiple workspaces | One app, many classrooms, segmented activity. |
+| Workspace-creator collaboration | Editor sharing on the app | Collaboration is per-app. Workspace membership grants different things. |
+| Public sharing only | Public, org, group, or individual sharing | Sharing is granular and reversible. |
+| Activity per workspace | Activity per workspace, plus member detail | Org admins see flags and activity centrally. |
+| (no equivalent) | Collections | Curated sets of apps for partner-style deployment. |
+
+{/* IMG-01: Annotated org dashboard showing Workspaces, Apps, Collections, Members tabs */}
+<Frame caption="The V2 organization dashboard: Workspaces, Apps, Collections, and Members are the four primary tabs.">
+  <img src="/images/v2_org_dashboard.png" alt="Annotated screenshot of the V2 organization dashboard showing the Workspaces, Apps, Collections, and Members tabs along the top navigation." />
+</Frame>
+
+## Where things moved
+
+Three reorganizations are worth flagging up front.
+
+<AccordionGroup>
+  <Accordion title="Sharing is now its own surface" icon="share">
+    In V1, you shared apps by adding people to a workspace. In V2, every app has a **Share** button that opens a modal where you can share with people, groups, or whole organizations. Workspace membership is still useful for activity grouping, but it is no longer how you grant access to a single app.
+  </Accordion>
+  <Accordion title="Activity lives at every level" icon="chart-line">
+    In V1, activity was workspace-only. In V2, you can review activity inside a workspace, drill into a specific member, or see flags across an entire organization. Each level surfaces a different question.
+  </Accordion>
+  <Accordion title="Collections replace remixing for deployment" icon="layer-group">
+    In V1, a partner who wanted to share a curated set of apps with five districts had to remix each one into each district's workspace. In V2, the partner builds a Collection once, shares it with the districts, and updates flow automatically.
+  </Accordion>
+</AccordionGroup>
+
+## What this means for you
+
+If you are a builder, your apps are private until you share them. See [V2 for Builders](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Builders).
+
+If you are an educator, your workspace gives you new visibility into student activity and finer control over what students can do. See [V2 for Educators](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Educators).
+
+If you are an org admin, you have a centralized view of activity and flags across all workspaces. See [V2 for Admins](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Admins).
+
+If you are deploying Playlab across a network, Collections are designed for you. See [V2 for Changemakers](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Changemakers).
+
+## FAQ
+
+**Why did this change?**
+
+V1 worked well for individual builders and small teams. As partners scaled to dozens of orgs and thousands of students, three patterns showed strain: workspaces were doing too many jobs (membership, sharing, activity, ownership), remixing made deployment fragile, and admins had no central place to see what was happening. V2 splits those jobs into purpose-built containers.
+
+**Will my apps still work?**
+
+Yes. Apps move into V2 with their owners and members preserved. Activity history is retained. Some labels and entry points changed, but the apps themselves are unchanged.
+
+**Where is X now?**
+
+If you are looking for a specific V1 feature or page, check the [V1 → V2 cheat sheet](https://learn.playlab.ai/whatsnew/v2/V1%20to%20V2%20Cheat%20Sheet). It maps every common workflow side-by-side.
+
+**Is V2 only available to certain orgs?**
+
+V2 is the default for new organizations as of May 2026. Existing organizations migrate on a rolling schedule with their Learning Partner. See [Migrating from V1 to V2](https://learn.playlab.ai/whatsnew/v2/Migrating%20from%20V1%20to%20V2).
+
+---
+
+Last updated: 2026-05-05
+
+Contact us at [support@playlab.ai](mailto:support@playlab.ai)

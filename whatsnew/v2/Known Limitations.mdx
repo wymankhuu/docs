@@ -1,0 +1,64 @@
+---
+title: "Known limitations and what's coming next"
+description: "What V2 does not yet do, what is in flight, and what is planned. An honest reference."
+sidebarTitle: "Known Limitations"
+icon: "circle-info"
+---
+
+*What V2 does not yet do, and what's planned.*
+
+V2 is a substantial release, and a few things are still in flight. This page tracks them so you can plan around them. Items move off this list as they ship.
+
+<Info>
+  This page is updated on the same schedule as the engineering rollout. Last review: 2026-05-05.
+</Info>
+
+## Currently in flight
+
+These are scheduled for release in the next few weeks.
+
+**App-level insights dashboard.** A per-app view of usage stats, conversation patterns, and engagement for app builders. Workspace and org-level views are live; the app-level dashboard ships in a follow-up release. See [App-level insights](https://learn.playlab.ai/features/App-Level%20Insights).
+
+**Org-level insights aggregation.** Cross-workspace metrics aggregated for org admins. Scheduled for June 12, 2026. The org dashboard is live; the aggregation views are added on that date.
+
+**Network and district page.** A view designed for partners deploying Playlab across multiple organizations. In design and scoping. Ships after the org-level insights work.
+
+## Not yet in V2
+
+These are known gaps that V2 does not address. They are tracked and on the roadmap, with no committed date.
+
+**Rostering support for V2.** Several partner districts use Clever or ClassLink to provision accounts and class rosters into Playlab. V2 keeps the V1 rostering integrations working but does not yet add new V2-specific rostering features. Districts that depend on rostering for class setup should coordinate migration timing with their Learning Partner.
+
+**Network Deployer dedicated permissions.** Some partners (Building 21, WestEd, Dancing Panda among others) work as network deployers, sending Playlab into partner schools they don't directly control. V2 supports this through cross-org sharing and Collections, but a dedicated Network Deployer role with bespoke permissions is not yet built.
+
+**Org-level starter input templates.** Standardizing starter inputs across an org's apps is not yet supported. Each app sets its own. Tempe Elementary and other large districts have asked for this; it is on the roadmap.
+
+**White-labeling and custom branding.** District-wide visual customization is not in V2. Foundational work is in progress.
+
+**Custom org-level roles.** V2 ships with the four standard roles (Admin, Manager, Member, Viewer). Custom role definition is planned but not in this release. See [Org permissions and roles](https://learn.playlab.ai/features/Org%20Permissions%20and%20Roles).
+
+**App-to-app links and embeds.** V2 does not support directly linking from one Playlab app to another in a way the AI can navigate. Apps stand alone. Cross-app context is shared through references.
+
+## Workarounds today
+
+A few patterns that work while the above ship:
+
+For app-level insights: use the workspace activity view filtered to the app, or ask an org admin to pull the data from the org dashboard.
+
+For Network Deployer use cases: combine Collections with cross-org sharing. The pattern works, even without a dedicated Network Deployer role.
+
+For org-level starter inputs: set them in each app individually. Bulk update is on the way.
+
+For custom roles: use the four standard roles and document any per-person nuance separately.
+
+## How to give feedback
+
+If something on this page is blocking you, or if you want to nominate something we have missed, email [support@playlab.ai](mailto:support@playlab.ai). Partner-specific issues go through your Learning Partner first.
+
+For roadmap updates and ship dates as they're confirmed, watch the [Q2 2026 changelog](https://learn.playlab.ai/changelog/Playlab%20Q2%202026%20%E2%80%94%20V2%20Launch) and the broader [product changelog](https://learn.playlab.ai/changelog/Product%20Changelog).
+
+---
+
+Last updated: 2026-05-05
+
+Contact us at [support@playlab.ai](mailto:support@playlab.ai)

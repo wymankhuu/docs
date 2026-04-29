@@ -1,0 +1,350 @@
+/* ==========================================================================
+   Playlab V2 Learn Hub — brand-aligned styling
+   --------------------------------------------------------------------------
+   Source: Playlab Brand System v2.0 (yaml). Workshop / studio metaphor.
+   Scope:  Only routes that contain V2 content. Everything else inherits the
+           default Mintlify theme so V1 docs are untouched.
+
+   Drop into the Mintlify docs repo as `styles/v2-brand.css` and reference
+   from `mint.json` via the `css` field.
+
+   Instrument Sans is registered via mint.json. The other two brand fonts
+   load here via @import so this CSS file is self-contained.
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+
+/* --------------------------------------------------------------------------
+   1. Brand color tokens (from yaml §5)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Foundational neutrals */
+  --pl-ink: #0c0f14;
+  --pl-ink-warm: #0d1f18;     /* warmer near-black used in deck body type */
+  --pl-paper: #fbf9f6;        /* off-white, primary light surface */
+  --pl-parchment: #eff0e5;    /* alternate light surface, panels */
+
+  /* Primary accents (use sparingly) */
+  --pl-highlighter: #feffa0;  /* warm yellow / pale chartreuse */
+  --pl-chalk-blue: #a4beeb;   /* Playlab blue. NOT cobalt. */
+  --pl-lilac: #efd8ef;
+
+  /* Categorical index (data, tags, illustration) */
+  --pl-cat-lime: #d4fd63;
+  --pl-cat-butter: #fff46c;
+  --pl-cat-cobalt: #356fe5;
+  --pl-cat-orchid: #f4baef;
+  --pl-cat-olive: #96be53;
+  --pl-cat-tangerine: #ed6e2d;
+  --pl-cat-navy: #283f88;
+  --pl-cat-brick: #ce463f;
+  --pl-cat-forest: #398239;
+
+  /* Brand fonts */
+  --pl-font-sans: "Instrument Sans", "DM Sans", system-ui, -apple-system, sans-serif;
+  --pl-font-serif: "EB Garamond", Georgia, "Times New Roman", serif;
+  --pl-font-mono: "Spline Sans Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+/* --------------------------------------------------------------------------
+   2. V2 scope selector
+
+   Mintlify exposes the current page route on the body or a wrapper element.
+   The exact attribute depends on the Mintlify version. Three fallback
+   strategies are layered below; one of them will match.
+
+   If none match in your build, the cleanest fallback is to add
+   <div className="v2-page"> at the top of each V2 .mdx file.
+   -------------------------------------------------------------------------- */
+
+/* Strategy A: match by URL pathname via :has() — works in modern browsers */
+body:has(a[href$="/V2 for Builders"]),
+body:has(a[href$="/V2 for Educators"]),
+body:has(a[href$="/V2 for Admins"]),
+body:has(a[href$="/V2 for Changemakers"]),
+/* fallback: explicit class on a wrapper */
+.v2-page,
+/* fallback: data attribute set by mintlify per route */
+body[data-route*="/whatsnew/v2/"],
+body[data-route*="/features/collections/"],
+body[data-route*="/getstarted/Navigating Playlab V2"],
+body[data-route*="/getstarted/Collaborating on an App"],
+body[data-route*="/getstarted/Workspace Building Permissions"],
+body[data-route*="/features/Cross-Workspace App Use"],
+body[data-route*="/features/Sharing with Individuals"],
+body[data-route*="/features/Sharing with Groups and Orgs"],
+body[data-route*="/features/App Privacy and Visibility"],
+body[data-route*="/features/Workspace Member Detail"],
+body[data-route*="/features/App-Level Insights"],
+body[data-route*="/features/Org Permissions and Roles"],
+body[data-route*="/features/Publishing"],
+body[data-route*="/features/Reviewing App Activity"],
+body[data-route*="/changelog/Playlab Q2 2026 V2 Launch"] {
+
+  /* --------------------------------------------------------------------------
+     3. Surfaces and text (yaml §5: ink on paper)
+     -------------------------------------------------------------------------- */
+  --background: var(--pl-paper);
+  --foreground: var(--pl-ink);
+  --primary: var(--pl-chalk-blue);
+
+  background-color: var(--pl-paper);
+  color: var(--pl-ink);
+
+  /* --------------------------------------------------------------------------
+     4. Typography (yaml §6)
+     -------------------------------------------------------------------------- */
+  font-family: var(--pl-font-sans);
+  font-feature-settings: "ss01", "ss02";
+}
+
+/* --------------------------------------------------------------------------
+   5. Typographic pairings (scoped under .v2-page or matching body)
+   -------------------------------------------------------------------------- */
+
+/* H1: confident headline (yaml: Instrument Sans SemiBold, large) */
+.v2-page h1,
+body[data-route*="/whatsnew/v2/"] main h1,
+body[data-route*="/features/collections/"] main h1,
+body[data-route*="/getstarted/Navigating"] main h1,
+body[data-route*="/changelog/Playlab Q2"] main h1 {
+  font-family: var(--pl-font-sans);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--pl-ink);
+}
+
+/* H2: section title (yaml: Instrument Sans 24pt) */
+.v2-page h2,
+body[data-route*="/whatsnew/v2/"] main h2,
+body[data-route*="/features/collections/"] main h2 {
+  font-family: var(--pl-font-sans);
+  font-weight: 500;
+  color: var(--pl-ink);
+}
+
+/* H3: step heading (still sans, lighter weight) */
+.v2-page h3,
+body[data-route*="/whatsnew/v2/"] main h3 {
+  font-family: var(--pl-font-sans);
+  font-weight: 500;
+  color: var(--pl-ink);
+}
+
+/* The italic lede paragraph that opens every V2 page.
+   This is the editorial moment. EB Garamond Italic carries the literary
+   register the brand reserves for statement headlines and pull quotes. */
+.v2-page > em:first-of-type,
+.v2-page p:first-of-type em:only-child,
+body[data-route*="/whatsnew/v2/"] main > p:first-of-type em,
+body[data-route*="/features/collections/"] main > p:first-of-type em,
+body[data-route*="/getstarted/Navigating"] main > p:first-of-type em {
+  font-family: var(--pl-font-serif);
+  font-style: italic;
+  font-size: 1.25em;
+  font-weight: 400;
+  color: var(--pl-ink);
+  letter-spacing: 0;
+}
+
+/* Body copy: Instrument Sans Regular, 18pt baseline */
+.v2-page p,
+.v2-page li,
+body[data-route*="/whatsnew/v2/"] main p,
+body[data-route*="/features/collections/"] main p {
+  font-family: var(--pl-font-sans);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--pl-ink);
+}
+
+/* Inline code, kbd, table headers — the "label" voice (yaml: Spline Sans Mono) */
+.v2-page code,
+.v2-page kbd,
+.v2-page th,
+body[data-route*="/whatsnew/v2/"] main code,
+body[data-route*="/whatsnew/v2/"] main th,
+body[data-route*="/features/collections/"] main code,
+body[data-route*="/features/collections/"] main th {
+  font-family: var(--pl-font-mono);
+  font-size: 0.92em;
+  font-weight: 400;
+  background-color: var(--pl-parchment);
+  border-radius: 3px;
+  padding: 0.1em 0.3em;
+}
+
+.v2-page th,
+body[data-route*="/whatsnew/v2/"] main th {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.78em;
+  background-color: var(--pl-parchment);
+  text-align: left;
+}
+
+/* Pre/code blocks: parchment background, no fancy gradients (yaml §5: no gradients) */
+.v2-page pre,
+body[data-route*="/whatsnew/v2/"] main pre {
+  background-color: var(--pl-parchment);
+  border: 1px solid rgba(12, 15, 20, 0.08);
+  border-radius: 4px;
+  font-family: var(--pl-font-mono);
+}
+
+/* --------------------------------------------------------------------------
+   6. Mintlify component restyling
+   -------------------------------------------------------------------------- */
+
+/* Cards: paper background, parchment hover, ink text. No gradients. */
+.v2-page [class*="card"],
+body[data-route*="/whatsnew/v2/"] main [class*="card"],
+body[data-route*="/features/collections/"] main [class*="card"] {
+  background-color: var(--pl-paper);
+  border: 1px solid rgba(12, 15, 20, 0.12);
+  border-radius: 4px;
+  transition: background-color 120ms ease;
+}
+
+.v2-page [class*="card"]:hover,
+body[data-route*="/whatsnew/v2/"] main [class*="card"]:hover {
+  background-color: var(--pl-parchment);
+  border-color: rgba(12, 15, 20, 0.2);
+}
+
+/* Card icons: ink, no fill */
+.v2-page [class*="card"] svg,
+body[data-route*="/whatsnew/v2/"] main [class*="card"] svg {
+  color: var(--pl-ink);
+}
+
+/* Accordions */
+.v2-page [class*="accordion"],
+body[data-route*="/whatsnew/v2/"] main [class*="accordion"] {
+  border-top: 1px solid rgba(12, 15, 20, 0.12);
+  border-radius: 0;
+}
+
+/* Callouts: Note / Tip / Warning / Info / Check */
+.v2-page [class*="callout"],
+body[data-route*="/whatsnew/v2/"] main [class*="callout"] {
+  border-radius: 4px;
+  border-left: 3px solid var(--pl-chalk-blue);
+  background-color: var(--pl-paper);
+}
+
+/* Tip uses highlighter accent (yaml §5: warm yellow / marker feel) */
+.v2-page [class*="callout-tip"],
+body[data-route*="/whatsnew/v2/"] main [class*="callout-tip"] {
+  border-left-color: var(--pl-ink);
+  background-color: var(--pl-highlighter);
+}
+
+/* Warning uses brick from categorical index */
+.v2-page [class*="callout-warning"],
+body[data-route*="/whatsnew/v2/"] main [class*="callout-warning"] {
+  border-left-color: var(--pl-cat-brick);
+}
+
+/* Note + Info use chalk-blue (default brand accent) */
+.v2-page [class*="callout-note"],
+.v2-page [class*="callout-info"],
+body[data-route*="/whatsnew/v2/"] main [class*="callout-note"],
+body[data-route*="/whatsnew/v2/"] main [class*="callout-info"] {
+  border-left-color: var(--pl-chalk-blue);
+}
+
+/* Steps component — workshop feel: numbered, paper background */
+.v2-page [class*="step"]::before,
+body[data-route*="/whatsnew/v2/"] main [class*="step"]::before {
+  font-family: var(--pl-font-mono);
+  font-size: 0.85em;
+  letter-spacing: 0.02em;
+}
+
+/* Tables — workshop feel: simple borders, parchment header, no zebra */
+.v2-page table,
+body[data-route*="/whatsnew/v2/"] main table {
+  border-collapse: collapse;
+  border: 1px solid rgba(12, 15, 20, 0.12);
+}
+
+.v2-page table thead,
+body[data-route*="/whatsnew/v2/"] main table thead {
+  background-color: var(--pl-parchment);
+}
+
+.v2-page table td,
+.v2-page table th,
+body[data-route*="/whatsnew/v2/"] main table td,
+body[data-route*="/whatsnew/v2/"] main table th {
+  border: 1px solid rgba(12, 15, 20, 0.08);
+  padding: 0.6em 0.8em;
+}
+
+/* Frames around images (yaml §7: tight crop, generous space) */
+.v2-page [class*="frame"],
+body[data-route*="/whatsnew/v2/"] main [class*="frame"] {
+  background-color: var(--pl-paper);
+  border: 1px solid rgba(12, 15, 20, 0.1);
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.v2-page [class*="frame"] img,
+body[data-route*="/whatsnew/v2/"] main [class*="frame"] img {
+  border-radius: 3px;
+}
+
+/* Frame caption: mono label voice */
+.v2-page [class*="frame"] figcaption,
+body[data-route*="/whatsnew/v2/"] main [class*="frame"] figcaption {
+  font-family: var(--pl-font-mono);
+  font-size: 0.78em;
+  letter-spacing: 0.03em;
+  color: rgba(12, 15, 20, 0.7);
+  text-transform: none;
+}
+
+/* Links: chalk-blue underline, ink text */
+.v2-page a:not([class*="card"]):not([class*="button"]),
+body[data-route*="/whatsnew/v2/"] main a:not([class*="card"]):not([class*="button"]) {
+  color: var(--pl-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--pl-chalk-blue);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.v2-page a:not([class*="card"]):not([class*="button"]):hover,
+body[data-route*="/whatsnew/v2/"] main a:not([class*="card"]):not([class*="button"]):hover {
+  background-color: var(--pl-highlighter);
+  text-decoration-color: var(--pl-ink);
+}
+
+/* Footer: "Last updated" + support email line */
+.v2-page hr + p,
+body[data-route*="/whatsnew/v2/"] main hr + p {
+  font-family: var(--pl-font-mono);
+  font-size: 0.85em;
+  color: rgba(12, 15, 20, 0.6);
+  letter-spacing: 0.02em;
+}
+
+/* --------------------------------------------------------------------------
+   7. Drift guards (yaml §9.drift_warnings)
+   -------------------------------------------------------------------------- */
+
+/* No glassmorphism / blur / saturated edtech blue */
+.v2-page *,
+body[data-route*="/whatsnew/v2/"] main * {
+  backdrop-filter: none !important;
+}
+
+/* Force chalk-blue over any default cobalt that themes might apply */
+.v2-page [style*="background-color: rgb(53, 111, 229)"],
+body[data-route*="/whatsnew/v2/"] main [style*="background-color: rgb(53, 111, 229)"] {
+  background-color: var(--pl-chalk-blue) !important;
+}

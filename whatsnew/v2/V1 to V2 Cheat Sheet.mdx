@@ -1,0 +1,128 @@
+---
+title: "V1 to V2 cheat sheet"
+description: "Side-by-side reference for every common workflow that changed between Playlab V1 and V2."
+sidebarTitle: "V1 → V2 Cheat Sheet"
+icon: "table-list"
+---
+
+*A side-by-side reference for every workflow that changed.*
+
+This page is a printable one-pager. If you remember a V1 flow and want to know how to do it in V2, find it here.
+
+<Tip>
+  For the conceptual model behind these changes, read [Navigating Playlab V2](https://learn.playlab.ai/getstarted/Navigating%20Playlab%20V2) first.
+</Tip>
+
+## How to use this guide
+
+Each row below shows the V1 flow on the left and the V2 flow on the right. Where the verb stayed the same, you will see only minor differences. Where the verb changed, the V2 column links to a full guide.
+
+## Creating an app
+
+| V1 | V2 |
+| --- | --- |
+| Go to org | Go to org **or** workspace |
+| Go to workspace | Click **New App** |
+| Click **New App** | Build the app |
+| Build the app | |
+
+V2 lets you start a new app from either the org level or inside a workspace. The build flow itself is unchanged. See [Creating an app in V2](https://learn.playlab.ai/getstarted/Creating%20a%20Playlab%20App).
+
+## Collaborating on an app
+
+| V1 | V2 |
+| --- | --- |
+| Go to the workspace where the app lives | Go to the app |
+| Invite the peer to the workspace as **Creator** | Click **Share** |
+| Peer can now edit your app and every other app in that workspace | Add the peer as **Editor** |
+
+Editor access is per-app in V2. A peer you add as an Editor can edit only that app. They do not get access to the rest of your workspace. See [Collaborating on an app (Editor model)](https://learn.playlab.ai/getstarted/Collaborating%20on%20an%20App).
+
+## Publishing an app
+
+| V1 | V2 |
+| --- | --- |
+| Go to app builder | Go to app builder **or** click **Share** on any app |
+| Click **Publish** | Click **Publish** |
+| Pick a visibility level | Pick a visibility level **or** share directly with a person, group, or organization |
+
+You can now publish from the **Share** modal, and you can share an app with specific people without making it public. See [Publishing your app in V2](https://learn.playlab.ai/features/Publishing).
+
+{/* IMG-26: Optional 2-up before/after for publishing flow */}
+<Frame caption="Publishing in V2: the Share modal includes a Publish toggle and a recipient picker.">
+  <img src="/images/v2_before_after_publishing.png" alt="Side-by-side comparison of the V1 publish flow on the left and the V2 Share modal on the right." />
+</Frame>
+
+## Inviting users
+
+### From the organization view
+
+| V1 | V2 |
+| --- | --- |
+| Go to **Members** tab | Go to **Members** tab |
+| Click **New Member** | Click **Add Members** |
+| Type or paste new member emails | Add emails |
+| Select permission | Select permission |
+| Click **Invite members…** | Click **Add Members** |
+
+V2 also adds a one-click invite link path. From **Members**, click **Create Invite Link**, set the permission, and click **Create & Copy Link**. See [Inviting users to your org](https://learn.playlab.ai/getstarted/Adding%20Students%20to%20Playlab).
+
+### From a workspace view
+
+| V1 | V2 |
+| --- | --- |
+| Go to **Workspace Members** tab | Go to **Members** tab |
+| Click **Add Member** | Click **Add Members** |
+| Add emails, select permission | Add emails, select permission |
+| Click **Invite members…** | Click **Add Members** |
+| **OR** Click **Copy Team Invite**, share the link | **OR** Click **Copy Invite Link**, share the link |
+
+The verbs are slightly more consistent. The flow is otherwise the same. See [Adding members to a workspace](https://learn.playlab.ai/getstarted/Adding%20Members%20to%20your%20Workspace).
+
+## Setting up and managing a workspace
+
+| V1 | V2 |
+| --- | --- |
+| Go to workspace | Go to **Org** |
+| Click **New Workspace** | Click **New Workspace** |
+| Name the workspace | Name the workspace, add a description, and set building permissions |
+| Create apps | Add members |
+| Add members | Add existing apps **or** create new ones |
+| View activity | View activity |
+
+V2 adds two things at workspace creation: a description field and building permissions toggles. Workspaces also accept existing apps, so you can build a class environment without recreating apps. See [Creating and managing a workspace in V2](https://learn.playlab.ai/getstarted/Creating%20Your%20Own%20Workspace).
+
+## What's new in V2 (no V1 equivalent)
+
+These workflows did not exist in V1.
+
+<CardGroup cols={2}>
+  <Card title="Use an app across multiple classes" icon="copy" href="/features/Cross-Workspace App Use">
+    Add the same app to several workspaces without remixing. Activity stays segmented per class.
+  </Card>
+  <Card title="Workspace member detail" icon="user-magnifying-glass" href="/features/Workspace Member Detail">
+    Click a member to see all their activity, conversations, flags, and apps built.
+  </Card>
+  <Card title="Share with individuals, groups, or orgs" icon="share-nodes" href="/features/Sharing with Individuals">
+    Type a name, set a permission, send. Works for one person, a group, or an entire organization.
+  </Card>
+  <Card title="Collections" icon="layer-group" href="/features/collections/What are Collections">
+    Curated sets of apps you can share like a single resource. Updates propagate automatically.
+  </Card>
+  <Card title="Workspace building permissions" icon="sliders" href="/getstarted/Workspace Building Permissions">
+    Decide if students can build, see each other, or share beyond the workspace.
+  </Card>
+  <Card title="Centralized org monitoring" icon="chart-line" href="/features/Reviewing App Activity">
+    Org-level dashboard with flags, activity, and member detail across all workspaces.
+  </Card>
+</CardGroup>
+
+## Print this page
+
+Use your browser's print to PDF feature. The tables print cleanly on letter-size paper. We also publish a one-page PDF version on request: email [support@playlab.ai](mailto:support@playlab.ai).
+
+---
+
+Last updated: 2026-05-05
+
+Contact us at [support@playlab.ai](mailto:support@playlab.ai)
