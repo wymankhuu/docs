@@ -344,9 +344,12 @@ body[data-route*="/whatsnew/v2/"] main hr + p {
    below; whichever the live build emits will hit.
    -------------------------------------------------------------------------- */
 
-/* Highlight the LINK background (not the icon directly).
-   Padding/box-sizing on an <svg> can break icon rendering, so we mark the
-   link itself with highlighter yellow and let the icon ride on top. */
+/* Active sidebar item:
+   - Strong chalk-blue tinted background (different from hover) + left rule
+   - Icon explicitly kept visible (opacity, visibility, display overrides)
+   - Ink text + ink icon
+   - Bold weight
+   Hover state is a subtle parchment, visually distinct from active. */
 
 aside a[aria-current="page"],
 nav a[aria-current="page"],
@@ -357,41 +360,56 @@ nav a[data-active="true"],
 [class*="nav-link"][class*="active"]:not(svg),
 [class*="nav-item"][class*="active"]:not(svg),
 [class*="NavLink"][aria-current] {
-  background-color: var(--pl-highlighter) !important;
+  background-color: rgba(164, 190, 235, 0.32) !important; /* chalk-blue tint, ~32% */
   color: var(--pl-ink) !important;
-  font-weight: 600;
-  border-radius: 4px;
+  font-weight: 600 !important;
+  border-left: 3px solid var(--pl-chalk-blue) !important;
+  border-radius: 0 4px 4px 0 !important;
   transition: background-color 120ms ease;
 }
 
-/* Active icon: keep it visible. Just shift to ink color. No background,
-   padding, or transforms — those interfere with SVG sizing. */
+/* Active icon: keep visible at all costs. No padding/transform on the
+   SVG — those break sizing in some Mintlify component versions. */
 aside a[aria-current="page"] svg,
+aside a[aria-current="page"] [class*="icon"],
+aside a[aria-current="page"] img,
 nav a[aria-current="page"] svg,
+nav a[aria-current="page"] [class*="icon"],
+nav a[aria-current="page"] img,
 [class*="sidebar"] a[aria-current="page"] svg,
+[class*="sidebar"] a[aria-current="page"] [class*="icon"],
+[class*="sidebar"] a[aria-current="page"] img,
 aside a[data-active="true"] svg,
 nav a[data-active="true"] svg,
 [class*="sidebar"] [class*="active"] svg,
+[class*="sidebar"] [class*="active"] [class*="icon"],
 [class*="nav-link"][class*="active"] svg,
 [class*="nav-item"][class*="active"] svg,
 [class*="NavLink"][aria-current] svg {
   color: var(--pl-ink) !important;
+  fill: currentColor !important;
+  stroke: currentColor !important;
   opacity: 1 !important;
   display: inline-block !important;
   visibility: visible !important;
 }
 
-/* On hover for non-active sidebar items: subtle parchment background, ink icon */
-aside a:hover svg,
-nav a:hover svg,
-[class*="sidebar"] a:hover svg {
-  color: var(--pl-ink);
-}
-
+/* Hover state — distinctly different from active.
+   Active = chalk-blue tint + left rule.
+   Hover = parchment, no border. */
 aside a:not([aria-current="page"]):hover,
 nav a:not([aria-current="page"]):hover,
 [class*="sidebar"] a:not([aria-current="page"]):hover {
   background-color: var(--pl-parchment);
+  border-radius: 4px;
+}
+
+aside a:hover svg,
+nav a:hover svg,
+[class*="sidebar"] a:hover svg {
+  color: var(--pl-ink);
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 /* --------------------------------------------------------------------------
