@@ -38,21 +38,30 @@
         "color": "#a4beeb",
         "groups": [
           {
-            "group": "Welcome",
+            "group": "Start Here",
             "icon": "door-open",
             "pages": [
               "introduction",
-              "getstarted/Getting Started",
-              "getstarted/Signing Up"
+              "whatsnew/v2/Why V2"
             ]
           },
           {
-            "group": "Get Oriented",
-            "icon": "map",
+            "group": "New to Playlab",
+            "icon": "user-plus",
             "pages": [
-              "getstarted/Navigating Playlab V2",
+              "getstarted/Signing Up",
+              "getstarted/Getting Started",
+              "getstarted/Navigating Playlab V2"
+            ]
+          },
+          {
+            "group": "Migrating from V1",
+            "icon": "arrow-left-right",
+            "pages": [
+              "whatsnew/v2/What's Different in V2",
               "whatsnew/v2/V1 to V2 Cheat Sheet",
-              "whatsnew/v2/V2 Glossary"
+              "whatsnew/v2/Migrating from V1 to V2",
+              "whatsnew/v2/Known Limitations"
             ]
           },
           {
@@ -112,7 +121,7 @@
             ]
           },
           {
-            "group": "Admin",
+            "group": "Org Admin",
             "icon": "shield",
             "pages": [
               "getstarted/Adding Students to Playlab",
@@ -120,11 +129,10 @@
             ]
           },
           {
-            "group": "V1 to V2 Migration",
-            "icon": "arrow-left-right",
+            "group": "Reference",
+            "icon": "book-open",
             "pages": [
-              "whatsnew/v2/Migrating from V1 to V2",
-              "whatsnew/v2/Known Limitations",
+              "whatsnew/v2/V2 Glossary",
               "changelog/Playlab Q2 2026 V2 Launch"
             ]
           }
