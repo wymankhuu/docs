@@ -65,16 +65,6 @@
             ]
           },
           {
-            "group": "For Your Role",
-            "icon": "users",
-            "pages": [
-              "whatsnew/v2/V2 for Builders",
-              "whatsnew/v2/V2 for Educators",
-              "whatsnew/v2/V2 for Admins",
-              "whatsnew/v2/V2 for Networks or Districts"
-            ]
-          },
-          {
             "group": "Build Apps",
             "icon": "hammer",
             "pages": [
@@ -126,6 +116,16 @@
             "pages": [
               "getstarted/Adding Students to Playlab",
               "features/Org Permissions and Roles"
+            ]
+          },
+          {
+            "group": "For Your Role",
+            "icon": "users",
+            "pages": [
+              "whatsnew/v2/V2 for Builders",
+              "whatsnew/v2/V2 for Educators",
+              "whatsnew/v2/V2 for Admins",
+              "whatsnew/v2/V2 for Networks or Districts"
             ]
           },
           {
