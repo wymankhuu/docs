@@ -334,6 +334,57 @@ body[data-route*="/whatsnew/v2/"] main hr + p {
 }
 
 /* --------------------------------------------------------------------------
+   6b. Active sidebar item — different icon treatment when on the page
+   --------------------------------------------------------------------------
+   Brand metaphor: highlighter / marker on paper. The active page's icon
+   gets a highlighter-yellow block behind it, scaled slightly larger, and
+   the link text shifts to ink with chalk-blue underline removed (it's
+   already where you are, no underline needed).
+   Mintlify uses several patterns for the active sidebar link. All listed
+   below; whichever the live build emits will hit.
+   -------------------------------------------------------------------------- */
+
+aside a[aria-current="page"] svg,
+nav a[aria-current="page"] svg,
+[class*="sidebar"] a[aria-current="page"] svg,
+aside a[data-active="true"] svg,
+nav a[data-active="true"] svg,
+[class*="sidebar"] [class*="active"] svg,
+[class*="nav-link"][class*="active"] svg,
+[class*="nav-item"][class*="active"] svg,
+[class*="NavLink"][aria-current] svg {
+  background-color: var(--pl-highlighter);
+  color: var(--pl-ink);
+  border-radius: 3px;
+  padding: 2px;
+  box-sizing: content-box;
+  transform: scale(1.05);
+  transition: transform 120ms ease, background-color 120ms ease;
+}
+
+aside a[aria-current="page"],
+nav a[aria-current="page"],
+[class*="sidebar"] a[aria-current="page"],
+aside a[data-active="true"],
+nav a[data-active="true"] {
+  font-weight: 600;
+  color: var(--pl-ink) !important;
+}
+
+/* On hover for non-active sidebar items: subtle parchment background, ink icon */
+aside a:hover svg,
+nav a:hover svg,
+[class*="sidebar"] a:hover svg {
+  color: var(--pl-ink);
+}
+
+aside a:not([aria-current="page"]):hover,
+nav a:not([aria-current="page"]):hover,
+[class*="sidebar"] a:not([aria-current="page"]):hover {
+  background-color: var(--pl-parchment);
+}
+
+/* --------------------------------------------------------------------------
    7. Drift guards (yaml §9.drift_warnings)
    -------------------------------------------------------------------------- */
 

@@ -1,26 +1,49 @@
 ---
 title: "Navigating Playlab V2"
-description: "The new mental model. How organizations, workspaces, apps, and collections fit together."
+description: "How V2 is organized, where your work lives, and what's new for you."
 sidebarTitle: "Navigating V2"
 icon: "compass"
 ---
 
-*The new mental model. How organizations, workspaces, apps, and collections fit together.*
+*How V2 is organized, where your work lives, and what's new for you.*
 
-Playlab V2 reorganizes how content lives and travels across your organization. If you used V1, most of what you knew still works, but the way pieces relate to each other has shifted toward something closer to Google Drive: clearly nested containers, explicit sharing, and content that can move without being copied.
+V2 reorganizes the platform around four clear containers. The change gives you direct control over your apps, sharper boundaries between classes, and new ways to share what you build with the people you build for. If you used V1, most of what you knew still works. The structure around it has shifted to give you more room to move.
 
 <Note>
-  Read this page first. Almost every other V2 doc references the four-container model below.
+  Read this first if you're new to V2. The rest of the V2 docs assume you know the containers below.
 </Note>
 
-{/* IMG-02: Hierarchy diagram showing Org → Workspace → App → Collection with arrows for sharing scope */}
-<Frame caption="The V2 hierarchy: organizations contain workspaces and collections; apps live in workspaces and can be added to collections.">
-  <img src="/images/v2_mental_model_diagram.svg" alt="Diagram of the V2 hierarchy with Org at the top, branching into Workspaces and Collections, with Apps sitting under Workspaces and referenced from Collections." />
-</Frame>
+```mermaid
+graph TD
+    Org["🏛️ Organization"]
+    WS1["📁 Workspace<br/>(Class A)"]
+    WS2["📁 Workspace<br/>(Class B)"]
+    Coll["📚 Collection<br/>(curated set)"]
+    A1["✏️ App 1"]
+    A2["✏️ App 2"]
+    A3["✏️ App 3"]
+
+    Org --> WS1
+    Org --> WS2
+    Org --> Coll
+    WS1 --> A1
+    WS1 --> A2
+    WS2 --> A2
+    WS2 --> A3
+    Coll -.references.-> A1
+    Coll -.references.-> A3
+
+    classDef container fill:#fbf9f6,stroke:#0c0f14,stroke-width:2px,color:#0c0f14
+    classDef app fill:#a4beeb,stroke:#0c0f14,stroke-width:1px,color:#0c0f14
+    class Org,WS1,WS2,Coll container
+    class A1,A2,A3 app
+```
+
+*Solid lines show containment. Dotted lines show reference (a Collection points to apps but does not own them).*
 
 ## The four containers
 
-Playlab V2 has four containers. Everything you do happens inside one of them.
+V2 has four containers. Everything you do happens inside one of them.
 
 <CardGroup cols={2}>
   <Card title="Organization" icon="building">
@@ -32,10 +55,26 @@ Playlab V2 has four containers. Everything you do happens inside one of them.
   <Card title="App" icon="square-pen">
     A Playlab app. Lives in a workspace. Can be added to other workspaces and to collections without remixing.
   </Card>
-  <Card title="Collection" icon="layer-group">
+  <Card title="Collection" icon="layers">
     A curated set of apps you can share like a single resource. Useful for partner deployments and starter packs.
   </Card>
 </CardGroup>
+
+## What's new for you
+
+The container structure is the means. The ends are new things you can do that V1 made hard.
+
+**Your apps are yours.** New apps start private. You and your org's admins can see them. Nobody else, until you share or publish. Drafts stop leaking into a workspace before you're ready.
+
+**Sharing is direct.** Add a peer as Editor or Viewer on one app. They get access to that app, not your whole workspace. You can change or revoke access at any time.
+
+**One app, many classes.** Add the same app to as many workspaces as you need. Each class sees segmented activity. Update the app once, and every class using it sees the new version.
+
+**Collections for curated bundles.** If you ship a set of apps to partners or districts, build a Collection once and share it. Recipients see updates as you publish them.
+
+**Workspace controls you set.** Toggles on each workspace decide whether members can build apps, see each other's work, or share apps beyond the workspace. The settings can match the class.
+
+**Activity at the level you need.** Workspace, member, or org. Same data, different scope. Teachers see their class. Admins see across classes.
 
 ## How content moves
 
@@ -86,35 +125,35 @@ Three reorganizations are worth flagging up front.
 
 <AccordionGroup>
   <Accordion title="Sharing is now its own surface" icon="share">
-    In V1, you shared apps by adding people to a workspace. In V2, every app has a **Share** button that opens a modal where you can share with people, groups, or whole organizations. Workspace membership is still useful for activity grouping, but it is no longer how you grant access to a single app.
+    In V1, you shared apps by adding people to a workspace. In V2, every app has a **Share** button that opens a modal where you can share with people, groups, or whole organizations. Workspace membership is still useful for activity grouping. It is no longer how you grant access to a single app.
   </Accordion>
-  <Accordion title="Activity lives at every level" icon="chart-line">
+  <Accordion title="Activity lives at every level" icon="trending-up">
     In V1, activity was workspace-only. In V2, you can review activity inside a workspace, drill into a specific member, or see flags across an entire organization. Each level surfaces a different question.
   </Accordion>
-  <Accordion title="Collections replace remixing for deployment" icon="layer-group">
+  <Accordion title="Collections replace remixing for deployment" icon="layers">
     In V1, a partner who wanted to share a curated set of apps with five districts had to remix each one into each district's workspace. In V2, the partner builds a Collection once, shares it with the districts, and updates flow automatically.
   </Accordion>
 </AccordionGroup>
 
 ## What this means for you
 
-If you are a builder, your apps are private until you share them. See [V2 for Builders](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Builders).
+If you build apps, your apps are private until you share them, and Editor sharing replaces workspace-level collaboration. See [V2 for Builders](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Builders).
 
-If you are an educator, your workspace gives you new visibility into student activity and finer control over what students can do. See [V2 for Educators](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Educators).
+If you teach, your workspace gives you new visibility into student activity and finer control over what students can do. See [V2 for Educators](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Educators).
 
-If you are an org admin, you have a centralized view of activity and flags across all workspaces. See [V2 for Admins](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Admins).
+If you admin an org, you have a centralized view of activity and flags across all workspaces. See [V2 for Admins](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Admins).
 
-If you are deploying Playlab across a network, Collections are designed for you. See [V2 for Changemakers](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Changemakers).
+If you deploy across a network, Collections were designed for you. See [V2 for Changemakers](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Changemakers).
 
 ## FAQ
 
-**Why did this change?**
+**Why did the structure change?**
 
 V1 worked well for individual builders and small teams. As partners scaled to dozens of orgs and thousands of students, three patterns showed strain: workspaces were doing too many jobs (membership, sharing, activity, ownership), remixing made deployment fragile, and admins had no central place to see what was happening. V2 splits those jobs into purpose-built containers.
 
 **Will my apps still work?**
 
-Yes. Apps move into V2 with their owners and members preserved. Activity history is retained. Some labels and entry points changed, but the apps themselves are unchanged.
+Yes. Apps move into V2 with their owners and members preserved. Activity history is retained. Some labels and entry points changed. The apps themselves are unchanged.
 
 **Where is X now?**
 

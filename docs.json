@@ -13,10 +13,13 @@
     "content": "🚧 V2 Preview · This is a draft of the new Playlab Learning Hub. The live site is at [learn.playlab.ai](https://learn.playlab.ai).",
     "dismissible": false
   },
+  "icons": {
+    "library": "lucide"
+  },
   "colors": {
-    "primary": "#4F46E5",
-    "light": "#818CF8",
-    "dark": "#3730A3"
+    "primary": "#0c0f14",
+    "light": "#a4beeb",
+    "dark": "#0c0f14"
   },
   "topbarLinks": [
     {
@@ -35,17 +38,23 @@
         "color": "#a4beeb",
         "groups": [
           {
-            "group": "Start Here",
+            "group": "Welcome",
             "pages": [
               "introduction",
-              "getstarted/Navigating Playlab V2",
               "getstarted/Getting Started",
+              "getstarted/Signing Up"
+            ]
+          },
+          {
+            "group": "Get Oriented",
+            "pages": [
+              "getstarted/Navigating Playlab V2",
               "whatsnew/v2/V1 to V2 Cheat Sheet",
               "whatsnew/v2/V2 Glossary"
             ]
           },
           {
-            "group": "By Persona",
+            "group": "For Your Role",
             "pages": [
               "whatsnew/v2/V2 for Builders",
               "whatsnew/v2/V2 for Educators",
@@ -54,18 +63,23 @@
             ]
           },
           {
-            "group": "Building & Sharing",
+            "group": "Build Apps",
             "pages": [
               "getstarted/Creating a Playlab App",
               "getstarted/Collaborating on an App",
-              "features/Publishing",
-              "features/Sharing with Individuals",
-              "features/Sharing with Groups and Orgs",
               "features/App Privacy and Visibility"
             ]
           },
           {
-            "group": "Workspaces",
+            "group": "Share & Publish",
+            "pages": [
+              "features/Publishing",
+              "features/Sharing with Individuals",
+              "features/Sharing with Groups and Orgs"
+            ]
+          },
+          {
+            "group": "Run a Workspace",
             "pages": [
               "getstarted/Creating Your Own Workspace",
               "getstarted/Adding Members to your Workspace",
@@ -74,7 +88,7 @@
             ]
           },
           {
-            "group": "Insights",
+            "group": "Monitor Activity",
             "pages": [
               "getstarted/Reviewing Activity",
               "features/Workspace Member Detail",
@@ -90,11 +104,15 @@
             ]
           },
           {
-            "group": "Admin & Migration",
+            "group": "Admin",
             "pages": [
-              "getstarted/Signing Up",
               "getstarted/Adding Students to Playlab",
-              "features/Org Permissions and Roles",
+              "features/Org Permissions and Roles"
+            ]
+          },
+          {
+            "group": "V1 to V2 Migration",
+            "pages": [
               "whatsnew/v2/Migrating from V1 to V2",
               "whatsnew/v2/Known Limitations",
               "changelog/Playlab Q2 2026 V2 Launch"
