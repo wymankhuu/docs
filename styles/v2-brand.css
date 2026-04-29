@@ -385,6 +385,49 @@ nav a:not([aria-current="page"]):hover,
 }
 
 /* --------------------------------------------------------------------------
+   6c. Active section header (group containing the current page)
+   --------------------------------------------------------------------------
+   When you are on a page inside "Welcome", the "Welcome" group header
+   itself gets a soft chalk-blue tint and a left rule so you can see at a
+   glance which section you are in.
+   Uses :has() to find the group whose nested link is the current page.
+   -------------------------------------------------------------------------- */
+
+aside h3:has(~ * a[aria-current="page"]),
+aside h3:has(+ * a[aria-current="page"]),
+nav h3:has(~ * a[aria-current="page"]),
+[class*="sidebar"] [class*="group"]:has(a[aria-current="page"]) > h3,
+[class*="sidebar"] [class*="group"]:has(a[aria-current="page"]) > [class*="title"],
+[class*="sidebar"] [class*="group"]:has(a[aria-current="page"]) > [class*="header"],
+[class*="sidebar"] [class*="section"]:has(a[aria-current="page"]) > h3,
+[class*="sidebar"] li:has(> a[aria-current="page"]) ~ * h3,
+[class*="sidebar"] details:has(a[aria-current="page"]) > summary {
+  background: linear-gradient(
+    to right,
+    rgba(164, 190, 235, 0.18) 0%,
+    rgba(164, 190, 235, 0.04) 100%
+  );
+  border-left: 3px solid var(--pl-chalk-blue);
+  padding-left: 0.6rem;
+  color: var(--pl-ink) !important;
+  font-weight: 600;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Active TOP TAB — the "🆕 V2 Preview" tab when you are on a V2 page.
+   Mintlify already handles tab active state via primary color, but we
+   reinforce it with the chalk-blue accent. */
+
+[class*="tabs"] [aria-current="page"],
+[class*="tabs"] [data-state="active"],
+nav [role="tablist"] [aria-selected="true"],
+nav [class*="tab"][class*="active"] {
+  border-bottom: 3px solid var(--pl-chalk-blue) !important;
+  color: var(--pl-ink) !important;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
    7. Drift guards (yaml §9.drift_warnings)
    -------------------------------------------------------------------------- */
 
