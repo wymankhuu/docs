@@ -39,6 +39,7 @@
         "groups": [
           {
             "group": "Welcome",
+            "icon": "door-open",
             "pages": [
               "introduction",
               "getstarted/Getting Started",
@@ -47,6 +48,7 @@
           },
           {
             "group": "Get Oriented",
+            "icon": "map",
             "pages": [
               "getstarted/Navigating Playlab V2",
               "whatsnew/v2/V1 to V2 Cheat Sheet",
@@ -55,6 +57,7 @@
           },
           {
             "group": "For Your Role",
+            "icon": "users",
             "pages": [
               "whatsnew/v2/V2 for Builders",
               "whatsnew/v2/V2 for Educators",
@@ -64,6 +67,7 @@
           },
           {
             "group": "Build Apps",
+            "icon": "hammer",
             "pages": [
               "getstarted/Creating a Playlab App",
               "getstarted/Collaborating on an App",
@@ -72,6 +76,7 @@
           },
           {
             "group": "Share & Publish",
+            "icon": "share-2",
             "pages": [
               "features/Publishing",
               "features/Sharing with Individuals",
@@ -80,6 +85,7 @@
           },
           {
             "group": "Run a Workspace",
+            "icon": "folder-tree",
             "pages": [
               "getstarted/Creating Your Own Workspace",
               "getstarted/Adding Members to your Workspace",
@@ -89,6 +95,7 @@
           },
           {
             "group": "Monitor Activity",
+            "icon": "trending-up",
             "pages": [
               "getstarted/Reviewing Activity",
               "features/Workspace Member Detail",
@@ -98,6 +105,7 @@
           },
           {
             "group": "Collections",
+            "icon": "layers",
             "pages": [
               "features/collections/What are Collections",
               "features/collections/Creating and Sharing a Collection"
@@ -105,6 +113,7 @@
           },
           {
             "group": "Admin",
+            "icon": "shield",
             "pages": [
               "getstarted/Adding Students to Playlab",
               "features/Org Permissions and Roles"
@@ -112,6 +121,7 @@
           },
           {
             "group": "V1 to V2 Migration",
+            "icon": "arrow-left-right",
             "pages": [
               "whatsnew/v2/Migrating from V1 to V2",
               "whatsnew/v2/Known Limitations",
