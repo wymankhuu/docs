@@ -15,7 +15,7 @@ V2 reverses this. New apps are private to the owner and the organization's admin
 
 {/* IMG-06: Privacy indicator */}
 <Frame caption="The lock icon on an app card shows the app is currently private.">
-  <img src="/images/v2_privacy_indicator.png" alt="A V2 app card with a small lock icon and a tooltip reading Only you and org admins can see this." />
+ <img src="/images/v2_privacy_indicator.png" alt="A V2 app card with a small lock icon and a tooltip reading Only you and org admins can see this." />
 </Frame>
 
 ## Who can see your app
@@ -32,29 +32,29 @@ V2 reverses this. New apps are private to the owner and the organization's admin
 
 ```mermaid
 graph LR
-    App["🔒 Your App<br/>(private by default)"]
-    You["👤 You"]
-    Admin["🛡️ Org Admin"]
-    Editor["✏️ Editor<br/>(direct share)"]
-    Viewer["👁️ Viewer<br/>(after publish)"]
-    Workspace["📁 Workspace members<br/>(if added to workspace)"]
-    OrgPub["🏛️ Org members<br/>(if published org-wide)"]
-    Public["🌐 Anyone<br/>(if published public)"]
+ App["🔒 Your App<br/>(private by default)"]
+ You["👤 You"]
+ Admin["🛡️ Org Admin"]
+ Editor["✏️ Editor<br/>(direct share)"]
+ Viewer["👁️ Viewer<br/>(after publish)"]
+ Workspace["📁 Workspace members<br/>(if added to workspace)"]
+ OrgPub["🏛️ Org members<br/>(if published org-wide)"]
+ Public["🌐 Anyone<br/>(if published public)"]
 
-    App --> You
-    App --> Admin
-    App -.share.-> Editor
-    App -.share + publish.-> Viewer
-    App -.add to workspace.-> Workspace
-    App -.publish: Organization.-> OrgPub
-    App -.publish: Public.-> Public
+ App --> You
+ App --> Admin
+ App -.share.-> Editor
+ App -.share + publish.-> Viewer
+ App -.add to workspace.-> Workspace
+ App -.publish: Organization.-> OrgPub
+ App -.publish: Public.-> Public
 
-    classDef app fill:#a4beeb,stroke:#0c0f14,stroke-width:2px,color:#0c0f14
-    classDef always fill:#feffa0,stroke:#0c0f14,stroke-width:1px,color:#0c0f14
-    classDef opt fill:#fbf9f6,stroke:#0c0f14,stroke-width:1px,color:#0c0f14
-    class App app
-    class You,Admin always
-    class Editor,Viewer,Workspace,OrgPub,Public opt
+ classDef app fill:#a4beeb,stroke:#0c0f14,stroke-width:2px,color:#0c0f14
+ classDef always fill:#feffa0,stroke:#0c0f14,stroke-width:1px,color:#0c0f14
+ classDef opt fill:#fbf9f6,stroke:#0c0f14,stroke-width:1px,color:#0c0f14
+ class App app
+ class You,Admin always
+ class Editor,Viewer,Workspace,OrgPub,Public opt
 ```
 
 *Yellow blocks see the app from creation. The rest open up only after you share, add, or publish.*
@@ -83,7 +83,7 @@ For most builders, the practical effect is small. The admin sees the app in thei
 
 {/* IMG-07: Org admin perspective */}
 <Frame caption="From the org admin view, all apps in the org are visible, including drafts. Admins can view but not edit.">
-  <img src="/images/v2_org_admin_view_others_apps.png" alt="A V2 org admin's view of an app they did not own, showing read-only access to the app overview." />
+ <img src="/images/v2_org_admin_view_others_apps.png" alt="A V2 org admin's view of an app they did not own, showing read-only access to the app overview." />
 </Frame>
 
 Admin visibility is read-only. They can view the app but not edit it. They cannot publish your app or change who has access.
@@ -91,21 +91,21 @@ Admin visibility is read-only. They can view the app but not edit it. They canno
 ## FAQ
 
 <AccordionGroup>
-  <Accordion title="Is private-by-default a regression from V1?">
-    It is a different default. V1 prioritized discoverability inside a workspace. V2 prioritizes builder control. Most builders find the V2 default closer to how they expected the product to behave.
-  </Accordion>
-  <Accordion title="Can I make my app fully private, hidden from org admins?">
-    No. Org admins keep visibility for trust and safety. The default is private from peers and members of your workspaces unless you share or publish.
-  </Accordion>
-  <Accordion title="What happens to my V1 apps during migration?">
-    Apps move with their existing access. If your app was visible to a workspace in V1, the workspace members keep access in V2 through workspace-level visibility. New people added to the workspace after migration follow the V2 sharing model.
-  </Accordion>
-  <Accordion title="Can I see who has accessed my app?">
-    Yes. Activity views show usage per app, including who used it and when. See [Reviewing student activity per class](https://learn.playlab.ai/getstarted/Reviewing%20Activity).
-  </Accordion>
-  <Accordion title="Does private mean no one but me can find it through search?">
-    Yes. Private apps do not appear in any search outside the owner's view and the org admin's dashboard.
-  </Accordion>
+ <Accordion title="Is private-by-default a regression from V1?">
+ It is a different default. V1 prioritized discoverability inside a workspace. V2 prioritizes builder control. Most builders find the V2 default closer to how they expected the product to behave.
+ </Accordion>
+ <Accordion title="Can I make my app fully private, hidden from org admins?">
+ No. Org admins keep visibility for trust and safety. The default is private from peers and members of your workspaces unless you share or publish.
+ </Accordion>
+ <Accordion title="What happens to my V1 apps during migration?">
+ Apps move with their existing access. If your app was visible to a workspace in V1, the workspace members keep access in V2 through workspace-level visibility. New people added to the workspace after migration follow the V2 sharing model.
+ </Accordion>
+ <Accordion title="Can I see who has accessed my app?">
+ Yes. Activity views show usage per app, including who used it and when. See [Reviewing student activity per class](https://learn.playlab.ai/getstarted/Reviewing%20Activity).
+ </Accordion>
+ <Accordion title="Does private mean no one but me can find it through search?">
+ Yes. Private apps do not appear in any search outside the owner's view and the org admin's dashboard.
+ </Accordion>
 </AccordionGroup>
 
 ---

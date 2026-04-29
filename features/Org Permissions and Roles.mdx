@@ -8,7 +8,7 @@ icon: "key"
 This page documents the org-level role matrix. For workspace-level roles, see [Adding members to a workspace](https://learn.playlab.ai/getstarted/Adding%20Members%20to%20your%20Workspace) and [Creating a workspace](https://learn.playlab.ai/getstarted/Creating%20Your%20Own%20Workspace).
 
 <Info>
-  Role names may shift between this draft and launch. Confirm with your org admin if a name does not match what you see in the product.
+ Role names may shift between this draft and launch. Confirm with your org admin if a name does not match what you see in the product.
 </Info>
 
 ## Roles in your org
@@ -34,23 +34,23 @@ Read-only access at the org level. Useful for instructional coaches, partner obs
 ## How to change a member's role
 
 <Steps>
-  <Step title="Go to the org Members tab">
-    From the org dashboard, click Members. You see all org members with their current roles.
-  </Step>
-  <Step title="Find the member">
-    Search by name or scroll. Click the member to open their detail panel.
-  </Step>
-  <Step title="Change the role">
-    The role dropdown shows the four roles. Pick the new role.
-  </Step>
-  <Step title="Confirm">
-    The change applies immediately. The member's permissions update on their next page load.
-  </Step>
+ <Step title="Go to the org Members tab">
+ From the org dashboard, click Members. You see all org members with their current roles.
+ </Step>
+ <Step title="Find the member">
+ Search by name or scroll. Click the member to open their detail panel.
+ </Step>
+ <Step title="Change the role">
+ The role dropdown shows the four roles. Pick the new role.
+ </Step>
+ <Step title="Confirm">
+ The change applies immediately. The member's permissions update on their next page load.
+ </Step>
 </Steps>
 
 {/* IMG-22: Role dropdown in Members tab */}
 <Frame caption="The role dropdown on a member's detail panel. Pick the role and the change applies immediately.">
-  <img src="/images/v2_org_role_dropdown.png" alt="A V2 organization Members tab with a role dropdown open showing the four role options." />
+ <img src="/images/v2_org_role_dropdown.png" alt="A V2 organization Members tab with a role dropdown open showing the four role options." />
 </Frame>
 
 ## Permission inheritance
@@ -59,26 +59,26 @@ Permissions in V2 cascade from org to workspace to app. Each level grants access
 
 ```mermaid
 graph TD
-    Admin["👤 Org Admin"]
-    Manager["👤 Workspace Manager"]
-    Member["👤 Workspace Member"]
-    Owner["✏️ App Owner"]
+ Admin["👤 Org Admin"]
+ Manager["👤 Workspace Manager"]
+ Member["👤 Workspace Member"]
+ Owner["✏️ App Owner"]
 
-    OrgScope["🏛️ Organization<br/>(all workspaces + apps)"]
-    WSScope["📁 One Workspace"]
-    AppScope["✏️ One App"]
+ OrgScope["🏛️ Organization<br/>(all workspaces + apps)"]
+ WSScope["📁 One Workspace"]
+ AppScope["✏️ One App"]
 
-    Admin --> OrgScope
-    OrgScope -.read-only.-> WSScope
-    OrgScope -.read-only.-> AppScope
-    Manager --> WSScope
-    Member --> WSScope
-    Owner --> AppScope
+ Admin --> OrgScope
+ OrgScope -.read-only.-> WSScope
+ OrgScope -.read-only.-> AppScope
+ Manager --> WSScope
+ Member --> WSScope
+ Owner --> AppScope
 
-    classDef role fill:#a4beeb,stroke:#0c0f14,stroke-width:1px,color:#0c0f14
-    classDef scope fill:#fbf9f6,stroke:#0c0f14,stroke-width:2px,color:#0c0f14
-    class Admin,Manager,Member,Owner role
-    class OrgScope,WSScope,AppScope scope
+ classDef role fill:#a4beeb,stroke:#0c0f14,stroke-width:1px,color:#0c0f14
+ classDef scope fill:#fbf9f6,stroke:#0c0f14,stroke-width:2px,color:#0c0f14
+ class Admin,Manager,Member,Owner role
+ class OrgScope,WSScope,AppScope scope
 ```
 
 **Org Admin** has read access to every workspace and every app in the org, regardless of explicit invites. This is the trust and safety layer.
@@ -106,21 +106,21 @@ Review roles every semester. Past staff, departed coaches, and former co-admins 
 ## FAQ
 
 <AccordionGroup>
-  <Accordion title="Can I create custom roles?">
-    Not in this release. The four roles cover the cases V1 supported. Custom role definition is on the roadmap.
-  </Accordion>
-  <Accordion title="How do roles cascade across orgs in cross-org sharing?">
-    When you share an app or Collection with another org, permissions are scoped to that share. The recipient org's roles do not transfer to your org. Members of the recipient org gain access only at the level you granted in the share.
-  </Accordion>
-  <Accordion title="Are roles different for SSO orgs?">
-    The role structure is the same. Some orgs sync role changes from their identity provider; others manage roles directly in Playlab. Check with your org admin.
-  </Accordion>
-  <Accordion title="Can I bulk-change roles?">
-    Yes. From the Members tab, select multiple members with checkboxes and apply a role change to all of them. Useful for end-of-year cleanups.
-  </Accordion>
-  <Accordion title="What happens to apps when a member's role is downgraded?">
-    The apps stay with the original owner. Role changes affect what the member can do going forward. They do not transfer or delete existing apps.
-  </Accordion>
+ <Accordion title="Can I create custom roles?">
+ Not in this release. The four roles cover the cases V1 supported. Custom role definition is on the roadmap.
+ </Accordion>
+ <Accordion title="How do roles cascade across orgs in cross-org sharing?">
+ When you share an app or Collection with another org, permissions are scoped to that share. The recipient org's roles do not transfer to your org. Members of the recipient org gain access only at the level you granted in the share.
+ </Accordion>
+ <Accordion title="Are roles different for SSO orgs?">
+ The role structure is the same. Some orgs sync role changes from their identity provider; others manage roles directly in Playlab. Check with your org admin.
+ </Accordion>
+ <Accordion title="Can I bulk-change roles?">
+ Yes. From the Members tab, select multiple members with checkboxes and apply a role change to all of them. Useful for end-of-year cleanups.
+ </Accordion>
+ <Accordion title="What happens to apps when a member's role is downgraded?">
+ The apps stay with the original owner. Role changes affect what the member can do going forward. They do not transfer or delete existing apps.
+ </Accordion>
 </AccordionGroup>
 
 ---
