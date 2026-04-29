@@ -52,12 +52,34 @@ ONE8 Foundation works with Massachusetts districts on AI in education. Their V1 
 
 In V2, ONE8 builds a Collection of those apps once. Partners add the Collection to a workspace, and the apps are available in the workspace. ONE8 sees aggregate activity across the network. Each district sees only its own. When ONE8 publishes an update to one of the apps, every classroom using it sees the new version.
 
-This is the canonical Collections workflow. It is what V2 sharing was designed for.
+```mermaid
+graph LR
+    Coll["📚 ONE8 Collection<br/>(owned by ONE8)"]
+    A1["✏️ App 1"]
+    A2["✏️ App 2"]
+    A3["✏️ App 3"]
+    O1["🏛️ District A"]
+    O2["🏛️ District B"]
+    O3["🏛️ District C"]
 
-{/* IMG-16: ONE8-style example collection */}
-<Frame caption="An example Collection from ONE8 Foundation: several apps grouped under a single shareable bundle.">
-  <img src="/images/v2_one8_collection_example.jpeg" alt="A sample Playlab Collection titled ONE8 Sample Collection containing several apps as a single curated set." />
-</Frame>
+    Coll -.references.-> A1
+    Coll -.references.-> A2
+    Coll -.references.-> A3
+    Coll ==shared with==> O1
+    Coll ==shared with==> O2
+    Coll ==shared with==> O3
+
+    classDef coll fill:#efd8ef,stroke:#0c0f14,stroke-width:2px,color:#0c0f14
+    classDef app fill:#a4beeb,stroke:#0c0f14,stroke-width:1px,color:#0c0f14
+    classDef org fill:#fbf9f6,stroke:#0c0f14,stroke-width:1px,color:#0c0f14
+    class Coll coll
+    class A1,A2,A3 app
+    class O1,O2,O3 org
+```
+
+*One Collection, three apps, three districts. ONE8 updates an app once and every district sees the new version.*
+
+This is the canonical Collections workflow. It is what V2 sharing was designed for.
 
 ## Collections vs workspaces vs apps
 

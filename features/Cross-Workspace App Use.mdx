@@ -46,10 +46,32 @@ To add the same app to another workspace, go to that workspace and repeat the st
 
 Each workspace where the app is added keeps its own activity log. A teacher running three sections of the same class sees three separate activity views, one per workspace. Org admins can see across workspaces, but teachers stay scoped to their classes.
 
-{/* IMG-17: Activity view with workspace filter */}
-<Frame caption="Activity is filtered by workspace. The same app shows different activity in each class.">
-  <img src="/images/v2_activity_workspace_filter.png" alt="A V2 activity view filtered to a specific workspace, showing conversations from one class." />
-</Frame>
+```mermaid
+graph TD
+    App["✏️ One app<br/>(owned by you)"]
+    WS1["📁 Class A"]
+    WS2["📁 Class B"]
+    WS3["📁 Class C"]
+    Act1["📊 Activity A"]
+    Act2["📊 Activity B"]
+    Act3["📊 Activity C"]
+
+    App -.added to.-> WS1
+    App -.added to.-> WS2
+    App -.added to.-> WS3
+    WS1 --> Act1
+    WS2 --> Act2
+    WS3 --> Act3
+
+    classDef app fill:#a4beeb,stroke:#0c0f14,stroke-width:2px,color:#0c0f14
+    classDef ws fill:#fbf9f6,stroke:#0c0f14,stroke-width:1px,color:#0c0f14
+    classDef act fill:#feffa0,stroke:#0c0f14,stroke-width:1px,color:#0c0f14
+    class App app
+    class WS1,WS2,WS3 ws
+    class Act1,Act2,Act3 act
+```
+
+*One app, three classes, three separate activity views. Each teacher sees only their class.*
 
 For more, see [Reviewing student activity per class](https://learn.playlab.ai/getstarted/Reviewing%20Activity).
 

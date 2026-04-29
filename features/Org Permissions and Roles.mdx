@@ -57,7 +57,31 @@ Read-only access at the org level. Useful for instructional coaches, partner obs
 
 ## Permission inheritance
 
-Permissions in V2 cascade from org to workspace to app.
+Permissions in V2 cascade from org to workspace to app. Each level grants access to what's inside it, with one exception (apps follow their owner, not the workspace).
+
+```mermaid
+graph TD
+    Admin["👤 Org Admin"]
+    Manager["👤 Workspace Manager"]
+    Member["👤 Workspace Member"]
+    Owner["✏️ App Owner"]
+
+    OrgScope["🏛️ Organization<br/>(all workspaces + apps)"]
+    WSScope["📁 One Workspace"]
+    AppScope["✏️ One App"]
+
+    Admin --> OrgScope
+    OrgScope -.read-only.-> WSScope
+    OrgScope -.read-only.-> AppScope
+    Manager --> WSScope
+    Member --> WSScope
+    Owner --> AppScope
+
+    classDef role fill:#a4beeb,stroke:#0c0f14,stroke-width:1px,color:#0c0f14
+    classDef scope fill:#fbf9f6,stroke:#0c0f14,stroke-width:2px,color:#0c0f14
+    class Admin,Manager,Member,Owner role
+    class OrgScope,WSScope,AppScope scope
+```
 
 **Org Admin** has read access to every workspace and every app in the org, regardless of explicit invites. This is the trust and safety layer.
 

@@ -32,6 +32,35 @@ V2 reverses this. New apps are private to the owner and the organization's admin
 | Other members of your organization | Only if visibility is Organization or Public | After you publish at that level |
 | Anyone on Playlab | Only if visibility is Public | After you publish at that level |
 
+```mermaid
+graph LR
+    App["🔒 Your App<br/>(private by default)"]
+    You["👤 You"]
+    Admin["🛡️ Org Admin"]
+    Editor["✏️ Editor<br/>(direct share)"]
+    Viewer["👁️ Viewer<br/>(after publish)"]
+    Workspace["📁 Workspace members<br/>(if added to workspace)"]
+    OrgPub["🏛️ Org members<br/>(if published org-wide)"]
+    Public["🌐 Anyone<br/>(if published public)"]
+
+    App --> You
+    App --> Admin
+    App -.share.-> Editor
+    App -.share + publish.-> Viewer
+    App -.add to workspace.-> Workspace
+    App -.publish: Organization.-> OrgPub
+    App -.publish: Public.-> Public
+
+    classDef app fill:#a4beeb,stroke:#0c0f14,stroke-width:2px,color:#0c0f14
+    classDef always fill:#feffa0,stroke:#0c0f14,stroke-width:1px,color:#0c0f14
+    classDef opt fill:#fbf9f6,stroke:#0c0f14,stroke-width:1px,color:#0c0f14
+    class App app
+    class You,Admin always
+    class Editor,Viewer,Workspace,OrgPub,Public opt
+```
+
+*Yellow blocks see the app from creation. The rest open up only after you share, add, or publish.*
+
 For details on publishing and visibility levels, see [Publishing your app in V2](https://learn.playlab.ai/features/Publishing).
 
 ## Going from private to shared
