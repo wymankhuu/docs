@@ -1,24 +1,23 @@
 ---
 title: "Adding members to your workspace"
-description: "How to invite team members to a Playlab workspace using direct invites or invite links."
+description: "How to invite team members to a Playlab workspace using existing org members, email invites, or a shareable invite link."
 sidebarTitle: "Adding Members"
 icon: "users"
 ---
 
 
-{/* TODO-VID-ADDING-MEMBERS: Walkthrough video for two ways to add members to a workspace */}
-<Frame caption="Walkthrough: two ways to add members to a workspace.">
+{/* TODO-VID-ADDING-MEMBERS: Walkthrough video for the three ways to add members to a workspace */}
+<Frame caption="Walkthrough: the three ways to add members to a workspace.">
   <iframe
-    src="https://www.loom.com/embed/TODO-VID-adding-members"
+    src="https://drive.google.com/file/d/1JMYmZF-C3UYEkPgANfvL5_zuSfJA9KJ4/preview"
     frameborder="0"
-    webkitallowfullscreen=""
-    mozallowfullscreen=""
+    allow="autoplay"
     allowfullscreen=""
     style={{ width: "100%", height: "400px" }}
   ></iframe>
 </Frame>
 
-Workspaces hold members and apps. Adding members is a two-path flow in V2: direct invitation by email, or a shareable invite link.
+Workspaces hold members and apps. There are three ways to add a member: search and add someone who is already in your organization, paste a list of emails to send invites, or share an invite link.
 
 <Note>
  **Permissions matter**
@@ -26,22 +25,49 @@ Workspaces hold members and apps. Adding members is a two-path flow in V2: direc
  Roles you assign on invitation control what members can do in the workspace. Choose carefully. You can change roles later from the Members tab.
 </Note>
 
-## Two ways to add members
+## Three ways to add members
 
-V2 supports both direct invites and invite links. Pick the path that matches your situation.
+Pick the path that matches your situation.
 
-**Direct invite (Add Members).** You type or paste a list of emails, set the permission, and Playlab sends each one an invite. Best when you have a known list and want a record of who you invited.
+**Add existing org members (search and add).** From the Members tab, type a name to find people already in your org and add them directly. No email goes out. Best for adding co-teachers, instructional coaches, or any colleague who already has a Playlab account in your org.
+
+**Email invites (Add Members).** Type or paste a list of emails, set the permission, and Playlab sends each one an invite. Best when you have a known list outside your org and want a record of who you invited.
 
 **Invite link (Create Invite Link).** Playlab generates a link you can share through email, Slack, or a class document. Anyone who clicks the link joins the workspace at the permission level you set. Best for class rosters where you want students to self-serve.
 
-## Method 1: Add Members directly
+## Method 1: Add existing org members
 
 <Steps>
  <Step title="Open the workspace and go to Members">
  The Members tab lists current members and shows the Add Members and Create Invite Link buttons.
  </Step>
  <Step title="Click Add Members">
- A dialog opens with an email input field and a permission selector.
+ A dialog opens. The first tab lets you search your org's directory.
+ </Step>
+ <Step title="Search by name or email">
+ Start typing. Matching org members appear in the list. Select the people you want to add.
+ </Step>
+ <Step title="Pick the permission">
+ Choose **Member** for most people, or **Manager** for co-teachers and admin support.
+ </Step>
+ <Step title="Click Add">
+ The selected members land in the workspace right away. They get an in-app notification, no email is sent.
+ </Step>
+</Steps>
+
+{/* IMG-21A: Add Members modal with search tab */}
+<Frame caption="The Add Members dialog with the org search tab. Matching org members appear as you type.">
+ <img src="/images/v2_members_add_search.png" alt="A workspace Add Members dialog with a search input and a list of matching org members." />
+</Frame>
+
+## Method 2: Email invites
+
+<Steps>
+ <Step title="Open the workspace and go to Members">
+ Same Members tab as Method 1.
+ </Step>
+ <Step title="Click Add Members">
+ In the Add Members dialog, switch to the email-invite tab.
  </Step>
  <Step title="Add emails">
  Type or paste a list of emails. Playlab parses comma-separated and newline-separated lists.
@@ -49,21 +75,21 @@ V2 supports both direct invites and invite links. Pick the path that matches you
  <Step title="Pick the permission">
  Choose **Member** for most people, or **Manager** for co-teachers and admin support.
  </Step>
- <Step title="Click Add Members">
- Each invitee gets an email. They click through and join the workspace.
+ <Step title="Click Send Invites">
+ Each invitee gets an email. They click through, create or sign in to their account, and join the workspace.
  </Step>
 </Steps>
 
-{/* IMG-21: Members tab with new buttons */}
-<Frame caption="The Members tab in V2 with Add Members and Create Invite Link buttons.">
- <img src="/images/v2_members_add_invite.png" alt="A V2 workspace Members tab showing Add Members and Create Invite Link buttons in the top right." />
+{/* IMG-21B: Add Members modal with email tab */}
+<Frame caption="The email-invite tab. Paste a list of emails and Playlab sends invites.">
+ <img src="/images/v2_members_add_email.png" alt="A workspace Add Members dialog with an email-invite input and a permission selector." />
 </Frame>
 
-## Method 2: Create an invite link
+## Method 3: Create an invite link
 
 <Steps>
  <Step title="Open the workspace and go to Members">
- Same Members tab as for direct invitation.
+ Same Members tab as Methods 1 and 2.
  </Step>
  <Step title="Click Create Invite Link">
  A dialog opens with the permission selector and a Copy Link button.
@@ -78,6 +104,11 @@ V2 supports both direct invites and invite links. Pick the path that matches you
  Send it through email, Slack, or paste it into a class document. Each person who clicks it joins the workspace.
  </Step>
 </Steps>
+
+{/* IMG-21C: Create Invite Link modal */}
+<Frame caption="The Create Invite Link dialog with permission selector and Copy Link button.">
+ <img src="/images/v2_members_invite_link.png" alt="A workspace Create Invite Link dialog with permission selector and Copy Link button." />
+</Frame>
 
 You can revoke an invite link at any time from the Members tab. Revoking does not affect people who have already joined; it only stops new joiners from using the link.
 
@@ -97,9 +128,11 @@ For org-level roles that span workspaces, see [Org permissions and roles](https:
 
 Things teachers have asked about:
 
-Use Add Members when you have a class roster from a student information system. The list import is faster than expecting students to follow a link.
+Use the org search when you're adding a colleague who already has a Playlab account in your org. It's instant and skips the email round-trip.
 
-Use Create Invite Link for after-school or club settings where attendance is fluid. The link makes self-service possible.
+Use email invites when you have a class roster from a student information system or a list of new accounts to onboard. The list import is faster than expecting students to follow a link.
+
+Use the invite link for after-school or club settings where attendance is fluid. The link makes self-service possible.
 
 Set the default permission for the link to Member. If a colleague needs Manager access, invite them directly with the right role.
 
@@ -117,8 +150,8 @@ Revisit roles each semester. Coaches who were active last year may not need acce
  <Accordion title="How do I remove a member?">
  Open the Members tab, find the person, and click Remove. They lose access immediately. Their conversation history stays in the workspace's activity log.
  </Accordion>
- <Accordion title="Can I see who joined through an invite link?">
- Yes. The Members tab shows how each person joined: direct invite or link.
+ <Accordion title="Can I see how each member joined?">
+ Yes. The Members tab shows how each person was added: org search, email invite, or invite link.
  </Accordion>
  <Accordion title="What if I revoke a link by accident?">
  Generate a new one. The new link works the same way. People who joined through the old link keep their access.

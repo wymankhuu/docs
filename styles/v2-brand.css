@@ -69,7 +69,7 @@ body:has(a[href$="/V2 for Networks or Districts"]),
 /* fallback: data attribute set by mintlify per route */
 body[data-route*="/whatsnew/v2/"],
 body[data-route*="/features/collections/"],
-body[data-route*="/getstarted/Navigating Playlab V2"],
+body[data-route*="/getstarted/Navigating Playlab"],
 body[data-route*="/getstarted/Collaborating on an App"],
 body[data-route*="/getstarted/Workspace Building Permissions"],
 body[data-route*="/features/Cross-Workspace App Use"],

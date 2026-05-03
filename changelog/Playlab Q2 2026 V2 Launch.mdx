@@ -1,6 +1,6 @@
 ---
-title: "Q2 2026: V2 launch"
-description: "What shipped in the V2 launch: new sharing, Collections, organization-level monitoring, and granular permissions."
+title: "New feature release: org deployment, Collections sharing, App Insights, oh my!"
+description: "What shipped in the V2 launch: org-level deployment, Collections that update everywhere, app insights, and a refreshed permissions model."
 sidebarTitle: "Q2 2026 V2 Launch"
 icon: "flag"
 ---
@@ -18,56 +18,133 @@ icon: "flag"
   ></iframe>
 </Frame>
 
-V2 of Playlab shipped to new organizations as the default in May 2026. Existing orgs migrate on a rolling schedule with their Learning Partners through July. This entry summarizes what changed and links to the deeper guides for each area.
+Over the years, Playlab usage has grown from individual builders to partners, districts, and entire countries serving tens of thousands of students. The scale is inspiring. It also told us we needed to grow the product to support the wildest ambitions you have for your apps.
 
-{/* TODO-IMG-Q2-LAUNCH-WHERE: Screenshot showing where to find this in the V2 UI */}
-<Frame caption="Where to find this in V2.">
-  <img src="/images/v2/TODO-where-to-find-q2-launch.png" alt="V2 UI screenshot showing where to find Q2 2026 V2 launch highlights" />
-</Frame>
+This release ships a batch of features that make organizing, sharing, and monitoring apps and people on Playlab a meaningfully better experience.
 
+## What's new
 
-## Highlights
+<CardGroup cols={2}>
+  <Card title="Org deployment" icon="building" href="/features/Sharing with Groups and Orgs">
+    Share an app with another organization directly. Activity stays segmented per recipient. Updates flow automatically.
+  </Card>
+  <Card title="Collections sharing" icon="layers" href="/features/collections/What are Collections">
+    Bundle a curated set of apps into a Collection and share it across many organizations. Update an app once, every recipient sees the new version.
+  </Card>
+  <Card title="App Insights" icon="trending-up" href="/features/App-Level Insights">
+    A new app-level view for builders. Set goals, track engagement, review individual conversations, see what's working.
+  </Card>
+  <Card title="Permissions refresh" icon="lock" href="/features/App Privacy and Visibility">
+    Apps start private. Editor and Viewer roles work per-app. Workspace toggles decide what members can build, see, and share.
+  </Card>
+</CardGroup>
 
-Five capabilities define the V2 release.
+## What's new for your role
 
-**Editor model for app collaboration.** Sharing an app with a peer no longer requires adding them to the workspace. Use the Share modal on any app and pick Editor or Viewer. See [Collaborating on an app](https://learn.playlab.ai/getstarted/Collaborating%20on%20an%20App).
+Whether you build apps, run a class, admin an org, or deploy across a network, this release adds something for you.
 
-**Sharing with individuals, groups, and orgs.** A single Share modal handles every sharing destination. Activity stays segmented by recipient. See [Sharing with individuals](https://learn.playlab.ai/features/Sharing%20with%20Individuals) and [Sharing with groups and orgs](https://learn.playlab.ai/features/Sharing%20with%20Groups%20and%20Orgs).
+### For builders
 
-**Collections.** A curated bundle of apps you can share like a single resource. Updates flow to recipients automatically. The model that ONE8 Foundation, district admins, and curriculum partners asked for. See [What are Collections](https://learn.playlab.ai/features/collections/What%20are%20Collections).
+Your apps are yours from day one. New apps start private to you and your org's admins. When you're ready, share with a peer as Editor or Viewer through the Share modal. They get access to that one app, not your whole workspace. Change or revoke access at any time.
 
-**Centralized org monitoring and flags.** Org admins see usage, member detail, and flagged messages across every workspace from one dashboard. See [Centralized monitoring](https://learn.playlab.ai/features/Reviewing%20App%20Activity).
+- [App privacy and visibility](/features/App%20Privacy%20and%20Visibility)
+- [Sharing with individuals](/features/Sharing%20with%20Individuals)
+- [Sharing with groups and orgs](/features/Sharing%20with%20Groups%20and%20Orgs)
 
-**Privacy and granular building permissions.** Apps start private to the owner and org admins. Workspaces have three toggles for what members can do. See [App privacy](https://learn.playlab.ai/features/App%20Privacy%20and%20Visibility) and [Workspace building permissions](https://learn.playlab.ai/getstarted/Workspace%20Building%20Permissions).
+### For educators
 
-## What changed for each persona
+You have more visibility into what students are doing and finer control over what they can do. Each workspace has three toggles for whether members can build apps, see each other's work, or share apps beyond the workspace. The same app can live in multiple workspaces with activity segmented per class. A member detail page collects everything one student did inside the workspace.
 
-**Builders.** Privacy by default, the new Editor model, deployment without remixing. See [V2 for Builders](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Builders).
+- [Workspace building permissions](/getstarted/Workspace%20Building%20Permissions)
+- [Using an app across multiple classes](/features/Cross-Workspace%20App%20Use)
+- [Workspace member detail](/features/Workspace%20Member%20Detail)
 
-**Educators.** Curating apps from across the org, member detail visibility, granular building permissions per workspace. See [V2 for Educators](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Educators).
+### For administrators
 
-**Admins.** Org-wide dashboards, centralized flagged messages, and a clear answer to "what has this student been doing." See [V2 for Admins](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Admins).
+Activity dashboards, flagged messages, and member detail pages live at the organization level. The question "what has this student been doing in Playlab" has a direct answer. Org admins see usage across every workspace from one dashboard, with filters by workspace, app, member, and date.
 
-**Networks or Districts.** Multi-org deployment, segmented activity, Collections for curated partner bundles. See [V2 for Networks or Districts](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Networks%20or%20Districts).
+- [Centralized org monitoring](/features/Reviewing%20App%20Activity)
+- [Workspace member detail](/features/Workspace%20Member%20Detail)
+- [App-level insights](/features/App-Level%20Insights)
+- [Org permissions and roles](/features/Org%20Permissions%20and%20Roles)
 
-## Coming next
+### For network owners
 
-A few things shipped on a follow-up timeline. They are tracked openly:
+Share apps across multiple organizations through Collections. Build a curated set of apps once, share it with each partner, and updates flow automatically. Aggregate activity rolls up to you. Each partner sees only their own.
 
-App-level insights dashboard for app builders (in development)
+- [What are Collections](/features/collections/What%20are%20Collections)
+- [Creating and sharing a Collection](/features/collections/Creating%20and%20Sharing%20a%20Collection)
+- [Using an app across multiple classes](/features/Cross-Workspace%20App%20Use)
 
-Org-level cross-workspace insights aggregation (June 12, 2026)
+## A closer look at what's new
 
-Rostering support for V2 (in scoping)
+### Student data is more visible and accessible
 
-For the full list, see [Known limitations](https://learn.playlab.ai/whatsnew/v2/Known%20Limitations).
+You can segment activity on the same app by workspace, so each class sees only its own sessions. The member detail page collects everything a student did inside the workspace: apps used, conversations, flags, and apps built.
 
-## Resources
+A few patterns that work:
 
-- [Getting started in V2](https://learn.playlab.ai/getstarted/Getting%20Started)
-- [Navigating Playlab V2 (how V2 is organized)](https://learn.playlab.ai/getstarted/Navigating%20Playlab%20V2)
-- [V1 → V2 cheat sheet](https://learn.playlab.ai/whatsnew/v2/V1%20to%20V2%20Cheat%20Sheet)
-- [Migrating from V1 to V2](https://learn.playlab.ai/whatsnew/v2/Migrating%20from%20V1%20to%20V2)
+Set a weekly review cadence. Open the Activity view every Friday and scan for sessions that stalled or members who haven't engaged. Five minutes catches most issues.
+
+Use date filtering like last 7 days or last 14 days to avoid getting overwhelmed.
+
+Filter by flag status when you open the view. Anything flagged is worth a quick read.
+
+Open conversations that look unusual. A very long session for a brief assignment, or a very short session for a complex assignment, are signals worth investigating.
+
+Admins can see across classes. The org-level dashboard surfaces patterns no single workspace view would catch.
+
+### Curate your favorite apps into a Collection and share across an organization
+
+If you ship a set of apps to partners or districts, build a Collection once and share it. Recipients see updates as you publish them. Each district sees only its own activity, and you see aggregate usage across the network.
+
+[Read the full guide →](/features/collections/What%20are%20Collections)
+
+### Apps can live in multiple workspaces; one update reaches all of them
+
+Add the same app to as many workspaces as you need. Each class sees segmented activity. Update the app once, and every class using it sees the new version.
+
+[Read the full guide →](/features/Cross-Workspace%20App%20Use)
+
+### App-level and workspace-level control
+
+New apps start private. You and your org's admins can see them. You can add a peer as Editor or Viewer when you're ready. They get access to that one app, not your whole workspace. You can change or revoke access at any time.
+
+For workspaces, three toggles decide whether members can build apps, see each other's work, or share apps beyond the workspace. The settings can match how the class works.
+
+- [App privacy and visibility](/features/App%20Privacy%20and%20Visibility)
+- [Workspace building permissions](/getstarted/Workspace%20Building%20Permissions)
+
+## What's changing in the structure
+
+Playlab is now organized around four clear containers: organization, workspace, app, and collection. The container model gives you direct control over your apps, sharper boundaries between classes, and new ways to share what you build with the people you build for. Most of what you knew still works. The structure around it has shifted to give you more room to move.
+
+[See how Playlab is organized →](/getstarted/Navigating%20Playlab)
+
+If you're coming from V1 and want a workflow-by-workflow comparison, the [Coming from V1](/whatsnew/v2/Why%20V2) section has migration guides, a side-by-side cheat sheet, and role-specific summaries of what changed.
+
+## Coming soon
+
+This summer we're shipping deeper organization dashboards for cross-workspace member usage, expanded app insights with aggregated metrics, and rostering support.
+
+For the full list of what's in flight, see [Known limitations and what's coming next](/whatsnew/v2/Known%20Limitations).
+
+## Learn with us
+
+Join us at upcoming live sessions to see V2 in action and ask questions.
+
+<CardGroup cols={2}>
+  <Card title="Onboarding sessions" icon="graduation-cap" href="/learn with us/onboarding">
+    Live walkthroughs for new and returning users.
+  </Card>
+  <Card title="Office hours" icon="message-circle" href="/learn with us/office hours">
+    Drop in with questions any week. We're here.
+  </Card>
+</CardGroup>
+
+## Contact us
+
+As you play with the new release, reach out any time at [support@playlab.ai](mailto:support@playlab.ai). For deeper conversations, you're always welcome at [office hours](/learn with us/office hours).
 
 ---
 

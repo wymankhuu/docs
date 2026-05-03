@@ -31,113 +31,15 @@
     "name": "Home",
     "url": "https://learn.playlab.ai"
   },
+  "redirects": [
+    { "source": "/getstarted/publishing", "destination": "/features/Publishing" },
+    { "source": "/getstarted/Remixing", "destination": "/getstarted/Creating a Playlab App" },
+    { "source": "/features/Move Apps to Workspace", "destination": "/features/Cross-Workspace App Use" },
+    { "source": "/features/Remixing multiple apps", "destination": "/features/Cross-Workspace App Use" },
+    { "source": "/getstarted/Navigating Playlab V2", "destination": "/getstarted/Navigating Playlab" }
+  ],
   "navigation": {
     "tabs": [
-      {
-        "tab": "🆕 V2 Preview",
-        "color": "#a4beeb",
-        "groups": [
-          {
-            "group": "Start Here",
-            "icon": "door-open",
-            "pages": [
-              "introduction",
-              "whatsnew/v2/Why V2"
-            ]
-          },
-          {
-            "group": "New to Playlab",
-            "icon": "user-plus",
-            "pages": [
-              "getstarted/Signing Up",
-              "getstarted/Getting Started",
-              "getstarted/Navigating Playlab V2"
-            ]
-          },
-          {
-            "group": "Migrating from V1",
-            "icon": "arrow-left-right",
-            "pages": [
-              "whatsnew/v2/What's Different in V2",
-              "whatsnew/v2/V1 to V2 Cheat Sheet",
-              "whatsnew/v2/Migrating from V1 to V2",
-              "whatsnew/v2/Known Limitations"
-            ]
-          },
-          {
-            "group": "Build Apps",
-            "icon": "hammer",
-            "pages": [
-              "getstarted/Creating a Playlab App",
-              "getstarted/Collaborating on an App",
-              "features/App Privacy and Visibility"
-            ]
-          },
-          {
-            "group": "Share & Publish",
-            "icon": "share-2",
-            "pages": [
-              "features/Publishing",
-              "features/Sharing with Individuals",
-              "features/Sharing with Groups and Orgs"
-            ]
-          },
-          {
-            "group": "Run a Workspace",
-            "icon": "folder-tree",
-            "pages": [
-              "getstarted/Creating Your Own Workspace",
-              "getstarted/Adding Members to your Workspace",
-              "getstarted/Workspace Building Permissions",
-              "features/Cross-Workspace App Use"
-            ]
-          },
-          {
-            "group": "Monitor Activity",
-            "icon": "trending-up",
-            "pages": [
-              "getstarted/Reviewing Activity",
-              "features/Workspace Member Detail",
-              "features/Reviewing App Activity",
-              "features/App-Level Insights"
-            ]
-          },
-          {
-            "group": "Collections",
-            "icon": "layers",
-            "pages": [
-              "features/collections/What are Collections",
-              "features/collections/Creating and Sharing a Collection"
-            ]
-          },
-          {
-            "group": "Org Admin",
-            "icon": "shield",
-            "pages": [
-              "getstarted/Adding Students to Playlab",
-              "features/Org Permissions and Roles"
-            ]
-          },
-          {
-            "group": "For Your Role",
-            "icon": "users",
-            "pages": [
-              "whatsnew/v2/V2 for Builders",
-              "whatsnew/v2/V2 for Educators",
-              "whatsnew/v2/V2 for Admins",
-              "whatsnew/v2/V2 for Networks or Districts"
-            ]
-          },
-          {
-            "group": "Reference",
-            "icon": "book-open",
-            "pages": [
-              "whatsnew/v2/V2 Glossary",
-              "changelog/Playlab Q2 2026 V2 Launch"
-            ]
-          }
-        ]
-      },
       {
         "tab": "🎓 Learn Live with Us",
         "color": "#10B981",
@@ -165,23 +67,40 @@
             "group": "▶️ Getting Started",
             "pages": [
               "getstarted/Signing Up",
+              "getstarted/Getting Started",
+              "getstarted/Navigating Playlab",
+              "getstarted/Building Safely"
+            ]
+          },
+          {
+            "group": "🛠️ Build & Collaborate",
+            "pages": [
               "getstarted/Creating a Playlab App",
-              "getstarted/publishing",
-              "getstarted/Creating Your Own Workspace",
-              "getstarted/Adding Members to your Workspace",
+              "getstarted/Collaborating on an App",
               "getstarted/Changing Name and Description",
               "getstarted/Adding References",
               "getstarted/Using the Design Tab",
               "getstarted/Adding Starter Inputs",
               "getstarted/Using the Playlab Assistant",
-              "getstarted/Remixing",
-              "getstarted/Deleting",
-              "getstarted/Reviewing Activity",
               "getstarted/Image Input",
+              "getstarted/Deleting"
+            ]
+          },
+          {
+            "group": "🗂️ Workspaces & People",
+            "pages": [
+              "getstarted/Creating Your Own Workspace",
+              "getstarted/Adding Members to your Workspace",
+              "getstarted/Workspace Building Permissions",
+              "getstarted/Adding Students to Playlab",
               "getstarted/markingstatus",
-              "getstarted/organizingworkspaces",
-              "getstarted/Building Safely",
-              "getstarted/Adding Students to Playlab"
+              "getstarted/organizingworkspaces"
+            ]
+          },
+          {
+            "group": "📈 Activity",
+            "pages": [
+              "getstarted/Reviewing Activity"
             ]
           },
           {
@@ -217,9 +136,57 @@
           {
             "group": "🆕 Recently Added",
             "pages": [
+              "features/App Privacy and Visibility",
+              "features/Sharing with Individuals",
+              "features/Sharing with Groups and Orgs",
+              "features/collections/What are Collections",
+              "features/Cross-Workspace App Use",
+              "features/Workspace Member Detail",
+              "features/App-Level Insights",
               "features/Camera Handwriting Input",
               "features/Doc Editor",
               "features/Safety and Moderation Updates"
+            ]
+          },
+          {
+            "group": "🔒 Privacy & Permissions",
+            "pages": [
+              "features/App Privacy and Visibility",
+              "features/Org Permissions and Roles"
+            ]
+          },
+          {
+            "group": "🔗 Sharing & Publishing",
+            "pages": [
+              "features/Publishing",
+              "features/Sharing with Individuals",
+              "features/Sharing with Groups and Orgs"
+            ]
+          },
+          {
+            "group": "📚 Collections",
+            "pages": [
+              "features/collections/What are Collections",
+              "features/collections/Creating and Sharing a Collection"
+            ]
+          },
+          {
+            "group": "🏠 Workspaces",
+            "pages": [
+              "features/Organizing Workspaces",
+              "features/Cross-Workspace App Use",
+              "features/Submit Your App To Community"
+            ]
+          },
+          {
+            "group": "📊 Activity & Insights",
+            "pages": [
+              "features/Reviewing App Activity",
+              "features/Workspace Member Detail",
+              "features/App-Level Insights",
+              "features/Exporting Data",
+              "features/Exporting to Docx",
+              "features/Exporting to Google Drive"
             ]
           },
           {
@@ -229,7 +196,8 @@
               "features/Selecting an LLM",
               "features/Richer Starter Inputs",
               "features/Optional welcome message",
-              "features/forking conversations"
+              "features/forking conversations",
+              "features/Doc Editor"
             ]
           },
           {
@@ -273,25 +241,6 @@
             ]
           },
           {
-            "group": "🟡 Activity, Exports & Documents",
-            "pages": [
-              "features/Reviewing App Activity",
-              "features/Exporting Data",
-              "features/Doc Editor",
-              "features/Exporting to Docx",
-              "features/Exporting to Google Drive"
-            ]
-          },
-          {
-            "group": "🟤 Workspace & Community",
-            "pages": [
-              "features/Organizing Workspaces",
-              "features/Move Apps to Workspace",
-              "features/Remixing multiple apps",
-              "features/Submit Your App To Community"
-            ]
-          },
-          {
             "group": "🔴 Safety & Feedback",
             "pages": [
               "features/Submitting Feedback",
@@ -308,6 +257,7 @@
           {
             "group": "⚙️ Changelog",
             "pages": [
+              "changelog/Playlab Q2 2026 V2 Launch",
               "changelog/Product Changelog"
             ]
           }
@@ -380,6 +330,46 @@
               "faq/Professional Development",
               "faq/Research",
               "faq/Partnerships"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Coming from V1",
+        "color": "#a4beeb",
+        "groups": [
+          {
+            "group": "Read this first",
+            "icon": "compass",
+            "pages": [
+              "whatsnew/v2/Why V2"
+            ]
+          },
+          {
+            "group": "Migration guide",
+            "icon": "arrow-left-right",
+            "pages": [
+              "whatsnew/v2/What's Different in V2",
+              "whatsnew/v2/V1 to V2 Cheat Sheet",
+              "whatsnew/v2/Migrating from V1 to V2",
+              "whatsnew/v2/Known Limitations"
+            ]
+          },
+          {
+            "group": "What's new for your role",
+            "icon": "users",
+            "pages": [
+              "whatsnew/v2/V2 for Builders",
+              "whatsnew/v2/V2 for Educators",
+              "whatsnew/v2/V2 for Admins",
+              "whatsnew/v2/V2 for Networks or Districts"
+            ]
+          },
+          {
+            "group": "Reference",
+            "icon": "book-open",
+            "pages": [
+              "whatsnew/v2/V2 Glossary"
             ]
           }
         ]

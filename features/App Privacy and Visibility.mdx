@@ -1,6 +1,6 @@
 ---
-title: "App privacy and visibility in V2"
-description: "How privacy works for Playlab apps in V2: who can see your app, when, and why."
+title: "App privacy and visibility"
+description: "How privacy works for Playlab apps: who can see your app, when, and why."
 sidebarTitle: "App Privacy"
 icon: "lock"
 ---
@@ -18,13 +18,7 @@ icon: "lock"
   ></iframe>
 </Frame>
 
-In V2, every Playlab app starts private. Only you and your organization's admins can see it until you take action to share or publish. This page explains who can see what, why org admins still have visibility, and how to move from private to shared.
-
-## What changed from V1
-
-In V1, an app you created was visible to everyone in the workspace where it lived. If you started a draft inside a workspace, your colleagues saw it from day one. The default mode was open.
-
-V2 reverses this. New apps are private to the owner and the organization's admins. Sharing is an explicit action. The change protects in-progress work and matches the way most builders described how they wanted Playlab to feel.
+Every Playlab app starts private. Only you and your organization's admins can see it until you take action to share or publish. This page explains who can see what, why org admins still have visibility, and how to move from private to shared.
 
 {/* IMG-06: Privacy indicator */}
 <Frame caption="The lock icon on an app card shows the app is currently private.">
@@ -104,14 +98,8 @@ Admin visibility is read-only. They can view the app but not edit it. They canno
 ## FAQ
 
 <AccordionGroup>
- <Accordion title="Is private-by-default a regression from V1?">
- It is a different default. V1 prioritized discoverability inside a workspace. V2 prioritizes builder control. Most builders find the V2 default closer to how they expected the product to behave.
- </Accordion>
  <Accordion title="Can I make my app fully private, hidden from org admins?">
  No. Org admins keep visibility for trust and safety. The default is private from peers and members of your workspaces unless you share or publish.
- </Accordion>
- <Accordion title="What happens to my V1 apps during migration?">
- Apps move with their existing access. If your app was visible to a workspace in V1, the workspace members keep access in V2 through workspace-level visibility. New people added to the workspace after migration follow the V2 sharing model.
  </Accordion>
  <Accordion title="Can I see who has accessed my app?">
  Yes. Activity views show usage per app, including who used it and when. See [Reviewing student activity per class](https://learn.playlab.ai/getstarted/Reviewing%20Activity).
