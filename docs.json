@@ -58,7 +58,7 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "\ud83c\udf93 Learn Live with Us",
+        "tab": "Learn Live with Us",
         "color": "#10B981",
         "groups": [
           {
@@ -68,7 +68,7 @@
             ]
           },
           {
-            "group": "\ud83d\udd0d Explore Learning Opportunities",
+            "group": "Explore Learning Opportunities",
             "pages": [
               "learn with us/onboarding",
               "learn with us/office hours"
@@ -77,11 +77,11 @@
         ]
       },
       {
-        "tab": "\u270f\ufe0f Learn on Your Own",
+        "tab": "Learn on Your Own",
         "color": "#3B82F6",
         "groups": [
           {
-            "group": "\u25b6\ufe0f Getting Started",
+            "group": "Getting Started",
             "pages": [
               "getstarted/Signing Up",
               "getstarted/Getting Started",
@@ -90,7 +90,7 @@
             ]
           },
           {
-            "group": "\ud83d\udee0\ufe0f Build & Collaborate",
+            "group": "Build & Collaborate",
             "pages": [
               "getstarted/Creating a Playlab App",
               "getstarted/Collaborating on an App",
@@ -104,7 +104,7 @@
             ]
           },
           {
-            "group": "\ud83d\uddc2\ufe0f Workspaces & People",
+            "group": "Workspaces & People",
             "pages": [
               "getstarted/Creating Your Own Workspace",
               "getstarted/Adding Members to your Workspace",
@@ -115,13 +115,13 @@
             ]
           },
           {
-            "group": "\ud83d\udcc8 Activity",
+            "group": "Activity",
             "pages": [
               "getstarted/Reviewing Activity"
             ]
           },
           {
-            "group": "\ud83d\udfe1 Basic Prompting",
+            "group": "Basic Prompting",
             "pages": [
               "prompting/basic/be clear concise and specific",
               "prompting/basic/context is key",
@@ -134,7 +134,7 @@
             ]
           },
           {
-            "group": "\ud83d\udd35 Advanced Prompting",
+            "group": "Advanced Prompting",
             "pages": [
               "prompting/advanced/intro",
               "prompting/advanced/selecting llm",
@@ -147,11 +147,11 @@
         ]
       },
       {
-        "tab": "\ud83d\udccb Feature Documentation",
+        "tab": "Feature Documentation",
         "color": "#8B5CF6",
         "groups": [
           {
-            "group": "\ud83c\udd95 Recently Added",
+            "group": "Recently Added",
             "pages": [
               "features/App Privacy and Visibility",
               "features/Sharing with Individuals",
@@ -166,14 +166,14 @@
             ]
           },
           {
-            "group": "\ud83d\udd12 Privacy & Permissions",
+            "group": "Privacy & Permissions",
             "pages": [
               "features/App Privacy and Visibility",
               "features/Org Permissions and Roles"
             ]
           },
           {
-            "group": "\ud83d\udd17 Sharing & Publishing",
+            "group": "Sharing & Publishing",
             "pages": [
               "features/Publishing",
               "features/Sharing with Individuals",
@@ -181,14 +181,14 @@
             ]
           },
           {
-            "group": "\ud83d\udcda Collections",
+            "group": "Collections",
             "pages": [
               "features/collections/What are Collections",
               "features/collections/Creating and Sharing a Collection"
             ]
           },
           {
-            "group": "\ud83c\udfe0 Workspaces",
+            "group": "Workspaces",
             "pages": [
               "features/Organizing Workspaces",
               "features/Cross-Workspace App Use",
@@ -196,7 +196,7 @@
             ]
           },
           {
-            "group": "\ud83d\udcca Activity & Insights",
+            "group": "Activity & Insights",
             "pages": [
               "features/Reviewing App Activity",
               "features/Workspace Member Detail",
@@ -207,7 +207,7 @@
             ]
           },
           {
-            "group": "\ud83d\udfe3 Building Your App",
+            "group": "Building Your App",
             "pages": [
               "features/AI assisted builder",
               "features/Selecting an LLM",
@@ -218,7 +218,7 @@
             ]
           },
           {
-            "group": "\ud83d\udfe0 Personalizing App Behavior",
+            "group": "Personalizing App Behavior",
             "pages": [
               "features/Adaptive Memory",
               "features/User Profiles",
@@ -227,7 +227,7 @@
             ]
           },
           {
-            "group": "\ud83d\udd35 References & Curriculum",
+            "group": "References & Curriculum",
             "pages": [
               "features/Global References",
               "features/Organizational References",
@@ -237,7 +237,7 @@
             ]
           },
           {
-            "group": "\ud83d\udfe2 Voice, Language & Accessibility",
+            "group": "Voice, Language & Accessibility",
             "pages": [
               "features/Voice Input",
               "features/Voice Output",
@@ -249,7 +249,7 @@
             ]
           },
           {
-            "group": "\u26aa AI Tools (MCP)",
+            "group": "AI Tools (MCP)",
             "pages": [
               "features/MCP tools",
               "features/MCP Python Tool",
@@ -258,7 +258,7 @@
             ]
           },
           {
-            "group": "\ud83d\udd34 Safety & Feedback",
+            "group": "Safety & Feedback",
             "pages": [
               "features/Submitting Feedback",
               "features/Escalating Flagged Conversations",
@@ -268,11 +268,11 @@
         ]
       },
       {
-        "tab": "\u2699\ufe0f Changelog",
+        "tab": "Changelog",
         "color": "#10B981",
         "groups": [
           {
-            "group": "\u2699\ufe0f Changelog",
+            "group": "Changelog",
             "pages": [
               "changelog/Playlab Q2 2026 V2 Launch",
               "changelog/Product Changelog"
@@ -281,11 +281,11 @@
         ]
       },
       {
-        "tab": "\ud83d\udcda Resources",
+        "tab": "Resources",
         "color": "#F59E0B",
         "groups": [
           {
-            "group": "\ud83d\udcc4 AI Policies",
+            "group": "AI Policies",
             "pages": [
               "resources/aipolicies",
               "resources/aistatepolicies",
@@ -293,14 +293,14 @@
             ]
           },
           {
-            "group": "\ud83c\udfa5 Skills Boost Videos",
+            "group": "Skills Boost Videos",
             "pages": [
               "skillsboost/smartreferencing",
               "skillsboost/usability"
             ]
           },
           {
-            "group": "\ud83d\udfe2 Lead a Workshop",
+            "group": "Lead a Workshop",
             "pages": [
               "resources/introtoplaylab",
               "resources/playlab101"
@@ -309,7 +309,7 @@
         ]
       },
       {
-        "tab": "\u2753 FAQ",
+        "tab": "FAQ",
         "color": "#EF4444",
         "groups": [
           {
@@ -319,13 +319,13 @@
             ]
           },
           {
-            "group": "\ud83d\udca1 Why Playlab",
+            "group": "Why Playlab",
             "pages": [
               "faq/The Playlab Difference"
             ]
           },
           {
-            "group": "\ud83d\udd12 Privacy, Safety & Compliance",
+            "group": "Privacy, Safety & Compliance",
             "pages": [
               "faq/Approach to Trust and Safety",
               "faq/Privacy and Security",
@@ -334,7 +334,7 @@
             ]
           },
           {
-            "group": "\ud83d\udc64 Account & Technical",
+            "group": "Account & Technical",
             "pages": [
               "faq/Account Management",
               "faq/Single Sign On",
@@ -342,7 +342,7 @@
             ]
           },
           {
-            "group": "\ud83e\udd1d Programs & Partnerships",
+            "group": "Programs & Partnerships",
             "pages": [
               "faq/Professional Development",
               "faq/Research",
