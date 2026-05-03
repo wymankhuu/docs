@@ -1,29 +1,134 @@
 ---
-title: 'Adding Starter Inputs'
-description: 'Learn how to add starter inputs to your Playlab apps'
+title: "Adding starter inputs"
+description: "Collect information from users before they start interacting with your app. Covers all input types, configuration, and best practices."
+sidebarTitle: "Starter Inputs"
 ---
 
-## Adding Starter Inputs
+Starter inputs let you collect information from users before they begin interacting with your app. They make conversations more focused, structured, and personalized.
 
-Starter Inputs allow you to collect information from users before they begin interacting with your app. For the full guide on adding and configuring different types of starter inputs, see our detailed feature documentation.
+<Warning>
+  **Preview required**
 
-<Card title="Richer Starter Inputs: Full Guide" icon="arrow-right" href="/features/Richer Starter Inputs">
-  Learn about all starter input types (Short Text, Long Text, Dropdown, Checkbox, File Upload), configuration options, best practices, and FAQs.
-</Card>
+  Always preview your app to test how starter inputs behave. Confirm they collect the right information and that required fields appear as intended before sharing.
+</Warning>
 
-## Quick Overview
+<Info>
+  **Why this matters**
 
-Starter inputs help you:
-- **Collect key information upfront** before users start interacting with your app
-- **Structure conversations** by gathering context like names, grade levels, or preferences
-- **Enhance personalization** by using input data to customize the AI's responses
+  Well-designed starter inputs streamline interactions, collect what you need upfront, and make your app more useful. They are often essential for purposeful, structured conversations.
+</Info>
 
-<Tip>
-  Remember to preview your app after adding starter inputs to make sure they work as expected!
-</Tip>
+## Watch how to add starter inputs
 
-## Need Support?
+A short walkthrough of building with starter inputs in a Playlab app.
 
-If you encounter any issues while adding starter inputs:
+<iframe
+  src="https://www.loom.com/embed/d2678de775d54095b2879f13838eddb6?sid=bcfc6aa2-61ca-41bd-a195-fa2fd94d42ab"
+  frameborder="0"
+  webkitallowfullscreen
+  mozallowfullscreen
+  allowfullscreen
+  style={{ width: "100%", height: "500px" }}
+></iframe>
 
-* Contact us at [support@playlab.ai](mailto:support@playlab.ai)
+## How to add starter inputs
+
+<Steps>
+  <Step title="Open the Inputs menu">
+    On the right-hand navigation in your app editor, click the **Inputs** button. The starter inputs configuration panel opens.
+  </Step>
+
+  <Step title="Add and configure inputs">
+    Click **Add Starter Input** to begin.
+
+    <Frame>
+      <img src="/images/starterinput.jpeg" alt="Starter input button in the app editor" width="300" className="bordered-image" />
+    </Frame>
+
+    Pick from the available input types:
+
+    <Frame>
+      <img src="/images/richerstarterinputsstill.png" alt="Starter input types: Short Text, Long Text, Dropdown, Checkbox, File Upload" width="300" className="bordered-image" />
+    </Frame>
+
+    - **Short Text:** brief responses like names or short answers
+    - **Long Text:** longer responses like descriptions or feedback
+    - **Dropdown:** select a single option from predefined choices
+    - **Checkbox:** select multiple options from predefined choices
+    - **File Upload:** accept files up to 5MB (images, PDFs, CSVs, and more)
+
+    For each input, set:
+
+    - A clear, descriptive label
+    - Whether the input is required or optional
+    - Helpful placeholder text to guide users
+    - At least two options for dropdowns
+    - Multiple options for checkboxes (users can pick any combination)
+
+    Arrange inputs in a logical order, then preview your app to test them.
+  </Step>
+
+  <Step title="Use input data in your app">
+    Reference the collected information in your app's instructions and prompts. Update prompts to incorporate user-provided data, test how the inputs change the conversation, and refine based on what you see.
+  </Step>
+</Steps>
+
+## Best practices
+
+A few patterns that have worked:
+
+**Keep it focused.** Only ask for information that is essential for your app to work.
+
+**Match the input type to the data.** Short text for names; long text for detailed feedback; dropdowns for single-choice; checkboxes for multi-select; file upload for documents or images.
+
+**Make labels clear and specific** so users know exactly what to provide.
+
+**Use placeholder text** to give examples or clarification.
+
+**Arrange inputs in a logical sequence** that matches the flow you want.
+
+**Balance required and optional fields.** Too many required fields can feel overwhelming.
+
+**Test with different inputs** to make sure your app handles every response gracefully.
+
+**Preview before publishing** so you experience your app from the user's side.
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="What types of starter inputs can I add?">
+    Five types: **Short Text** for brief responses, **Long Text** for extended responses, **Dropdown** for single-choice from predefined options, **Checkbox** for multi-select from predefined options, and **File Upload** for files up to 5MB (images, PDFs, CSVs, and more).
+  </Accordion>
+
+  <Accordion title="How many starter inputs should I include?">
+    There is no strict limit, but keep them focused. Too many inputs creates friction and overwhelm. Ask only for what your app actually needs to function.
+  </Accordion>
+
+  <Accordion title="Can I change starter inputs after publishing?">
+    Yes. Be aware that removing inputs returning users have relied on can create confusion, and adding new required inputs can break the experience for them. For significant changes, consider a new version of your app.
+  </Accordion>
+
+  <Accordion title="How do I use the information collected from starter inputs?">
+    Reference specific inputs in your app's instructions and prompts, customize the conversation flow, process uploaded files for relevant data, and use checkbox selections to personalize responses.
+  </Accordion>
+
+  <Accordion title="Are starter inputs visible to all users of my app?">
+    Yes, every user who opens your app sees the configured starter inputs. If you need different inputs for different audiences, create separate versions of the app.
+  </Accordion>
+
+  <Accordion title="What happens if a user skips an optional starter input?">
+    Your app proceeds without that data. Make sure your app's logic handles missing optional inputs gracefully.
+  </Accordion>
+
+  <Accordion title="Can I use uploaded files in my app's functionality?">
+    Yes. Files uploaded through starter inputs can be processed in your app: analyzing CSV data, extracting text from PDFs, or using images as reference material. Include instructions in your app for how to handle uploads.
+  </Accordion>
+
+  <Accordion title="When should I use Dropdown vs Checkbox?">
+    **Dropdown** when users should pick exactly one option from a limited set. **Checkbox** when users might pick multiple options that aren't mutually exclusive. Both ensure consistent, predictable responses and prevent typos compared to free text.
+  </Accordion>
+</AccordionGroup>
+
+## Need support?
+
+Email [support@playlab.ai](mailto:support@playlab.ai) if you run into any issues with starter inputs.

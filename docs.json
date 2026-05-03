@@ -53,6 +53,10 @@
     {
       "source": "/getstarted/Navigating Playlab V2",
       "destination": "/getstarted/Navigating Playlab"
+    },
+    {
+      "source": "/features/Richer Starter Inputs",
+      "destination": "/getstarted/Adding Starter Inputs"
     }
   ],
   "navigation": {
@@ -211,7 +215,7 @@
             "pages": [
               "features/AI assisted builder",
               "features/Selecting an LLM",
-              "features/Richer Starter Inputs",
+              "getstarted/Adding Starter Inputs",
               "features/Optional welcome message",
               "features/forking conversations",
               "features/Doc Editor"
