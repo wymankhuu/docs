@@ -89,8 +89,7 @@
             "pages": [
               "getstarted/Signing Up",
               "getstarted/Getting Started",
-              "getstarted/Navigating Playlab",
-              "getstarted/Building Safely"
+              "getstarted/Navigating Playlab"
             ]
           },
           {
@@ -264,9 +263,10 @@
           {
             "group": "Safety & Feedback",
             "pages": [
-              "features/Submitting Feedback",
+              "getstarted/Building Safely",
+              "features/Safety and Moderation Updates",
               "features/Escalating Flagged Conversations",
-              "features/Safety and Moderation Updates"
+              "features/Submitting Feedback"
             ]
           }
         ]
