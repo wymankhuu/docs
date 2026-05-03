@@ -1,6 +1,7 @@
 ---
-title: "Camera Handwriting Input"
+title: "Camera handwriting input"
 description: "Snap a photo of handwritten work and send it directly to the AI for interpretation and feedback"
+sidebarTitle: "Camera Handwriting Input"
 tag: "Beta"
 ---
 
@@ -13,13 +14,13 @@ Beta
 </span>
 </div>
 
-## <Icon icon="bell-on" size="24" className="inline-block align-text-bottom" /> What is this feature?
+## What is this feature?
 
 Camera Handwriting Input adds a camera button directly inside Playlab conversations. Users can snap a photo of handwritten notes, equations, diagrams, or other paper-based inputs and send them to the AI without leaving the app. There is no need to save a photo separately, find it in a file browser, or upload it manually.
 
 When the AI receives a camera capture, it recognizes that the image contains handwriting and reads the content accordingly, including math equations. Math is rendered with LaTeX formatting so equations display cleanly in the conversation.
 
-## <Icon icon="lightbulb" size="24" className="inline-block align-text-bottom" /> Why is this useful?
+## Why is this useful?
 
 A lot of thinking, especially in math and science, still happens on paper. Getting handwritten notes, equations, or diagrams into an AI conversation usually means taking a photo, saving it, opening a file picker, locating the image, and uploading it. That is a lot of steps, and each one is a place where a user might lose focus or give up.
 
@@ -27,7 +28,7 @@ With Camera Handwriting Input, users tap one button, take a photo, confirm it lo
 
 This can be particularly helpful for younger users, users with accessibility needs, or anyone who thinks best with a pencil in hand. Rather than asking people to change how they express their thinking, it brings paper-based inputs into the digital conversation.
 
-## <Icon icon="circle-play" size="24" className="inline-block align-text-bottom" /> Watch it in Action
+## Watch it in Action
 
 <Frame>
   <iframe
@@ -38,8 +39,7 @@ This can be particularly helpful for younger users, users with accessibility nee
   />
 </Frame>
 
-
-## <Icon icon="thought-bubble" size="24" className="inline-block align-text-bottom" /> How does it work?
+## How does it work?
 
 <Steps>
   <Step title="Enable Image Inputs at the org and app level">
@@ -72,7 +72,7 @@ This can be particularly helpful for younger users, users with accessibility nee
   </Step>
 </Steps>
 
-## <Icon icon="star" size="24" className="inline-block align-text-bottom" /> Tips and Best Practices
+## Tips and Best Practices
 
 <CardGroup cols={2}>
   <Card title="Avoid Blurry Images" icon="image">
@@ -100,12 +100,12 @@ This can be particularly helpful for younger users, users with accessibility nee
   </Card>
 </CardGroup>
 
-## <Icon icon="wand-magic-sparkles" size="24" className="inline-block align-text-bottom" /> Best Models for Handwriting
+## Best Models for Handwriting
 
 For the best results with camera handwriting input, we recommend pairing this feature with models that have strong vision and handwriting recognition capabilities:
 
 <CardGroup cols={2}>
-  <Card title="Gemini 3.1 Pro" icon="stars">
+  <Card title="Gemini 3.1 Pro" icon="bot">
     Among the best models for handwriting recognition. Google's vision capabilities excel at reading handwritten text, equations, and diagrams with high accuracy, making it an ideal choice for camera-based inputs.
   </Card>
 
@@ -126,7 +126,7 @@ For the best results with camera handwriting input, we recommend pairing this fe
   You can change your app's model anytime from the LLM selector in the top left of the builder. See [Selecting an LLM](/features/Selecting%20an%20LLM) for a full comparison of all available models.
 </Tip>
 
-## <Icon icon="circle-check" size="24" className="inline-block align-text-bottom" /> What's Supported
+## What's Supported
 
 - Works on any device with a camera (phones, tablets, laptops with webcam)
 - Supports front and rear cameras with automatic switching
@@ -136,7 +136,7 @@ For the best results with camera handwriting input, we recommend pairing this fe
 - Fully accessible with keyboard navigation and screen reader support
 - Photos follow the same upload pipeline, image optimization, and content moderation as regular image uploads
 
-## <Icon icon="triangle-exclamation" size="24" className="inline-block align-text-bottom" /> Known Limitations
+## Known Limitations
 
 <Warning>
 Camera Handwriting Input is currently in an experimental phase. The following limitations are known:
@@ -148,7 +148,7 @@ Camera Handwriting Input is currently in an experimental phase. The following li
 - Very complex diagrams or mixed text and drawings may not be fully interpreted
 - Each image uses a flat token count regardless of content complexity
 
-## <Icon icon="circle-question" size="24" className="inline-block align-text-bottom" /> Frequently Asked Questions
+## Frequently Asked Questions
 
 <Accordion title="Do I need to enable anything to use this feature?">
   Yes. Image inputs must be enabled at the organization level by an admin, and the app creator must also enable image inputs in the app's settings. Once both are enabled, the camera button will appear automatically in supported browsers.

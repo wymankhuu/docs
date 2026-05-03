@@ -1,0 +1,99 @@
+---
+title: "What's different in V2"
+description: "For people coming from V1: what stayed, what changed, and what you can do now that you couldn't before."
+sidebarTitle: "What's Different"
+---
+
+<Note>
+  This guide is for people coming from Playlab V1. It will be retired in August 2026 once everyone has migrated. For current Playlab guidance, see [Learn on Your Own](/getstarted/Getting%20Started) or [Feature Documentation](/features/App%20Privacy%20and%20Visibility).
+</Note>
+
+If you're coming from V1, this page is your first stop. It answers two questions side by side: what changed in your existing workflows, and what V2 lets you do that wasn't possible before.
+
+For the workflow-by-workflow side-by-side, see the [V1 → V2 cheat sheet](https://learn.playlab.ai/whatsnew/v2/V1%20to%20V2%20Cheat%20Sheet). For the rationale, see [Why V2](https://learn.playlab.ai/whatsnew/v2/Why%20V2).
+
+## What stays the same
+
+Migration preserves what was already working.
+
+- Your apps move with the same prompts, references, and starter inputs
+- App owners are preserved
+- Workspaces keep their names, members, and apps
+- Conversation history is retained and queryable
+- References at the org, workspace, and app level all carry over
+- Integrations (SSO, rostering) keep working
+- Activity history stays in place
+- V1 URLs continue to redirect to V2 paths
+
+## What changed
+
+The structure of how content lives changed. The content itself did not.
+
+| In V1 you went to... | In V2 you go to... |
+| --- | --- |
+| Workspace > Members > Add Member | Workspace > Members > **Add Members** or **Create Invite Link** |
+| Workspace > Apps > New App | Org or Workspace > **New App** |
+| App > Publish > Pick visibility | App > **Share** > Publish toggle and visibility selector |
+| Workspace > Activity | Workspace > Activity (segmented per class) or Org > Activity (cross-workspace) |
+| Remix to deploy | App > **Share** > target org or **Add to Workspace** in another workspace |
+| Curated bundles by remixing | Org > **Collections** > New Collection |
+| Workspace creator collaboration | App > **Share** > add as Editor |
+
+For the full mapping, see the [V1 → V2 cheat sheet](https://learn.playlab.ai/whatsnew/v2/V1%20to%20V2%20Cheat%20Sheet).
+
+## What you can do now (couldn't before)
+
+Six capabilities are new in V2. Each one solves a problem V1 partners ran into often.
+
+**Editor sharing on a single app.** Add a peer as Editor on one app and they can edit that app only. They don't get access to your other apps or your workspace. In V1, the only way to grant edit access was through workspace membership, which over-shared. See [Collaborating on an app](https://learn.playlab.ai/getstarted/Collaborating%20on%20an%20App).
+
+**One app in many classes (no remixing).** Add the same app to as many workspaces as you need. The app keeps a single owner. Activity stays segmented per class. When the owner publishes a new version, every class using the app sees the update. In V1, this required remixing the app per class and copies drifted. See [Using an app across multiple classes](https://learn.playlab.ai/features/Cross-Workspace%20App%20Use).
+
+**Direct sharing with another organization.** From the Share modal, type the destination organization, set permissions, send. Cross-org sharing is a first-class flow. In V1, the only path was remixing into the recipient org. See [Sharing with groups and orgs](https://learn.playlab.ai/features/Sharing%20with%20Groups%20and%20Orgs).
+
+**Collections for curated bundles.** Build a Collection of apps once, share it with a partner organization, and that organization gets the whole bundle. Updates propagate. The ONE8 deployment story is the canonical example. In V1, this required remixing each app into each district's workspace. See [What are Collections](https://learn.playlab.ai/features/collections/What%20are%20Collections).
+
+**Centralized flag review.** All flagged messages from across an organization surface in one dashboard. Filter by workspace, severity, member, or date. In V1, finding flags meant walking every workspace. See [Centralized org monitoring](https://learn.playlab.ai/features/Reviewing%20App%20Activity).
+
+**Workspace building permissions.** Three toggles per workspace: members can build apps, members can see each other, members can share beyond the workspace. Set them to match the class. In V1, workspaces had one shared mode (everyone builds or no one does). See [Workspace building permissions](https://learn.playlab.ai/getstarted/Workspace%20Building%20Permissions).
+
+## Privacy as a default change
+
+<Note>
+  In V2, every new app starts private. You and your org's admins can see it. Nobody else, until you share or publish. In V1, an app you created was visible to everyone in the workspace from day one. The default flipped.
+</Note>
+
+Org admins keep visibility for trust and safety reasons. The default is private from peers and members of your workspaces unless you share. See [App privacy and visibility in V2](https://learn.playlab.ai/features/App%20Privacy%20and%20Visibility).
+
+## Where to next
+
+<CardGroup cols={2}>
+  <Card title="Walk me through migration" icon="arrow-left-right" href="/whatsnew/v2/Migrating from V1 to V2">
+    What to do before, during, and after the migration window.
+  </Card>
+  <Card title="Show me the workflows side-by-side" icon="list" href="/whatsnew/v2/V1 to V2 Cheat Sheet">
+    Every common workflow with V1 and V2 columns.
+  </Card>
+</CardGroup>
+
+For role-specific overviews, see [V2 for Builders](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Builders), [V2 for Educators](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Educators), [V2 for Admins](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Admins), and [V2 for Networks or Districts](https://learn.playlab.ai/whatsnew/v2/V2%20for%20Networks%20or%20Districts).
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Will my class links from last year still work?">
+    Yes. V1 URLs redirect to V2 paths. Bookmarks, LMS embeds, and class materials should keep resolving.
+  </Accordion>
+  <Accordion title="Do I have to learn V2 before my org migrates?">
+    No. The basics work the same. The new capabilities (Collections, cross-workspace, centralized monitoring) become available after migration. Read at your own pace.
+  </Accordion>
+  <Accordion title="Where do I get help during my org's migration?">
+    Your Learning Partner is the first stop. For self-serve users, support@playlab.ai. For real-time questions, drop into Office Hours.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+Last updated: 2026-05-05
+
+Contact us at [support@playlab.ai](mailto:support@playlab.ai)

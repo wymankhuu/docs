@@ -1,0 +1,128 @@
+---
+title: "Publishing your app"
+description: "How to publish a Playlab app, set visibility, and share with specific recipients."
+sidebarTitle: "Publishing"
+---
+
+<Info>
+  **Key points**
+
+  - Publish from the app builder or from any Share modal
+  - Visibility levels: Private, Organization, or Public
+  - Direct sharing works alongside any visibility level
+</Info>
+
+<Frame caption="Walkthrough: publishing an app and picking visibility.">
+  <iframe
+    src="https://drive.google.com/file/d/19Ylm_YOOLHEJzs9PwhnCiQHTO3ELZ7O7/preview"
+    frameborder="0"
+    allow="autoplay"
+    allowfullscreen=""
+    style={{ width: "100%", height: "400px" }}
+  ></iframe>
+</Frame>
+
+Publishing makes an app available beyond the people you have shared it with directly. You publish from the app builder or from any app's Share modal, set the visibility level, and optionally share with specific people, groups, or organizations in the same flow.
+
+<Warning>
+ An app must be published before viewers can use it. People you have added as viewers see a "not yet published" message until you publish.
+</Warning>
+
+## How to publish
+
+<Steps>
+ <Step title="Review your app">
+ Make sure the prompt, references, and starter inputs are ready. Test the app from the builder before publishing.
+ </Step>
+ <Step title="Open Publish from the app builder or Share modal">
+ Both paths land in the same place. The app builder has a **Publish** button at the top. Any app's **Share** modal has a Publish toggle alongside the recipient picker.
+ </Step>
+ <Step title="Pick a visibility level">
+ Visibility controls who can see the app once published. Levels are described below.
+ </Step>
+ <Step title="Optional: share with specific people">
+ From the Share modal, add individuals, groups, or organizations as viewers. They see the app once it is published.
+ </Step>
+ <Step title="Click Publish">
+ The app goes live with the visibility you selected. People you shared with see it on their next visit.
+ </Step>
+</Steps>
+
+{/* IMG-05: Share modal with Publish toggle */}
+<Frame caption="The Share modal includes the Publish toggle and the visibility selector in one place.">
+ <img src="/images/v2_share_modal_publish.png" alt="The V2 Share modal with a Publish toggle, visibility selector, and recipient picker visible together." />
+</Frame>
+
+## Visibility levels
+
+Visibility tells Playlab who can find and use your app once it is published.
+
+**Private**
+
+Only you, the people you have shared with directly, and your org's admins can see the app. This is the most restrictive level and is appropriate for class-specific apps you do not want spreading.
+
+**Organization**
+
+Members of your organization can see the app. They do not need to be in your workspace. Useful when you want everyone in the org to be able to find and use the app.
+
+**Public**
+
+Anyone with a Playlab account can find and use the app. Public apps appear in the Playlab community gallery. Choose this when you want to share the app with the broader community.
+
+If you want a more granular target than these levels, use the Share modal to add specific people, groups, or organizations. They see the app even when the broader visibility is Private.
+
+## Sharing directly with people, groups, or orgs
+
+Direct sharing works alongside visibility. From the Share modal, type the recipient and pick a permission level.
+
+{/* IMG-03: Share modal with individual picker */}
+<Frame caption="Share with a specific person, group, or organization. The visibility level still controls who else can find the app.">
+ <img src="/images/v2_share_modal_individual.png" alt="The V2 Share modal with an email entered and a permission dropdown showing Editor and Viewer options." />
+</Frame>
+
+For the deeper guides, see [Sharing with individuals](https://learn.playlab.ai/features/Sharing%20with%20Individuals) and [Sharing with groups and orgs](https://learn.playlab.ai/features/Sharing%20with%20Groups%20and%20Orgs).
+
+## Best practices
+
+A few things that have worked for builders shipping V2 apps:
+
+Set visibility to Private and share with specific recipients during pilot. You stay in control of who tests the app and you avoid distributing an app that is not ready.
+
+Publish a v1 quickly and iterate. The Editor model and direct sharing make iteration cheaper. Updates flow to everyone with access on the next load, so you can ship small improvements often.
+
+Write a short description before publishing. The description shows up in search and on the app card. A clear one-line summary makes the app findable.
+
+## FAQ
+
+<AccordionGroup>
+ <Accordion title="Can I unpublish my app?">
+ Yes. From the app builder or Share modal, toggle Publish off. The app stops being visible to viewers and disappears from search. Sharing with specific people stays in place but those people see the unpublished state.
+ </Accordion>
+ <Accordion title="What happens when I publish an update?">
+ The new version replaces the old one for everyone with access. Conversations users had with prior versions are preserved. New conversations use the latest published version.
+ </Accordion>
+ <Accordion title="Can I monetize a published app?">
+ Playlab does not currently support paid apps. The platform is free for educators and learners. Partnership and licensing arrangements work through your Learning Partner.
+ </Accordion>
+ <Accordion title="Can I share a draft before publishing?">
+ Add a peer as Editor or Viewer through the Share modal. Editors see the draft and can edit. Viewers see it once published. To preview a draft with a Viewer, the simplest path is to publish to Private, share with them, and unpublish later.
+ </Accordion>
+ <Accordion title="Did the workspace-only visibility level go away?">
+ In V2, the workspace level is replaced by direct sharing with workspace members or by setting the visibility to Organization. The change keeps the same control without overloading the workspace concept.
+ </Accordion>
+  <Accordion title="Can I schedule a publish for a future date?">
+    Not in this release. Publish happens immediately. If you need a coordinated launch, share the app as Viewer with your team and publish on the day.
+  </Accordion>
+  <Accordion title="Will my published app be findable through search engines?">
+    Public apps are indexed and may show up in search engines. Private apps are not. Org-level apps are not indexed externally.
+  </Accordion>
+  <Accordion title="How do I republish if I made a mistake?">
+    Edit the app, click Publish again. The new version replaces the previous one. Conversations from the previous version are preserved.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+Last updated: 2026-05-05
+
+Contact us at [support@playlab.ai](mailto:support@playlab.ai)

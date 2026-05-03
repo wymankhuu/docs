@@ -1,0 +1,109 @@
+---
+title: "What's new in V2 for networks or districts"
+description: "What changes in Playlab V2 for partners deploying apps across networks of organizations."
+sidebarTitle: "V2 for Networks or Districts"
+---
+
+<Note>
+  This guide is for people coming from Playlab V1. It will be retired in August 2026 once everyone has migrated. For current Playlab guidance, see [Learn on Your Own](/getstarted/Getting%20Started) or [Feature Documentation](/features/App%20Privacy%20and%20Visibility).
+</Note>
+
+If you are a Learning Partner, a network operator, a foundation, or a curriculum org running Playlab in many classrooms across many districts, V2 was built with your workflow in mind. Multi-org deployment, segmented activity, and Collections replace the V1 remix-per-deployment pattern.
+
+{/* IMG-13: Collections tab on org */}
+<Frame>
+ <img src="/images/v2_collections_tab.png" alt="A V2 organization Collections tab listing curated collections of apps." />
+</Frame>
+
+## At a glance
+
+1. Apps deploy across organizations from a single source. Update once, propagate everywhere.
+2. Activity stays segmented by org and workspace, so partners see network-wide data without crossing privacy lines.
+3. Collections let you bundle a curated set of apps and share them as a single resource.
+4. The ONE8 case is the canonical example of how this works in practice.
+
+## Deploy apps at scale
+
+In V1, deploying a curated app to a network of partner schools meant remixing the app into each district's workspace. A 30-school network meant 30 remixes. Every update meant doing it again.
+
+V2 introduces direct sharing across organizations. From the Share modal on any app, you type the destination organization, set permissions, and send. The recipient adds the app to their workspaces and uses it. When you publish a new version, everyone with access gets the update.
+
+{/* IMG-04: Share modal with org type-ahead */}
+<Frame caption="Sharing an app with multiple organizations is one flow.">
+ <img src="/images/v2_share_modal_org.png" alt="The V2 Share modal with multiple organization names entered as recipients and a permission level set." />
+</Frame>
+
+For the full sharing workflow, see [Sharing with groups and orgs](https://learn.playlab.ai/features/Sharing%20with%20Groups%20and%20Orgs).
+
+## Activity is segmented
+
+A common Learning Partner concern in V1: if students from many districts are using the same app, can a partner see usage data without seeing private student information from other partners' districts?
+
+V2 segments activity by organization and workspace. As the partner who shared the app, you see aggregate usage across all the districts you shared with. Each district sees only its own activity. Privacy lines stay where they should be.
+
+For more, see [Reviewing student activity per class](https://learn.playlab.ai/getstarted/Reviewing%20Activity).
+
+## Collections
+
+A Collection is a curated set of apps that you share like a single resource. Build a Collection once, add the apps you want included, share it with a partner organization, and that organization gets the whole bundle.
+
+Collections solve a problem that came up in nearly every Learning Partner conversation: "I want to give this district a starter pack of seven apps for their teachers, but I do not want to remix seven apps into seven workspaces."
+
+{/* IMG-16: ONE8-style example collection */}
+<Frame caption="An example Collection from ONE8 Foundation with several apps grouped under a single shareable bundle.">
+ <img src="/images/v2_one8_collection_example.jpeg" alt="A sample Playlab Collection titled ONE8 Sample Collection containing several apps as a single curated set." />
+</Frame>
+
+For the deeper guide, see [What are Collections](https://learn.playlab.ai/features/collections/What%20are%20Collections) and [Creating and sharing a Collection](https://learn.playlab.ai/features/collections/Creating%20and%20Sharing%20a%20Collection).
+
+## The ONE8 story
+
+ONE8 Foundation works with Massachusetts districts on AI in education. In V1, ONE8 remixed dozens of apps across many partner orgs to deploy them, with each partner managing a separate copy. When ONE8 updated an app, the change had to propagate manually.
+
+In V2, ONE8 builds a Collection of those apps. The partners go to a workspace, add apps from the Collection, and the kids have the apps. No remixing required. ONE8 sees aggregate activity across the network. Each partner district sees only its own. When ONE8 publishes an update to one of the apps, every classroom using it sees the new version.
+
+This is the canonical Collections workflow. It is the example the V2 sharing model was designed around.
+
+## Updates propagate
+
+A point worth highlighting on its own.
+
+In V1, an app update lived in the app's source workspace. To propagate the update to remixed copies, the partner had to re-remix or push changes manually. In practice, most copies drifted.
+
+In V2, the canonical app has one source of truth. When the owner publishes a new version, every workspace and Collection using the app sees the update on the next load. There is no separate update step.
+
+## What stays the same
+
+The app builder, references, prompts, model selection, conversation flow, and partnership reporting integrations all carry over from V1. The change is in how content travels across the network.
+
+## FAQ
+
+<AccordionGroup>
+ <Accordion title="Can a partner add their own apps to a Collection I shared with them?">
+ The recipient sees the apps in the Collection but cannot modify the Collection itself. They can use the apps in their workspaces and combine them with their own apps and Collections.
+ </Accordion>
+ <Accordion title="Do permissions cascade from the Collection to the apps inside?">
+ Yes. Permissions you grant on a Collection apply to the apps in that Collection. If you remove access to the Collection, access to the contained apps is removed too.
+ </Accordion>
+ <Accordion title="How does activity work for cross-org sharing?">
+ You see aggregate stats across the orgs you shared with. Each org sees only its own activity. Personally identifiable student information stays inside each org.
+ </Accordion>
+ <Accordion title="Where is migration support for partners?">
+ Coordinated through your Learning Partner. The migration meeting walks you through what changes for your specific deployment. See [Migrating from V1 to V2](https://learn.playlab.ai/whatsnew/v2/Migrating%20from%20V1%20to%20V2) for the self-serve overview.
+ </Accordion>
+  <Accordion title="Can I see usage data without logging into each partner org?">
+    Yes for the apps and Collections you've shared. Each recipient org's activity rolls up to your view as the source. You see aggregate, not personally identifiable, data.
+  </Accordion>
+  <Accordion title="How do I onboard new partners to my network?">
+    Share your starter Collection with the new org and walk them through the [Migrating from V1 to V2](https://learn.playlab.ai/whatsnew/v2/Migrating%20from%20V1%20to%20V2) guide if they're coming from V1, or [Getting started](https://learn.playlab.ai/getstarted/Getting%20Started) if they're brand-new.
+  </Accordion>
+  <Accordion title="Can I template an org structure for new partners?">
+    Org templates are on the roadmap. Today, the closest path is to share a Collection of starter apps so new partners have a known starting point.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+Last updated: 2026-05-05
+
+Contact us at [support@playlab.ai](mailto:support@playlab.ai)

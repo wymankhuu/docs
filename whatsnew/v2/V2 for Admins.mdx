@@ -1,0 +1,98 @@
+---
+title: "What's new in V2 for admins"
+description: "What changes in Playlab V2 for organization administrators."
+sidebarTitle: "V2 for Admins"
+---
+
+<Note>
+  This guide is for people coming from Playlab V1. It will be retired in August 2026 once everyone has migrated. For current Playlab guidance, see [Learn on Your Own](/getstarted/Getting%20Started) or [Feature Documentation](/features/App%20Privacy%20and%20Visibility).
+</Note>
+
+V2 gives org admins a single place to see what is happening across all workspaces. Activity dashboards, flagged messages, and member detail pages live at the organization level, so the question "what has this student been doing in Playlab" has a direct answer.
+
+{/* IMG-18: Org dashboard hero */}
+<Frame>
+ <img src="/images/v2_org_activity_dashboard.png" alt="A V2 organization-level dashboard showing usage stats across workspaces." />
+</Frame>
+
+## At a glance
+
+1. Org-level data and insights live in one dashboard, no workspace-by-workspace digging required.
+2. Flagged messages from across the org surface in a centralized view.
+3. Apps deploy across orgs and workspaces without remixing.
+4. Member detail pages show what any single member has done inside a workspace.
+
+## More data, with insights
+
+The org dashboard shows usage across every workspace, app, and member. You can filter by date range, by app, by workspace, or by member. The same view feeds the partnership reports we share with Learning Partners.
+
+Insights are added in the same dashboard as they ship: time-on-task patterns, app-level engagement, and aggregate conversation summaries. Some are live now. Others ship in the next eng cycle and surface as they are available.
+
+For more, see [Centralized org monitoring](https://learn.playlab.ai/features/Reviewing%20App%20Activity).
+
+## Centralized monitoring of flagged messages
+
+In V1, a flagged conversation was visible inside the workspace where it occurred. To find flags across an organization, an admin had to walk every workspace.
+
+V2 surfaces all flagged messages in one place. Filter by severity, by member, or by workspace. Click through to the conversation, the member's full detail page, or the app where the flag came from.
+
+{/* IMG-19: Flagged messages dashboard */}
+<Frame caption="Centralized flagged messages list. Filter by workspace, severity, and member.">
+ <img src="/images/v2_flagged_messages_dashboard.png" alt="A V2 centralized flagged messages dashboard showing flags across workspaces with filters for severity and date." />
+</Frame>
+
+For escalation paths, the existing [Escalating Flagged Conversations](https://learn.playlab.ai/features/Escalating%20Flagged%20Conversations) doc still applies. The dashboard makes it faster to find what to escalate.
+
+## Deploy apps at scale
+
+V1 deployment for an admin meant remixing an app once per workspace, or once per organization for partner deployments. Updates required re-remixing.
+
+V2 lets you share apps directly with workspaces, groups, or other organizations. For curated bundles, you build a Collection and share it once. Recipients see updates as they ship.
+
+For more, see [Sharing with groups and orgs](https://learn.playlab.ai/features/Sharing%20with%20Groups%20and%20Orgs) and [Cross-workspace app use](https://learn.playlab.ai/features/Cross-Workspace%20App%20Use).
+
+## "How do I know what a kid has been doing?"
+
+This was the most common admin question in V1. V2 has a direct answer.
+
+From the org dashboard, find the member. Their detail page lists every app they have used, every conversation they have had inside any workspace they belong to, every flagged message, and every app they have built. The view is admin-scoped, so it includes activity across all workspaces in the org.
+
+{/* IMG-12: Member detail page */}
+<Frame caption="The member detail page collects a member's apps, conversations, flags, and apps built in one place.">
+ <img src="/images/v2_member_detail_page.png" alt="A V2 member detail page with sections for apps used, conversations, flagged messages, and apps built." />
+</Frame>
+
+For more, see [Workspace member detail](https://learn.playlab.ai/features/Workspace%20Member%20Detail).
+
+## What stays the same
+
+Org structure, member roles, partnership integrations, and SSO all carry over. The data model added to support V2 dashboards is additive: V1 data is preserved and queryable in the new views.
+
+## FAQ
+
+<AccordionGroup>
+ <Accordion title="Can I export the data behind these dashboards?">
+ Yes. The export options from V1 still work, and the new dashboards add a download button for the visible data range. CSV and JSON formats are supported.
+ </Accordion>
+ <Accordion title="Are there role-based limits on who sees what?">
+ Org admins see all of it. Workspace managers see their workspaces. Members see their own apps and conversations. The role matrix is documented in [Org permissions and roles](https://learn.playlab.ai/features/Org%20Permissions%20and%20Roles).
+ </Accordion>
+ <Accordion title="When do org-level insights ship?">
+ The current dashboards are live at V2 launch. Org-level insights with cross-workspace aggregation are scheduled for June 12, 2026 per the rollout plan.
+ </Accordion>
+  <Accordion title="Can I delegate org admin access?">
+    Yes. Add another admin from the Members tab. Most orgs have two to four admins. Avoid more than that for accountability.
+  </Accordion>
+  <Accordion title="How do I get reports for partnership accountability?">
+    Org-level activity views can be exported as CSV. Your Learning Partner can also pull custom reports for partnership reviews.
+  </Accordion>
+  <Accordion title="Can I integrate Playlab data with our SIS?">
+    Through the activity export today. Direct SIS integration is partner-specific and coordinated through your Learning Partner.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+Last updated: 2026-05-05
+
+Contact us at [support@playlab.ai](mailto:support@playlab.ai)

@@ -1,0 +1,104 @@
+---
+title: "Workspace building permissions"
+description: "Three toggles that control whether students can build apps, see each other's work, or share beyond the workspace."
+sidebarTitle: "Building Permissions"
+---
+
+<Info>
+  **Key points**
+
+  - Three toggles: members can build, see each other's work, share beyond workspace
+  - Defaults are conservative; turn on as the class needs grow
+  - Changes apply going forward, not retroactively
+</Info>
+
+V2 introduces granular building permissions on each workspace. You decide whether members can build apps, whether they can see each other's apps and work, and whether they can share apps beyond the workspace. The toggles are set on workspace creation and editable later.
+
+## What this controls
+
+The three toggles are:
+
+**Members can build apps.** Off by default. When on, workspace members can create new apps inside the workspace.
+
+**Members can see each other's apps and work.** Off by default. When on, members see apps and conversations from other members of the same workspace. Useful for collaborative classes.
+
+**Members can share apps beyond the workspace.** Off by default. When on, members can use the Share modal to share their apps with people, groups, or organizations outside the workspace.
+
+{/* IMG-09: Building permissions toggles */}
+<Frame caption="The three building permission toggles. All start off. Turn on the ones the class needs.">
+ <img src="/images/v2_workspace_building_permissions.png" alt="A V2 workspace settings panel showing three toggles for building permissions: build apps, see each other, share beyond workspace." />
+</Frame>
+
+## How to set permissions on workspace creation
+
+The toggles appear on the New Workspace form. Set them as you create the workspace. See [Creating and managing a workspace in V2](https://learn.playlab.ai/getstarted/Creating%20Your%20Own%20Workspace) for the full creation flow.
+
+## How to change permissions later
+
+<Steps>
+ <Step title="Open the workspace">
+ Go to the workspace you want to update.
+ </Step>
+ <Step title="Open Settings">
+ Click the settings gear in the top right of the workspace.
+ </Step>
+ <Step title="Find Building Permissions">
+ The three toggles are listed together.
+ </Step>
+ <Step title="Update toggles">
+ Turn on or off as needed.
+ </Step>
+ <Step title="Save">
+ Changes apply going forward. Existing apps and conversations are not affected.
+ </Step>
+</Steps>
+
+## Recommended settings by use case
+
+A few patterns that have worked for teachers:
+
+| Use case | Build apps | See each other | Share beyond |
+| --- | --- | --- | --- |
+| Research class, individual work | Off | Off | Off |
+| Intro CS, students learning to build | On | On | Off |
+| AI literacy, collaborative projects | On | On | On |
+| Study skills, students using only | Off | Off | Off |
+| Capstone, students publishing work | On | On | On |
+| Teacher-only workspace | Off | n/a | n/a |
+
+These are starting points. Adjust to match the class.
+
+## FAQ
+
+<AccordionGroup>
+ <Accordion title="Can I override permissions for individual students?">
+ No. Permissions apply to the whole workspace. If you need exceptions, the simplest path is to create a separate workspace with different permissions for those members.
+ </Accordion>
+ <Accordion title="What happens to existing apps when I change a permission?">
+ Existing apps stay. Conversations stay. The change applies to what members can do going forward. If you turn off "members can build apps," existing student apps remain accessible. New ones cannot be created.
+ </Accordion>
+ <Accordion title="Can students see each other's drafts?">
+ Only if "members can see each other" is on. A draft is just an unpublished app. With the toggle on, members see drafts from other members. With it off, they see only their own.
+ </Accordion>
+ <Accordion title='Does "share beyond workspace" let students share with anyone publicly?'>
+ It enables the Share modal for them. Students can share with people they enter, but cannot raise visibility above what the org's admin allows. Public sharing may be restricted at the org level by your admin.
+ </Accordion>
+ <Accordion title="What if my org admin has set org-wide policies?">
+ Org-level policies take precedence. If the org disables public sharing, the workspace toggle for "share beyond workspace" still works for in-org sharing, but public visibility is unavailable.
+ </Accordion>
+  <Accordion title="Can I copy permissions from one workspace to another?">
+    Not in this release. The fastest path is to set the toggles by hand on each new workspace, or to use the workspace template feature once it ships.
+  </Accordion>
+  <Accordion title="What's the safest default for a brand-new class?">
+    All three toggles off. Turn on Build apps when students are ready to create. Add See each other when collaboration becomes part of the lesson. Keep Share beyond off unless you've talked through what students might share.
+  </Accordion>
+  <Accordion title="Can I lock permissions so other managers can't change them?">
+    Org-level policies override workspace toggles. If you need that level of control, ask your org admin to set the policy at the org level.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+Last updated: 2026-05-05
+
+Contact us at [support@playlab.ai](mailto:support@playlab.ai)

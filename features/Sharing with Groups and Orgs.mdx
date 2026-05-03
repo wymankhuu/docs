@@ -1,0 +1,126 @@
+---
+title: "Sharing with groups and orgs"
+description: "How to share a Playlab app with whole workspaces, groups, or organizations."
+sidebarTitle: "Share with Groups and Orgs"
+---
+
+<Info>
+  **Key points**
+
+  - The same Share modal works for groups and entire organizations
+  - Activity stays segmented per recipient org
+  - For curated bundles of multiple apps, use Collections instead
+</Info>
+
+<Frame caption="Walkthrough: sharing an app with a group or organization.">
+  <iframe
+    src="https://drive.google.com/file/d/19Ylm_YOOLHEJzs9PwhnCiQHTO3ELZ7O7/preview"
+    frameborder="0"
+    allow="autoplay"
+    allowfullscreen=""
+    style={{ width: "100%", height: "400px" }}
+  ></iframe>
+</Frame>
+
+You share an app with a group or organization the same way you share with a person: open the Share modal, type the destination, pick a permission, send. This is how partners deploy apps to many districts at once and how org admins distribute curated apps inside their network.
+
+## When to share with a group or org
+
+Common cases:
+
+A Learning Partner wants to give a curated math app to fifteen district partners. Direct share to each org.
+
+A district admin wants to make a starter pack of apps available to every school in the district. Share with each school's org.
+
+A curriculum org rolling out a new unit wants every classroom in three networks to have access. Share with each network's org.
+
+For sharing with one specific person, see [Sharing with individuals](https://learn.playlab.ai/features/Sharing%20with%20Individuals).
+
+## How to share with a group
+
+<Steps>
+ <Step title="Open the app or collection">
+ Both apps and Collections share the same way.
+ </Step>
+ <Step title="Click Share">
+ The **Share** button is in the top right.
+ </Step>
+ <Step title="Type the group name">
+ Start typing. Matching groups inside your org appear as suggestions.
+ </Step>
+ <Step title="Pick a permission level">
+ Pick **Viewer** to let group members use the app, or **Editor** for collaborators on the build.
+ </Step>
+ <Step title="Send">
+ Members of the group see the app on their dashboard with the permission you set.
+ </Step>
+</Steps>
+
+## How to share with an organization
+
+The flow is the same. In the recipient field, type the organization's name. If the org is on your partner list or has previously shared with you, it appears in the suggestions. Otherwise, you can type the org's domain to find it.
+
+{/* IMG-04: Share modal with org type-ahead */}
+<Frame caption="Sharing with an organization is the same flow as sharing with a person. Type the org name, set permissions, send.">
+ <img src="/images/v2_share_modal_org.png" alt="The V2 Share modal with an organization name entered as recipient, a permission level set, and a Send button visible." />
+</Frame>
+
+To share with several orgs at once, add them all to the recipient list. Each org gets its own activity segmentation, so you see usage per org and each org sees only its own.
+
+## Cross-org sharing in V2
+
+V2 supports sharing across organizations as a first-class flow. Previously, the only way to deploy an app from one org to another was to remix it.
+
+A few things to know about cross-org sharing:
+
+**The original org owns the app.** Updates flow from the source. Recipient orgs see the latest version automatically.
+
+**Activity is segmented.** You see aggregate usage across the orgs you shared with. Each org sees only its own.
+
+**Permissions cascade.** A Viewer permission grants the recipient org's members the right to use the app. To grant editing rights to specific people in another org, share with them individually as Editors.
+
+**Recipients can add to their workspaces.** Once you share an app with an org, members of that org can add it to their workspaces using the [Add Apps flow](https://learn.playlab.ai/features/Cross-Workspace%20App%20Use).
+
+For partner-style deployment with curated bundles of apps, [Collections](https://learn.playlab.ai/features/collections/What%20are%20Collections) are usually a better fit.
+
+## Activity segmentation
+
+When the same app is in use across several orgs, the data stays separated.
+
+You see aggregate stats: how many sessions, how many active users, what conversation topics are common across orgs.
+
+Each recipient org sees only its own data. Personally identifiable student information from one org never crosses to another.
+
+For more, see [Reviewing student activity per class](https://learn.playlab.ai/getstarted/Reviewing%20Activity).
+
+## FAQ
+
+<AccordionGroup>
+ <Accordion title="Can I share with multiple orgs at once?">
+ Yes. Add them all to the recipient field. Each gets the same permission level and the app shows up in each org separately.
+ </Accordion>
+ <Accordion title="Do recipient orgs see each other?">
+ No. The recipient list is private to you. Each org sees only that you (the source) shared the app with them.
+ </Accordion>
+ <Accordion title="How do permissions cascade?">
+ A Viewer-level org share grants every member of that org the right to use the app. Editor-level org sharing is not supported. To grant editing access, share with the specific people who should have it.
+ </Accordion>
+ <Accordion title="Can a recipient org reshare the app?">
+ The recipient cannot reshare your app outside their org. Inside their org, members can add the app to their workspaces.
+ </Accordion>
+ <Accordion title="What happens if I unshare with an org?">
+ Members of that org lose access on their next visit. Conversations they had are preserved in your activity history but no longer visible to them.
+ </Accordion>
+  <Accordion title="Can the recipient org see who else I shared with?">
+    No. Each org sees only that you shared with them. The recipient list stays private to you.
+  </Accordion>
+  <Accordion title="Can I track which orgs are actively using my shared app?">
+    Yes. The org-level activity view shows usage by recipient org. You see aggregate stats per org without crossing privacy lines.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+Last updated: 2026-05-05
+
+Contact us at [support@playlab.ai](mailto:support@playlab.ai)

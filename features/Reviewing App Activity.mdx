@@ -1,225 +1,119 @@
 ---
-title: "Individual App Activity Review"
-description: "Monitor usage and analyze conversations for a specific Playlab app"
+title: "Centralized org monitoring and flags"
+description: "How org admins review activity, flagged messages, and member detail across all workspaces in their organization."
+sidebarTitle: "Centralized Monitoring"
 ---
 
-## What is this feature?
+<Info>
+  **Key points**
 
-Individual App Activity Review allows you to dive deep into the usage analytics and performance metrics of a specific Playlab app. Unlike workspace activity review which shows usage across all your apps, this feature provides focused insights into how users interact with a particular app, including conversation patterns, feature usage, and engagement metrics.
+  - Org dashboards show usage across every workspace from one view
+  - Centralized flagged-messages list surfaces safety issues across the org
+  - Member detail spans every workspace a person belongs to
+</Info>
 
-Think of it as having a microscope for your app's performance. While workspace activity gives you the big picture across all your apps, individual app activity lets you examine the details of how one specific app is performing and being used by your audience.
+An organization-level view collects activity and flags from every workspace into one place. From the org dashboard, an admin sees usage across every workspace, the centralized flagged messages list, and member detail pages that span the org. This page covers what the view shows and how to use it.
 
 <Warning>
-  This feature requires creator or admin permissions for the specific app you want to review.
+ **Access requirements**
+
+ Org-level monitoring is visible to org admins. Workspace managers see their own workspace's activity. Members see their own conversations. The roles are described in [Org permissions and roles](https://learn.playlab.ai/features/Org%20Permissions%20and%20Roles).
 </Warning>
 
-## What is the Rationale for this feature?
+## Org-level monitoring
 
-While workspace activity review helps you understand overall usage patterns across all your apps, creators often need granular insights into how individual apps are performing. Without app-specific analytics, it's difficult to identify which features within an app are most valuable, where users get stuck, or how to optimize the app's content and functionality.
+The org dashboard shows aggregate usage across every workspace, app, and member in your organization. Filter by workspace, by app, by member, or by date range. The same view feeds the partnership reports we share with Learning Partners.
 
-Individual App Activity Review fills this gap by providing focused analytics that help creators understand user behavior within a specific app, identify optimization opportunities, and make targeted improvements to enhance the app's effectiveness and user experience.
+{/* IMG-18: Org-level activity dashboard */}
+<Frame caption="The org-level dashboard. Usage across every workspace, with filters for workspace, app, member, and date.">
+ <img src="/images/v2_org_activity_dashboard.png" alt="A V2 organization-level dashboard showing usage stats across workspaces with filter controls." />
+</Frame>
 
-## Watch How to Review Individual App Activity
+The aggregate view is the starting point. From any row, click through to the workspace, app, or member for details.
 
-Watch a short demonstration of how to access and review individual app activity in Playlab.
-  <iframe 
-    src="https://drive.google.com/file/d/13NSlOWUiz2HV1u8p7Ck0NW4qugEGzNi5/preview" 
-    frameBorder="0" 
-    webkitAllowFullScreen 
-    mozAllowFullScreen 
-    allowFullScreen 
-    style={{width: "100%", height: "500px"}}
-  />
-  <figcaption>How to review individual app activity</figcaption>
+## Flagged messages dashboard
 
-## Accessing Individual App Activity
+The flagged messages dashboard surfaces every flag from every workspace in one list, with severity, date, member, and the app where the flag came from.
 
-<Steps>
-  <Step title="Navigate to the Activity Tab">
-    **Find and click the Activity tab in your app's interface.**
+{/* IMG-19: Flagged messages dashboard */}
+<Frame caption="The centralized flagged messages list. Filter by workspace, severity, member, or date.">
+ <img src="/images/v2_flagged_messages_dashboard.png" alt="A V2 centralized flagged messages dashboard listing flags across workspaces with severity indicators." />
+</Frame>
 
-    1. Open your Playlab app in the builder or published view
-    2. Look for the navigation tabs at the top: **Build**, **Design**, and **Activity**
-    3. Click on the **"Activity"** tab to access the app's analytics
+For each flag, you can:
 
-    <Frame>
-      <img
-        src="/images/app activity.png"
-        alt="App Navigation Tabs showing Build, Design, and Activity"
-        className="bordered-image"
-      />
-    </Frame>
-  </Step>
-  <Step title="Set Up Conversation Review (Optional)">
-    **Configure AI-powered conversation analysis for deeper insights.**
+- Read the full conversation in context
+- Open the member's detail page to see their other activity
+- Open the app to review prompt and references
+- Mark the flag reviewed or escalate further
 
-    1. Set up, "Configure Conversation Review" for AI-powered analysis. This feature teaches the model how to review conversations against your app's specific goals
-    2. **Step 1**: Clarify your app's goal in the text field provided
-    3. **Step 2**: You can have AI improve your goal if you'd like by clicking "**Improve with AI**"
-    4. **Step 3**: Define what a successful conversation looks like for your app
-    5. **Step 4**: Click "**Improve with AI**" if you'd like to leverage AI to improve your success criteria
-    6. Click "**Analyze a Conversation**" or "**Done**" if you want to complete this setup at another time
+For escalation paths, the [Escalating Flagged Conversations](https://learn.playlab.ai/features/Escalating%20Flagged%20Conversations) doc describes the next steps. The dashboard makes finding what to escalate faster.
 
-    <Frame>
-      <img
-        src="/images/customcriteria.png"
-        alt="Configure Conversation Review setup screen"
-        className="bordered-image"
-      />
-    </Frame>
-  </Step>
-</Steps>
+## Member detail across workspaces
 
-## Understanding Individual App Activity
+When a flag or activity pattern raises concern about a single member, the member detail page collects their activity across every workspace they belong to in the org.
 
-<Steps>
-  <Step title="Review Conversation Analysis Results">
-    **Examine how well conversations are meeting your app's goals.**
+Click a member from any view to open their detail page. The org-scoped version shows:
 
-    1. View the status indicator: **"GOAL MET"** (green) or **"GOAL NOT MET"** (red) for each analyzed conversation
-    2. Read the **"Key Finding"** summary that explains what happened in the conversation
-    3. Check the **"Success Criteria Used"** section to see which specific goals were or weren't achieved:
-       - ✅ Green checkmarks indicate criteria that were met
-       - ❌ Red X marks show criteria that were not fulfilled
-    4. Use the thumbs up/down buttons to provide feedback on the AI analysis accuracy
+- All apps used in any workspace, segmented by workspace
+- Conversations across all workspaces
+- All flagged messages
+- Apps the member has built
 
-    <Frame>
-      <img
-        src="/images/goalmet.png"
-        alt="Conversation Review Settings showing goal analysis results with GOAL MET and GOAL NOT MET examples"
-        className="bordered-image"
-      />
-    </Frame>
-    <Frame>
-      <img
-        src="/images/goalnotmet.png"
-        alt="Conversation Review Settings showing goal analysis results with GOAL MET and GOAL NOT MET examples"
-        className="bordered-image"
-      />
-    </Frame>
-  </Step>
-  <Step title="Analyze Conversation Patterns">
-    **Use the Reanalyze feature to refine your understanding.**
+For the workspace-scoped version (managers' view), see [Workspace member detail](https://learn.playlab.ai/features/Workspace%20Member%20Detail).
 
-    1. Click **"Reanalyze Conversation"** to run the analysis again with updated criteria
-    2. Review how changes to your success criteria affect the analysis results
-    3. Look for patterns across multiple conversations to identify trends
-    4. Note which types of interactions consistently meet or miss your goals
-  </Step>
-  <Step title="Monitor Activity Metrics">
-    **Track basic usage statistics and engagement patterns.**
+{/* IMG-12: Member detail page */}
+<Frame caption="The org-scoped member detail collects activity across every workspace.">
+ <img src="/images/v2_member_detail_page.png" alt="A V2 member detail page with sections for apps used, conversations, flagged messages, and apps built." />
+</Frame>
 
-    1. Review conversation frequency and user engagement over time
-    2. Monitor user retention and return visit rates
-    3. See how well your app performs against your intended goals and criteria
-  </Step>
-  <Step title="Optimize Based on Insights">
-    **Use the analysis results to improve your app.**
+## App-specific activity
 
-    1. Identify common failure points where conversations don't meet goals
-    2. Adjust your app's prompts or instructions based on successful patterns
-    3. Refine your success criteria as you better understand user needs
-    4. Use the insights to guide future app development and improvements
-  </Step>
-</Steps>
+For drilling into a single app's usage, the app-level view lets you set goals and success criteria, review individual conversations, and analyze patterns. App-level insights with aggregated metrics ship in a follow-up release. See [App-level insights](https://learn.playlab.ai/features/App-Level%20Insights).
 
-## Individual App Analysis Best Practices
+## Best practices
 
-Consider these recommendations when analyzing individual app activity:
+Habits that have worked for admins:
 
-- **Compare performance over time** to identify trends and measure improvements
-- **Focus on conversation quality metrics** like message depth and completion rates
-- **Identify your app's "power users"** to understand what drives engagement
-- **Look for common user pathways** to optimize the most popular workflows
-- **Monitor feature adoption rates** for new functionality you've added
-- **Track seasonal patterns** specific to your app's subject matter or use case
-- **Analyze drop-off points** to identify where users lose interest or encounter problems
+Set a weekly review cadence. Open the flagged messages dashboard every Friday and clear flags that have been resolved. Patterns are easier to see when the list is current.
 
-## Best Practices
+Watch for cross-workspace patterns. A single student showing up in multiple workspaces' activity in unusual ways is more useful than reviewing each workspace separately.
 
-<Accordion title="Optimizing Based on Usage Patterns">
-  Use individual app data to make targeted improvements:
+Use date filtering to keep views manageable. Last 7 days for monitoring, last 90 days for partnership reports.
 
-  - **High-engagement features**: Double down on what's working by expanding similar functionality
-  - **Low-engagement areas**: Redesign or remove parts of your workflow that aren't being used
-  - **Common user paths**: Streamline and optimize the most popular workflows
-  - **Drop-off points**: Add guidance, simplify processes, or provide more direct workflow steps
+When a flag warrants escalation, use member detail first. The conversation in context is more useful than the flag in isolation.
 
-  Focus your development efforts on changes that will have the greatest impact on user experience.
-</Accordion>
+## FAQ
 
-<Accordion title="Comparing Individual Apps">
-  When you manage multiple apps, use individual app analytics to:
-
-  - **Benchmark performance** across your app portfolio
-  - **Identify successful patterns** to replicate in other apps
-  - **Allocate resources** to your highest-performing or highest-potential apps
-  - **Learn from outliers** both positive and negative performance cases
-
-  This comparative analysis helps you apply lessons learned across your entire app ecosystem.
-</Accordion>
-
-<Accordion title="User Feedback Integration">
-  Combine activity data with qualitative feedback:
-
-  - **Correlate usage patterns** with user comments and ratings
-  - **Identify disconnect points** where high usage doesn't match user satisfaction
-  - **Prioritize improvements** based on both data and user requests
-  - **Validate assumptions** about how users want to interact with your app
-
-  Quantitative activity data becomes more powerful when combined with qualitative user feedback.
-</Accordion>
-
-## Frequently Asked Questions
-
-<Accordion title="How does this differ from workspace activity review?">
-  Individual App Activity Review focuses on a single app's performance, while workspace activity review shows usage across all apps in your workspace. Individual app review provides:
-
-  - **Deeper metrics** specific to one app's functionality
-  - **Conversation-level insights** into how users interact with the app
-  - **Feature-specific usage data** within the app
-  - **Targeted optimization opportunities** for that particular app
-
-  Use workspace activity for portfolio overview and individual app activity for detailed optimization.
-</Accordion>
-
-<Accordion title="What specific metrics are available for individual apps?">
-  Individual app analytics include:
-
-  - It will evaluate based on your entered in criteria and goals
-</Accordion>
-
-<Accordion title="How detailed is the user interaction data?">
-  Individual app activity provides detailed interaction data while maintaining user privacy:
-
-  - **Conversation flows**: See how users navigate through your app
-  - **Feature usage**: Track which tools and options are most popular
-  - **Session patterns**: Understand how long and how often users engage
-  - **Anonymous insights**: All data is anonymized to protect user privacy unless they are members in your space.
-</Accordion>
-
-<Accordion title="How can I use this data to improve my app?">
-  Individual app activity data helps you make targeted improvements:
-
-  - **Content optimization**: Focus on topics and formats that generate the most engagement
-  - **User experience**: Streamline workflows based on common user paths
-  - **Feature development**: Prioritize new features based on usage gaps
-  - **Performance tuning**: Address technical issues that impact user experience
-  - **Onboarding improvement**: Reduce drop-off rates by optimizing the initial user experience
-</Accordion>
-
-## Related
-
-<Card title="Workspace Activity Review" icon="chart-mixed" href="/getstarted/Reviewing Activity">
-  Looking for an overview of activity across all your apps? Check out the Workspace Activity Review guide for filtering, trends, and workspace-level analytics.
-</Card>
-
-## Need Support?
-
-If you need assistance with individual app activity review in Playlab:
-
-- Contact us at [support@playlab.ai](mailto:support@playlab.ai)
+<AccordionGroup>
+ <Accordion title="Can I export the data?">
+ Yes. The dashboards have export buttons for the visible data range. CSV is the default. JSON export is available for the org-level view.
+ </Accordion>
+ <Accordion title="Are there role-based limits?">
+ Org admins see all of it. Workspace managers see their workspaces only. Members see their own. The role matrix is in [Org permissions and roles](https://learn.playlab.ai/features/Org%20Permissions%20and%20Roles).
+ </Accordion>
+ <Accordion title="When does cross-workspace aggregation ship?">
+ Org-level insights with cross-workspace aggregation are scheduled for June 12, 2026 per the V2 rollout plan. Until then, the dashboards show usage but advanced aggregations are limited.
+ </Accordion>
+ <Accordion title="What is the difference between this and the workspace activity view?">
+ Workspace activity is scoped to one class. Org monitoring sees every workspace in the org and surfaces flags across the network. Use workspace activity for day-to-day teaching. Use org monitoring for trust and safety, partnership reports, and cross-class patterns.
+ </Accordion>
+ <Accordion title="How long is the data retained?">
+ For the lifetime of the organization. Archived workspaces retain history. Deleted workspaces' activity stays visible to org admins for compliance purposes.
+ </Accordion>
+  <Accordion title="Are flagged messages reviewed automatically?">
+    Playlab's safety system surfaces messages that match concerning patterns. A human admin still reviews each one. We don't auto-resolve.
+  </Accordion>
+  <Accordion title="Can I customize what gets flagged?">
+    The default safety rules cover most cases. Org-level customization is on the roadmap. For specific concerns, contact support@playlab.ai.
+  </Accordion>
+  <Accordion title="What happens to flags after I review them?">
+    Mark a flag as Reviewed and it moves to your archive. The conversation stays visible. You can revisit any flag later.
+  </Accordion>
+</AccordionGroup>
 
 ---
 
-_Last updated: March 15, 2026_
+Last updated: 2026-05-05
+
+Contact us at [support@playlab.ai](mailto:support@playlab.ai)

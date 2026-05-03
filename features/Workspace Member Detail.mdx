@@ -1,0 +1,111 @@
+---
+title: "Workspace member activity and member detail page"
+description: "How workspace managers and admins view a single member's activity, conversations, flags, and apps built."
+sidebarTitle: "Member Detail"
+---
+
+<Info>
+  **Key points**
+
+  - Click any member to see their full activity inside the workspace
+  - Page collects apps used, conversations, flags, and apps built
+  - Visible to workspace managers and org admins only
+</Info>
+
+From the Members tab in any workspace, click a member to see a full view of their activity inside that workspace: which apps they used, the conversations they had, any flagged messages, and any apps they built.
+
+The view is admin-scoped, so it includes context a member would not see about themselves.
+
+## How to view member activity
+
+<Steps>
+ <Step title="Open the workspace">
+ Go to the workspace you want to investigate.
+ </Step>
+ <Step title="Open the Members tab">
+ The tab lists every member with a click-through affordance on each row.
+ </Step>
+ <Step title="Click a member">
+ The member detail page opens, scoped to this workspace.
+ </Step>
+ <Step title="Review their activity">
+ The page shows apps used, conversations, flags, and apps built.
+ </Step>
+</Steps>
+
+{/* IMG-11: Members tab */}
+<Frame caption="The Members tab. Click any member to open their detail page.">
+ <img src="/images/v2_workspace_members_tab.png" alt="A V2 workspace Members tab listing students with click-through affordances." />
+</Frame>
+
+{/* IMG-12: Member detail page */}
+<Frame caption="The member detail page collects apps, conversations, flags, and apps built for one member in this workspace.">
+ <img src="/images/v2_member_detail_page.png" alt="A V2 member detail page with sections for apps used, conversations, flagged messages, and apps built." />
+</Frame>
+
+## What you'll see
+
+The detail page is organized into four sections.
+
+**Apps used**
+
+Every app this member has used in this workspace, with date of last use and total session count. Click an app to see usage at the app level.
+
+**Conversations**
+
+Recent conversations in any app inside the workspace. Each row shows the app, the start time, and the conversation length. Click a row to read the full transcript.
+
+**Flagged messages**
+
+Any messages flagged by Playlab's safety system inside this workspace. Severity, app, and date are shown. Click to review the message in context.
+
+**Apps built**
+
+Apps this member created inside the workspace, if building permissions allow it. Status and last edit time are shown.
+
+## When to use this view
+
+A few patterns:
+
+**Escalation.** Trust and safety system flagged a conversation. You want to see the surrounding context, including other conversations from the same student.
+
+**Monitoring.** A class is running an extended project. You check in weekly on each student's progress through the apps assigned for the unit.
+
+**Supporting a struggling student.** A student is not engaging with the app. You look at their conversation history to find what is getting in the way.
+
+**Year-end review.** You want a summary of what each student did across the workspace's apps.
+
+## FAQ
+
+<AccordionGroup>
+ <Accordion title="Can students see this view?">
+ No. Member detail is visible to workspace managers and org admins. Students see their own apps and conversations from their own dashboard.
+ </Accordion>
+ <Accordion title="Can I export the data?">
+ Yes. The detail page has an Export button that downloads the visible data as CSV. JSON export is also available for org-level access.
+ </Accordion>
+ <Accordion title="Does it cross workspaces?">
+ The workspace member detail is scoped to one workspace. To see a member's activity across all workspaces in an org, use the org-level dashboard. See [Centralized org monitoring](https://learn.playlab.ai/features/Reviewing%20App%20Activity).
+ </Accordion>
+ <Accordion title="What if the member belongs to several workspaces in my org?">
+ You see only their activity in the workspace you opened. Click into another workspace to see their activity there. Org admins have a cross-workspace view.
+ </Accordion>
+ <Accordion title="Does the member know I am viewing their detail page?">
+ The view is private to managers and admins. Members do not get a notification when their detail page is opened.
+ </Accordion>
+  <Accordion title="Is the member detail view available on mobile?">
+    Yes, but the layout is denser. Wider screens make it easier to scan multiple sections at once.
+  </Accordion>
+  <Accordion title="Can I print a member detail view?">
+    Yes. Use your browser's Print to PDF. The view is laid out for letter-size paper with sections preserved.
+  </Accordion>
+  <Accordion title="Are there permission-based limits on what I see in member detail?">
+    Workspace managers see members in their workspace. Org admins see members across the org. Members see only their own activity from their dashboard.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+Last updated: 2026-05-05
+
+Contact us at [support@playlab.ai](mailto:support@playlab.ai)

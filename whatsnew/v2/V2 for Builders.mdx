@@ -1,0 +1,129 @@
+---
+title: "What's new in V2 for builders"
+description: "The five things that change for app creators in Playlab V2."
+sidebarTitle: "V2 for Builders"
+---
+
+<Note>
+  This guide is for people coming from Playlab V1. It will be retired in August 2026 once everyone has migrated. For current Playlab guidance, see [Learn on Your Own](/getstarted/Getting%20Started) or [Feature Documentation](/features/App%20Privacy%20and%20Visibility).
+</Note>
+
+If you build apps in Playlab, V2 keeps the building experience close to V1 and changes how your apps move once they exist. Privacy is the default, sharing is per-app, and deployment across organizations no longer requires remixing.
+
+{/* IMG-01: Hero image of V2 builder view */}
+<Frame>
+ <img src="/images/v2_org_dashboard.png" alt="A V2 organization dashboard with apps and workspaces visible from a builder's perspective." />
+</Frame>
+
+## At a glance
+
+Five changes shape the V2 builder experience.
+
+1. Your apps start private. Only you and the organization's admins can see them until you share or publish.
+2. Sharing is granular. You add specific people as Editors or Viewers from a Share modal on each app.
+3. Apps deploy across workspaces and organizations without being copied.
+4. App-level insights are coming. A dashboard for usage stats lives in the next eng cycle.
+5. Publishing happens from the app builder or from any app's Share modal. Visibility levels are clearer.
+
+The rest of this page explains each one in turn and links to the deeper guide.
+
+## Increased privacy
+
+In V1, an app you created sat inside a workspace and was visible to everyone in that workspace. In V2, every app starts private. Only you and your organization's admins can see it until you take action to share or publish.
+
+This applies to drafts, work-in-progress, and finished apps you have not yet released. The privacy indicator on the app card shows the current state.
+
+{/* IMG-06: App card with privacy indicator */}
+<Frame caption="The lock icon shows the app is currently private. Hover for the full visibility statement.">
+ <img src="/images/v2_privacy_indicator.png" alt="A V2 app card with a small lock icon and a tooltip reading Only you and org admins can see this." />
+</Frame>
+
+Org admins still see your app for trust and safety reasons. If a student conversation is flagged, an admin needs to be able to find it. The default is private to the rest of your organization.
+
+For more, see [App privacy and visibility in V2](https://learn.playlab.ai/features/App%20Privacy%20and%20Visibility).
+
+## Simpler permission management
+
+In V1, collaboration ran through workspace membership. To let a peer edit your app, you added them to the workspace, which gave them access to every app in that workspace.
+
+V2 separates collaboration from workspace membership. Each app has a **Share** button. From there, you add a peer as an **Editor** for that single app. They do not get access to anything else.
+
+{/* IMG-03: Share modal with Editor selected */}
+<Frame caption="The Share modal with a peer added as an Editor for a single app.">
+ <img src="/images/v2_share_modal_individual.png" alt="The V2 Share modal with an email address entered and the Editor permission selected from the dropdown." />
+</Frame>
+
+If you want a peer to see the app but not edit it, share with the **Viewer** permission. If you change your mind, you can remove or change permissions at any time.
+
+For more, see [Sharing with individuals](https://learn.playlab.ai/features/Sharing%20with%20Individuals).
+
+## Easier deployment across organizations
+
+V1 required remixing an app for each new context. If a partner wanted to use your app in five districts, that meant five remixes, five separate copies, five separate update paths.
+
+V2 lets you share an app directly with another workspace, group, or organization. The recipient adds it to their workspaces and uses it. When you publish a new version, everyone with access sees the update.
+
+{/* IMG-04: Share modal with org type-ahead */}
+<Frame caption="Sharing with an organization is the same flow as sharing with a person. Type the org name, set permissions, send.">
+ <img src="/images/v2_share_modal_org.png" alt="The V2 Share modal with an organization name entered in the recipient field and a permission selected." />
+</Frame>
+
+For partners deploying apps to many orgs, see [Sharing with groups and orgs](https://learn.playlab.ai/features/Sharing%20with%20Groups%20and%20Orgs) and [Collections](https://learn.playlab.ai/features/collections/What%20are%20Collections).
+
+## App-level insights are coming
+
+V2 introduces an insights dashboard on each app showing usage stats, conversation patterns, and engagement over time.
+
+<Info>
+ This dashboard is in development and ships in a follow-up release. Until then, [workspace-level activity](https://learn.playlab.ai/getstarted/Reviewing%20Activity) gives you per-class data.
+</Info>
+
+For more, see [App-level insights dashboard](https://learn.playlab.ai/features/App-Level%20Insights).
+
+## Clearer publishing flow
+
+V1 publishing happened through one path: app builder, then **Publish**, then pick a visibility level. V2 keeps that path and adds a second one.
+
+You can now publish from the **Share** modal on any app. The visibility selector is the same. The benefit is that you can choose whether to publish broadly, share with specific people, or both, in a single place.
+
+{/* IMG-05: Share modal with Publish toggle */}
+<Frame caption="The Share modal includes the Publish toggle and visibility selector.">
+ <img src="/images/v2_share_modal_publish.png" alt="The V2 Share modal showing a Publish toggle alongside the recipient picker and visibility options." />
+</Frame>
+
+The relationship between publishing and sharing is more direct in V2. People you have added as viewers cannot see the app until it is published. Once published, they see it on their next visit.
+
+For more, see [Publishing your app in V2](https://learn.playlab.ai/features/Publishing).
+
+## What stays the same
+
+The app builder, prompt engineering surface, references, model selection, and conversation experience are unchanged. If you knew how to build an app in V1, you know how to build one in V2. The differences live around the app, in how it is shared, monitored, and deployed.
+
+## FAQ
+
+<AccordionGroup>
+ <Accordion title="Will my V1 apps move to V2 with their permissions intact?">
+ Yes. Existing apps move with their owners and shared collaborators preserved. Workspace-level access is mapped to V2 permissions during migration. See [Migrating from V1 to V2](https://learn.playlab.ai/whatsnew/v2/Migrating%20from%20V1%20to%20V2).
+ </Accordion>
+ <Accordion title="Can I make my app fully private, hidden even from org admins?">
+ No. Org admins keep visibility for trust and safety reasons. The default is private to your peers and members of your workspaces unless you share.
+ </Accordion>
+ <Accordion title="What happens to apps I built in a workspace in V1?">
+ The app keeps its original owner. Workspace members who used the app retain access. New workspaces get the app only when you share or add it.
+ </Accordion>
+  <Accordion title="Can I sell apps I build?">
+    Playlab doesn't support paid apps today. The platform is free for educators and learners. Partnership and licensing arrangements work through your Learning Partner.
+  </Accordion>
+  <Accordion title="Will my apps work after I leave the org?">
+    Apps stay with your account. If you leave the org, your apps go with you. Sharing arrangements with the old org may need to be reset.
+  </Accordion>
+  <Accordion title="Can I version my apps?">
+    Each publish creates a version. Conversations are tied to the version they ran on. You can roll back to an earlier version from the app builder.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+Last updated: 2026-05-05
+
+Contact us at [support@playlab.ai](mailto:support@playlab.ai)
