@@ -8,9 +8,11 @@
     "href": "https://www.playlab.ai"
   },
   "favicon": "/favicon.svg",
-  "css": ["/styles/v2-brand.css"],
+  "css": [
+    "/styles/v2-brand.css"
+  ],
   "banner": {
-    "content": "🚧 V2 Preview · This is a draft of the new Playlab Learning Hub. The live site is at [learn.playlab.ai](https://learn.playlab.ai).",
+    "content": "\ud83d\udea7 V2 Preview \u00b7 This is a draft of the new Playlab Learning Hub. The live site is at [learn.playlab.ai](https://learn.playlab.ai).",
     "dismissible": false
   },
   "icons": {
@@ -32,16 +34,31 @@
     "url": "https://learn.playlab.ai"
   },
   "redirects": [
-    { "source": "/getstarted/publishing", "destination": "/features/Publishing" },
-    { "source": "/getstarted/Remixing", "destination": "/getstarted/Creating a Playlab App" },
-    { "source": "/features/Move Apps to Workspace", "destination": "/features/Cross-Workspace App Use" },
-    { "source": "/features/Remixing multiple apps", "destination": "/features/Cross-Workspace App Use" },
-    { "source": "/getstarted/Navigating Playlab V2", "destination": "/getstarted/Navigating Playlab" }
+    {
+      "source": "/getstarted/publishing",
+      "destination": "/features/Publishing"
+    },
+    {
+      "source": "/getstarted/Remixing",
+      "destination": "/getstarted/Creating a Playlab App"
+    },
+    {
+      "source": "/features/Move Apps to Workspace",
+      "destination": "/features/Cross-Workspace App Use"
+    },
+    {
+      "source": "/features/Remixing multiple apps",
+      "destination": "/features/Cross-Workspace App Use"
+    },
+    {
+      "source": "/getstarted/Navigating Playlab V2",
+      "destination": "/getstarted/Navigating Playlab"
+    }
   ],
   "navigation": {
     "tabs": [
       {
-        "tab": "🎓 Learn Live with Us",
+        "tab": "\ud83c\udf93 Learn Live with Us",
         "color": "#10B981",
         "groups": [
           {
@@ -51,7 +68,7 @@
             ]
           },
           {
-            "group": "🔍 Explore Learning Opportunities",
+            "group": "\ud83d\udd0d Explore Learning Opportunities",
             "pages": [
               "learn with us/onboarding",
               "learn with us/office hours"
@@ -60,11 +77,11 @@
         ]
       },
       {
-        "tab": "✏️ Learn on Your Own",
+        "tab": "\u270f\ufe0f Learn on Your Own",
         "color": "#3B82F6",
         "groups": [
           {
-            "group": "▶️ Getting Started",
+            "group": "\u25b6\ufe0f Getting Started",
             "pages": [
               "getstarted/Signing Up",
               "getstarted/Getting Started",
@@ -73,7 +90,7 @@
             ]
           },
           {
-            "group": "🛠️ Build & Collaborate",
+            "group": "\ud83d\udee0\ufe0f Build & Collaborate",
             "pages": [
               "getstarted/Creating a Playlab App",
               "getstarted/Collaborating on an App",
@@ -87,7 +104,7 @@
             ]
           },
           {
-            "group": "🗂️ Workspaces & People",
+            "group": "\ud83d\uddc2\ufe0f Workspaces & People",
             "pages": [
               "getstarted/Creating Your Own Workspace",
               "getstarted/Adding Members to your Workspace",
@@ -98,13 +115,13 @@
             ]
           },
           {
-            "group": "📈 Activity",
+            "group": "\ud83d\udcc8 Activity",
             "pages": [
               "getstarted/Reviewing Activity"
             ]
           },
           {
-            "group": "🟡 Basic Prompting",
+            "group": "\ud83d\udfe1 Basic Prompting",
             "pages": [
               "prompting/basic/be clear concise and specific",
               "prompting/basic/context is key",
@@ -117,7 +134,7 @@
             ]
           },
           {
-            "group": "🔵 Advanced Prompting",
+            "group": "\ud83d\udd35 Advanced Prompting",
             "pages": [
               "prompting/advanced/intro",
               "prompting/advanced/selecting llm",
@@ -130,11 +147,11 @@
         ]
       },
       {
-        "tab": "📋 Feature Documentation",
+        "tab": "\ud83d\udccb Feature Documentation",
         "color": "#8B5CF6",
         "groups": [
           {
-            "group": "🆕 Recently Added",
+            "group": "\ud83c\udd95 Recently Added",
             "pages": [
               "features/App Privacy and Visibility",
               "features/Sharing with Individuals",
@@ -149,14 +166,14 @@
             ]
           },
           {
-            "group": "🔒 Privacy & Permissions",
+            "group": "\ud83d\udd12 Privacy & Permissions",
             "pages": [
               "features/App Privacy and Visibility",
               "features/Org Permissions and Roles"
             ]
           },
           {
-            "group": "🔗 Sharing & Publishing",
+            "group": "\ud83d\udd17 Sharing & Publishing",
             "pages": [
               "features/Publishing",
               "features/Sharing with Individuals",
@@ -164,14 +181,14 @@
             ]
           },
           {
-            "group": "📚 Collections",
+            "group": "\ud83d\udcda Collections",
             "pages": [
               "features/collections/What are Collections",
               "features/collections/Creating and Sharing a Collection"
             ]
           },
           {
-            "group": "🏠 Workspaces",
+            "group": "\ud83c\udfe0 Workspaces",
             "pages": [
               "features/Organizing Workspaces",
               "features/Cross-Workspace App Use",
@@ -179,7 +196,7 @@
             ]
           },
           {
-            "group": "📊 Activity & Insights",
+            "group": "\ud83d\udcca Activity & Insights",
             "pages": [
               "features/Reviewing App Activity",
               "features/Workspace Member Detail",
@@ -190,7 +207,7 @@
             ]
           },
           {
-            "group": "🟣 Building Your App",
+            "group": "\ud83d\udfe3 Building Your App",
             "pages": [
               "features/AI assisted builder",
               "features/Selecting an LLM",
@@ -201,7 +218,7 @@
             ]
           },
           {
-            "group": "🟠 Personalizing App Behavior",
+            "group": "\ud83d\udfe0 Personalizing App Behavior",
             "pages": [
               "features/Adaptive Memory",
               "features/User Profiles",
@@ -210,7 +227,7 @@
             ]
           },
           {
-            "group": "🔵 References & Curriculum",
+            "group": "\ud83d\udd35 References & Curriculum",
             "pages": [
               "features/Global References",
               "features/Organizational References",
@@ -220,7 +237,7 @@
             ]
           },
           {
-            "group": "🟢 Voice, Language & Accessibility",
+            "group": "\ud83d\udfe2 Voice, Language & Accessibility",
             "pages": [
               "features/Voice Input",
               "features/Voice Output",
@@ -232,7 +249,7 @@
             ]
           },
           {
-            "group": "⚪ AI Tools (MCP)",
+            "group": "\u26aa AI Tools (MCP)",
             "pages": [
               "features/MCP tools",
               "features/MCP Python Tool",
@@ -241,7 +258,7 @@
             ]
           },
           {
-            "group": "🔴 Safety & Feedback",
+            "group": "\ud83d\udd34 Safety & Feedback",
             "pages": [
               "features/Submitting Feedback",
               "features/Escalating Flagged Conversations",
@@ -251,11 +268,11 @@
         ]
       },
       {
-        "tab": "⚙️ Changelog",
+        "tab": "\u2699\ufe0f Changelog",
         "color": "#10B981",
         "groups": [
           {
-            "group": "⚙️ Changelog",
+            "group": "\u2699\ufe0f Changelog",
             "pages": [
               "changelog/Playlab Q2 2026 V2 Launch",
               "changelog/Product Changelog"
@@ -264,11 +281,11 @@
         ]
       },
       {
-        "tab": "📚 Resources",
+        "tab": "\ud83d\udcda Resources",
         "color": "#F59E0B",
         "groups": [
           {
-            "group": "📄 AI Policies",
+            "group": "\ud83d\udcc4 AI Policies",
             "pages": [
               "resources/aipolicies",
               "resources/aistatepolicies",
@@ -276,14 +293,14 @@
             ]
           },
           {
-            "group": "🎥 Skills Boost Videos",
+            "group": "\ud83c\udfa5 Skills Boost Videos",
             "pages": [
               "skillsboost/smartreferencing",
               "skillsboost/usability"
             ]
           },
           {
-            "group": "🟢 Lead a Workshop",
+            "group": "\ud83d\udfe2 Lead a Workshop",
             "pages": [
               "resources/introtoplaylab",
               "resources/playlab101"
@@ -292,7 +309,7 @@
         ]
       },
       {
-        "tab": "❓ FAQ",
+        "tab": "\u2753 FAQ",
         "color": "#EF4444",
         "groups": [
           {
@@ -302,13 +319,13 @@
             ]
           },
           {
-            "group": "💡 Why Playlab",
+            "group": "\ud83d\udca1 Why Playlab",
             "pages": [
               "faq/The Playlab Difference"
             ]
           },
           {
-            "group": "🔒 Privacy, Safety & Compliance",
+            "group": "\ud83d\udd12 Privacy, Safety & Compliance",
             "pages": [
               "faq/Approach to Trust and Safety",
               "faq/Privacy and Security",
@@ -317,7 +334,7 @@
             ]
           },
           {
-            "group": "👤 Account & Technical",
+            "group": "\ud83d\udc64 Account & Technical",
             "pages": [
               "faq/Account Management",
               "faq/Single Sign On",
@@ -325,7 +342,7 @@
             ]
           },
           {
-            "group": "🤝 Programs & Partnerships",
+            "group": "\ud83e\udd1d Programs & Partnerships",
             "pages": [
               "faq/Professional Development",
               "faq/Research",
@@ -340,14 +357,12 @@
         "groups": [
           {
             "group": "Read this first",
-            "icon": "compass",
             "pages": [
               "whatsnew/v2/Why V2"
             ]
           },
           {
             "group": "Migration guide",
-            "icon": "arrow-left-right",
             "pages": [
               "whatsnew/v2/What's Different in V2",
               "whatsnew/v2/V1 to V2 Cheat Sheet",
@@ -357,7 +372,6 @@
           },
           {
             "group": "What's new for your role",
-            "icon": "users",
             "pages": [
               "whatsnew/v2/V2 for Builders",
               "whatsnew/v2/V2 for Educators",
@@ -367,7 +381,6 @@
           },
           {
             "group": "Reference",
-            "icon": "book-open",
             "pages": [
               "whatsnew/v2/V2 Glossary"
             ]

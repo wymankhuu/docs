@@ -17,18 +17,18 @@ New
 🧪 This feature is currently in early access and available to select organizations.
 </Note>
 
-## <Icon icon="bell-on" size="24" /> What is this feature?
+## What is this feature?
 
 The MCP Python Tool allows AI in your Playlab apps to write and execute real Python code during a conversation. Instead of generating code for users to run elsewhere, the AI writes code, executes it in a secure sandbox, reads the output, and returns the actual result, all within a single turn.
 <Warning>
 This is an MCP tool. AI models that do not support Model Context Protocol will not be able to execute code when this tool is enabled. Ensure your selected model supports MCP before enabling.
 </Warning>
 
-## <Icon icon="lightbulb" size="24" /> What is the Rationale for this feature?
+## What is the Rationale for this feature?
 
 Language models are probabilistic: they predict likely outputs based on patterns, which makes them powerful for language tasks but unreliable for precise computation. Math, data aggregation, and file generation require deterministic execution, where the same input always produces the same correct output. Python code provides that guarantee. By combining LLM reasoning with actual code execution, the Python Tool lets AI handle the logic and language while Python handles the numbers. This is especially important in education, where grade calculations, data summaries, and generated reports need to be accurate, not approximate.
 
-## <Icon icon="circle-play" size="24" /> Watch MCP Python Tool in Action
+## Watch MCP Python Tool in Action
 
 <Frame>
   <iframe
@@ -39,7 +39,7 @@ Language models are probabilistic: they predict likely outputs based on patterns
   />
 </Frame>
 
-## <Icon icon="gear" size="24" /> Setup Instructions
+## Setup Instructions
 
 <Steps>
 <Step title="Enable the MCP Python Tool">
@@ -80,7 +80,7 @@ Try a query that exercises the tool end-to-end. Good starter prompts:
 </Step>
 </Steps>
 
-## <Icon icon="diagram-project" size="24" /> What Can It Do?
+## What Can It Do?
 
 ### Sample Workflows
 
@@ -120,7 +120,7 @@ Geometric figures, function plots, and number lines require precise rendering. P
 </Card>
 </CardGroup>
 
-## <Icon icon="triangle-exclamation" size="24" /> Important Behavior Changes
+## Important Behavior Changes
 
 <Accordion title="Sandbox Resets After Limits">
 Code runs in an isolated sandbox that is automatically reset after it reaches resource limits (memory, execution time, or after the conversation ends). Variables and files created in one turn are not guaranteed to persist to the next. Design prompts and workflows with this in mind, as each code execution should be self-contained when possible.
@@ -138,7 +138,7 @@ This is an MCP tool, which requires a model that supports the Model Context Prot
 The execution sandbox does not have internet access. Code that attempts to fetch URLs, call external APIs, or download packages will fail. All data processing must use files or data already present in the conversation.
 </Accordion>
 
-## <Icon icon="circle-question" size="24" /> Frequently Asked Questions
+## Frequently Asked Questions
 
 <Accordion title="What file types are supported?">
 The list below covers commonly used formats, but it is not exhaustive — the Python Tool can work with additional file types depending on the task.
@@ -183,7 +183,7 @@ Yes. You can disable the MCP Python Tool at any time from your app's Tools setti
 **Deploying code** means publishing code to a server or environment where it runs continuously or on demand over time — like a web app, scheduled job, or API. The MCP Python Tool does not deploy code. It is strictly for in-conversation execution, not for building or hosting persistent applications.
 </Accordion>
 
-## <Icon icon="bullhorn" size="24" /> Need Support?
+## Need Support?
 
 We're actively expanding access and improving the MCP Python Tool based on feedback. Reach out to [support@playlab.ai](mailto:support@playlab.ai) for help with setup, troubleshooting, or to request early access for your organization.
 
