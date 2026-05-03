@@ -187,7 +187,10 @@
             "group": "Collections",
             "pages": [
               "features/collections/What are Collections",
-              "features/collections/Creating and Sharing a Collection"
+              "features/collections/Creating and Sharing a Collection",
+              "features/collections/Using a Shared Collection",
+              "features/collections/Curating a Collection",
+              "features/collections/Collection Insights"
             ]
           },
           {

@@ -1,0 +1,102 @@
+---
+title: "Collection insights and activity"
+description: "How Collection owners track usage across recipient organizations: aggregate metrics, per-app trends, and what stays private."
+sidebarTitle: "Collection Insights"
+---
+
+When you ship a Collection to multiple organizations, you need a way to know whether it's landing. Collection insights give you aggregate visibility into how recipients are using the apps inside.
+
+<Warning>
+ **What you see and what stays private**
+
+ You see aggregate usage across all recipient orgs and per-app trends. You do not see individual conversations, member names, or recipient-specific user lists. Privacy boundaries between recipient orgs are preserved.
+</Warning>
+
+## What's in the Collection insights view
+
+Open a Collection you own and go to the **Insights** tab. The view organizes data into three sections.
+
+### Adoption
+
+How many recipient orgs have added the Collection to at least one workspace, and how that number has changed over time.
+
+### App-level usage
+
+For each app in the Collection: total sessions, active recipient orgs, and a sparkline of activity over the last 30 days. Click any app to drill into a per-app view.
+
+### Recipient breakdown
+
+A list of recipient orgs with high-level usage stats per org (sessions, active apps, last activity date). You see which orgs are using the Collection actively, which are dormant, and which never adopted.
+
+{/* IMG-COLL-INSIGHTS: Collection insights dashboard */}
+<Frame caption="The Collection insights dashboard. Adoption, per-app usage, and recipient breakdown surface the questions that matter most.">
+ <img src="/images/v2/TODO-collection-insights.png" alt="A Collection insights dashboard showing adoption stats at the top, a list of apps with usage sparklines, and a recipient org list with per-org usage summaries." />
+</Frame>
+
+## Questions the dashboard answers
+
+A few patterns that come up often:
+
+**Is this Collection landing?** Adoption count and the trendline tell you whether new orgs are picking it up. A flat or declining trend is a signal to revisit your distribution channel or the Collection itself.
+
+**Which apps are working?** App-level usage shows which apps in the Collection get sessions and which sit unused. An app with zero sessions in 30 days is a candidate for removal or rework.
+
+**Which orgs need follow-up?** The recipient breakdown highlights orgs that added the Collection but never used it. A short check-in often unlocks adoption.
+
+**What pace is realistic?** Comparing usage across recipient orgs gives you a benchmark for what to expect. Outliers in either direction are worth investigating.
+
+## Filters
+
+Filter the dashboard by:
+
+- **Date range.** Last 7, 14, 30, 90 days, or custom
+- **App.** Show usage for one app at a time
+- **Recipient org.** Drill into a single org's usage of the Collection
+
+## Exporting data
+
+The Insights view has an Export button that downloads the visible data as CSV. Useful for partnership reports, board updates, or longer-form analysis.
+
+JSON export is available for org admins who want to feed Collection data into a partner dashboard or analytics pipeline.
+
+## What you do not see
+
+Collection insights respects recipient org privacy:
+
+- **No individual conversations.** You see session counts, not transcripts.
+- **No member names or emails.** Recipient orgs see their own members; you see only org-level totals.
+- **No flagged messages.** Flags surface inside the recipient org's own monitoring view.
+- **No cross-recipient comparisons by name.** Recipient identities are visible to you (you shared with them), but you cannot compare individual members across orgs.
+
+## When app-level insights ship
+
+Per-app insights with goal tracking, conversation analysis, and engagement metrics ship in a follow-up release. Until then, the Collection-level dashboard plus the [App-level insights](/features/App-Level%20Insights) page give you the most complete picture available.
+
+## FAQ
+
+<AccordionGroup>
+ <Accordion title="When does the data refresh?">
+ Aggregate counts update within a few minutes of new sessions. Trendlines update daily.
+ </Accordion>
+ <Accordion title="Can I see which specific teacher uses the Collection most?">
+ No. Recipient privacy is preserved. You see usage at the org level. The recipient org's admins can see their own teacher-level breakdown.
+ </Accordion>
+ <Accordion title="What counts as a session?">
+ A conversation that includes at least one user message and one app response. Empty sessions and aborted attempts do not count.
+ </Accordion>
+ <Accordion title="What if a recipient org has many workspaces using the Collection?">
+ Workspace counts roll up to the org level in your view. Multiple workspaces in one recipient org show as one line in the recipient breakdown.
+ </Accordion>
+ <Accordion title="Can I share insights data with my partners?">
+ Yes. Export the data and share whatever you choose. Many partners include high-level insights summaries in their quarterly reports back to recipient districts.
+ </Accordion>
+ <Accordion title="Do recipient orgs see the same insights?">
+ No. Recipient orgs see their own usage of the apps in their own dashboards. Cross-org aggregation is for the Collection owner only.
+ </Accordion>
+</AccordionGroup>
+
+---
+
+Last updated: 2026-05-05
+
+Contact us at [support@playlab.ai](mailto:support@playlab.ai)
