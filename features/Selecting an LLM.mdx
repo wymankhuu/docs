@@ -17,7 +17,7 @@ tag: "Updated"
 
 ## <Icon icon="bell-on" size="24" className="inline-block align-text-bottom" /> What is this feature?
 
-You can now build on top of even more LLMs in Playlab! There are now over 15 available AI models for you to build your Playlab apps on top of. We will try our best to always provide the latest models for you to build on top of.
+You can now build on top of even more LLMs in Playlab! There are now more than a dozen available AI models for you to build your Playlab apps on top of. We will try our best to always provide the latest models for you to build on top of.
 
 <Warning>
   Changing the LLM may impact the performance of your app.
@@ -37,7 +37,7 @@ Before selecting a model, it's helpful to understand the different categories of
 |---|---|---|
 | Cutting-edge, proprietary models developed by major AI companies | Models with publicly available parameters (weights) that can be downloaded and run independently | Fully open models where both weights and training code are publicly available |
 | Typically offer the most advanced capabilities and are continuously updated with the latest research breakthroughs | While training code may not be available, you have more control over deployment and customization | Offer maximum transparency and customization potential |
-| Examples: Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.4, GPT-5 Mini, Gemini 3.1 Pro, Gemini 3 Flash | Examples: Llama models, DeepSeek R1, GPT OSS 120B, Kimi K2.5, Qwen 3, Mistral Large 3 | Coming soon! |
+| Examples: Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.4, GPT-5 Mini, Gemini 3.1 Pro, Gemini 3 Flash | Examples: Llama models, DeepSeek R1, Kimi K2.5, Qwen 3, Mistral Large 3 | Coming soon! |
 
 ## <Icon icon="thought-bubble" size="24" className="inline-block align-text-bottom" /> How do I access these models?
 
@@ -63,6 +63,7 @@ Now that you know how to select models, here are some strengths and tradeoffs of
   <Card title="Claude Opus 4.6 (Anthropic)" icon="crown">
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
     <p><strong>Description:</strong> Advanced model for complex analysis, even longer tasks with many steps, and higher-order math and coding.</p>
+    <p><strong>Knowledge Cutoff:</strong> Aug 2025</p>
     <p><strong>Strengths:</strong> Unmatched intelligence and reasoning depth. Superior performance on complex multi-step problems. Exceptional analytical and coding capabilities. Best-in-class for higher-order math and extended tasks.</p>
     <p><strong>Trade Offs:</strong> Slower response times and higher cost. Best reserved for tasks that truly require maximum capability.</p>
   </Card>
@@ -70,6 +71,7 @@ Now that you know how to select models, here are some strengths and tradeoffs of
   <Card title="Claude Sonnet 4.6 (Anthropic)" icon="diamond">
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
     <p><strong>Description:</strong> Latest version of Claude Sonnet series - with the highest intelligence across most tasks.</p>
+    <p><strong>Knowledge Cutoff:</strong> Aug 2025</p>
     <p><strong>Strengths:</strong> Highest intelligence across most tasks. Superior instruction following and nuance understanding. Exceptional balance of speed and capability. Best-in-class for most applications requiring high quality output.</p>
     <p><strong>Trade Offs:</strong> More expensive than smaller models. May be more than needed for very simple tasks.</p>
   </Card>
@@ -77,6 +79,7 @@ Now that you know how to select models, here are some strengths and tradeoffs of
   <Card title="Claude Haiku 4.5 (Anthropic)" icon="leaf">
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
     <p><strong>Description:</strong> Near-frontier intelligence at blazing speeds with extended thinking and exceptional cost-efficiency.</p>
+    <p><strong>Knowledge Cutoff:</strong> July 2025</p>
     <p><strong>Strengths:</strong> Blazing fast response times with extended thinking capabilities. Near-frontier intelligence at exceptional cost-efficiency. Excellent for quick questions and lightweight tasks.</p>
     <p><strong>Trade Offs:</strong> Less capable than Sonnet or Opus models. May struggle with complex multi-step reasoning and advanced analysis.</p>
   </Card>
@@ -84,6 +87,7 @@ Now that you know how to select models, here are some strengths and tradeoffs of
   <Card title="Claude 4.6 Sonnet (Reasoning) (Anthropic)" icon="brain">
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
     <p><strong>Description:</strong> Work through difficult problems using careful, step-by-step reasoning.</p>
+    <p><strong>Knowledge Cutoff:</strong> Aug 2025</p>
     <p><strong>Strengths:</strong> Exceptional step by step reasoning capabilities. Stronger at math and coding. Very good at explaining thought process.</p>
     <p><strong>Trade Offs:</strong> Slower response times. Not as optimized for creative tasks. Consider Claude Sonnet 4.6 or Claude Opus 4.6 for better overall performance.</p>
   </Card>
@@ -91,6 +95,7 @@ Now that you know how to select models, here are some strengths and tradeoffs of
   <Card title="GPT 5.4 (OpenAI)" icon="circle-star">
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
     <p><strong>Description:</strong> OpenAI's latest coding and reasoning model.</p>
+    <p><strong>Knowledge Cutoff:</strong> Aug 2025</p>
     <p><strong>Strengths:</strong> State-of-the-art coding and reasoning performance. Exceptional problem-solving capabilities. Superior instruction following and nuance understanding.</p>
     <p><strong>Trade Offs:</strong> Slower response times and higher cost. May be unnecessary for simple tasks. Premium pricing for cutting-edge capabilities.</p>
   </Card>
@@ -98,20 +103,15 @@ Now that you know how to select models, here are some strengths and tradeoffs of
   <Card title="GPT-5 Mini (OpenAI)" icon="circle-star">
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
     <p><strong>Description:</strong> Faster model for well-defined tasks.</p>
+    <p><strong>Knowledge Cutoff:</strong> Aug 2025</p>
     <p><strong>Strengths:</strong> Fast response times for well-defined tasks. Cost-effective for regular applications. Strong performance across most tasks without premium overhead.</p>
     <p><strong>Trade Offs:</strong> Slightly reduced capabilities compared to GPT 5.4. May not excel at the most complex reasoning challenges requiring maximum model capacity.</p>
-  </Card>
-
-  <Card title="GPT OSS 120B (OpenAI)" icon="circle">
-    <div className="text-xs bg-green-100 px-2 py-1 rounded mb-2 inline-block">Open Weight Model</div>
-    <p><strong>Description:</strong> OpenAI's large open weight model.</p>
-    <p><strong>Strengths:</strong> Open weights allow for customization and local deployment. Strong general capabilities. Good for research and experimentation.</p>
-    <p><strong>Trade Offs:</strong> Requires significant computational resources. May not match latest frontier model performance.</p>
   </Card>
 
   <Card title="Gemini 3.1 Pro (Google)" icon="stars">
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
     <p><strong>Description:</strong> Google's most powerful thinking model with maximum response accuracy and state-of-the-art performance.</p>
+    <p><strong>Knowledge Cutoff:</strong> Jan 2025</p>
     <p><strong>Strengths:</strong> Maximum response accuracy and state-of-the-art performance. Exceptional reasoning and problem-solving. Superior performance on complex analytical tasks. Enhanced creative and coding capabilities. Best-in-class for applications requiring advanced Google AI.</p>
     <p><strong>Trade Offs:</strong> Slower response times compared to Flash models. Higher cost for premium capabilities. May be unnecessary for simple tasks.</p>
   </Card>
@@ -119,6 +119,7 @@ Now that you know how to select models, here are some strengths and tradeoffs of
   <Card title="Gemini 3 Flash (Google)" icon="bolt">
     <div className="text-xs bg-blue-100 px-2 py-1 rounded mb-2 inline-block">Frontier Model</div>
     <p><strong>Description:</strong> General purpose model optimized for fast response times.</p>
+    <p><strong>Knowledge Cutoff:</strong> Jan 2025</p>
     <p><strong>Strengths:</strong> Extremely fast response times. Strong general-purpose performance. Good for simple instruction following and high volume tasks.</p>
     <p><strong>Trade Offs:</strong> Not ideal for multi-step problem solving or complex instruction following. May miss nuance in instructions.</p>
   </Card>
@@ -126,6 +127,7 @@ Now that you know how to select models, here are some strengths and tradeoffs of
   <Card title="Mistral Large 3 (Mistral)" icon="sparkles">
     <div className="text-xs bg-green-100 px-2 py-1 rounded mb-2 inline-block">Open Weight Model</div>
     <p><strong>Description:</strong> Mistral's 675B parameter flagship model with strong multilingual capabilities.</p>
+    <p><strong>Knowledge Cutoff:</strong> Oct 2024</p>
     <p><strong>Strengths:</strong> Strong reasoning and analytical capabilities. Excellent multilingual support. Open weight flexibility for customization and deployment.</p>
     <p><strong>Trade Offs:</strong> May not match top frontier models on the most demanding tasks. Performance varies by domain.</p>
   </Card>
@@ -133,6 +135,7 @@ Now that you know how to select models, here are some strengths and tradeoffs of
   <Card title="Kimi K2.5 (Moonshot)" icon="rocket">
     <div className="text-xs bg-green-100 px-2 py-1 rounded mb-2 inline-block">Open Weight Model</div>
     <p><strong>Description:</strong> Advanced open weight model that excels in using tools.</p>
+    <p><strong>Knowledge Cutoff:</strong> ~Apr 2024</p>
     <p><strong>Strengths:</strong> Excellent tool usage capabilities. Good for applications requiring API integrations. Strong technical reasoning.</p>
     <p><strong>Trade Offs:</strong> May be specialized for tool use rather than general conversation. Performance varies on creative tasks.</p>
   </Card>
@@ -140,6 +143,7 @@ Now that you know how to select models, here are some strengths and tradeoffs of
   <Card title="DeepSeek R1 (DeepSeek)" icon="water">
     <div className="text-xs bg-green-100 px-2 py-1 rounded mb-2 inline-block">Open Weight Model</div>
     <p><strong>Description:</strong> Open-source model designed for efficiency.</p>
+    <p><strong>Knowledge Cutoff:</strong> July 2024</p>
     <p><strong>Strengths:</strong> Cost-effective and efficient. Good for applications where budget is a primary concern. Open-source flexibility.</p>
     <p><strong>Trade Offs:</strong> May not match performance of frontier models on complex tasks. Limited compared to more advanced models.</p>
   </Card>
@@ -147,6 +151,7 @@ Now that you know how to select models, here are some strengths and tradeoffs of
   <Card title="Llama 4 Maverick (Meta)" icon="meta">
     <div className="text-xs bg-green-100 px-2 py-1 rounded mb-2 inline-block">Open Weight Model</div>
     <p><strong>Description:</strong> Advanced open-weight model for reasoning, math, and general knowledge.</p>
+    <p><strong>Knowledge Cutoff:</strong> Aug 2024</p>
     <p><strong>Strengths:</strong> Strong reasoning capabilities for math and general knowledge. Open weight benefits. Good performance across diverse tasks.</p>
     <p><strong>Trade Offs:</strong> Not as fast as smaller models. May require more specific prompting for best results.</p>
   </Card>
@@ -154,6 +159,7 @@ Now that you know how to select models, here are some strengths and tradeoffs of
   <Card title="Llama 4 Scout (Meta)" icon="meta">
     <div className="text-xs bg-green-100 px-2 py-1 rounded mb-2 inline-block">Open Weight Model</div>
     <p><strong>Description:</strong> Powerful for multi-document analysis, cross-lingual understanding, and context-aware reasoning.</p>
+    <p><strong>Knowledge Cutoff:</strong> Aug 2024</p>
     <p><strong>Strengths:</strong> Excellent at analyzing multiple documents simultaneously. Strong cross-lingual capabilities. Advanced contextual understanding.</p>
     <p><strong>Trade Offs:</strong> May be slower for simple tasks. Specialized for document analysis rather than general usage.</p>
   </Card>
@@ -161,6 +167,7 @@ Now that you know how to select models, here are some strengths and tradeoffs of
   <Card title="Llama 3.3 70B Instruct (Meta)" icon="meta">
     <div className="text-xs bg-green-100 px-2 py-1 rounded mb-2 inline-block">Open Weight Model</div>
     <p><strong>Description:</strong> Advanced model for reasoning, math, and general knowledge.</p>
+    <p><strong>Knowledge Cutoff:</strong> Dec 2023</p>
     <p><strong>Strengths:</strong> Strong general well balanced use cases. Performs well in math. Effective at following clear instructions. Open weight flexibility.</p>
     <p><strong>Trade Offs:</strong> Slower than smaller models. Does not follow instructions as well as Claude/GPT models.</p>
   </Card>
@@ -168,6 +175,7 @@ Now that you know how to select models, here are some strengths and tradeoffs of
   <Card title="Qwen 3 (Alibaba)" icon="sparkles">
     <div className="text-xs bg-green-100 px-2 py-1 rounded mb-2 inline-block">Open Weight Model</div>
     <p><strong>Description:</strong> Large-scale Qwen3 model with 235B parameters, optimized for instruction following and reasoning tasks.</p>
+    <p><strong>Knowledge Cutoff:</strong> Oct 2023</p>
     <p><strong>Strengths:</strong> Excellent multilingual support. Strong performance on reasoning and instruction following tasks. Good balance of performance and efficiency. Open weight flexibility.</p>
     <p><strong>Trade Offs:</strong> May not match frontier model performance on highly specialized tasks. Performance varies depending on language and domain.</p>
   </Card>
@@ -192,13 +200,13 @@ Selecting can be tricky. That's why we encourage you to play and experiment as y
 </Accordion>
 
 <Accordion title="Do you need open weights or source code access?">
-  If you need model customization, local deployment, or transparency into model operations, consider open weight models like Llama 4 series, Qwen 3, DeepSeek R1, Mistral Large 3, or GPT OSS 120B. For maximum performance and latest capabilities, frontier models like Claude Opus 4.6, GPT 5.4, Claude Sonnet 4.6, or Gemini 3.1 Pro are typically best. Consider your long-term deployment and customization needs when choosing between proprietary and open models.
+  If you need model customization, local deployment, or transparency into model operations, consider open weight models like Llama 4 series, Qwen 3, DeepSeek R1, or Mistral Large 3. For maximum performance and latest capabilities, frontier models like Claude Opus 4.6, GPT 5.4, Claude Sonnet 4.6, or Gemini 3.1 Pro are typically best. Consider your long-term deployment and customization needs when choosing between proprietary and open models.
 </Accordion>
 
 ### <Icon icon="medal" size="24" className="inline-block align-text-bottom" /> Best Practices
 
 <Accordion title="Try to match your model with your use case:">
-  Everyday applications: Claude Sonnet 4.6, Claude Haiku 4.5, or GPT-5 Mini provide the best balance of performance and efficiency. Critical/Complex applications: Claude Opus 4.6, GPT 5.4, or Gemini 3.1 Pro for highest accuracy and reasoning capability. Creative applications: GPT 5.4, GPT-5 Mini, or Claude Sonnet 4.6 for creative tasks. Problem-solving tools: Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.4, Gemini 3.1 Pro, or Llama 4 Maverick. Document analysis: Claude Opus 4.6, Claude Sonnet 4.6, or Llama 4 Scout for multi-document or cross-lingual analysis. Technical/Coding tasks: Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.4, or Kimi K2.5 for tool usage. Educational explanation: Claude Sonnet 4.6, GPT-5 Mini, Llama 3.3 70B Instruct, Llama 4 Maverick, or those with strong explanatory capabilities. High-volume applications: Balance quality with speed using Claude Sonnet 4.6, Claude Haiku 4.5, Gemini 3 Flash, or GPT-5 Mini. Budget-conscious applications: Claude Haiku 4.5, Qwen 3, DeepSeek R1, Mistral Large 3, or other open weight models for cost-effective solutions. Research/Experimentation: Open weight models like Llama 4 series, Qwen 3, Mistral Large 3, or GPT OSS 120B for flexibility.
+  Everyday applications: Claude Sonnet 4.6, Claude Haiku 4.5, or GPT-5 Mini provide the best balance of performance and efficiency. Critical/Complex applications: Claude Opus 4.6, GPT 5.4, or Gemini 3.1 Pro for highest accuracy and reasoning capability. Creative applications: GPT 5.4, GPT-5 Mini, or Claude Sonnet 4.6 for creative tasks. Problem-solving tools: Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.4, Gemini 3.1 Pro, or Llama 4 Maverick. Document analysis: Claude Opus 4.6, Claude Sonnet 4.6, or Llama 4 Scout for multi-document or cross-lingual analysis. Technical/Coding tasks: Claude Opus 4.6, Claude Sonnet 4.6, GPT 5.4, or Kimi K2.5 for tool usage. Educational explanation: Claude Sonnet 4.6, GPT-5 Mini, Llama 3.3 70B Instruct, Llama 4 Maverick, or those with strong explanatory capabilities. High-volume applications: Balance quality with speed using Claude Sonnet 4.6, Claude Haiku 4.5, Gemini 3 Flash, or GPT-5 Mini. Budget-conscious applications: Claude Haiku 4.5, Qwen 3, DeepSeek R1, Mistral Large 3, or other open weight models for cost-effective solutions. Research/Experimentation: Open weight models like Llama 4 series, Qwen 3, or Mistral Large 3 for flexibility.
 </Accordion>
 
 <Accordion title="Test out multiple models for apps that you are building:">
@@ -252,4 +260,4 @@ Selecting can be tricky. That's why we encourage you to play and experiment as y
 </div>
 
 ---
-Last updated: 03/02/2026
+Last updated: 05/07/2026

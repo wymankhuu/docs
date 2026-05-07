@@ -70,20 +70,19 @@ Yes. Playlab apps support image inputs, [voice input](/features/Voice%20Input), 
 
 ## What LLMs does Playlab currently support?
 
-Playlab supports over 20 AI models from multiple providers, including:
+Playlab supports more than a dozen AI models from multiple providers. Knowledge cutoff dates are noted in parentheses.
 
 ### Frontier Models
-- **Anthropic**: Claude Opus 4.6, Claude Sonnet 4.6, Claude Opus 4.5, Claude Sonnet 4.5, Claude Haiku 4.5, Claude 4 Sonnet (Reasoning)
-- **OpenAI**: GPT 5.4, ChatGPT 5.1, GPT-5 Mini
-- **Google**: Gemini 3.1 Pro, Gemini 3 Flash, Gemini 3 Pro
+- **Anthropic**: Claude Opus 4.6 (Aug 2025), Claude Sonnet 4.6 (Aug 2025), Claude Haiku 4.5 (July 2025), Claude 4 Sonnet (Reasoning) (Aug 2025)
+- **OpenAI**: GPT 5.4 (Aug 2025), GPT-5 Mini (Aug 2025)
+- **Google**: Gemini 3.1 Pro (Jan 2025), Gemini 3 Flash (Jan 2025)
 
 ### Open Weight Models
-- **Meta**: Llama 3.3 70B Instruct, Llama 4 Maverick, Llama 4 Scout
-- **OpenAI**: GPT OSS 120B
-- **DeepSeek**: DeepSeek R1
-- **Moonshot**: Kimi K2.5
-- **Mistral**: Mistral Large 3
-- **Alibaba**: Qwen 3
+- **Meta**: Llama 3.3 70B Instruct (Dec 2023), Llama 4 Maverick (Aug 2024), Llama 4 Scout (Aug 2024)
+- **DeepSeek**: DeepSeek R1 (July 2024)
+- **Moonshot**: Kimi K2.5 (~Apr 2024)
+- **Mistral**: Mistral Large 3 (Oct 2024)
+- **Alibaba**: Qwen 3 (Oct 2023)
 
 New models are added regularly to provide users with access to the latest AI capabilities, with a focus on providing more open weight and eventually open source models for maximum flexibility and control.
 
@@ -106,7 +105,6 @@ flowchart LR
     GW --> OA["OpenAI GPT / o-series"]
     GW --> GG["Google Gemini"]
     GW --> OW["Meta Llama, Mistral,<br/>Qwen 3, DeepSeek R1, Kimi K2.5"]
-    GW --> FW["GPT OSS 120B"]
 
     AN -->|primary| BED["AWS Bedrock"]
     AN -.->|fallback| ANT["Anthropic direct"]
@@ -116,11 +114,10 @@ flowchart LR
 
     GG --> GGL["Google direct"]
     OW --> BED
-    FW --> FWD["Fireworks"]
 ```
 
 **Served via AWS Bedrock:**
-- Anthropic Claude models (Claude 4.6 family, Claude 4.5 family, Claude Haiku 4.5)
+- Anthropic Claude models (Claude 4.6 family, Claude Haiku 4.5)
 - Meta Llama (Llama 3.3 70B Instruct, Llama 4 Scout, Llama 4 Maverick)
 - Mistral Large 3
 - Qwen 3
@@ -128,12 +125,11 @@ flowchart LR
 - Kimi K2.5
 
 **Served via Microsoft Azure OpenAI Service** (fallback path for OpenAI models):
-- GPT 5.4, ChatGPT 5.1, GPT-5 Mini
+- GPT 5.4, GPT-5 Mini
 
 **Accessed directly from the provider:**
 - OpenAI GPT and o-series models (primary path; Azure is the fallback)
 - Google Gemini (all models)
-- Fireworks-hosted open-weight models (GPT OSS 120B)
 
 The general pattern is: **Anthropic → AWS Bedrock primary**, **OpenAI → OpenAI direct primary / Azure fallback**, with Google models going direct. Fallbacks are automatic and transparent to end users.
 
