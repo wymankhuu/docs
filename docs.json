@@ -57,6 +57,10 @@
     {
       "source": "/features/Richer Starter Inputs",
       "destination": "/getstarted/Adding Starter Inputs"
+    },
+    {
+      "source": "/learn with us/onboarding",
+      "destination": "/learn with us/Virtual Learning Opportunities"
     }
   ],
   "navigation": {
@@ -74,7 +78,7 @@
           {
             "group": "Explore Learning Opportunities",
             "pages": [
-              "learn with us/onboarding",
+              "learn with us/Virtual Learning Opportunities",
               "learn with us/office hours"
             ]
           }
