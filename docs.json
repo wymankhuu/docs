@@ -203,7 +203,7 @@
           {
             "group": "Workspaces",
             "pages": [
-              "features/Organizing Workspaces",
+              "features/App Status Designations",
               "features/Cross-Workspace App Use",
               "features/Submit Your App To Community"
             ]
