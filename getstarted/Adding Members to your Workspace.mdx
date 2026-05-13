@@ -14,7 +14,7 @@ sidebarTitle: "Adding Members"
 
 <Frame caption="Walkthrough: the three ways to add members to a workspace.">
   <iframe
-    src="https://drive.google.com/file/d/1JMYmZF-C3UYEkPgANfvL5_zuSfJA9KJ4/preview"
+    src="https://drive.google.com/file/d/12FwaNX8bbHUxdU3OrtvIilGlhFbdNYYh/preview"
     frameborder="0"
     allow="autoplay"
     allowfullscreen=""
@@ -34,88 +34,87 @@ Workspaces hold members and apps. There are three ways to add a member: search a
 
 Pick the path that matches your situation.
 
-**Add existing org members (search and add).** From the Members tab, type a name to find people already in your org and add them directly. No email goes out. Best for adding co-teachers, instructional coaches, or any colleague who already has a Playlab account in your org.
+<Tabs>
+  <Tab title="Invite link">
+    Playlab generates a link you can share through email, Slack, or a class document. Anyone who clicks the link joins the workspace at the permission level you set. Best for class rosters where you want students to self-serve.
 
-**Email invites (Add Members).** Type or paste a list of emails, set the permission, and Playlab sends each one an invite. Best when you have a known list outside your org and want a record of who you invited.
+    <Frame caption="The Create Invite Link dialog with the permission selector and Copy Link button.">
+      <img src="/images/v2/invitelink.png" alt="A workspace Create Invite Link dialog with a permission selector and a Copy Link button." width="500" className="mx-auto" />
+    </Frame>
 
-**Invite link (Create Invite Link).** Playlab generates a link you can share through email, Slack, or a class document. Anyone who clicks the link joins the workspace at the permission level you set. Best for class rosters where you want students to self-serve.
+    <Steps>
+      <Step title="Open the workspace and go to Members" icon="users">
+        The Members tab lists current members and shows the **Add Members** and **Create Invite Link** buttons.
+      </Step>
+      <Step title="Click Create Invite Link" icon="link">
+        A dialog opens with the permission selector and a Copy Link button.
+      </Step>
+      <Step title="Pick the permission for the link" icon="user-check">
+        Anyone who joins through the link gets this permission.
+      </Step>
+      <Step title="Click Create & Copy Link" icon="copy">
+        The link is generated and copied to your clipboard.
+      </Step>
+      <Step title="Share the link" icon="share">
+        Send it through email, Slack, or paste it into a class document. Each person who clicks it joins the workspace.
+      </Step>
+    </Steps>
 
-## Method 1: Add existing org members
+    You can revoke an invite link at any time from the Members tab. Revoking does not affect people who have already joined; it only stops new joiners from using the link.
+  </Tab>
 
-<Steps>
- <Step title="Open the workspace and go to Members">
- The Members tab lists current members and shows the Add Members and Create Invite Link buttons.
- </Step>
- <Step title="Click Add Members">
- A dialog opens. The first tab lets you search your org's directory.
- </Step>
- <Step title="Search by name or email">
- Start typing. Matching org members appear in the list. Select the people you want to add.
- </Step>
- <Step title="Pick the permission">
- Choose **Member** for most people, or **Manager** for co-teachers and admin support.
- </Step>
- <Step title="Click Add">
- The selected members land in the workspace right away. They get an in-app notification, no email is sent.
- </Step>
-</Steps>
+  <Tab title="Org search">
+    Type a name to find people already in your org and add them directly. No email goes out. Best for adding co-teachers, instructional coaches, or any colleague who already has a Playlab account in your org.
 
-{/* IMG-21A: Add Members modal with search tab */}
-<Frame caption="The Add Members dialog with the org search tab. Matching org members appear as you type.">
- <img src="/images/v2_members_add_search.png" alt="A workspace Add Members dialog with a search input and a list of matching org members." />
-</Frame>
+    <Frame caption="The Add Members dialog with org search active.">
+      <img src="/images/v2/searchorg.png" alt="A workspace Add Members dialog with a search input and a list of matching org members." width="500" className="mx-auto" />
+    </Frame>
 
-## Method 2: Email invites
+    <Steps>
+      <Step title="Open the workspace and go to Members" icon="users">
+        Same Members tab as the other methods.
+      </Step>
+      <Step title="Click Add Members" icon="user-plus">
+        A dialog opens with the org-search tab active by default.
+      </Step>
+      <Step title="Search by name or email" icon="search">
+        Start typing. Matching org members appear in the list. Select the people you want to add.
+      </Step>
+      <Step title="Pick the permission" icon="user-check">
+        Choose **Member** for most people, or **Manager** for co-teachers and admin support.
+      </Step>
+      <Step title="Click Add" icon="check">
+        The selected members land in the workspace right away. They get an in-app notification — no email is sent.
+      </Step>
+    </Steps>
+  </Tab>
 
-<Steps>
- <Step title="Open the workspace and go to Members">
- Same Members tab as Method 1.
- </Step>
- <Step title="Click Add Members">
- In the Add Members dialog, switch to the email-invite tab.
- </Step>
- <Step title="Add emails">
- Type or paste a list of emails. Playlab parses comma-separated and newline-separated lists.
- </Step>
- <Step title="Pick the permission">
- Choose **Member** for most people, or **Manager** for co-teachers and admin support.
- </Step>
- <Step title="Click Send Invites">
- Each invitee gets an email. They click through, create or sign in to their account, and join the workspace.
- </Step>
-</Steps>
+  <Tab title="Email invites">
+    Type or paste a list of emails, set the permission, and Playlab sends each one an invite. Best when you have a known list outside your org and want a record of who you invited.
 
-{/* IMG-21B: Add Members modal with email tab */}
-<Frame caption="The email-invite tab. Paste a list of emails and Playlab sends invites.">
- <img src="/images/v2_members_add_email.png" alt="A workspace Add Members dialog with an email-invite input and a permission selector." />
-</Frame>
+    <Frame caption="The email-invite tab with a list of emails pasted in.">
+      <img src="/images/v2/pasteemails.png" alt="A workspace Add Members dialog with an email-invite input populated with multiple addresses and a permission selector." width="500" className="mx-auto" />
+    </Frame>
 
-## Method 3: Create an invite link
-
-<Steps>
- <Step title="Open the workspace and go to Members">
- Same Members tab as Methods 1 and 2.
- </Step>
- <Step title="Click Create Invite Link">
- A dialog opens with the permission selector and a Copy Link button.
- </Step>
- <Step title="Pick the permission for the link">
- Anyone who joins through the link gets this permission.
- </Step>
- <Step title="Click Create & Copy Link">
- The link is generated and copied to your clipboard.
- </Step>
- <Step title="Share the link">
- Send it through email, Slack, or paste it into a class document. Each person who clicks it joins the workspace.
- </Step>
-</Steps>
-
-{/* IMG-21C: Create Invite Link modal */}
-<Frame caption="The Create Invite Link dialog with permission selector and Copy Link button.">
- <img src="/images/v2_members_invite_link.png" alt="A workspace Create Invite Link dialog with permission selector and Copy Link button." />
-</Frame>
-
-You can revoke an invite link at any time from the Members tab. Revoking does not affect people who have already joined; it only stops new joiners from using the link.
+    <Steps>
+      <Step title="Open the workspace and go to Members" icon="users">
+        Same Members tab as the other methods.
+      </Step>
+      <Step title="Click Add Members" icon="user-plus">
+        In the Add Members dialog, switch to the email-invite tab.
+      </Step>
+      <Step title="Add emails" icon="mail">
+        Type or paste a list of emails. Playlab parses comma-separated and newline-separated lists.
+      </Step>
+      <Step title="Pick the permission" icon="user-check">
+        Choose **Member** for most people, or **Manager** for co-teachers and admin support.
+      </Step>
+      <Step title="Click Send Invites" icon="send">
+        Each invitee gets an email. They click through, create or sign in to their account, and join the workspace.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
 
 ## Workspace roles
 

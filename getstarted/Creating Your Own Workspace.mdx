@@ -8,7 +8,7 @@ sidebarTitle: "Creating a Workspace"
   **Key points**
 
   - Workspaces are containers for a class, team, or project
-  - Set building permissions when you create them; change anytime
+  - Four toggles set what members can do — review them on creation; change anytime
   - Add members through org search, email invite, or invite link
 </Info>
 
@@ -33,26 +33,29 @@ Workspaces are the home for a class, team, or group inside an organization. They
 ## How to create a workspace
 
 <Steps>
- <Step title="Go to your organization dashboard">
- The dashboard lists your existing workspaces, apps, collections, and members.
+ <Step title="Go to your organization dashboard" icon="layout-dashboard">
+   The dashboard lists your existing workspaces, apps, collections, and members.
  </Step>
- <Step title="Click New Workspace">
- The button is in the top right of the Workspaces tab.
+ <Step title="Click New Workspace" icon="plus">
+   The button is in the top right of the Workspaces tab.
+
+   <Frame>
+     <img src="/images/v2/newworkspacefrommenu.png" alt="The Workspaces tab on the org dashboard with the New Workspace button highlighted." width="500" className="mx-auto" />
+   </Frame>
  </Step>
- <Step title="Name the workspace and add a description">
- The name shows up in members' dashboards. The description is for you and your members to understand the purpose.
+ <Step title="Name the workspace and add a description" icon="pencil">
+   The name shows up in members' dashboards. Pick something easy to identify. The description helps you and your members remember what the workspace is for.
  </Step>
- <Step title="Set building permissions">
- Three toggles control what members can do: build apps, see each other's apps, share apps beyond the workspace. Defaults are conservative. You can change them later.
+ <Step title="Set member permissions" icon="user-check">
+   Review the four toggles. See [Building permissions](#building-permissions) below for what each one does.
  </Step>
- <Step title="Click Create">
- The workspace is created. You land on the workspace home page with empty Members and Apps tabs ready to fill.
+ <Step title="Click Create new Workspace" icon="check">
+   You land on the workspace home page with empty Members and Apps tabs ready to fill.
  </Step>
 </Steps>
 
-{/* IMG-08: New Workspace form */}
-<Frame caption="The New Workspace form. Name, description, and building permissions are set together.">
- <img src="/images/v2_workspace_create_form.png" alt="The V2 New Workspace form with fields for name, description, and three building permissions toggles visible." />
+<Frame caption="The Create new Workspace form.">
+  <img src="/images/v2/newworkspace.png" alt="The Create new Workspace modal with Name and Description fields, four member-permission toggles, and Cancel and Create new Workspace buttons." width="500" className="mx-auto" />
 </Frame>
 
 ## Workspace roles
@@ -94,24 +97,18 @@ To create a new app, go to the Apps tab and click **New App**. The app is create
 
 To add an existing app, go to the Apps tab and click **Add Apps**. Search for an app you have access to (yours, shared with you, or part of a Collection you have added). Pick it and confirm. The app appears in the workspace and members can use it.
 
-{/* IMG-10: Add Apps modal */}
-<Frame caption="From the Apps tab, click Add Apps to bring an existing app into your workspace.">
- <img src="/images/v2_add_app_to_workspace.png" alt="The V2 workspace Apps tab with an Add Apps modal open, showing a list of apps to choose from." />
-</Frame>
-
 For the deeper guide on cross-workspace use, see [Using an app across multiple classes](https://learn.playlab.ai/features/Cross-Workspace%20App%20Use).
 
 ## Building permissions
 
-The three toggles you set on workspace creation are:
+The four toggles you set on workspace creation are:
 
-1. **Members can build apps.** Off by default. Turn on for classes where students are creating apps as part of the curriculum.
-2. **Members can see each other's apps.** Off by default. Useful when collaboration is part of the learning, off when individual work matters.
-3. **Members can share apps beyond the workspace.** Off by default. Lets advanced students share their work with friends, family, or other classes.
+1. **Build Apps.** Members can create their own apps in this workspace. Turn on for classes where students are creating apps as part of the curriculum.
+2. **Members can see each other's apps.** Members can browse apps built by other members. Useful when collaboration is part of the learning; off when individual work matters.
+3. **Share apps outside the workspace.** Members can always share their app with other members inside the workspace — this toggle controls whether they can also share it with users *outside* the workspace.
+4. **Manage own apps.** Members can view moderated messages and delete their own apps. **Recommended for adults only.**
 
-You can change these any time from the workspace settings. Changes apply going forward. Existing apps are not affected.
-
-For more, see [Workspace building permissions](https://learn.playlab.ai/getstarted/Workspace%20Building%20Permissions).
+You can change these any time from the workspace settings. For more, see [Workspace building permissions](https://learn.playlab.ai/getstarted/Workspace%20Building%20Permissions).
 
 ## Organizing your workspaces
 
@@ -133,9 +130,7 @@ A few things teachers have asked about and that have worked:
 
 Set conservative building permissions to start. Turning a toggle on later is easy. Walking back student access after they have built apps is harder.
 
-Use the description field. It shows up on the workspace card and reminds members what the workspace is for. A short purpose statement saves a lot of "what is this for" questions later.
-
-Archive workspaces at the end of a unit or year. Activity is preserved. The workspace stops being active in members' dashboards.
+Archive workspaces at the end of a unit or year — the workspace stops being active in members' dashboards while activity history stays available to admins.
 
 ## FAQ
 
