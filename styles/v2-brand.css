@@ -293,26 +293,42 @@ main hr + p {
    Mintlify release changes the markup, inspect the rendered DOM and adjust.
    -------------------------------------------------------------------------- */
 
+/* Topbar CTA — full Playlab wordmark instead of text label. The docs.json
+   "Home" string still drives the link href; CSS hides the text and renders
+   the full logo as a background image. Paper variant swaps in for dark mode.
+   Aspect ratio ~3.5:1 from the SVG viewBox. */
 header a[class*="button"],
 header a[href*="learn.playlab.ai"],
 [class*="topbar"] a[class*="button"],
 [class*="navbar"] a[class*="cta"] {
-  background-color: var(--pl-ink) !important;
-  color: var(--pl-paper) !important;
-  border: 1px solid var(--pl-ink) !important;
+  background-color: transparent !important;
+  background-image: url("/logo/Playlab_Logo_Full_Black.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: transparent !important;
+  font-size: 0 !important;
+  border: none !important;
   border-radius: 4px !important;
-  padding: 0.4rem 0.9rem !important;
-  font-family: var(--pl-font-sans) !important;
-  font-weight: 500 !important;
+  width: 110px !important;
+  height: 32px !important;
+  padding: 0 !important;
   box-shadow: none !important;
-  transition: background-color 120ms ease;
+  transition: opacity 120ms ease;
+}
+
+[data-theme="dark"] header a[class*="button"],
+[data-theme="dark"] header a[href*="learn.playlab.ai"],
+[data-theme="dark"] [class*="topbar"] a[class*="button"],
+[data-theme="dark"] [class*="navbar"] a[class*="cta"] {
+  background-image: url("/logo/Playlab_Logo_Full_Paper.svg");
 }
 
 header a[class*="button"]:hover,
+header a[href*="learn.playlab.ai"]:hover,
 [class*="topbar"] a[class*="button"]:hover {
-  background-color: var(--pl-paper) !important;
-  color: var(--pl-ink) !important;
-  border-color: var(--pl-ink) !important;
+  background-color: transparent !important;
+  opacity: 0.7;
 }
 
 /* In-content secondary buttons */
@@ -362,11 +378,9 @@ a:focus-visible,
   color: var(--pl-on-highlighter);
 }
 
-/* Ink-filled buttons keep their fill on focus — outline only */
+/* Topbar CTA keeps its loop-mark image on focus — outline only, no fill swap */
 header a[class*="button"]:focus-visible,
 [class*="topbar"] a[class*="button"]:focus-visible {
-  background-color: var(--pl-ink);
-  color: var(--pl-paper);
   outline: 2px solid var(--pl-focus-ring);
   outline-offset: 2px;
 }
@@ -385,13 +399,12 @@ header a[class*="button"]:focus-visible,
    No aria-current, no data-active.
    -------------------------------------------------------------------------- */
 
-/* Active sidebar link — yellow highlighter fill, ink text, ink left rule.
+/* Active sidebar link — yellow highlighter fill, ink text.
    This is THE selected mark in the left rail. */
 a[class*="bg-primary/10"] {
   background-color: var(--pl-highlighter) !important;
   color: var(--pl-on-highlighter) !important;
   font-weight: 600 !important;
-  box-shadow: inset 3px 0 0 0 var(--pl-ink) !important;
   border-radius: 4px !important;
   transition: background-color 120ms ease;
 }
@@ -451,19 +464,17 @@ nav h3:has(~ * a[aria-current="page"]),
 [class*="sidebar"] li:has(> a[aria-current="page"]) ~ * h3,
 [class*="sidebar"] details:has(a[aria-current="page"]) > summary {
   background: rgba(254, 255, 160, 0.45);
-  border-left: 3px solid var(--pl-ink);
   padding-left: 0.6rem;
   color: var(--pl-on-highlighter) !important;
   font-weight: 600;
-  border-radius: 0 3px 3px 0;
+  border-radius: 3px;
 }
 
-/* Active TOP TAB — yellow fill, ink underline, ink text */
+/* Active TOP TAB — yellow fill, ink text. No underline rule. */
 [class*="tabs"] [aria-current="page"],
 [class*="tabs"] [data-state="active"],
 nav [role="tablist"] [aria-selected="true"],
 nav [class*="tab"][class*="active"] {
-  border-bottom: 3px solid var(--pl-ink) !important;
   background-color: var(--pl-highlighter) !important;
   color: var(--pl-on-highlighter) !important;
   font-weight: 600;
