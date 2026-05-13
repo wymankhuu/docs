@@ -1,96 +1,83 @@
 ---
-title: "Inviting users to your org"
-description: "How org admins invite new members to a Playlab organization."
+title: "Inviting users to Playlab"
+description: "How org admins and teachers invite users at the org level or into a specific workspace."
 sidebarTitle: "Inviting Users"
 ---
 
 <Info>
   **Key points**
 
-  - Org admins invite users via org-level invitation, workspace email, or invite link
-  - Each path fits a different audience size and onboarding need
-  - Roles assigned at invitation determine workspace and org access
+  - Two paths: **org-level invitation** (whole organization) or **workspace invitation** (a specific class or team)
+  - Each path supports both direct email invites and shareable invite links
+  - Roles assigned at invitation determine what new members can do
 </Info>
 
-<Frame caption="Walkthrough: inviting users to your organization.">
-  <iframe
-    src="https://drive.google.com/file/d/1obWwDKcTw1lZpTu_c1dt_c_dY_sm-PeS/preview"
-    frameborder="0"
-    allow="autoplay"
-    allowfullscreen=""
-    style={{ width: "100%", height: "400px" }}
-  ></iframe>
-</Frame>
+Org admins and teachers invite people into Playlab through two paths: an **org-level invitation** that adds someone to the organization itself, or a **workspace invitation** that places someone in a specific class or team. Pick the path that matches what you're trying to do.
 
-Org admins and teachers invite people into Playlab through three paths: org-level invitation, workspace email invitations, or workspace invite links. Each fits a different situation.
+<Tabs>
+  <Tab title="Org-level invitation">
+    The path for adding people to the organization itself, before placing them in any specific workspace. Use it for co-admins, Learning Partners, and members who'll be assigned to workspaces later.
 
-<Tip>
- Quick reference: download the [Adding Members One Pager](https://docs.google.com/document/d/1LkOE6fcNHm9ZVFb63gwMsOCN68o44guASGWQdSyM970/view).
-</Tip>
+    <Frame caption="Walkthrough: inviting users to your organization.">
+      <iframe
+        src="https://drive.google.com/file/d/1Mjp2YCYDZubxm9XoQoYJiYkapz3k_hNh/preview"
+        frameborder="0"
+        allow="autoplay"
+        allowfullscreen=""
+        style={{ width: "100%", maxWidth: "720px", aspectRatio: "16 / 9", margin: "1.5rem auto", display: "block" }}
+      ></iframe>
+    </Frame>
 
-## Method 1: Org-level invitation
+    <Frame caption="The org Members tab with the Add Members and Create Invite Link buttons.">
+      <img src="/images/v2/addorgmembers.png" alt="A Playlab organization Members tab showing the Add Members and Create Invite Link buttons." />
+    </Frame>
 
-This is the path for adding people to the organization itself, before placing them in any specific workspace.
+    <Steps>
+      <Step title="Go to the org Members tab" icon="users">
+        From the org dashboard, click **Members**. You see current org members along with the **Add Members** and **Create Invite Link** buttons.
+      </Step>
+      <Step title="Click Add Members or Create Invite Link" icon="user-plus">
+        **Add Members** sends direct email invitations. **Create Invite Link** generates a shareable link anyone can use to join.
+      </Step>
+      <Step title="Set the permission" icon="user-check">
+        Pick the role new members should have at the org level. Most start as Members; coaches or co-admins might be Admins.
+      </Step>
+      <Step title="Send or share" icon="send">
+        For **Add Members**, paste the email list and click **Add Members**. For **Create Invite Link**, copy the link and share it through email or your communication channel.
+      </Step>
+    </Steps>
 
-<Steps>
- <Step title="Go to the org Members tab">
- From the org dashboard, click Members. You see the list of current org members and the Add Members and Create Invite Link buttons.
- </Step>
- <Step title="Click Add Members or Create Invite Link">
- **Add Members** sends direct email invitations. **Create Invite Link** generates a shareable link.
- </Step>
- <Step title="Set the permission">
- Pick the role you want new members to have at the org level. Most members start as Members; coaches or co-admins might be Admins.
- </Step>
- <Step title="Send or share">
- For Add Members, paste the email list and click Add Members. For Create Invite Link, copy the link and share through email or your communication channel.
- </Step>
-</Steps>
+    For org-level role assignments, see [Org permissions and roles](https://learn.playlab.ai/features/Org%20Permissions%20and%20Roles).
+  </Tab>
 
-{/* IMG-21: Members tab with new buttons */}
-<Frame caption="The org Members tab in V2 with the Add Members and Create Invite Link buttons.">
- <img src="/images/v2_members_add_invite.png" alt="A V2 organization Members tab showing Add Members and Create Invite Link buttons." />
-</Frame>
+  <Tab title="Workspace invitation">
+    The path for teachers adding students or co-teachers to a specific class or team. From the workspace's Members tab, you can either send email invites or share an invite link — the same two flows that exist at the org level.
 
-For org-level role assignments, see [Org permissions and roles](https://learn.playlab.ai/features/Org%20Permissions%20and%20Roles).
+    <Frame caption="Walkthrough: adding members to a workspace.">
+      <iframe
+        src="https://drive.google.com/file/d/12FwaNX8bbHUxdU3OrtvIilGlhFbdNYYh/preview"
+        frameborder="0"
+        allow="autoplay"
+        allowfullscreen=""
+        style={{ width: "100%", maxWidth: "720px", aspectRatio: "16 / 9", margin: "1.5rem auto", display: "block" }}
+      ></iframe>
+    </Frame>
 
-## Method 2: Workspace email invitation
+    <Steps>
+      <Step title="Open the workspace and go to Members" icon="users">
+        Go to the workspace where you want to add members.
+      </Step>
+      <Step title="Pick Add Members or Create Invite Link" icon="user-plus">
+        **Add Members** sends email invites. **Create Invite Link** generates a shareable link.
+      </Step>
+      <Step title="Set roles and share" icon="send">
+        Paste the email list (or copy the link) and assign the role. Email-invite recipients without a Playlab account get a signup invite and land in the workspace once they sign up.
+      </Step>
+    </Steps>
 
-This is the path for teachers adding students or co-teachers to a specific workspace. The workflow is documented in detail in [Adding members to a workspace](https://learn.playlab.ai/getstarted/Adding%20Members%20to%20your%20Workspace).
-
-A short version:
-
-<Steps>
- <Step title="Open the workspace">
- Go to the workspace where you want to add members.
- </Step>
- <Step title="Click Add Members">
- The Members tab has the same Add Members button.
- </Step>
- <Step title="Add emails and set roles">
- Paste the list, pick a role, send.
- </Step>
-</Steps>
-
-If the email belongs to someone who is not yet a Playlab user, they receive an invite to create an account and land in the workspace once signed up.
-
-## Method 3: Workspace invite link
-
-This is the path for class rosters or programs where you want self-service signup.
-
-<Steps>
- <Step title="Open the workspace and go to Members">
- Same starting point as Method 2.
- </Step>
- <Step title="Click Create Invite Link">
- Pick the role new members should have when they join.
- </Step>
- <Step title="Copy and share">
- Paste the link into your class platform, email it to families, or share it through Slack.
- </Step>
-</Steps>
-
-You can revoke an invite link at any time. Revoking stops new joiners; people who already used the link keep their access.
+    For the full walkthrough (org search, email invites, invite link — all three tabs), see [Adding members to a workspace](https://learn.playlab.ai/getstarted/Adding%20Members%20to%20your%20Workspace). You can revoke an invite link at any time; revoking stops new joiners but doesn't affect people who already used it.
+  </Tab>
+</Tabs>
 
 ## Choosing the right method
 
@@ -98,45 +85,45 @@ You can revoke an invite link at any time. Revoking stops new joiners; people wh
 | --- | --- |
 | Adding a co-admin to the org | Org-level invitation, role Admin |
 | Adding a Learning Partner to the org | Org-level invitation, role Member or Viewer |
-| Adding a class roster | Workspace email invitation if you have the list, otherwise invite link |
-| Adding a co-teacher to a workspace | Workspace email invitation, role Manager |
-| Running an after-school club | Workspace invite link |
-| Adding a guest observer | Workspace email invitation, role Viewer |
+| Adding a class roster | Workspace invitation, email or invite link |
+| Adding a co-teacher to a workspace | Workspace invitation, role Manager |
+| Running an after-school club | Workspace invitation, invite link |
+| Adding a guest observer | Workspace invitation, role Viewer |
 
 ## Best practices
 
 Things admins and teachers have asked about:
 
-Use direct email invitations when you have a roster from a student information system. The list import is faster than relying on students to follow a link.
+**Invite at the org level** when someone needs access that spans workspaces — co-admins, Learning Partners, or members who'll be assigned to multiple classes later.
 
-Use invite links for fluid attendance: clubs, summer programs, professional development sessions.
+**Invite at the workspace level** when someone only needs access to a specific class or team. It keeps activity and visibility scoped to that one workspace.
 
 Set the default permission low. It is easier to upgrade a Member to a Manager than to walk back excessive access.
 
-Document who has Admin access to your org. Periodic review (twice a year) catches stale Admin assignments from past staff.
+Document who has Admin access to your org. A twice-a-year review catches stale Admin assignments from past staff.
 
 ## FAQ
 
 <AccordionGroup>
- <Accordion title="What if I don't have a list of students yet?">
- Use Create Invite Link. Set the permission to Member and share the link. Students join as they sign up.
- </Accordion>
- <Accordion title="Can students invite other students?">
- Only if their workspace permissions include "share beyond workspace" and your org allows it. By default, students cannot invite others. See [Workspace building permissions](https://learn.playlab.ai/getstarted/Workspace%20Building%20Permissions).
- </Accordion>
- <Accordion title="How do roles cascade between org and workspace?">
- Org-level Admin status grants visibility into every workspace. Workspace Manager status applies only inside that workspace. The two are independent: a Workspace Manager is not automatically an Org Admin.
- </Accordion>
- <Accordion title="What if a student leaves my org?">
- Remove them from the org Members tab. They lose access to all workspaces. Their conversation history is preserved for admin review.
- </Accordion>
-  <Accordion title="What if a student forgets their password?">
-    For SSO orgs, students reset through their identity provider (Google, Microsoft, Clever). For email accounts, the sign-in screen has a Forgot Password link.
+  <Accordion title="What if I don't have a list of recipients yet?">
+    Use **Create Invite Link**. Set the permission to Member and share the link. People join as they sign up.
   </Accordion>
-  <Accordion title="Can students belong to multiple orgs at once?">
-    Yes. A student account can be invited into more than one organization. Each org controls what they see when they're inside it.
+  <Accordion title="Can members invite other members?">
+    Only if their workspace permissions include "share apps outside the workspace" and your org allows it. By default, members cannot invite others. See [Workspace building permissions](https://learn.playlab.ai/getstarted/Workspace%20Building%20Permissions).
   </Accordion>
-  <Accordion title="Is there a maximum number of students per org?">
+  <Accordion title="How do roles cascade between org and workspace?">
+    Org-level Admin status grants visibility into every workspace. Workspace Manager status applies only inside that workspace. The two are independent — a Workspace Manager is not automatically an Org Admin.
+  </Accordion>
+  <Accordion title="What if a member leaves my org?">
+    Remove them from the org Members tab. They lose access to all workspaces. Their conversation history is preserved for admin review.
+  </Accordion>
+  <Accordion title="What if a user forgets their password?">
+    For SSO orgs, users reset through their identity provider (Google, Microsoft, Clever). For email accounts, the sign-in screen has a Forgot Password link.
+  </Accordion>
+  <Accordion title="Can a user belong to multiple orgs at once?">
+    Yes. A Playlab account can be invited into more than one organization. Each org controls what they see when they're inside it.
+  </Accordion>
+  <Accordion title="Is there a maximum number of users per org?">
     Partner orgs have generous limits. Most schools and districts don't hit them. If you do, your Learning Partner can request more.
   </Accordion>
 </AccordionGroup>
