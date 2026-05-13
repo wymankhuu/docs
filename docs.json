@@ -63,7 +63,7 @@
     "tabs": [
       {
         "tab": "Learn Live with Us",
-        "color": "#10B981",
+        "color": "#ed6e2d",
         "groups": [
           {
             "group": "Overview",
@@ -82,7 +82,7 @@
       },
       {
         "tab": "Learn on Your Own",
-        "color": "#3B82F6",
+        "color": "#356fe5",
         "groups": [
           {
             "group": "Getting Started",
@@ -151,7 +151,7 @@
       },
       {
         "tab": "Feature Documentation",
-        "color": "#8B5CF6",
+        "color": "#f4baef",
         "groups": [
           {
             "group": "Recently Added",
@@ -276,7 +276,7 @@
       },
       {
         "tab": "Changelog",
-        "color": "#10B981",
+        "color": "#398239",
         "groups": [
           {
             "group": "Changelog",
@@ -289,7 +289,7 @@
       },
       {
         "tab": "Resources",
-        "color": "#F59E0B",
+        "color": "#96be53",
         "groups": [
           {
             "group": "AI Policies",
@@ -317,7 +317,7 @@
       },
       {
         "tab": "FAQ",
-        "color": "#EF4444",
+        "color": "#ce463f",
         "groups": [
           {
             "group": "Frequently Asked Questions",
@@ -360,7 +360,7 @@
       },
       {
         "tab": "Coming from V1",
-        "color": "#a4beeb",
+        "color": "#283f88",
         "groups": [
           {
             "group": "Read this first",

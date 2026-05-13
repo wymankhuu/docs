@@ -1,15 +1,9 @@
 /* ==========================================================================
-   Playlab V2 Learn Hub — brand-aligned styling
+   Playlab Learning Hub — brand-aligned styling
    --------------------------------------------------------------------------
-   Source: Playlab Brand System v2.0 (yaml). Workshop / studio metaphor.
-   Scope:  Only routes that contain V2 content. Everything else inherits the
-           default Mintlify theme so V1 docs are untouched.
-
-   Drop into the Mintlify docs repo as `styles/v2-brand.css` and reference
-   from `mint.json` via the `css` field.
-
-   Instrument Sans is registered via mint.json. The other two brand fonts
-   load here via @import so this CSS file is self-contained.
+   Source: Playlab Brand System v2.0. Paper / ink / one yellow mark.
+   Scope:  Whole site (V1 + V2). Previously route-scoped; now applied
+           globally so every Mintlify page reads as a Playlab surface.
    ========================================================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap");
@@ -17,18 +11,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
 
 /* --------------------------------------------------------------------------
-   1. Brand color tokens (from yaml §5)
+   1. Brand tokens
    -------------------------------------------------------------------------- */
 :root {
   /* Foundational neutrals */
   --pl-ink: #0c0f14;
-  --pl-ink-warm: #0d1f18;     /* warmer near-black used in deck body type */
-  --pl-paper: #fbf9f6;        /* off-white, primary light surface */
-  --pl-parchment: #eff0e5;    /* alternate light surface, panels */
+  --pl-ink-warm: #0d1f18;
+  --pl-paper: #fbf9f6;
+  --pl-parchment: #eff0e5;
 
   /* Primary accents (use sparingly) */
-  --pl-highlighter: #feffa0;  /* warm yellow / pale chartreuse */
-  --pl-chalk-blue: #a4beeb;   /* Playlab blue. NOT cobalt. */
+  --pl-highlighter: #feffa0;
+  --pl-chalk-blue: #a4beeb;
   --pl-lilac: #efd8ef;
 
   /* Categorical index (data, tags, illustration) */
@@ -46,107 +40,68 @@
   --pl-font-sans: "Instrument Sans", "DM Sans", system-ui, -apple-system, sans-serif;
   --pl-font-serif: "EB Garamond", Georgia, "Times New Roman", serif;
   --pl-font-mono: "Spline Sans Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Contract tokens (new in v2.0) */
+  --pl-on-highlighter: #0c0f14;          /* invariant ink on highlighter fills */
+  --pl-ink-12: rgba(12, 15, 20, 0.12);   /* interior dividers, subtle rules */
+  --pl-ink-70: rgba(12, 15, 20, 0.7);
+  --pl-focus-ring: #fff7a8;              /* pale yellow, a hair paler than highlighter */
 }
 
 /* --------------------------------------------------------------------------
-   2. V2 scope selector
-
-   Mintlify exposes the current page route on the body or a wrapper element.
-   The exact attribute depends on the Mintlify version. Three fallback
-   strategies are layered below; one of them will match.
-
-   If none match in your build, the cleanest fallback is to add
-   <div className="v2-page"> at the top of each V2 .mdx file.
+   2. Global base — paper field, ink text, sans default
+   --------------------------------------------------------------------------
+   Critical: do NOT declare --primary here. Mintlify reads --primary from
+   docs.json colors.primary (#0c0f14) and uses it as the background-color
+   of mask-image icons. Overriding it makes every Lucide icon disappear.
    -------------------------------------------------------------------------- */
 
-/* Strategy A: match by URL pathname via :has() — works in modern browsers */
-body:has(a[href$="/V2 for Builders"]),
-body:has(a[href$="/V2 for Educators"]),
-body:has(a[href$="/V2 for Admins"]),
-body:has(a[href$="/V2 for Networks or Districts"]),
-/* fallback: explicit class on a wrapper */
-.v2-page,
-/* fallback: data attribute set by mintlify per route */
-body[data-route*="/whatsnew/v2/"],
-body[data-route*="/features/collections/"],
-body[data-route*="/getstarted/Navigating Playlab"],
-body[data-route*="/getstarted/Collaborating on an App"],
-body[data-route*="/getstarted/Workspace Building Permissions"],
-body[data-route*="/features/Cross-Workspace App Use"],
-body[data-route*="/features/Sharing with Individuals"],
-body[data-route*="/features/Sharing with Groups and Orgs"],
-body[data-route*="/features/App Privacy and Visibility"],
-body[data-route*="/features/Workspace Member Detail"],
-body[data-route*="/features/App-Level Insights"],
-body[data-route*="/features/Org Permissions and Roles"],
-body[data-route*="/features/Publishing"],
-body[data-route*="/features/Reviewing App Activity"],
-body[data-route*="/changelog/Playlab Q2 2026 V2 Launch"] {
-
-  /* --------------------------------------------------------------------------
-     3. Surfaces and text (yaml §5: ink on paper)
-     -------------------------------------------------------------------------- */
+:root {
   --background: var(--pl-paper);
   --foreground: var(--pl-ink);
-  /* Do NOT override --primary here. Mintlify uses --primary as the
-     background-color for masked icons (bg-primary class). Setting it to
-     chalk-blue made every Card icon and active sidebar icon render as
-     pale blue on white — invisible in light mode. Mintlify already maps
-     --primary from docs.json colors.primary (#0c0f14, ink). Leave it. */
+}
 
+body {
   background-color: var(--pl-paper);
   color: var(--pl-ink);
-
-  /* --------------------------------------------------------------------------
-     4. Typography (yaml §6)
-     -------------------------------------------------------------------------- */
   font-family: var(--pl-font-sans);
   font-feature-settings: "ss01", "ss02";
 }
 
+main,
+[class*="content"],
+[class*="container"] > article {
+  background-color: var(--pl-paper);
+}
+
 /* --------------------------------------------------------------------------
-   5. Typographic pairings (scoped under .v2-page or matching body)
+   3. Typography (scoped to main so chrome inherits sans default but doesn't
+      pick up page-body H1 weight / letterspacing)
    -------------------------------------------------------------------------- */
 
-/* H1: confident headline (yaml: Instrument Sans SemiBold, large) */
-.v2-page h1,
-body[data-route*="/whatsnew/v2/"] main h1,
-body[data-route*="/features/collections/"] main h1,
-body[data-route*="/getstarted/Navigating"] main h1,
-body[data-route*="/changelog/Playlab Q2"] main h1 {
+main h1 {
   font-family: var(--pl-font-sans);
   font-weight: 600;
   letter-spacing: -0.01em;
   color: var(--pl-ink);
 }
 
-/* H2: section title (yaml: Instrument Sans 24pt) */
-.v2-page h2,
-body[data-route*="/whatsnew/v2/"] main h2,
-body[data-route*="/features/collections/"] main h2 {
+main h2 {
   font-family: var(--pl-font-sans);
   font-weight: 500;
   color: var(--pl-ink);
 }
 
-/* H3: step heading (still sans, lighter weight) */
-.v2-page h3,
-body[data-route*="/whatsnew/v2/"] main h3 {
+main h3 {
   font-family: var(--pl-font-sans);
   font-weight: 500;
   color: var(--pl-ink);
 }
 
-/* Mintlify renders the frontmatter description as a subheader below the
-   page title. Style it as the editorial moment (EB Garamond Italic),
-   so the description carries the literary register the brand reserves
-   for statement headlines. The italic markdown lede is no longer used —
-   description-in-frontmatter handles that role. */
-.v2-page [class*="subtitle"],
-.v2-page [class*="description"],
-body[data-route*="/whatsnew/v2/"] main [class*="subtitle"],
-body[data-route*="/features/collections/"] main [class*="subtitle"],
-body[data-route*="/getstarted/Navigating"] main [class*="subtitle"] {
+/* Frontmatter description / page subtitle — the literary moment.
+   EB Garamond italic is reserved for editorial / quote register only. */
+main [class*="subtitle"],
+main [class*="description"] {
   font-family: var(--pl-font-serif);
   font-style: italic;
   font-size: 1.15em;
@@ -155,25 +110,19 @@ body[data-route*="/getstarted/Navigating"] main [class*="subtitle"] {
   letter-spacing: 0;
 }
 
-/* Body copy: Instrument Sans Regular, 18pt baseline */
-.v2-page p,
-.v2-page li,
-body[data-route*="/whatsnew/v2/"] main p,
-body[data-route*="/features/collections/"] main p {
+/* Body copy */
+main p,
+main li {
   font-family: var(--pl-font-sans);
   font-weight: 400;
   line-height: 1.6;
   color: var(--pl-ink);
 }
 
-/* Inline code, kbd, table headers — the "label" voice (yaml: Spline Sans Mono) */
-.v2-page code,
-.v2-page kbd,
-.v2-page th,
-body[data-route*="/whatsnew/v2/"] main code,
-body[data-route*="/whatsnew/v2/"] main th,
-body[data-route*="/features/collections/"] main code,
-body[data-route*="/features/collections/"] main th {
+/* Inline code / kbd / table headers — the mono "label" voice */
+main code,
+main kbd,
+main th {
   font-family: var(--pl-font-mono);
   font-size: 0.92em;
   font-weight: 400;
@@ -182,8 +131,7 @@ body[data-route*="/features/collections/"] main th {
   padding: 0.1em 0.3em;
 }
 
-.v2-page th,
-body[data-route*="/whatsnew/v2/"] main th {
+main th {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   font-size: 0.78em;
@@ -191,132 +139,119 @@ body[data-route*="/whatsnew/v2/"] main th {
   text-align: left;
 }
 
-/* Pre/code blocks: parchment background, no fancy gradients (yaml §5: no gradients) */
-.v2-page pre,
-body[data-route*="/whatsnew/v2/"] main pre {
+/* Code blocks — parchment fill, full-ink outline, no shadow */
+main pre {
   background-color: var(--pl-parchment);
-  border: 1px solid rgba(12, 15, 20, 0.08);
+  border: 1px solid var(--pl-ink);
   border-radius: 4px;
+  box-shadow: none;
   font-family: var(--pl-font-mono);
 }
 
 /* --------------------------------------------------------------------------
-   6. Mintlify component restyling
+   4. Components
    -------------------------------------------------------------------------- */
 
-/* Cards: paper background, parchment hover, ink text. No gradients. */
-.v2-page [class*="card"],
-body[data-route*="/whatsnew/v2/"] main [class*="card"],
-body[data-route*="/features/collections/"] main [class*="card"] {
-  background-color: var(--pl-paper);
-  border: 1px solid rgba(12, 15, 20, 0.12);
+/* Cards — white surface on cream paper, full-ink 1px outline.
+   Depth comes from the outline, not from shadow. */
+main [class*="card"] {
+  background-color: #ffffff;
+  border: 1px solid var(--pl-ink);
   border-radius: 4px;
+  box-shadow: none;
   transition: background-color 120ms ease;
 }
 
-.v2-page [class*="card"]:hover,
-body[data-route*="/whatsnew/v2/"] main [class*="card"]:hover {
+main [class*="card"]:hover {
   background-color: var(--pl-parchment);
-  border-color: rgba(12, 15, 20, 0.2);
+  border-color: var(--pl-ink);
 }
 
-/* Card icons: ink, no fill */
-.v2-page [class*="card"] svg,
-body[data-route*="/whatsnew/v2/"] main [class*="card"] svg {
+main [class*="card"] svg {
   color: var(--pl-ink);
 }
 
 /* Accordions */
-.v2-page [class*="accordion"],
-body[data-route*="/whatsnew/v2/"] main [class*="accordion"] {
-  border-top: 1px solid rgba(12, 15, 20, 0.12);
+main [class*="accordion"] {
+  border-top: 1px solid var(--pl-ink-12);
   border-radius: 0;
 }
 
-/* Callouts: Note / Tip / Warning / Info / Check */
-.v2-page [class*="callout"],
-body[data-route*="/whatsnew/v2/"] main [class*="callout"] {
+/* Callouts — Note / Tip / Warning / Info / Check */
+main [class*="callout"] {
   border-radius: 4px;
   border-left: 3px solid var(--pl-chalk-blue);
   background-color: var(--pl-paper);
 }
 
-/* Tip uses highlighter accent (yaml §5: warm yellow / marker feel) */
-.v2-page [class*="callout-tip"],
-body[data-route*="/whatsnew/v2/"] main [class*="callout-tip"] {
+/* Tip — full highlighter fill, ink text. The on-highlighter contract is
+   load-bearing here: never cream-on-yellow. */
+main [class*="callout-tip"] {
   border-left-color: var(--pl-ink);
   background-color: var(--pl-highlighter);
+  color: var(--pl-on-highlighter);
+}
+main [class*="callout-tip"] *,
+main [class*="callout-tip"] a {
+  color: var(--pl-on-highlighter);
 }
 
-/* Warning uses brick from categorical index */
-.v2-page [class*="callout-warning"],
-body[data-route*="/whatsnew/v2/"] main [class*="callout-warning"] {
+/* Warning — brick from the categorical index */
+main [class*="callout-warning"] {
   border-left-color: var(--pl-cat-brick);
 }
 
-/* Note + Info use chalk-blue (default brand accent) */
-.v2-page [class*="callout-note"],
-.v2-page [class*="callout-info"],
-body[data-route*="/whatsnew/v2/"] main [class*="callout-note"],
-body[data-route*="/whatsnew/v2/"] main [class*="callout-info"] {
+/* Note + Info — chalk-blue accent */
+main [class*="callout-note"],
+main [class*="callout-info"] {
   border-left-color: var(--pl-chalk-blue);
 }
 
-/* Steps component — workshop feel: numbered, paper background */
-.v2-page [class*="step"]::before,
-body[data-route*="/whatsnew/v2/"] main [class*="step"]::before {
+/* Steps — workshop feel: mono numeral */
+main [class*="step"]::before {
   font-family: var(--pl-font-mono);
   font-size: 0.85em;
   letter-spacing: 0.02em;
 }
 
-/* Tables — workshop feel: simple borders, parchment header, no zebra */
-.v2-page table,
-body[data-route*="/whatsnew/v2/"] main table {
+/* Tables — full-ink outer border, subtle interior rules */
+main table {
   border-collapse: collapse;
-  border: 1px solid rgba(12, 15, 20, 0.12);
+  border: 1px solid var(--pl-ink);
 }
 
-.v2-page table thead,
-body[data-route*="/whatsnew/v2/"] main table thead {
+main table thead {
   background-color: var(--pl-parchment);
 }
 
-.v2-page table td,
-.v2-page table th,
-body[data-route*="/whatsnew/v2/"] main table td,
-body[data-route*="/whatsnew/v2/"] main table th {
-  border: 1px solid rgba(12, 15, 20, 0.08);
+main table td,
+main table th {
+  border: 1px solid var(--pl-ink-12);
   padding: 0.6em 0.8em;
 }
 
-/* Frames around images (yaml §7: tight crop, generous space) */
-.v2-page [class*="frame"],
-body[data-route*="/whatsnew/v2/"] main [class*="frame"] {
-  background-color: var(--pl-paper);
-  border: 1px solid rgba(12, 15, 20, 0.1);
+/* Frames around images — white card on cream, ink outline */
+main [class*="frame"] {
+  background-color: #ffffff;
+  border: 1px solid var(--pl-ink);
   border-radius: 4px;
   padding: 0.5rem;
 }
 
-.v2-page [class*="frame"] img,
-body[data-route*="/whatsnew/v2/"] main [class*="frame"] img {
+main [class*="frame"] img {
   border-radius: 3px;
 }
 
-/* Frame caption: mono label voice */
-.v2-page [class*="frame"] figcaption,
-body[data-route*="/whatsnew/v2/"] main [class*="frame"] figcaption {
+main [class*="frame"] figcaption {
   font-family: var(--pl-font-mono);
   font-size: 0.78em;
   letter-spacing: 0.03em;
-  color: rgba(12, 15, 20, 0.7);
+  color: var(--pl-ink-70);
   text-transform: none;
 }
 
-/* Links: chalk-blue underline, ink text */
-.v2-page a:not([class*="card"]):not([class*="button"]),
-body[data-route*="/whatsnew/v2/"] main a:not([class*="card"]):not([class*="button"]) {
+/* Links — ink text, 2px chalk-blue underline, highlighter hover */
+main a:not([class*="card"]):not([class*="button"]) {
   color: var(--pl-ink);
   text-decoration: underline;
   text-decoration-color: var(--pl-chalk-blue);
@@ -324,65 +259,137 @@ body[data-route*="/whatsnew/v2/"] main a:not([class*="card"]):not([class*="butto
   text-underline-offset: 3px;
 }
 
-.v2-page a:not([class*="card"]):not([class*="button"]):hover,
-body[data-route*="/whatsnew/v2/"] main a:not([class*="card"]):not([class*="button"]):hover {
+main a:not([class*="card"]):not([class*="button"]):hover {
   background-color: var(--pl-highlighter);
+  color: var(--pl-on-highlighter);
   text-decoration-color: var(--pl-ink);
 }
 
-/* Footer: "Last updated" + support email line */
-.v2-page hr + p,
-body[data-route*="/whatsnew/v2/"] main hr + p {
+/* Footer "Last updated" line — mono, dimmed */
+main hr + p {
   font-family: var(--pl-font-mono);
   font-size: 0.85em;
-  color: rgba(12, 15, 20, 0.6);
+  color: var(--pl-ink-70);
   letter-spacing: 0.02em;
 }
 
 /* --------------------------------------------------------------------------
-   6b. Active sidebar item — different icon treatment when on the page
+   5. Buttons — ink fill, white text, 4px, boxy. Never pill, never yellow.
    --------------------------------------------------------------------------
-   Brand metaphor: highlighter / marker on paper. The active page's icon
-   gets a highlighter-yellow block behind it, scaled slightly larger, and
-   the link text shifts to ink with chalk-blue underline removed (it's
-   already where you are, no underline needed).
-   Mintlify uses several patterns for the active sidebar link. All listed
-   below; whichever the live build emits will hit.
+   Selectors are fuzzy because Mintlify wraps the topbar CTA in Tailwind
+   utility classes. The fragment lookups below should hit; if a future
+   Mintlify release changes the markup, inspect the rendered DOM and adjust.
    -------------------------------------------------------------------------- */
 
-/* Mintlify sidebar active state.
-   The active sidebar link does NOT use aria-current or data-active. It is
-   identified by the Tailwind utility classes `bg-primary/10` and
-   `text-primary` (verified against the live DOM at playlabai-v2-preview).
+header a[class*="button"],
+header a[href*="learn.playlab.ai"],
+[class*="topbar"] a[class*="button"],
+[class*="navbar"] a[class*="cta"] {
+  background-color: var(--pl-ink) !important;
+  color: var(--pl-paper) !important;
+  border: 1px solid var(--pl-ink) !important;
+  border-radius: 4px !important;
+  padding: 0.4rem 0.9rem !important;
+  font-family: var(--pl-font-sans) !important;
+  font-weight: 500 !important;
+  box-shadow: none !important;
+  transition: background-color 120ms ease;
+}
 
-   Mintlify renders sidebar icons as empty <svg> elements whose visible
-   color comes from `background-color` (the SVG itself is masked by an
-   external Lucide URL via mask-image). So to color the icon we override
-   `background-color` on the SVG, NOT `color`/`fill`/`stroke`.
-
-   Critical: never set `width: auto` on these SVGs. Mintlify gives them
-   `size-4` (= 1rem). Forcing auto collapses the icon to zero width and
-   it disappears. */
-
-a[class*="bg-primary/10"] {
-  background-color: rgba(164, 190, 235, 0.32) !important; /* chalk-blue tint */
+header a[class*="button"]:hover,
+[class*="topbar"] a[class*="button"]:hover {
+  background-color: var(--pl-paper) !important;
   color: var(--pl-ink) !important;
+  border-color: var(--pl-ink) !important;
+}
+
+/* In-content secondary buttons */
+main a[class*="button"],
+main button[class*="secondary"] {
+  background-color: #ffffff;
+  color: var(--pl-ink);
+  border: 1px solid var(--pl-ink);
+  border-radius: 4px;
+  padding: 0.35rem 0.8rem;
+  font-family: var(--pl-font-sans);
+  font-weight: 500;
+  box-shadow: none;
+  text-decoration: none;
+  transition: background-color 120ms ease;
+}
+
+main a[class*="button"]:hover {
+  background-color: var(--pl-parchment);
+}
+
+/* Anti-pattern guard: kill any pill-radius asserted by Mintlify or Tailwind. */
+header a[class*="button"],
+[class*="topbar"] a[class*="button"],
+main a[class*="button"],
+main button {
+  border-radius: 4px !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. Focus ring — pale yellow on interactive elements
+   -------------------------------------------------------------------------- */
+
+input:focus,
+input:focus-visible,
+textarea:focus,
+textarea:focus-visible,
+select:focus,
+select:focus-visible,
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible,
+[contenteditable]:focus-visible {
+  outline: 2px solid var(--pl-focus-ring);
+  outline-offset: 1px;
+  background-color: var(--pl-focus-ring);
+  color: var(--pl-on-highlighter);
+}
+
+/* Ink-filled buttons keep their fill on focus — outline only */
+header a[class*="button"]:focus-visible,
+[class*="topbar"] a[class*="button"]:focus-visible {
+  background-color: var(--pl-ink);
+  color: var(--pl-paper);
+  outline: 2px solid var(--pl-focus-ring);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   7. Sidebar — inactive state, active state, hover
+   --------------------------------------------------------------------------
+   Mintlify masks sidebar icons via mask-image with background-color carrying
+   the color (the SVG element itself is empty). To color the icon, override
+   `background-color`, NOT `color` / `fill` / `stroke`. And never set
+   `width: auto` on these — Mintlify gives them `size-4` (= 1rem) and forcing
+   auto collapses the icon to zero width.
+
+   The active sidebar link is identified by Tailwind utility classes
+   `bg-primary/10` and `text-primary` (verified against the live DOM).
+   No aria-current, no data-active.
+   -------------------------------------------------------------------------- */
+
+/* Active sidebar link — yellow highlighter fill, ink text, ink left rule.
+   This is THE selected mark in the left rail. */
+a[class*="bg-primary/10"] {
+  background-color: var(--pl-highlighter) !important;
+  color: var(--pl-on-highlighter) !important;
   font-weight: 600 !important;
-  box-shadow: inset 3px 0 0 0 var(--pl-chalk-blue) !important;
+  box-shadow: inset 3px 0 0 0 var(--pl-ink) !important;
   border-radius: 4px !important;
   transition: background-color 120ms ease;
 }
 
-/* Mintlify renders sidebar icons as empty <svg> elements with the icon
-   shape applied via mask-image. The visible color is the SVG's
-   background-color. Default inactive: bg-gray-400 (#9ca3af) — too light
-   against paper. Override across the board. */
-
+/* Inactive icon — ink at 70% (the masked SVG approach) */
 svg[class*="bg-gray-400"][style*="mask-image"],
 svg[class*="bg-gray-500"][style*="mask-image"],
 svg[class*="bg-gray-400"]:not([style*="mask-image"]),
 svg[class*="size-4"][class*="bg-gray"] {
-  background-color: rgba(12, 15, 20, 0.7) !important; /* ink at 70% */
+  background-color: var(--pl-ink-70) !important;
 }
 
 /* Hover bumps it to full ink */
@@ -391,8 +398,7 @@ a:hover svg[class*="bg-gray"][style*="mask-image"] {
   background-color: var(--pl-ink) !important;
 }
 
-/* Active sidebar icon: full ink, full size (Mintlify size-4 stays),
-   visibly contrasts against the chalk-blue tinted active background. */
+/* Active sidebar icon — full ink against the highlighter fill */
 a[class*="bg-primary/10"] svg[class*="size-"] {
   background-color: var(--pl-ink) !important;
   opacity: 1 !important;
@@ -400,9 +406,7 @@ a[class*="bg-primary/10"] svg[class*="size-"] {
   /* width and height intentionally NOT set — Mintlify's size-4 must win */
 }
 
-/* Hover (sidebar) — distinctly different from active.
-   Mintlify already supplies hover:bg-gray-600/5 on inactive links. We
-   reinforce with parchment so it's clearly visible on V2 routes. */
+/* Inactive hover — parchment row, full-ink icon */
 aside a:not([class*="bg-primary/10"]):hover,
 nav a:not([class*="bg-primary/10"]):hover,
 [class*="sidebar"] a:not([class*="bg-primary/10"]):hover {
@@ -410,7 +414,6 @@ nav a:not([class*="bg-primary/10"]):hover,
   border-radius: 4px;
 }
 
-/* Inactive icon hover: keep its gray fill, just bump opacity so nothing fades. */
 aside a:hover svg,
 nav a:hover svg,
 [class*="sidebar"] a:hover svg {
@@ -419,12 +422,11 @@ nav a:hover svg,
 }
 
 /* --------------------------------------------------------------------------
-   6c. Active section header (group containing the current page)
+   8. Active section header — the group containing the current page
    --------------------------------------------------------------------------
-   When you are on a page inside "Welcome", the "Welcome" group header
-   itself gets a soft chalk-blue tint and a left rule so you can see at a
-   glance which section you are in.
-   Uses :has() to find the group whose nested link is the current page.
+   Highlighter at ~45% so this reads as ambient context, NOT as a second
+   primary mark. The fully-saturated active sidebar link above is the
+   punctuated yellow; this is the wash that frames it.
    -------------------------------------------------------------------------- */
 
 aside h3:has(~ * a[aria-current="page"]),
@@ -436,43 +438,47 @@ nav h3:has(~ * a[aria-current="page"]),
 [class*="sidebar"] [class*="section"]:has(a[aria-current="page"]) > h3,
 [class*="sidebar"] li:has(> a[aria-current="page"]) ~ * h3,
 [class*="sidebar"] details:has(a[aria-current="page"]) > summary {
-  background: linear-gradient(
-    to right,
-    rgba(164, 190, 235, 0.18) 0%,
-    rgba(164, 190, 235, 0.04) 100%
-  );
-  border-left: 3px solid var(--pl-chalk-blue);
+  background: rgba(254, 255, 160, 0.45);
+  border-left: 3px solid var(--pl-ink);
   padding-left: 0.6rem;
-  color: var(--pl-ink) !important;
+  color: var(--pl-on-highlighter) !important;
   font-weight: 600;
   border-radius: 0 3px 3px 0;
 }
 
-/* Active TOP TAB — the "🆕 V2 Preview" tab when you are on a V2 page.
-   Mintlify already handles tab active state via primary color, but we
-   reinforce it with the chalk-blue accent. */
-
+/* Active TOP TAB — yellow fill, ink underline, ink text */
 [class*="tabs"] [aria-current="page"],
 [class*="tabs"] [data-state="active"],
 nav [role="tablist"] [aria-selected="true"],
 nav [class*="tab"][class*="active"] {
-  border-bottom: 3px solid var(--pl-chalk-blue) !important;
-  color: var(--pl-ink) !important;
+  border-bottom: 3px solid var(--pl-ink) !important;
+  background-color: var(--pl-highlighter) !important;
+  color: var(--pl-on-highlighter) !important;
   font-weight: 600;
 }
 
 /* --------------------------------------------------------------------------
-   7. Drift guards (yaml §9.drift_warnings)
+   9. Drift guards
    -------------------------------------------------------------------------- */
 
-/* No glassmorphism / blur / saturated edtech blue */
-.v2-page *,
-body[data-route*="/whatsnew/v2/"] main * {
+/* No glassmorphism / blur */
+* {
   backdrop-filter: none !important;
 }
 
-/* Force chalk-blue over any default cobalt that themes might apply */
-.v2-page [style*="background-color: rgb(53, 111, 229)"],
-body[data-route*="/whatsnew/v2/"] main [style*="background-color: rgb(53, 111, 229)"] {
+/* Force chalk-blue over any default cobalt that themes apply */
+[style*="background-color: rgb(53, 111, 229)"] {
   background-color: var(--pl-chalk-blue) !important;
+}
+
+/* No card / frame / pre drop shadows */
+main [class*="card"],
+main [class*="frame"],
+main pre {
+  box-shadow: none !important;
+}
+
+/* No gradient backgrounds in chrome */
+[style*="gradient"] {
+  background-image: none !important;
 }
