@@ -3,8 +3,8 @@
   "theme": "mint",
   "name": "Playlab Learning Hub",
   "logo": {
-    "light": "/logo/LightMode_Full.svg",
-    "dark": "/logo/DarkMode_Full.svg",
+    "light": "/logo/Playlab_Logo_Full_Black.svg",
+    "dark": "/logo/Playlab_Logo_Full_Paper.svg",
     "href": "https://www.playlab.ai"
   },
   "favicon": "/favicon.svg",
@@ -16,7 +16,7 @@
     "dismissible": false
   },
   "icons": {
-    "library": "lucide"
+    "library": "tabler"
   },
   "colors": {
     "primary": "#0c0f14",

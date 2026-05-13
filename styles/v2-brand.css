@@ -81,21 +81,33 @@ main,
 
 main h1 {
   font-family: var(--pl-font-sans);
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
   color: var(--pl-ink);
 }
 
 main h2 {
   font-family: var(--pl-font-sans);
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
   color: var(--pl-ink);
 }
 
 main h3 {
   font-family: var(--pl-font-sans);
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  line-height: 1.3;
   color: var(--pl-ink);
+}
+
+/* Body — 16px Instrument Sans, ink (bumped from 14px in design system v2.0) */
+main p,
+main li {
+  font-size: 16px;
+  line-height: 1.55;
 }
 
 /* Frontmatter description / page subtitle — the literary moment.

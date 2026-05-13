@@ -1,18 +1,19 @@
 ---
 title: "Collaborating on an app"
-description: "How to add Editors to a Playlab app using the Share modal."
+description: "How to share a Playlab app with individuals, groups, or organizations using the Share modal."
 sidebarTitle: "Collaborating on an App"
 ---
 
 <Info>
   **Key points**
 
-  - Use the Share modal to add a peer as Editor on a single app
-  - Editor access is per-app, not per-workspace
-  - Owners keep publish rights; Editors can edit and test
+  - Share apps with individuals, groups, or whole organizations from one modal
+  - Three permission levels: **Owner** (manage), **Editor** (edit), **Viewer** (view)
+  - Sharing is per-app, separate from workspace membership
+  - The modal also surfaces publish state so you can publish from the same place
 </Info>
 
-<Frame caption="Walkthrough: adding a peer as Editor on a single app.">
+<Frame caption="Walkthrough: sharing a Playlab app from the Share modal.">
   <iframe
     src="https://drive.google.com/file/d/1Efhgr2KqrGT38ODw5Bo-o87qQd4czih2/preview"
     frameborder="0"
@@ -22,63 +23,53 @@ sidebarTitle: "Collaborating on an App"
   ></iframe>
 </Frame>
 
-App collaboration is separate from workspace membership. To let a peer help build an app, you add them as an **Editor** on that app. Editor access is per-app, so the peer gets to edit the one app you shared and nothing else.
+The Share modal lets you add **individuals, groups, or whole organizations** as Owners, Editors, or Viewers on a single app. Access is per-app — if you give someone Editor on App A, they don't get access to your other apps. The modal also surfaces whether the app is published, so you can publish from the same place.
 
-## How to add an Editor
+## How to share an app
 
 <Steps>
- <Step title="Open the app">
- Go to the app you want to collaborate on. The app builder or the app overview page both work.
+ <Step title="Open Share from the app card or builder" icon="door">
+   Go to the app you want to share and click **Share**. The button sits on the app card and in the top right of the builder.
+
+   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginTop: "1rem" }}>
+     <Frame caption="Share from the app card.">
+       <img src="/images/v2/shareappcard.png" alt="A Playlab app card with the Share action visible." />
+     </Frame>
+     <Frame caption="Share from inside the builder.">
+       <img src="/images/v2/publishsharebuilder.png" alt="The Playlab app builder with the Publish and Share controls in the top right." />
+     </Frame>
+   </div>
  </Step>
- <Step title="Click Share">
- The **Share** button is in the top right of the app view.
+ <Step title="Search for a user, group, or organization" icon="search">
+   Type a name, email, group, or org name. Matches appear as you type. You can add individuals, groups (like a class or cohort), or a whole organization in one step.
  </Step>
- <Step title="Add the peer's email or name">
- Type their email address or, if they are in your organization, start typing their name. The matching members appear as you type.
+ <Step title="Choose a permission level" icon="user-check">
+   Pick **Owner**, **Editor**, or **Viewer** from the dropdown next to each recipient. To revoke access later, open the same dropdown and pick **Remove access**.
  </Step>
- <Step title="Set the permission to Editor">
- Pick **Editor** from the permission dropdown. This is the only permission level that grants editing rights.
- </Step>
- <Step title="Send">
- Click **Send**. The peer gets a notification and can open the app from their dashboard.
+ <Step title="Done" icon="check">
+   Click **Done**. Recipients get a notification and can open the app from their dashboard.
  </Step>
 </Steps>
 
-{/* IMG-03: Share modal with Editor selected */}
-<Frame caption="The Share modal with a peer added as an Editor. The permission dropdown is the key step.">
- <img src="/images/v2_share_modal_individual.png" alt="The V2 Share modal with an email entered, Editor permission selected, and a Send button visible." />
+<Frame caption="The Share modal: search for a user, group, or organization, then set their permission. The publish state is surfaced at the top.">
+  <img src="/images/v2/sharemodal.png" alt="The V2 Share modal showing the publish state callout, a search field, two users (Owner and Editor), and the permission dropdown with Owner, Editor, Viewer, and Remove access options." width="350" className="mx-auto" />
 </Frame>
 
-## Editor permissions
+## Permission levels
 
-An Editor on your app can do the following:
+<CardGroup cols={3}>
+  <Card title="Owner" icon="crown">
+    **Full control.** Edit, publish, share, delete, and reassign ownership. Use for co-builders who need the same authority you have.
+  </Card>
+  <Card title="Editor" icon="pencil">
+    **Can edit, not ship.** Edit instructions, references, starter inputs, model settings, and welcome message. Cannot publish, delete, or change access. Use for collaborators who help build and refine.
+  </Card>
+  <Card title="Viewer" icon="eye">
+    **Read-only.** Use the app and see its activity. Viewers see the app on their dashboard only once it's published. Use for people who only need to use the app.
+  </Card>
+</CardGroup>
 
-- Edit the app's instructions and prompt
-- Add, remove, and reorder references
-- Change starter inputs and welcome message
-- Adjust model selection and conversation settings
-- Test the app and view its activity
-
-An Editor cannot:
-
-- Reassign ownership
-- Delete the app
-- Change who else has access
-- Publish the app
-
-Publishing stays with the owner. If your Editor is ready to ship a new version, the owner clicks **Publish**.
-
-## When to use Editor vs Viewer
-
-Add a peer as **Editor** when you want them to help build, refine, or maintain the app.
-
-Add a peer as **Viewer** when you want them to use the app or see its activity without changing it. Viewers see the app on their dashboard once it is published. They cannot edit anything.
-
-For sharing with people who only need to use the app, see [Sharing with individuals](https://learn.playlab.ai/features/Sharing%20with%20Individuals).
-
-## Removing or changing access
-
-Open the app, click **Share**, find the person in the recipient list, and either change their permission or remove them. Changes take effect immediately.
+For sharing patterns by audience, see [Sharing with individuals](https://learn.playlab.ai/features/Sharing%20with%20Individuals) or [Sharing with groups and orgs](https://learn.playlab.ai/features/Sharing%20with%20Groups%20and%20Orgs).
 
 ## FAQ
 
@@ -86,11 +77,8 @@ Open the app, click **Share**, find the person in the recipient list, and either
  <Accordion title="Can I have more than one Editor on an app?">
  Yes. Add as many Editors as you need. Each one has the same edit rights.
  </Accordion>
- <Accordion title="Do Editors see other apps in my workspace?">
- No. Editor access is per-app. Adding someone as an Editor on App A does not give them any access to your other apps.
- </Accordion>
  <Accordion title="Does this replace workspace-level sharing?">
- For collaboration on a specific app, yes. Workspace membership still controls workspace-level activity views and access to apps that are added to the workspace as a whole.
+ Workspace membership still controls workspace-level activity views and access to apps added to the workspace as a whole. App sharing is the right tool when you want to grant access to one specific app.
  </Accordion>
  <Accordion title="What if my peer is in a different organization?">
  That works the same way. Type their email in the recipient field. They get an invite if they are not already in Playlab. Cross-org Editor access is supported in V2.
