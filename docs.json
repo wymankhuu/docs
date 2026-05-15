@@ -209,6 +209,7 @@
             "pages": [
               "resources/aipolicies",
               "resources/aistatepolicies",
+              "resources/aifederalpolicies",
               "resources/aiguidelines"
             ]
           },
